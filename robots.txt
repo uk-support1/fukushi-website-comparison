@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: 公開URLが未確定のため、Sitemapの絶対URLは未設定
+# Sitemap: https://example.com/sitemap.xml
