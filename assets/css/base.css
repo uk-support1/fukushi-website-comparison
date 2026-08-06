@@ -323,6 +323,27 @@ h3 {
   opacity: 0.8;
 }
 
+.site-footer__sitename {
+  font-weight: 700;
+}
+
+.site-footer__nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 16px;
+}
+
+.site-footer__nav a {
+  font-size: 13px;
+}
+
+.site-footer__disclaimer {
+  margin-top: 16px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
 /* ==========================================================================
    スマートフォン対応
    ========================================================================== */
