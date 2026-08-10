@@ -279,7 +279,7 @@
 }
 
 .cw-hl {
-  background: linear-gradient(180deg, transparent 62%, var(--color-green-light) 62%);
+  background: linear-gradient(180deg, transparent 62%, var(--color-yellow-light) 62%);
   font-weight: 800;
   color: var(--color-green);
   padding: 0 2px;
