@@ -24,7 +24,19 @@
   --radius-large: 16px;
   --shadow-card: 0 2px 10px rgba(30, 73, 60, 0.08);
 
-  --header-height: 64px;
+  --header-height: 68px;
+
+  /* logo.png は縦1024pxのうち、実際のロゴ部分は中央の206pxのみ（上下に大きな透明余白）。
+     以下は、その可視部分だけを表示するためのトリミング比率（可視高さ=206pxを基準とした倍率）。 */
+  --logo-crop-width: 5.0777;
+  --logo-crop-img-height: 4.9709;
+  --logo-crop-top: -1.7621;
+  --logo-crop-left: -1.1311;
+
+  /* logo.png内のアイコン部分のみ（サイト名の文字は含まない）を切り出すための幅倍率。
+     ヘッダーでは、文字が画像に焼き込まれていて改行してしまうため、
+     アイコンだけを画像から切り出し、サイト名は実テキストとして横に並べる。 */
+  --logo-icon-crop-width: 1.4223;
 }
 
 /* ==========================================================================
@@ -130,13 +142,36 @@ h3 {
 }
 
 .site-header__logo {
-  display: flex;
+  --logo-h: 38px;
+  display: inline-flex;
   align-items: center;
+  gap: 10px;
 }
 
-.site-header__logo img {
-  height: 32px;
+.site-header__logo-icon {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  flex-shrink: 0;
+  height: var(--logo-h);
+  width: calc(var(--logo-h) * var(--logo-icon-crop-width));
+}
+
+.site-header__logo-icon img {
+  position: absolute;
+  top: calc(var(--logo-h) * var(--logo-crop-top));
+  left: calc(var(--logo-h) * var(--logo-crop-left));
+  height: calc(var(--logo-h) * var(--logo-crop-img-height));
   width: auto;
+  max-width: none;
+}
+
+.site-header__logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-green);
+  white-space: nowrap;
+  line-height: 1.2;
 }
 
 /* ==========================================================================
@@ -324,6 +359,39 @@ h3 {
   color: var(--color-white);
 }
 
+.site-footer__logo {
+  --logo-h: 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-footer__logo-icon {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  flex-shrink: 0;
+  height: var(--logo-h);
+  width: calc(var(--logo-h) * var(--logo-icon-crop-width));
+}
+
+.site-footer__logo-icon img {
+  position: absolute;
+  top: calc(var(--logo-h) * var(--logo-crop-top));
+  left: calc(var(--logo-h) * var(--logo-crop-left));
+  height: calc(var(--logo-h) * var(--logo-crop-img-height));
+  width: auto;
+  max-width: none;
+}
+
+.site-footer__logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-white);
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
 .site-footer__copyright {
   margin-top: 16px;
   font-size: 12px;
@@ -373,6 +441,28 @@ h3 {
 
   .hero__title {
     font-size: 22px;
+  }
+
+  :root {
+    --header-height: 56px;
+  }
+
+  .site-header__logo {
+    --logo-h: 28px;
+    gap: 8px;
+  }
+
+  .site-header__logo-text {
+    font-size: 15px;
+  }
+
+  .site-footer__logo {
+    --logo-h: 26px;
+    gap: 8px;
+  }
+
+  .site-footer__logo-text {
+    font-size: 15px;
   }
 
   .nav-toggle {
