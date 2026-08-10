@@ -207,15 +207,6 @@ h3 {
   background-color: var(--color-green-light);
 }
 
-.btn--official {
-  background-color: var(--color-blue);
-  color: var(--color-white);
-}
-
-.btn--official:hover {
-  opacity: 0.9;
-}
-
 /* ==========================================================================
    セクション
    ========================================================================== */
