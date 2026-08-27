@@ -440,36 +440,70 @@
   color: var(--color-blue);
 }
 
+.cw-matrix-hint {
+  display: none;
+}
+
 @media (max-width: 860px) {
+  .cw-matrix-hint {
+    display: block;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--color-text-sub);
+    margin: 0 0 8px;
+  }
+
+  /* スマホでは無理に画面幅へ収めず、必要な最小幅を確保して横スクロールさせる */
   .cw-matrix-table {
     table-layout: fixed;
     width: auto;
-    min-width: 0;
+    min-width: 810px;
   }
 
   .cw-matrix-table th,
   .cw-matrix-table td {
-    padding: 10px 8px;
-    font-size: 0.72rem;
-    line-height: 1.5;
+    padding: 12px 14px;
+    font-size: 0.78rem;
+    line-height: 1.6;
   }
 
   .cw-matrix-table th[scope="row"],
   .cw-matrix-table thead th:first-child {
-    width: 84px;
-    min-width: 84px;
-    max-width: 84px;
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+    position: sticky;
+    left: 0;
+    z-index: 2;
+  }
+
+  .cw-matrix-table thead th:first-child {
+    z-index: 3;
   }
 
   .cw-matrix-table th[scope="col"]:not(:first-child),
   .cw-matrix-table td {
-    width: 76px;
-    min-width: 76px;
-    max-width: 76px;
+    width: 165px;
+    min-width: 165px;
+    max-width: 165px;
+  }
+
+  .cw-matrix-name {
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .cw-matrix-type {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .cw-matrix-table td.cw-matrix-text {
-    font-size: 0.7rem;
+    font-size: 0.76rem;
     word-break: normal;
     overflow-wrap: break-word;
   }
