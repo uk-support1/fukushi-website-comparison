@@ -41,12 +41,12 @@ for(let mask=0;mask<256;mask++) {
     c.listing.recommended=recommendation;
   }
 }
-assert.deepEqual(expectedIds(['budget']),['fukushi-it-partner']);
-assert.deepEqual(expectedIds(['noMonthly']),[]);
-assert.deepEqual(expectedIds(['maps']),['fukushi-it-partner','onenet']);
+assert.deepEqual(expectedIds(['budget']),['fukushi-it-partner','tomonico']);
+assert.deepEqual(expectedIds(['noMonthly']),['tomonico']);
+assert.deepEqual(expectedIds(['maps']),['fukushi-it-partner','onenet','tomonico']);
 assert.deepEqual(expectedIds(['selfUpdate']),['onenet','attlabo']);
-assert.deepEqual(expectedIds(['welfare','budget','maps']),[]);
-assert.deepEqual(expectedIds(['welfare','budget','content']),['fukushi-it-partner']);
+assert.deepEqual(expectedIds(['welfare','budget','maps']),['tomonico']);
+assert.deepEqual(expectedIds(['welfare','budget','content']),['fukushi-it-partner','tomonico']);
 assert.equal(companies.filter(c=>matches(c,['budget','noMonthly'])).length,0);
 assert.deepEqual(companies.filter(c=>matches(c,['selfUpdate','marketing'])).map(c=>c.id),['onenet']);
 assert.equal(matches(companies[0],['unknown']),false);
@@ -96,7 +96,7 @@ const server=http.createServer((req,res)=>{
     await page.getByLabel('福祉業界に詳しい',{exact:true}).check();
     await page.getByRole('button',{name:'この条件で探す'}).click();
     await page.waitForURL('**/search.html?**');
-    assert.match(await page.locator('#result-count').innerText(),/2社/);
+    assert.match(await page.locator('#result-count').innerText(),/3社/);
     assert.equal(await page.locator('#search-results article:visible').first().getAttribute('data-company'),'fukushi-it-partner');
     await page.goBack(); assert.equal(await page.getByLabel('福祉業界に詳しい',{exact:true}).isChecked(),true);
     await page.goForward(); assert.equal(await page.getByLabel('福祉業界に詳しい',{exact:true}).isChecked(),true);
@@ -138,16 +138,16 @@ const server=http.createServer((req,res)=>{
     assert.ok(fs.existsSync(path.join(root,'favicon.ico')));
     await page.setViewportSize({width:375,height:1000});
     await page.goto(base+'/search.html?condition=noMonthly');
-    assert.equal(await page.locator('#search-results article:visible').count(),0);
+    assert.equal(await page.locator('#search-results article:visible').count(),1);
     await page.screenshot({path:path.join(output,'no-monthly-375.png'),fullPage:true});
     await page.goto(base+'/search.html?condition=budget');
-    assert.match(await page.locator('#search-results article:visible .directory-price').innerText(),/19,800円（税込）/);
+    assert.match(await page.locator('[data-company="fukushi-it-partner"] .directory-price').innerText(),/19,800円（税込）/);
     await page.screenshot({path:path.join(output,'budget-375.png'),fullPage:true});
     await page.goto(base+'/search.html?condition=maps');
     assert.equal(await page.locator('[data-company="fukushi-it-partner"] .directory-price').innerText(),'55,000円（税込）');
     // Isolated regression fixture: never published or written to company-data.js.
-    // A real current zero-monthly plan is not verified, so exercise the formerly
-    // broken paid-plan/zero-monthly display with test data in this browser only.
+    // Exercises the formerly broken paid-plan/zero-monthly display and the
+    // "その他プラン" note with synthetic multi-plan data, in this browser only.
     await page.route('**/assets/js/company-data.js',async route=>{
       const fixture=`\nwindow.CompanyDirectory.companies.find(c=>c.id==='tomonico').plans=[
         {name:'検証用月額プラン',initial:0,monthly:9790,price:'初期0円・月額9,790円（税込）'},
