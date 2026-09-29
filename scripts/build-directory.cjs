@@ -71,7 +71,7 @@ ${isSearch?'<meta name="robots" content="noindex,follow">':''}<link rel="canonic
 <script type="application/ld+json">${JSON.stringify(schema)}</script></head><body class="directory-page">${header}<main><div class="directory-shell"><nav class="directory-breadcrumb" aria-label="パンくず"><ol><li><a href="${prefix}index.html">ホーム</a></li><li aria-current="page">${crumb}</li></ol></nav>${body}</div></main>${footer}<script src="${prefix}assets/js/main.js"></script>${isSearch?'<script src="assets/js/company-data.js"></script><script src="assets/js/company-search.js"></script>':''}</body></html>\n`;
 }
 const rankedRows = [
-  ['制作料金',c=>c.costRating,c=>c.tableAmounts.join('<br>')],
+  ['制作料金',c=>c.costRating,c=>c.tableAmounts.join('<br>'),'directory-price-cell'],
   ['福祉への理解',c=>c.support[0],c=>tableSymbol(c.support[0])],
   ['自分で更新',c=>c.support[1],c=>tableSymbol(c.support[1])],
   ['SEO',c=>c.support[2],c=>tableSymbol(c.support[2])],
@@ -84,7 +84,7 @@ const plainRows = [
   ['詳細を見る',c=>`<a class="btn btn--outline" href="#${c.id}">詳しく見る</a>`],
   ['公式サイト',c=>`<a class="btn btn--primary" href="${c.url}" target="_blank" rel="noopener noreferrer">公式サイト ↗</a>`],
 ];
-const table = `<table class="directory-table"><caption>掲載4社の料金・対応内容（2026年9月29日公式確認）</caption><thead><tr><th scope="col">比較項目</th>${companies.map(c=>`<th scope="col">${esc(c.name)}</th>`).join('')}</tr></thead><tbody>${rankedRows.map(([key,rankFn,htmlFn])=>{const mask=bestMask(companies.map(rankFn));return `<tr><th scope="row">${key}</th>${companies.map((c,i)=>`<td class="${mask[i]?'directory-best-cell':''}">${htmlFn(c)}</td>`).join('')}</tr>`;}).join('')}${plainRows.map(([key,fn])=>`<tr><th scope="row">${key}</th>${companies.map(c=>`<td>${fn(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+const table = `<table class="directory-table"><caption>掲載4社の料金・対応内容（2026年9月29日公式確認）</caption><thead><tr><th scope="col">比較項目</th>${companies.map(c=>`<th scope="col">${esc(c.name)}</th>`).join('')}</tr></thead><tbody>${rankedRows.map(([key,rankFn,htmlFn,rowClass])=>{const mask=bestMask(companies.map(rankFn));return `<tr><th scope="row">${key}</th>${companies.map((c,i)=>`<td class="${[mask[i]?'directory-best-cell':'',rowClass||''].filter(Boolean).join(' ')}">${htmlFn(c)}</td>`).join('')}</tr>`;}).join('')}${plainRows.map(([key,fn])=>`<tr><th scope="row">${key}</th>${companies.map(c=>`<td>${fn(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
 function section(id,heading,body,copy=false) {return `<section class="directory-section ${copy?'directory-copy':''}" id="${id}"><h2>${heading}</h2>${body}</section>`;}
 const purposes = [['費用を抑えたい','fukushi-it-partner','税込19,800円のライトプラン。公開作業などは別途。'],['福祉への理解を重視したい','fukushi-it-partner','B型を含む福祉事業所向けの制作に対応。'],['自分で更新したい','onenet','納品後の自社編集に対応。'],['集客まで相談したい','onenet','サイト運用・広告運用のサポート。'],['デザインを重視したい','attlabo','オリジナルデザインでの制作にも対応。']];
 const details = companies.map(c=>`<article id="${c.id}" class="directory-card"><h3>${esc(c.name)}</h3>${content.details[c.id].intro}${price(c)}<h4>特徴</h4><ul>${c.reasons.map(r=>`<li>${esc(r)}</li>`).join('')}</ul><h4>対応内容</h4>${spec(c)}${content.details[c.id].body}<h4>会社・サービス概要</h4><p>${esc(c.name)}。${esc(c.summary)} 所在地・法人情報の詳細は公式サイトでご確認ください。</p><p class="directory-note">情報元：公式サイト（${formatDate(c.informationDate)}確認）。<a href="${c.source}">公式サイトで情報を確認 ↗</a></p>${links(c,'../')}</article>`).join('');
