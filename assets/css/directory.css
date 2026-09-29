@@ -21,11 +21,11 @@
 .directory-section>p { margin-bottom:16px; }
 .directory-table { width:100%; table-layout:fixed; border-collapse:collapse; font-size:13px; line-height:1.7; background:white; }
 .directory-table caption { text-align:left; padding:0 0 12px; color:#5c6560; }
-.directory-table th,.directory-table td { padding:14px 12px; border:1px solid #dfe7e3; vertical-align:top; overflow-wrap:anywhere; }
-.directory-table th { background:#edf3ef; text-align:left; width:15%; }
+.directory-table th,.directory-table td { padding:14px 12px; border:1px solid #dfe7e3; vertical-align:top; overflow-wrap:anywhere; text-align:center; }
+.directory-table th { background:#edf3ef; width:15%; }
 .directory-table thead th { width:auto; color:#1e493c; font-size:16px; }
-.directory-table .directory-best-cell { background:#fff2cc; }
-.directory-table .directory-best-cell .directory-symbol { color:#a15c00; }
+.directory-table .directory-best-cell { background:#ffe4a3; }
+.directory-table .directory-best-cell .directory-symbol { color:#8a4b00; }
 .directory-plain { color:#5c6560; }
 .directory-table .btn { padding:10px 8px; width:100%; font-size:13px; min-height:44px; }
 .directory-table small { display:block; font-size:12px; margin-top:8px; color:#5c6560; }

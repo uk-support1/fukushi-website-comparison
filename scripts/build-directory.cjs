@@ -77,7 +77,7 @@ const rankedRows = [
   ['SEO',c=>c.support[2],c=>tableSymbol(c.support[2])],
   ['Googleマップ',c=>c.support[3],c=>tableSymbol(c.support[3])],
   ['集客支援',c=>c.support[4],c=>tableSymbol(c.support[4])],
-  ['制作期間',c=>c.delivery || '要確認',c=>tableSymbol(c.delivery || '要確認')],
+  ['制作期間',c=>c.delivery || '要確認',c=>esc(c.deliveryLabel)],
 ];
 const plainRows = [
   ['特徴',c=>esc(c.summary)],
