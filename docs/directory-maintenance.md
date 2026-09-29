@@ -82,6 +82,20 @@ commit / pushは行っていない。
 
 commit / pushは行っていない。
 
+### 2026-09-29 追記3：「おすすめ」表示を廃止し項目別の最良セル強調へ変更、集客支援・制作期間・制作料金を記号表記に
+
+「福祉ITパートナーがおすすめ」という編集上の紹介をやめ、welfare・group-home記事と同じく、比較表の各項目（行）ごとに最も優れている会社のセルのみを強調する方式に変更した。
+
+- `assets/js/company-data.js`：`fukushi-it-partner`の`listing.recommended`を`false`に変更（全社`false`）。`support[4]`（集客支援）を「カスタマイズで○」に変更（自分で更新と同じくカスタマイズで対応）。`delivery`（制作期間）を4社とも◎○△×の記号表記に変更（福祉ITパートナーは指定どおり「◎（最短48h、標準14日）」）。各社に`costRating`（制作料金の記号評価）と`priceDetails`（初期費用・月額費用の内訳）を追加。
+- `scripts/build-directory.cjs`：「当サイトおすすめ」バッジ（`label()`）、`recommended-column`、`directory-card--recommended`、おすすめ限定の紹介文リストを削除。比較表は行ごとに`bestMask()`で最良の記号（◎優先、複数社が同点なら同時に強調）を判定し、該当セルに`directory-best-cell`クラスを付与する方式に統一。制作期間の表示を`symbolCell()`経由に変更。制作料金は記号を先頭に表示し、その下に初期費用・月額費用の内訳を`<dl>`でまとめて表示する構成に変更（`price()`/`priceDetailsList()`）。詳細記事の「おすすめポイント」見出しは「特徴」に変更（全社共通の紹介のため）。運営者情報の文言も、個別のおすすめ紹介から項目別評価の説明に修正。
+- `assets/css/directory.css`：`.recommended-column`／`.directory-label`／`.directory-card--recommended`を削除し、`.directory-best-cell`（項目別の最良セル強調）と`.directory-price-breakdown`／`.directory-price-main`（料金内訳の表示）を追加。
+
+`listing.recommended`は`matches()`の判定に一切使われていないため、条件検索・フィルタの挙動に変更はない。Node上で256通りの条件組み合わせを実行し、変更前と同じ結果（`selfUpdate`・`budget`・`noMonthly`・`maps`・`welfare`・`selfUpdate+marketing`など）になることを確認済み。`scripts/check-directory.cjs`のハードコード済み期待値（44-51行目）は`features`ベースのため変更不要。ただし「おすすめ」バッジ・強調のUI表示に関するPlaywright側のアサーションは無く、`recommended`の値を反転させて`matches()`が変わらないことを確認する独立オラクルのテスト（37-42行目）もロジック自体は変更していないため影響なし。
+
+引き続きこの環境にはPlaywrightがインストールされておらず、`node scripts/check-directory.cjs`は未実行。Playwrightが使える環境で実行し、特に比較表の見た目（強調セルの表示・レイアウト崩れの有無）を確認すること。
+
+commit / pushは行っていない。
+
 ## 今回見送った改善
 
 カードの縦長改善、再検索フォーム位置、PC文字サイズ、検索OGPの個別化、JS無効時フォーム、業種追加向けの大規模整理、support配列の再設計、source設計の全面変更は今後の対応とする。

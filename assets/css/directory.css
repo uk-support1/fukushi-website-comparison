@@ -24,10 +24,13 @@
 .directory-table th,.directory-table td { padding:14px 12px; border:1px solid #dfe7e3; vertical-align:top; overflow-wrap:anywhere; }
 .directory-table th { background:#edf3ef; text-align:left; width:15%; }
 .directory-table thead th { width:auto; color:#1e493c; font-size:16px; }
-.directory-table .recommended-column { background:#f1f8f3; }
-.directory-label { display:inline-block; border-radius:4px; background:#1e493c; color:#fff; font-size:12px; font-weight:700; padding:4px 10px; margin-bottom:10px; }
+.directory-table .directory-best-cell { background:#f1f8f3; box-shadow:inset 3px 0 0 #1e493c; }
 .directory-table .btn { padding:10px 8px; width:100%; font-size:13px; min-height:44px; }
 .directory-table small { display:block; font-size:12px; margin-top:8px; color:#5c6560; }
+.directory-price-main { margin-left:6px; }
+.directory-price-breakdown { display:grid; grid-template-columns:auto 1fr; gap:2px 10px; font-size:12.5px; color:#3c453f; margin:10px 0 0; }
+.directory-price-breakdown dt { font-weight:700; }
+.directory-price-breakdown dd { margin:0; }
 .directory-symbol { font-weight:800; font-size:1.2em; margin:0 3px; }
 .directory-symbol--best { color:#1e493c; }
 .directory-symbol--good { color:#287780; }
@@ -49,7 +52,6 @@
 .directory-purpose strong { display:block; color:#1e493c; margin-bottom:8px; }
 .directory-purpose span { font-size:14px; }
 .directory-card { border:1px solid #dfe7e3; border-radius:12px; padding:28px; background:white; margin:20px 0; }
-.directory-card--recommended { border:2px solid #517c63; background:#f3f9f5; }
 .directory-card h3 { color:#1e493c; font-size:24px; line-height:1.5; margin-bottom:14px; overflow-wrap:anywhere; }
 .directory-card h4 { font-size:17px; margin:24px 0 10px; color:#1e493c; }
 .directory-card p { line-height:1.95; margin:12px 0; }
