@@ -28,6 +28,12 @@
 .directory-label { display:inline-block; border-radius:4px; background:#1e493c; color:#fff; font-size:12px; font-weight:700; padding:4px 10px; margin-bottom:10px; }
 .directory-table .btn { padding:10px 8px; width:100%; font-size:13px; min-height:44px; }
 .directory-table small { display:block; font-size:12px; margin-top:8px; color:#5c6560; }
+.directory-symbol { font-weight:800; font-size:1.2em; margin:0 3px; }
+.directory-symbol--best { color:#1e493c; }
+.directory-symbol--good { color:#287780; }
+.directory-symbol--mid { color:#8a8f76; }
+.directory-symbol--bad { color:#b3401f; }
+.directory-legend { display:flex; flex-wrap:wrap; gap:8px 20px; font-size:13px; color:#5c6560; margin:16px 0 8px; }
 .directory-mobile { display:none; }
 .directory-form { padding:26px; background:#e8f3ee; border:1px solid #c8ddd0; border-radius:12px; }
 .directory-form fieldset { padding:0; margin:0; border:0; min-width:0; }

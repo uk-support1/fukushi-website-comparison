@@ -58,12 +58,27 @@ commit / pushは行っていない。
 
 福祉ITパートナーの公式サイトに「最短48時間」の納期表記があることを確認したのを機に、掲載4社の「制作期間」と、残っていた「要確認」項目を公式サイトで再調査した。
 
-- 福祉ITパートナー：制作期間は変更なし（14日間・素材がそろえば最短48時間〜）。自分で更新・SEOは引き続き公式サイトに記載なし。
+- 福祉ITパートナー：制作期間は変更なし（14日間・素材がそろえば最短48時間〜）。自分で更新・SEOは当時は公式サイトに記載なしと判断（同日の別ページ確認で後日訂正。下記2026-09-29追記2参照）。
 - Onenet：制作期間は公式サイトに記載なし。SEO対策は制作プランに含まれず、別サービス「WEB広報サポート」で対応可能と判明。
 - tomonico：`https://tomonico.com/service/fukushi` で現行プラン（トモニコプラン／ミドルプラン／フリープラン）・基本SEO対策・Google Map表示・Googleビジネスプロフィール基本設定が確認できたため、`verified:false` を解除し4社目として条件検索に含めた。自社更新は不可（月額保守での更新代行）。制作の納期日数は記載なく、公開後の更新依頼は5営業日以内が目安。
 - アトラボ：`https://attlabo.com/concept/flow/` に「制作期間はおおよそ2〜6ヶ月（規模・プランニング内容により異なる）」の記載を確認。集客支援はSEO・リスティング広告代行・WEBコンサルティングを要望に応じて提供（個別見積り）だが、標準機能ではないため `features.marketing` はnullのまま維持し、表示テキストのみ補足した。
 
 tomonicoの条件検索への算入に伴い、`scripts/check-directory.cjs` の一部の期待値（`budget`／`noMonthly`／`maps`／`welfare+budget+maps`／`welfare+budget+content`、および375px手動確認2箇所）を更新した。**この環境にはPlaywrightがインストールされておらず、`node scripts/check-directory.cjs` を実際には実行できていない。** 更新後は改めてこのチェックを実行して確認すること。
+
+commit / pushは行っていない。
+
+### 2026-09-29 追記2：比較表を記号表記へ変更、福祉ITパートナーの自分で更新・SEOを訂正
+
+比較表の文章が長く読みにくいとの指摘を受け、`福祉への理解`／`自分で更新`／`SEO`／`Googleマップ`／`集客支援`の5項目を、welfare・group-home記事と同じ◎○△×の記号表記に変更した。
+
+- `scripts/build-directory.cjs` に `symbolCell()` を追加。`support` 配列の文字列先頭または末尾にある記号（◎○△×）を `<span class="directory-symbol">` で強調表示する。desktop表・モバイルカード・企業詳細・検索結果のすべてに反映される（`spec()`／`rows` 経由）。
+- `assets/css/directory.css` に `.directory-symbol`（色分け）と `.directory-legend`（凡例）を追加。凡例は比較表の直下に表示。
+- `https://fukushi-it-partner.com/` のトップページを再確認したところ、「自分で更新・カスタマイズも可能」「基本的なSEO対策も標準装備」の記載があった（`homepage-plan.html`には記載がなく、前回の追記1では見落としていた）。`features.selfUpdate`・`features.seo` を `true` に修正し、`support[1]` はユーザー指定の表記「カスタマイズで○」とした。
+- tomonicoの「自分で更新」は月額保守での更新代行であり自社編集不可のため「×（月額保守で更新代行、自社編集は不可）」とした。
+
+福祉ITパートナーの`selfUpdate`が`true`になったことに伴い、`scripts/check-directory.cjs`の`expectedIds(['selfUpdate'])`を`['fukushi-it-partner','onenet','attlabo']`に更新した（Node上で`matches()`を直接実行し他の組み合わせに影響がないことを確認済み）。FAQ「公開後は自分で更新できますか？」の回答文も、福祉ITパートナーが自社更新に対応する旨に修正した。
+
+引き続きPlaywrightは未インストールのため`node scripts/check-directory.cjs`は未実行。
 
 commit / pushは行っていない。
 

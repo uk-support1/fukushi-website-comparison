@@ -44,7 +44,7 @@ for(let mask=0;mask<256;mask++) {
 assert.deepEqual(expectedIds(['budget']),['fukushi-it-partner','tomonico']);
 assert.deepEqual(expectedIds(['noMonthly']),['tomonico']);
 assert.deepEqual(expectedIds(['maps']),['fukushi-it-partner','onenet','tomonico']);
-assert.deepEqual(expectedIds(['selfUpdate']),['onenet','attlabo']);
+assert.deepEqual(expectedIds(['selfUpdate']),['fukushi-it-partner','onenet','attlabo']);
 assert.deepEqual(expectedIds(['welfare','budget','maps']),['tomonico']);
 assert.deepEqual(expectedIds(['welfare','budget','content']),['fukushi-it-partner','tomonico']);
 assert.equal(companies.filter(c=>matches(c,['budget','noMonthly'])).length,0);
