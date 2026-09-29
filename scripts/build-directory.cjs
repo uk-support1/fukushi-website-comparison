@@ -23,13 +23,23 @@ function symbolCell(text) {
   if (trailing) return `${esc(text.slice(0,-trailing.length))}<span class="directory-symbol directory-symbol--${SYMBOL_CLASS[trailing]}">${trailing}</span>`;
   return esc(text);
 }
-function cellRank(text) {
-  const chars = Object.keys(SYMBOL_RANK);
+function resolvedSymbol(text) {
+  if (text.includes('記載なし')) return null;
+  if (text.startsWith('カスタマイズで')) return '△';
+  const chars = Object.keys(SYMBOL_CLASS);
   const leading = chars.find(s => text.startsWith(s));
-  if (leading) return SYMBOL_RANK[leading];
+  if (leading) return leading;
   const trailing = chars.find(s => text.endsWith(s));
-  if (trailing) return SYMBOL_RANK[trailing];
-  return null;
+  return trailing || null;
+}
+function cellRank(text) {
+  const symbol = resolvedSymbol(text);
+  return symbol ? SYMBOL_RANK[symbol] : null;
+}
+function tableSymbol(text) {
+  if (text.includes('記載なし')) return '<span class="directory-plain">記載なし</span>';
+  const symbol = resolvedSymbol(text);
+  return symbol ? symbolCell(symbol) : esc(text);
 }
 function bestMask(texts) {
   const ranks = texts.map(cellRank);
@@ -61,13 +71,13 @@ ${isSearch?'<meta name="robots" content="noindex,follow">':''}<link rel="canonic
 <script type="application/ld+json">${JSON.stringify(schema)}</script></head><body class="directory-page">${header}<main><div class="directory-shell"><nav class="directory-breadcrumb" aria-label="パンくず"><ol><li><a href="${prefix}index.html">ホーム</a></li><li aria-current="page">${crumb}</li></ol></nav>${body}</div></main>${footer}<script src="${prefix}assets/js/main.js"></script>${isSearch?'<script src="assets/js/company-data.js"></script><script src="assets/js/company-search.js"></script>':''}</body></html>\n`;
 }
 const rankedRows = [
-  ['制作料金',c=>c.costRating,c=>`${symbolCell(c.costRating)}<span class="directory-price-main">${esc(c.price)}</span>${priceDetailsList(c)}`],
-  ['福祉への理解',c=>c.support[0],c=>symbolCell(c.support[0])],
-  ['自分で更新',c=>c.support[1],c=>symbolCell(c.support[1])],
-  ['SEO',c=>c.support[2],c=>symbolCell(c.support[2])],
-  ['Googleマップ',c=>c.support[3],c=>symbolCell(c.support[3])],
-  ['集客支援',c=>c.support[4],c=>symbolCell(c.support[4])],
-  ['制作期間',c=>c.delivery || '要確認',c=>symbolCell(c.delivery || '要確認')],
+  ['制作料金',c=>c.costRating,c=>c.tableAmounts.join('<br>')],
+  ['福祉への理解',c=>c.support[0],c=>tableSymbol(c.support[0])],
+  ['自分で更新',c=>c.support[1],c=>tableSymbol(c.support[1])],
+  ['SEO',c=>c.support[2],c=>tableSymbol(c.support[2])],
+  ['Googleマップ',c=>c.support[3],c=>tableSymbol(c.support[3])],
+  ['集客支援',c=>c.support[4],c=>tableSymbol(c.support[4])],
+  ['制作期間',c=>c.delivery || '要確認',c=>tableSymbol(c.delivery || '要確認')],
 ];
 const plainRows = [
   ['特徴',c=>esc(c.summary)],
@@ -80,7 +90,7 @@ const purposes = [['費用を抑えたい','fukushi-it-partner','税込19,800円
 const details = companies.map(c=>`<article id="${c.id}" class="directory-card"><h3>${esc(c.name)}</h3>${content.details[c.id].intro}${price(c)}<h4>特徴</h4><ul>${c.reasons.map(r=>`<li>${esc(r)}</li>`).join('')}</ul><h4>対応内容</h4>${spec(c)}${content.details[c.id].body}<h4>会社・サービス概要</h4><p>${esc(c.name)}。${esc(c.summary)} 所在地・法人情報の詳細は公式サイトでご確認ください。</p><p class="directory-note">情報元：公式サイト（${formatDate(c.informationDate)}確認）。<a href="${c.source}">公式サイトで情報を確認 ↗</a></p>${links(c,'../')}</article>`).join('');
 const intro = '就労継続支援B型のホームページ制作会社4社を、料金・福祉への理解・公開後の運用から比較します。まずは比較表で違いを確認し、気になる条件や目的から候補を探してください。各社の特徴と注意点も整理し、見学や問い合わせにつながる依頼先選びをお手伝いします。';
 const btype = `<header class="directory-intro"><p class="directory-eyebrow">福祉業界のホームページ制作会社を比較</p><h1>${title.replace("B型",'<span class="directory-nowrap">B型</span>').replace("料金・特徴を比較",'<span class="directory-nowrap">料金・特徴を比較</span>')}</h1><p class="directory-date">ページ更新：<time datetime="2026-09-29">2026年9月29日</time> ／ 公式確認：2026年9月29日（掲載4社とも公式サイトで確認）</p><p class="directory-lead">${intro}</p><nav class="directory-toc" aria-label="比較・検索へのショートカット"><a href="#compare-table">比較表を見る ↓</a><a href="#conditions">条件から探す ↓</a><a href="#purpose">目的別おすすめ ↓</a></nav></header>`+
-section('compare-table','おすすめ制作会社の比較表',table+`<p class="directory-legend"><span><span class="directory-symbol directory-symbol--best">◎</span>特に優れている</span><span><span class="directory-symbol directory-symbol--good">○</span>対応あり</span><span><span class="directory-symbol directory-symbol--mid">△</span>限定的・要問い合わせ</span><span><span class="directory-symbol directory-symbol--bad">×</span>非対応</span></p><div class="directory-mobile">${companies.map(c=>card(c,'../',true)).join('')}</div><p class="directory-note">「要確認」「△」は必ずしも非対応を意味しません。掲載料金は条件が異なるため、総額・契約期間をあわせて確認してください。</p>`)+
+section('compare-table','おすすめ制作会社の比較表',table+`<p class="directory-legend"><span><span class="directory-symbol directory-symbol--best">◎</span>特に優れている</span><span><span class="directory-symbol directory-symbol--good">○</span>対応あり</span><span><span class="directory-symbol directory-symbol--mid">△</span>限定的・要問い合わせ</span><span><span class="directory-symbol directory-symbol--bad">×</span>非対応</span></p><div class="directory-mobile">${companies.map(c=>card(c,'../',true)).join('')}</div><p class="directory-note">「記載なし」「△」は必ずしも非対応を意味しません。tomonicoの2行目は月額料金を1年換算した金額です。掲載料金は条件が異なるため、総額・契約期間をあわせて確認してください。詳しい条件・注意点は各社の「詳しく見る」からご確認ください。</p>`)+
 section('conditions','条件に合う制作会社を見つける',form('../'))+
 section('purpose','目的別おすすめ',`<div class="directory-grid">${purposes.map(([heading,id,desc])=>`<a class="directory-purpose" href="#${id}"><strong>${heading}</strong><span>${companies.find(c=>c.id===id).name} →<br>${desc}</span></a>`).join('')}</div>`)+
 section('companies','各制作会社の詳細',details)+

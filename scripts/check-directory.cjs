@@ -41,12 +41,12 @@ for(let mask=0;mask<256;mask++) {
     c.listing.recommended=recommendation;
   }
 }
-assert.deepEqual(expectedIds(['budget']),['fukushi-it-partner','tomonico']);
+assert.deepEqual(expectedIds(['budget']),['tomonico','fukushi-it-partner']);
 assert.deepEqual(expectedIds(['noMonthly']),['tomonico']);
-assert.deepEqual(expectedIds(['maps']),['fukushi-it-partner','onenet','tomonico']);
-assert.deepEqual(expectedIds(['selfUpdate']),['fukushi-it-partner','onenet','attlabo']);
+assert.deepEqual(expectedIds(['maps']),['onenet','tomonico','fukushi-it-partner']);
+assert.deepEqual(expectedIds(['selfUpdate']),['onenet','fukushi-it-partner','attlabo']);
 assert.deepEqual(expectedIds(['welfare','budget','maps']),['tomonico']);
-assert.deepEqual(expectedIds(['welfare','budget','content']),['fukushi-it-partner','tomonico']);
+assert.deepEqual(expectedIds(['welfare','budget','content']),['tomonico','fukushi-it-partner']);
 assert.equal(companies.filter(c=>matches(c,['budget','noMonthly'])).length,0);
 assert.deepEqual(companies.filter(c=>matches(c,['selfUpdate','marketing'])).map(c=>c.id),['onenet']);
 assert.equal(matches(companies[0],['unknown']),false);
@@ -97,7 +97,7 @@ const server=http.createServer((req,res)=>{
     await page.getByRole('button',{name:'この条件で探す'}).click();
     await page.waitForURL('**/search.html?**');
     assert.match(await page.locator('#result-count').innerText(),/3社/);
-    assert.equal(await page.locator('#search-results article:visible').first().getAttribute('data-company'),'fukushi-it-partner');
+    assert.equal(await page.locator('#search-results article:visible').first().getAttribute('data-company'),'onenet');
     await page.goBack(); assert.equal(await page.getByLabel('福祉業界に詳しい',{exact:true}).isChecked(),true);
     await page.goForward(); assert.equal(await page.getByLabel('福祉業界に詳しい',{exact:true}).isChecked(),true);
     for(let mask=0;mask<(process.env.QA_LAYOUT_ONLY ? 0 : 256);mask++) {
