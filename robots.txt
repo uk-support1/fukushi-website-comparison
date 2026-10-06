@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://uk-support1.github.io/fukushi-website-comparison/sitemap.xml
+Sitemap: https://fukushi-hp-hikaku.com/sitemap.xml
