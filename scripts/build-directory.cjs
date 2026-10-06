@@ -6,7 +6,7 @@ require('../assets/js/company-data.js');
 const {companies,filters} = globalThis.CompanyDirectory;
 const content = JSON.parse(fs.readFileSync(path.join(root,'assets/data/b-type-content.json'),'utf8'));
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const base = 'https://uk-support1.github.io/fukushi-website-comparison/';
+const base = 'https://fukushi-hp-hikaku.com/';
 const title = `【2026年最新】就労継続支援B型におすすめのホームページ制作会社${companies.length}選｜料金・特徴を比較`;
 const description = '就労継続支援B型向けホームページ制作会社4社の料金・特徴・更新対応を比較。福祉への理解、初期費用、SEO、Googleマップなどの条件から探せます。各社の注意点や制作会社の選び方も紹介します。';
 function links(c,prefix) {return `<div class="directory-actions"><a class="btn btn--outline" href="${prefix}comparisons/b-type-comparison.html#${c.id}">詳しく見る</a><a class="btn btn--primary" href="${c.url}" target="_blank" rel="noopener noreferrer">公式サイトを見る ↗</a></div>`;}
