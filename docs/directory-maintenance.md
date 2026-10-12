@@ -135,6 +135,15 @@ commit / pushは行っていない。
 
 commit / pushは行っていない。
 
+### 2026-10-13 追記：URL正規化（独自ドメイン fukushi-hp-hikaku.com）
+
+Search Consoleの「重複：Googleが異なるページを正規ページに選択」「ページにリダイレクトがあります」の原因は、canonical・sitemap・robots.txt・og:urlが旧URL（`uk-support1.github.io/...`、独自ドメインへ301転送される）を指していたこと。独自ドメインへの置換は別途pushされ反映済みだったため、残る重複URLを整理した。
+
+- 内部リンクの `index.html` を `./`（下層は `../`）に変更。`/index.html` が `/` と同内容で200を返す重複URLになっていたため。対象：`index.html`、`welfare-comparison.html`、`group-home-comparison.html`、`b-type-content.json`、`scripts/build-directory.cjs`（B型ページ・`search.html` は再生成）。
+- 正規URLは `https://fukushi-hp-hikaku.com/`。sitemapはインデックス対象4URLのみ（`search.html` はnoindexのため非掲載）。
+
+GitHub Pagesはサーバー側リダイレクトを設定できないため、`/index.html` は残るが、canonicalで `/` に統一している。
+
 ## 今回見送った改善
 
 カードの縦長改善、再検索フォーム位置、PC文字サイズ、検索OGPの個別化、JS無効時フォーム、業種追加向けの大規模整理、support配列の再設計、source設計の全面変更は今後の対応とする。
