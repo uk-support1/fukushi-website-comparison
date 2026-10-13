@@ -3,6 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- GA4計測＋管理者除外（既存ページと同一。削除・複製・別のGAタグ追加をしないこと。除外スクリプトは必ずgtag.jsより前） -->
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
 <!-- TODO: title -->
 <title></title>
 <!-- TODO: description -->

@@ -149,7 +149,7 @@ GitHub Pagesはサーバー側リダイレクトを設定できないため、`/
 各ページの `<head>` で、Googleタグ（gtag.js）より前に除外スクリプトを実行する。`?analytics=off` でそのブラウザを除外登録、`?analytics=on` で解除。登録するとファーストパーティCookie `ga_exclude=1`（Path=/、Max-Age約400日、ホスト限定でサブドメインには共有しない）とlocalStorageに保存し、`window['ga-disable-G-KNYX0KWWLY']=true` でGA4への全送信を止める。URLからは `analytics` のみ削除（他のクエリ・ハッシュは維持）。保存に失敗した場合は成功表示を出さず赤い失敗表示にする。除外中は訪問のたびにCookieの期限を延長する（SafariのITP対策）。
 
 - 静的ページ（index・welfare・group-home）は各HTMLに直接記載。B型・条件検索は `assets/data/b-type-content.json` の `analytics` に含め、`node scripts/build-directory.cjs` で生成。スニペットを直す場合は両方を同じ内容に揃える。
-- 登録URLはサイト内メニュー・sitemap・検索エンジン向け案内には載せない。`templates/comparison-page-template.html` にはGA4自体が無いため、新規ページ作成時はGAタグと除外スニペットの両方を追加すること。
+- 登録URLはサイト内メニュー・sitemap・検索エンジン向け案内には載せない。`templates/comparison-page-template.html` の `<head>` にも同じGA4タグ＋除外スニペットを入れてあるため、新規ページはテンプレートから作れば自動で適用される。そのブロックは削除・複製せず、別のGAタグも追加しないこと（二重計測の原因になる）。
 
 ## 今回見送った改善
 
