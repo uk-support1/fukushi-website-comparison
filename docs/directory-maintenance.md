@@ -146,10 +146,10 @@ GitHub Pagesはサーバー側リダイレクトを設定できないため、`/
 
 ### 2026-10-13 追記：管理者アクセスのGA4計測除外
 
-各ページの  で、Googleタグ（gtag.js）より前に除外スクリプトを実行する。 でそのブラウザを除外登録、 で解除。登録するとファーストパーティCookie （Path=/、Max-Age約400日、ホスト限定でサブドメインには共有しない）とlocalStorageに保存し、 でGA4への全送信を止める。URLからは  のみ削除（他のクエリ・ハッシュは維持）。保存に失敗した場合は成功表示を出さず赤い失敗表示にする。除外中は訪問のたびにCookieの期限を延長する（SafariのITP対策）。
+各ページの `<head>` で、Googleタグ（gtag.js）より前に除外スクリプトを実行する。`?analytics=off` でそのブラウザを除外登録、`?analytics=on` で解除。登録するとファーストパーティCookie `ga_exclude=1`（Path=/、Max-Age約400日、ホスト限定でサブドメインには共有しない）とlocalStorageに保存し、`window['ga-disable-G-KNYX0KWWLY']=true` でGA4への全送信を止める。URLからは `analytics` のみ削除（他のクエリ・ハッシュは維持）。保存に失敗した場合は成功表示を出さず赤い失敗表示にする。除外中は訪問のたびにCookieの期限を延長する（SafariのITP対策）。
 
-- 静的ページ（index・welfare・group-home）は各HTMLに直接記載。B型・条件検索は  の  に含め、Generated B-type comparison and search.html で生成。スニペットを直す場合は両方を同じ内容に揃える。
-- 登録URLはサイト内メニュー・sitemap・検索エンジン向け案内には載せない。 にはGA4自体が無いため、新規ページ作成時はGAタグと除外スニペットの両方を追加すること。
+- 静的ページ（index・welfare・group-home）は各HTMLに直接記載。B型・条件検索は `assets/data/b-type-content.json` の `analytics` に含め、`node scripts/build-directory.cjs` で生成。スニペットを直す場合は両方を同じ内容に揃える。
+- 登録URLはサイト内メニュー・sitemap・検索エンジン向け案内には載せない。`templates/comparison-page-template.html` にはGA4自体が無いため、新規ページ作成時はGAタグと除外スニペットの両方を追加すること。
 
 ## 今回見送った改善
 
