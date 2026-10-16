@@ -66,12 +66,12 @@ function shell(body,isSearch=false) {
 ${content.analytics}<title>${esc(pageTitle)}</title><meta name="description" content="${esc(isSearch?'福祉業界向けホームページ制作会社を条件で検索。選択条件と該当数、各社の料金・特徴を確認できます。':description)}">
 ${isSearch?'<meta name="robots" content="noindex,follow">':''}<link rel="canonical" href="${url}">
 <meta property="og:type" content="${isSearch?'website':'article'}"><meta property="og:title" content="${esc(pageTitle)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${url}"><meta property="og:site_name" content="福祉ホームページ制作比較ガイド"><meta property="og:image" content="${base}assets/images/brand/logo.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(pageTitle)}">
-<link rel="icon" href="${prefix}favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="16x16" href="${prefix}favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="${prefix}favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="${prefix}favicon-48x48.png">
-<link rel="apple-touch-icon" href="${prefix}apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="${base}android-chrome-192x192.png">
+<link rel="icon" href="${prefix}favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="${prefix}favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="${prefix}favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="${prefix}favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="${prefix}apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="${base}favicon-v2-192x192.png">
 <link rel="manifest" href="${prefix}site.webmanifest"><meta name="theme-color" content="#1e493c">
 <link rel="stylesheet" href="${prefix}assets/css/base.css"><link rel="stylesheet" href="${prefix}assets/css/directory.css">
 <script type="application/ld+json">${JSON.stringify(schema)}</script></head><body class="directory-page">${header}<main><div class="directory-shell"><nav class="directory-breadcrumb" aria-label="パンくず"><ol><li><a href="${prefix||'./'}">ホーム</a></li><li aria-current="page">${crumb}</li></ol></nav>${body}</div></main>${footer}<script src="${prefix}assets/js/main.js"></script>${isSearch?'<script src="assets/js/company-data.js"></script><script src="assets/js/company-search.js"></script>':''}</body></html>\n`;

@@ -151,6 +151,10 @@ GitHub Pagesはサーバー側リダイレクトを設定できないため、`/
 - 静的ページ（index・welfare・group-home）は各HTMLに直接記載。B型・条件検索は `assets/data/b-type-content.json` の `analytics` に含め、`node scripts/build-directory.cjs` で生成。スニペットを直す場合は両方を同じ内容に揃える。
 - 登録URLはサイト内メニュー・sitemap・検索エンジン向け案内には載せない。`templates/comparison-page-template.html` の `<head>` にも同じGA4タグ＋除外スニペットを入れてあるため、新規ページはテンプレートから作れば自動で適用される。そのブロックは削除・複製せず、別のGAタグも追加しないこと（二重計測の原因になる）。
 
+### 2026-10-16 追記：ファビコンの拡大・ファイル名更新
+
+Googleの検索結果用ファビコンが小さく淡く見えていた（マークが画像の約25%・淡色で白背景に溶ける）ため、マークを大きく切り出し濃い緑（#1e493c）の地に配置して作り直した。Googleは同名ファイルを長期間キャッシュするため、ファイル名を `favicon-v2-*.png` / `apple-touch-icon-v2.png` に変更し、`favicon.ico` には `?v=2` を付与した。今後デザインを変える場合も、同名で上書きせずファイル名（v3等）を変えて全ページ・`scripts/build-directory.cjs`・`site.webmanifest` の参照を更新すること。Googleの表示反映は再クロール後（数日〜数週間）。
+
 ## 今回見送った改善
 
 カードの縦長改善、再検索フォーム位置、PC文字サイズ、検索OGPの個別化、JS無効時フォーム、業種追加向けの大規模整理、support配列の再設計、source設計の全面変更は今後の対応とする。
