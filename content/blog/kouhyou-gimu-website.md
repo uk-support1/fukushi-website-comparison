@@ -22,7 +22,6 @@
     { "title": "東京都障害者サービス情報「情報公表未報告減算について」", "url": "https://www.shougaifukushi.metro.tokyo.lg.jp/Lib/Download.php?sqid=2557" },
     { "title": "神戸市「障害福祉サービス等情報公表制度について」", "url": "https://www.city.kobe.lg.jp/a20315/business/annaitsuchi/shogaifukushi/jouhoukouhyou.html" },
     { "title": "鹿児島県「障害児通所支援事業所における支援プログラムの公表について」", "url": "https://www.pref.kagoshima.jp/ae07/kenko-fukushi/syogai-syakai/syougaiji/jigyousya/shien-program.html" },
-    { "title": "松江市「集団指導 Q&A」（重要事項のウェブサイト掲載に関する質疑を含む、PDF）", "url": "https://www.city.matsue.lg.jp/material/files/group/46/R5_3rd_GIR_QA2.pdf" },
     { "title": "豊明市「重要事項のウェブサイト掲載について」（介護保険サービス、PDF）", "url": "https://www.city.toyoake.lg.jp/secure/26317/2.webkeisai.pdf" }
   ]
 }

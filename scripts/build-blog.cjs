@@ -219,6 +219,7 @@ ${CATEGORIES.map(c => `<li><a href="${prefix}blog/category/${c.slug}/">${c.name}
 </ul>
 </nav>
 <p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
 <p class="site-footer__copyright">&copy; ${SITE}</p>
 </div>
 </footer>`;

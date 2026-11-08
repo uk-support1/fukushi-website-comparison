@@ -52,12 +52,6 @@
 - 掲載企業の記事を出典にする場合は、他の情報源（公的機関・報道・他社）と並べて使い、そのページだけに依拠しない。
 - 新しい記事を書く前に、下の一覧とテーマ・タイトルが重ならないか確認する。一覧は分かり次第追記する。
 
-### 福祉ITパートナーのブログで扱っていることが確認できたテーマ（重複を避ける）
+### 福祉ITパートナーのブログ記事一覧
 
-| テーマ | 同社記事URL |
-| --- | --- |
-| 2026年10月のPHPの重大な脆弱性 | https://fukushi-it-partner.com/blog/critical-php-vulnerability-2026-10.html |
-| PHPを使わないホームページ（静的サイト）のしくみ | https://fukushi-it-partner.com/blog/homepage-without-php.html |
-| PHPのアップデート費用 | https://fukushi-it-partner.com/blog/php-update-cost.html |
-| PHPを使わない問い合わせフォームの代替方法 | https://fukushi-it-partner.com/blog/php-contact-form-alternatives.html |
-| Ameba Owndのホームページが見られない原因 | https://fukushi-it-partner.com/blog/ameba-ownd-cannot-view.html |
+全記事のタイトルとURLは `docs/partner-blog-topics.md` にまとめている（同社の sitemap.xml から取得）。新しい記事を書く前に更新し、照合する。

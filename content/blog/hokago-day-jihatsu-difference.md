@@ -20,7 +20,6 @@
   "sources": [
     { "title": "鹿児島県「障害児通所支援事業所における支援プログラムの公表について」", "url": "https://www.pref.kagoshima.jp/ae07/kenko-fukushi/syogai-syakai/syougaiji/jigyousya/shien-program.html" },
     { "title": "千葉県「支援プログラムの公表について」", "url": "https://www.pref.chiba.lg.jp/shoji/jigyoushamuke/jidou/shienprogram.html" },
-    { "title": "滋賀県「支援プログラム未公表減算について」（PDF）", "url": "https://www.pref.shiga.lg.jp/file/attachment/5536125.pdf" },
     { "title": "厚生労働省「障害福祉サービスについて」", "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/service/naiyou.html" }
   ]
 }
