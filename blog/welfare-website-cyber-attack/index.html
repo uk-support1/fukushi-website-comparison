@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>福祉事業所のホームページが狙われている｜2026年のサイバー攻撃の動向と今すぐできる対策｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="ランサムウェア被害は2026年上半期に過去最多を更新し、WordPress本体の緊急脆弱性「wp2shell」も悪用されました。福祉・介護事業所のホームページが狙われる理由、最近の動向、小規模な事業所でも今すぐできる対策をわかりやすく解説します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/welfare-website-cyber-attack/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="福祉事業所のホームページが狙われている｜2026年のサイバー攻撃の動向と今すぐできる対策｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="ランサムウェア被害は2026年上半期に過去最多を更新し、WordPress本体の緊急脆弱性「wp2shell」も悪用されました。福祉・介護事業所のホームページが狙われる理由、最近の動向、小規模な事業所でも今すぐできる対策をわかりやすく解説します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/welfare-website-cyber-attack/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta property="article:section" content="セキュリティ対策">
+<link rel="icon" href="../../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "福祉事業所のホームページが狙われている｜2026年のサイバー攻撃の動向と今すぐできる対策",
+  "description": "ランサムウェア被害は2026年上半期に過去最多を更新し、WordPress本体の緊急脆弱性「wp2shell」も悪用されました。福祉・介護事業所のホームページが狙われる理由、最近の動向、小規模な事業所でも今すぐできる対策をわかりやすく解説します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/welfare-website-cyber-attack/",
+  "url": "https://fukushi-hp-hikaku.com/blog/welfare-website-cyber-attack/",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
+  "articleSection": "セキュリティ対策",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v2-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/brand/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "セキュリティ対策",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/security/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "福祉事業所のホームページが狙われている｜2026年のサイバー攻撃の動向と今すぐできる対策",
+      "item": "https://fukushi-hp-hikaku.com/blog/welfare-website-cyber-attack/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/security/">セキュリティ対策</a></li><li aria-current="page">福祉事業所のホームページが狙われている｜2026年のサイバー攻撃の動向と今すぐできる対策</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--security" href="../../blog/category/security/">セキュリティ対策</a>
+<h1 class="blog-article__title">福祉事業所のホームページが狙われている｜2026年のサイバー攻撃の動向と今すぐできる対策</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-08">2026年11月8日</time></span>
+
+<span>読了目安 約6分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<p class="blog-article__lead">「うちのような小さな事業所が狙われるはずがない」――そう考えている方こそ注意が必要です。サイバー攻撃の多くは、相手を選ばずに弱点のあるサイトやシステムを自動的に探して攻撃します。この記事では、2026年に入ってからの動向と、福祉事業所が今すぐできる対策を整理します。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>2026年上半期のランサムウェア被害は半期として過去最多（警察庁）</li><li>WordPress本体の緊急脆弱性「wp2shell」が実際の攻撃に悪用された</li><li>福祉事業所のホームページ・システムが狙われやすい理由</li><li>専門知識がなくても今日からできる7つの対策</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">2026年、サイバー攻撃はさらに増えている</a></li><li><a href="#sec-2">福祉事業所のホームページが狙われやすい理由</a></li><li><a href="#sec-3">ホームページへの主な攻撃の手口</a></li><li><a href="#sec-4">今日からできる7つの対策</a></li><li><a href="#sec-5">制作会社選びでもセキュリティを確認しよう</a></li><li><a href="#sec-6">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">2026年、サイバー攻撃はさらに増えている</h2>
+<h3>ランサムウェア被害は半期として過去最多</h3>
+<p>警察庁が2026年9月に公表した「令和8年上半期におけるサイバー空間をめぐる脅威の情勢等について」によると、2026年上半期に警察へ報告されたランサムウェアの被害は<strong>123件</strong>で、統計を取り始めた2020年下半期以降、半期として過去最多となりました。</p>
+<p>被害の内訳を見ると、<strong>中小企業が79件</strong>と全体の約3分の2を占めています。大企業だけが狙われているわけではないことがわかります。また、警察庁が観測した脆弱性の探索などの不審なアクセスは、1日・1IPアドレスあたり1万3,687件と、前年同期から約50％増加しています。インターネットに公開されているサーバーやホームページは、<strong>常に攻撃者から「弱点がないか」を自動的に調べられている</strong>状態だといえます。</p>
+<h3>IPAの「10大脅威」でも上位は変わらず</h3>
+<p>IPA（情報処理推進機構）が毎年発表している「情報セキュリティ10大脅威 2026」（組織編）では、1位が「ランサム攻撃による被害」、2位が「サプライチェーンや委託先を狙った攻撃」、3位に「AIの利用をめぐるサイバーリスク」が初めてランクインしました。4位は「システムの脆弱性を悪用した攻撃」です。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">順位</th><th scope="col">脅威（組織編）</th></tr></thead><tbody><tr><th scope="row">1位</th><td>ランサム攻撃による被害</td></tr><tr><th scope="row">2位</th><td>サプライチェーンや委託先を狙った攻撃</td></tr><tr><th scope="row">3位</th><td>AIの利用をめぐるサイバーリスク</td></tr><tr><th scope="row">4位</th><td>システムの脆弱性を悪用した攻撃</td></tr><tr><th scope="row">5位</th><td>機密情報を狙った標的型攻撃</td></tr></tbody></table></div>
+<div class="blog-box blog-box--info"><p class="blog-box__title">「委託先」も狙われる</p><p>2位の「サプライチェーンや委託先を狙った攻撃」は、福祉事業所にも関係します。ホームページの制作・保守会社、介護ソフトの提供会社、請求業務の委託先などが攻撃を受け、そこから事業所の情報が漏えいする可能性があるためです。委託先がどのような対策をとっているかを確認することも、事業所の大切な役割です。</p></div>
+<h3>WordPress本体に緊急の脆弱性「wp2shell」</h3>
+<p>2026年7月17日、世界中で広く使われているホームページ作成ソフト「WordPress」の本体に、<strong>ログインしなくても外部から任意のプログラムを実行される</strong>おそれがある深刻な脆弱性（通称「wp2shell」）が見つかり、修正版（7.0.2、6.9.5、6.8.6）が公開されました。すでに実際の攻撃も確認されたと報じられ、WordPressの運営側は対象サイトに対して異例の強制自動更新を行いました。</p>
+<p>WordPressは福祉事業所のホームページでもよく使われています。自動更新が無効になっていたり、古いバージョンのまま放置されていたりするサイトは、こうした攻撃の格好の標的になります。その後も修正版の公開は続いているため、<strong>常に最新版を使っているか</strong>を確認しておきましょう。</p>
+<h3>行政も対策の徹底を呼びかけ</h3>
+<p>報道などによると、厚生労働省は2026年10月、情報漏えいを伴う不正アクセスが相次いでいることを受け、医療機関や高齢者施設などの所管事業者に対してサイバーセキュリティ対策の徹底を周知し、被害を受けた場合の報告を求めています。福祉の現場でも、サイバー攻撃は「他人事」ではなくなっています。</p>
+<h2 id="sec-2">福祉事業所のホームページが狙われやすい理由</h2>
+<h3>1. 公開後に更新されていないサイトが多い</h3>
+<p>ホームページを作った後、ソフトウェアやプラグインの更新が行われず、何年も放置されているケースは珍しくありません。担当者の異動や制作会社との契約終了で「誰が管理しているのかわからない」状態になっていることもあります。</p>
+<h3>2. 個人情報や要配慮個人情報を扱っている</h3>
+<p>福祉事業所は、利用者の氏名・住所だけでなく、障害の種類や病歴など<strong>要配慮個人情報</strong>を扱います。問い合わせフォームや見学申込みフォームを通じて、こうした情報がホームページに入力されることもあります。</p>
+<h3>3. 専任のIT担当者がいない</h3>
+<p>多くの事業所では、ホームページやパソコンの管理を、本来は支援や事務を担当している職員が兼務しています。セキュリティの情報を日常的に確認する余裕がないのが実情です。</p>
+<h3>4. 業務システムやメールとつながっている</h3>
+<p>ホームページのサーバーと同じアカウントでメールを運用していたり、職員が同じパスワードを使い回していたりすると、ひとつの侵入が事業所全体の被害につながるおそれがあります。</p>
+<h2 id="sec-3">ホームページへの主な攻撃の手口</h2>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">手口</th><th scope="col">内容</th><th scope="col">主な被害</th></tr></thead><tbody><tr><th scope="row">脆弱性を突いた改ざん</th><td>古いWordPress本体・プラグイン・テーマの弱点を悪用して侵入</td><td>不正なページの設置、詐欺サイトへの誘導、ウイルス配布</td></tr><tr><th scope="row">管理画面への不正ログイン</th><td>推測しやすいパスワードを自動で試す（総当たり攻撃）</td><td>サイトの乗っ取り、情報の書き換え</td></tr><tr><th scope="row">フォームの悪用</th><td>問い合わせフォームから不正なデータを送る、大量の迷惑送信</td><td>情報漏えい、迷惑メール送信の踏み台</td></tr><tr><th scope="row">フィッシング</th><td>サーバー会社や取引先を装ったメールでパスワードを盗む</td><td>アカウントの乗っ取り</td></tr><tr><th scope="row">検索結果の汚染</th><td>改ざんしたサイトに大量の不正ページを作成</td><td>検索結果に不審な日本語が表示され、信用が低下</td></tr></tbody></table></div>
+<h2 id="sec-4">今日からできる7つの対策</h2>
+<p>専門知識がなくても取り組める対策から始めましょう。</p>
+<ol class="blog-olist"><li><strong>管理者を明確にする</strong>：ホームページ、ドメイン、サーバーの契約者とログイン情報を誰が管理しているかを確認し、記録しておく</li><li><strong>ソフトウェアを最新に保つ</strong>：WordPress本体・プラグイン・テーマを更新する。自動更新の設定も確認する</li><li><strong>使っていないプラグイン・テーマを削除する</strong>：無効化しただけでは弱点が残る場合がある</li><li><strong>パスワードを強くし、二段階認証を設定する</strong>：管理画面、サーバー、メールのパスワードを使い回さない</li><li><strong>バックアップを取る</strong>：サーバー外にも保存し、復元できることを確認しておく</li><li><strong>常時SSL（https）にする</strong>：フォームの入力内容を暗号化する</li><li><strong>保守契約の内容を確認する</strong>：制作会社に任せている場合、更新・監視・復旧が契約に含まれているかを確認する</li></ol>
+<p>WordPressを使っている場合の具体的な手順は「<a href="../../blog/wordpress-security-checklist/">WordPressセキュリティ対策チェックリスト</a>」で詳しく解説しています。</p>
+<div class="blog-box blog-box--warn"><p class="blog-box__title">「改ざんされたかも」と思ったら</p><p>ホームページに見覚えのない表示がある、検索結果に不審な文字が出る、サーバー会社から警告が届いたといった場合は、すぐに対応が必要です。初動の手順は「<a href="../../blog/website-hacked-first-response/">ホームページが改ざんされたときの初動対応</a>」にまとめています。</p></div>
+<h2 id="sec-5">制作会社選びでもセキュリティを確認しよう</h2>
+<p>これからホームページを作る、または作り直す場合は、デザインや料金だけでなく、公開後のセキュリティ対策を比較の基準に加えましょう。</p>
+<ul class="blog-list"><li>ソフトウェア・プラグインの更新は誰が、どのくらいの頻度で行うか</li><li>バックアップの頻度と保存期間、復元の費用</li><li>改ざんや不正アクセスが起きた場合の対応と費用</li><li>サーバー・ドメインの契約者は誰になるか（事業所名義にできるか）</li></ul>
+<p>当サイトの<a href="../../#comparisons">業種別比較記事</a>では、各社の公開後サポートの内容も整理しています。</p>
+<h2 id="sec-6">まとめ</h2>
+<p>2026年はランサムウェア被害が半期として過去最多となり、WordPress本体の緊急脆弱性も実際に悪用されました。攻撃者は事業所の規模を問わず、弱点のあるサイトを自動的に探しています。</p>
+<p>福祉事業所のホームページは、利用者や家族からの信頼の入口です。管理者の明確化、ソフトウェアの更新、強いパスワードと二段階認証、バックアップという基本を確実に押さえ、制作会社とも役割分担を確認しておきましょう。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>ホームページが改ざんされると、どんな被害がありますか？</summary><div class="blog-faq__a"><p>閲覧した利用者や家族のパソコン・スマートフォンがウイルスに感染する、偽の通販サイトや詐欺サイトへ誘導される、問い合わせフォームの個人情報が盗まれる、検索結果に不審な日本語が表示されるといった被害が考えられます。事業所の信用が大きく損なわれるだけでなく、復旧にも費用と時間がかかります。</p></div></details><details class="blog-faq__item"><summary>制作会社に任せているので、自分たちは何もしなくて大丈夫ですか？</summary><div class="blog-faq__a"><p>保守契約の内容によります。「ソフトウェアの更新」「バックアップ」「不正アクセスの監視」「改ざん時の復旧」が契約に含まれているかを確認してください。公開後の保守が契約に含まれていない場合、誰も更新しないまま放置されているケースもあります。</p></div></details><details class="blog-faq__item"><summary>被害にあったら、どこに相談すればよいですか？</summary><div class="blog-faq__a"><p>都道府県警察のサイバー犯罪相談窓口、IPA（情報処理推進機構）の情報セキュリティ安心相談窓口、JPCERT/CC（インシデント報告）などがあります。個人情報が漏えいした、またはそのおそれがある場合は、個人情報保護委員会への報告と本人への通知が必要になることがあります。所管の自治体への連絡も忘れずに行いましょう。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://www.npa.go.jp/publications/statistics/cybersecurity/data/R8kami/R08_kami_cyber_jousei.pdf" target="_blank" rel="noopener">警察庁「令和8年上半期におけるサイバー空間をめぐる脅威の情勢等について」（PDF）</a></li><li><a href="https://atmarkit.itmedia.co.jp/ait/articles/2609/17/news010.html" target="_blank" rel="noopener">@IT「ランサムウェア被害は過去最多 警察庁が明かした2026年上半期の異変」</a></li><li><a href="https://www.ipa.go.jp/security/10threats/10threats2026.html" target="_blank" rel="noopener">IPA「情報セキュリティ10大脅威 2026」</a></li><li><a href="https://www.itmedia.co.jp/news/articles/2607/21/news084.html" target="_blank" rel="noopener">ITmedia NEWS「WordPressに認証不要でコード実行される緊急の脆弱性 即時更新を呼び掛け」（2026年7月21日）</a></li><li><a href="https://blog.flatt.tech/entry/wp2shell_wordpress" target="_blank" rel="noopener">GMO Flatt Security Blog「WordPressの深刻度『緊急』脆弱性 wp2shell の概要と対応指針」</a></li><li><a href="https://rocket-boys.co.jp/security-measures-lab/industry/healthcare/nursing-care-welfare/" target="_blank" rel="noopener">セキュリティ対策Lab「介護・福祉のサイバー攻撃・情報漏洩事例と対策」</a></li><li><a href="https://www.soumu.go.jp/main_sosiki/cybersecurity/kokumin/" target="_blank" rel="noopener">総務省「国民のためのサイバーセキュリティサイト」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card" href="../../blog/wordpress-security-checklist/">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">WordPressセキュリティ対策チェックリスト｜福祉事業所のホームページを改ざん・乗っ取りから守る20項目</h3>
+<p class="blog-card__desc">WordPressで作った福祉事業所のホームページを改ざんや乗っ取りから守るためのチェックリスト。更新、ログイン対策、プラグイン管理、バックアップ、サーバー設定、運用体制まで20項目を、専門知識がなくても確認できるよう解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/website-hacked-first-response/">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">ホームページが改ざん・乗っ取りされたときの初動対応マニュアル｜福祉事業所向け</h3>
+<p class="blog-card__desc">福祉事業所のホームページが改ざん・乗っ取りされた疑いがあるときの初動対応を、気づくサイン、最初の1時間でやること、復旧、個人情報保護委員会への報告、再発防止の流れで解説。連絡先リストのひな形つきです。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/contact-form-personal-info/">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">福祉事業所の問い合わせフォームと個人情報保護｜要配慮個人情報の扱いとプライバシーポリシーの書き方</h3>
+<p class="blog-card__desc">福祉事業所のホームページに設置する問い合わせ・見学申込みフォームで注意すべき個人情報保護のポイントを解説。要配慮個人情報の取得、SSL化、入力項目の最小化、プライバシーポリシーに書くべき内容、迷惑送信対策までまとめました。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

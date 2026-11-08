@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>福祉事業所のホームページに載せるべき項目チェックリスト｜利用者・家族・相談支援専門員に選ばれる30項目｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="福祉事業所のホームページに掲載すべき内容を、基本情報、サービス内容、費用、1日の流れ、公表情報、採用情報など30項目のチェックリストで紹介。利用者・家族・相談支援専門員それぞれが知りたい情報と、ページ構成の例も解説します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/hp-must-have-contents/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="福祉事業所のホームページに載せるべき項目チェックリスト｜利用者・家族・相談支援専門員に選ばれる30項目｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="福祉事業所のホームページに掲載すべき内容を、基本情報、サービス内容、費用、1日の流れ、公表情報、採用情報など30項目のチェックリストで紹介。利用者・家族・相談支援専門員それぞれが知りたい情報と、ページ構成の例も解説します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/hp-must-have-contents/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta property="article:section" content="ホームページ制作の基礎">
+<link rel="icon" href="../../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "福祉事業所のホームページに載せるべき項目チェックリスト｜利用者・家族・相談支援専門員に選ばれる30項目",
+  "description": "福祉事業所のホームページに掲載すべき内容を、基本情報、サービス内容、費用、1日の流れ、公表情報、採用情報など30項目のチェックリストで紹介。利用者・家族・相談支援専門員それぞれが知りたい情報と、ページ構成の例も解説します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/hp-must-have-contents/",
+  "url": "https://fukushi-hp-hikaku.com/blog/hp-must-have-contents/",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
+  "articleSection": "ホームページ制作の基礎",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v2-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/brand/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ホームページ制作の基礎",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/hp-seisaku/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "福祉事業所のホームページに載せるべき項目チェックリスト｜利用者・家族・相談支援専門員に選ばれる30項目",
+      "item": "https://fukushi-hp-hikaku.com/blog/hp-must-have-contents/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li><li aria-current="page">福祉事業所のホームページに載せるべき項目チェックリスト｜利用者・家族・相談支援専門員に選ばれる30項目</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--hp-seisaku" href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a>
+<h1 class="blog-article__title">福祉事業所のホームページに載せるべき項目チェックリスト｜利用者・家族・相談支援専門員に選ばれる30項目</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-08">2026年11月8日</time></span>
+
+<span>読了目安 約4分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<p class="blog-article__lead">ホームページを作るとき、「何を載せればいいのか」で手が止まってしまうことは少なくありません。この記事では、福祉事業所のホームページに載せたい項目を30のチェックリストにまとめました。新しく作るときだけでなく、今のホームページの見直しにも使えます。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>ホームページを見るのは「利用者・家族」「相談支援専門員」「求職者」「行政」</li><li>基本情報からサービス内容、公表情報まで30項目のチェックリスト</li><li>小規模事業所向けのページ構成例</li><li>掲載するときに気をつけたい表現と写真の扱い</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">ホームページは誰が見ているのか</a></li><li><a href="#sec-2">載せるべき30項目チェックリスト</a></li><li><a href="#sec-3">小規模事業所向けのページ構成例</a></li><li><a href="#sec-4">掲載するときに気をつけたいこと</a></li><li><a href="#sec-5">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">ホームページは誰が見ているのか</h2>
+<p>福祉事業所のホームページは、さまざまな立場の人に見られています。それぞれが知りたいことを意識すると、載せるべき内容が見えてきます。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">見る人</th><th scope="col">主に知りたいこと</th></tr></thead><tbody><tr><th scope="row">利用を検討する本人</th><td>どんな場所か、何をするのか、通えそうか、雰囲気は合いそうか</td></tr><tr><th scope="row">家族</th><td>安心して任せられるか、費用はいくらか、送迎はあるか、職員はどんな人か</td></tr><tr><th scope="row">相談支援専門員・医療機関のソーシャルワーカー</th><td>対象者、定員、空き状況、支援の特色、連絡先</td></tr><tr><th scope="row">求職者</th><td>仕事内容、給与・待遇、職場の雰囲気、働き方</td></tr><tr><th scope="row">行政・関係機関</th><td>運営法人、事業所番号、公表情報、運営規程の概要</td></tr></tbody></table></div>
+<h2 id="sec-2">載せるべき30項目チェックリスト</h2>
+<h3>基本情報（8項目）</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">No.</th><th scope="col">項目</th><th scope="col">ポイント</th></tr></thead><tbody><tr><th scope="row">1</th><td>事業所名（正式名称）</td><td>指定を受けている名称と一致させる</td></tr><tr><th scope="row">2</th><td>サービスの種類（正式名称）</td><td>「就労継続支援B型」「共同生活援助」など</td></tr><tr><th scope="row">3</th><td>運営法人の名称・代表者</td><td>法人のホームページがあればリンクする</td></tr><tr><th scope="row">4</th><td>所在地・地図</td><td>Googleマップの埋め込み、最寄り駅からの道順</td></tr><tr><th scope="row">5</th><td>電話番号・受付時間</td><td>スマートフォンからタップで発信できるように</td></tr><tr><th scope="row">6</th><td>営業日・営業時間</td><td>祝日、長期休暇の扱いも</td></tr><tr><th scope="row">7</th><td>定員</td><td>利用定員、居室数など</td></tr><tr><th scope="row">8</th><td>事業所番号</td><td>行政や相談支援専門員が確認しやすくなる</td></tr></tbody></table></div>
+<h3>サービス内容（7項目）</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">No.</th><th scope="col">項目</th><th scope="col">ポイント</th></tr></thead><tbody><tr><th scope="row">9</th><td>対象となる方</td><td>障害種別、年齢、手帳の有無などを平易に</td></tr><tr><th scope="row">10</th><td>支援の特色・強み</td><td>他の事業所との違いを具体的に</td></tr><tr><th scope="row">11</th><td>活動・作業内容</td><td>写真つきで紹介</td></tr><tr><th scope="row">12</th><td>1日の流れ</td><td>時間ごとのスケジュール</td></tr><tr><th scope="row">13</th><td>年間行事・イベント</td><td>季節の行事、外出など</td></tr><tr><th scope="row">14</th><td>送迎の有無と範囲</td><td>対応エリア、時間帯</td></tr><tr><th scope="row">15</th><td>食事・設備</td><td>昼食の提供、バリアフリー設備など</td></tr></tbody></table></div>
+<h3>費用・利用方法（5項目）</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">No.</th><th scope="col">項目</th><th scope="col">ポイント</th></tr></thead><tbody><tr><th scope="row">16</th><td>利用料の考え方</td><td>世帯所得に応じた負担上限など、制度の説明</td></tr><tr><th scope="row">17</th><td>実費の内訳</td><td>食費、家賃、光熱水費、日用品費など</td></tr><tr><th scope="row">18</th><td>工賃・給与の実績（就労系）</td><td>時点を明記して正確に</td></tr><tr><th scope="row">19</th><td>利用開始までの流れ</td><td>問い合わせ→見学→体験→契約のステップ</td></tr><tr><th scope="row">20</th><td>空き状況</td><td>時点を明記し、こまめに更新</td></tr></tbody></table></div>
+<h3>信頼・安心のための情報（6項目）</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">No.</th><th scope="col">項目</th><th scope="col">ポイント</th></tr></thead><tbody><tr><th scope="row">21</th><td>職員の紹介</td><td>資格、経験、人柄が伝わるメッセージ</td></tr><tr><th scope="row">22</th><td>代表者・管理者のあいさつ</td><td>事業所をつくった思い、支援の方針</td></tr><tr><th scope="row">23</th><td>公表情報</td><td>支援プログラム、評価結果、重要事項、運営規程の概要</td></tr><tr><th scope="row">24</th><td>苦情・相談窓口</td><td>担当者、第三者委員、外部の窓口</td></tr><tr><th scope="row">25</th><td>虐待防止・感染症対策・BCPの取組</td><td>委員会や研修の実施状況</td></tr><tr><th scope="row">26</th><td>プライバシーポリシー</td><td>個人情報の取り扱い</td></tr></tbody></table></div>
+<h3>問い合わせ・採用・更新（4項目）</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">No.</th><th scope="col">項目</th><th scope="col">ポイント</th></tr></thead><tbody><tr><th scope="row">27</th><td>問い合わせ・見学申込みフォーム</td><td>入力項目は必要最小限に</td></tr><tr><th scope="row">28</th><td>よくある質問</td><td>電話でよく聞かれる質問を掲載</td></tr><tr><th scope="row">29</th><td>採用情報</td><td>募集職種、条件、応募方法</td></tr><tr><th scope="row">30</th><td>お知らせ・ブログ</td><td>定期的な更新で「活動している事業所」であることを伝える</td></tr></tbody></table></div>
+<p>公表情報の詳細は「<a href="../../blog/kouhyou-gimu-website/">障害福祉事業所がホームページ等で公表すべき情報まとめ</a>」、フォームの注意点は「<a href="../../blog/contact-form-personal-info/">問い合わせフォームと個人情報保護</a>」で解説しています。</p>
+<h2 id="sec-3">小規模事業所向けのページ構成例</h2>
+<p>1つの事業所を紹介するホームページであれば、次の7〜8ページ程度の構成が基本になります。</p>
+<ol class="blog-olist"><li><strong>トップページ</strong>：事業所の特色、空き状況、見学の案内、お知らせ</li><li><strong>事業所について</strong>：代表あいさつ、支援の方針、職員紹介</li><li><strong>サービス内容</strong>：対象者、活動内容、1日の流れ、年間行事</li><li><strong>ご利用案内</strong>：費用、利用開始までの流れ、よくある質問</li><li><strong>事業所概要・アクセス</strong>：基本情報、地図、送迎範囲</li><li><strong>公表情報</strong>：支援プログラム、評価結果、重要事項など</li><li><strong>採用情報</strong>：募集要項、職員の声</li><li><strong>お問い合わせ</strong>：フォーム、電話番号</li></ol>
+<div class="blog-box blog-box--point"><p class="blog-box__title">トップページの最初の画面が大切</p><p>スマートフォンで見たとき、最初の画面で「何の事業所か」「どこにあるか」「どうすれば見学できるか」がわかるようにしましょう。サービス名と地域名（例：「◯◯市の就労継続支援B型」）を見出しに入れると、検索からの訪問にもつながりやすくなります。</p></div>
+<h2 id="sec-4">掲載するときに気をつけたいこと</h2>
+<h3>表現は正確に、誇張しない</h3>
+<p>「必ず就職できます」「どんな障害でも対応できます」といった断定的な表現は避けましょう。実績を載せる場合は、「令和7年度の就職者数◯名」のように時点と数字を正確に示します。</p>
+<h3>写真の掲載は同意を得て</h3>
+<p>利用者が写っている写真を掲載する場合は、必ず本人（必要に応じて家族）の同意を得ましょう。顔が写らない構図にする、後ろ姿や手元を撮るなどの工夫も有効です。</p>
+<h3>読みやすさ（アクセシビリティ）にも配慮する</h3>
+<p>文字の大きさ、色のコントラスト、画像の代替テキスト、わかりやすい言葉づかいなど、障害のある方や高齢の方にも読みやすいホームページを目指しましょう。詳しくは「<a href="../../blog/web-accessibility/">改正障害者差別解消法とウェブアクセシビリティ</a>」で解説しています。</p>
+<h2 id="sec-5">まとめ</h2>
+<p>福祉事業所のホームページは、利用者・家族、相談支援専門員、求職者、行政など多くの人に見られています。基本情報、サービス内容、費用、公表情報、問い合わせ方法、採用情報をそろえ、それぞれが知りたい情報にすぐたどり着ける構成にすることが大切です。</p>
+<p>まずは30項目のチェックリストで、今のホームページに足りない情報がないか確認してみてください。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>1ページだけのホームページでも効果はありますか？</summary><div class="blog-faq__a"><p>まずは事業所の存在と基本情報を伝えるという点で、1ページでも効果はあります。ただし、サービス内容、費用、1日の流れ、公表情報、採用情報などをすべて1ページに載せると読みにくくなります。開所直後は1ページで始め、情報が増えたらページを分けていくのも現実的な方法です。</p></div></details><details class="blog-faq__item"><summary>利用者の声を載せてもよいですか？</summary><div class="blog-faq__a"><p>本人の同意を得たうえで、個人が特定されない形で掲載するのであれば問題ありません。ただし、効果を過大に表現したり、特定の結果を保証するような書き方をしたりするのは避けましょう。掲載する場合は、いつ、どのような立場の方の声かを添えると誠実な印象になります。</p></div></details><details class="blog-faq__item"><summary>法人のホームページと事業所のホームページは分けるべきですか？</summary><div class="blog-faq__a"><p>複数の事業所を運営している場合は、法人サイトの中に事業所ごとのページを作る方法と、事業所ごとに独立したサイトを作る方法があります。管理のしやすさを重視するなら法人サイト内に、事業所ごとの特色や地域での検索を重視するなら、それぞれのページを充実させることが大切です。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://www.wam.go.jp/sfkohyoout/" target="_blank" rel="noopener">WAM NET「障害福祉サービス等情報検索」</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ja" target="_blank" rel="noopener">Google 検索セントラル「SEO スターター ガイド」</a></li><li><a href="https://www.digital.go.jp/resources/introduction-to-web-accessibility-guidebook" target="_blank" rel="noopener">デジタル庁「ウェブアクセシビリティ導入ガイドブック」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card" href="../../blog/kouhyou-gimu-website/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害福祉事業所がホームページ等で公表すべき情報まとめ｜情報公表制度・未報告減算・重要事項の掲載</h3>
+<p class="blog-card__desc">障害福祉サービス等情報公表制度（WAM NET）の未報告減算、児童発達支援・放課後等デイサービスの支援プログラム未公表減算、重要事項のウェブサイト掲載など、障害福祉事業所が公表すべき情報と減算のリスクを一覧で整理します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/hp-company-choose/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">福祉事業所のホームページ制作会社の選び方｜失敗しないための7つの基準と問い合わせ時の質問リスト</h3>
+<p class="blog-card__desc">福祉事業所がホームページ制作会社を選ぶときの7つの基準（福祉への理解、料金の透明性、更新のしやすさ、公開後の保守、セキュリティ、名義、相談のしやすさ）と、問い合わせ・見積もり時にそのまま使える質問リスト25問を紹介します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/recruit-website/">
+<span class="blog-cat blog-cat--unei">集客・採用・運用</span>
+<h3 class="blog-card__title">福祉事業所の採用ページ設計｜処遇改善の見える化とGoogleしごと検索（求人の構造化データ）への対応</h3>
+<p class="blog-card__desc">福祉事業所の採用ページを、求職者が応募前に確認する情報から逆算して設計する方法を解説。処遇改善加算の取組の見える化、数字で見る職場、職員インタビューの質問例、求人の構造化データによるGoogleしごと検索への掲載、募集終了時の注意まで紹介します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>福祉事業所のホームページ制作費用の相場｜初期費用・月額費用・1年目の総額で比べる｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="福祉事業所のホームページ制作にかかる費用の相場を、自作ツール・テンプレート型・月額定額型・オリジナル制作のタイプ別に解説。サーバー・ドメインなどの見落としがちな費用、1年目と3年間の総額の考え方、見積もりで確認すべき点も紹介します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/hp-cost-souba/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="福祉事業所のホームページ制作費用の相場｜初期費用・月額費用・1年目の総額で比べる｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="福祉事業所のホームページ制作にかかる費用の相場を、自作ツール・テンプレート型・月額定額型・オリジナル制作のタイプ別に解説。サーバー・ドメインなどの見落としがちな費用、1年目と3年間の総額の考え方、見積もりで確認すべき点も紹介します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/hp-cost-souba/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta property="article:section" content="ホームページ制作の基礎">
+<link rel="icon" href="../../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "福祉事業所のホームページ制作費用の相場｜初期費用・月額費用・1年目の総額で比べる",
+  "description": "福祉事業所のホームページ制作にかかる費用の相場を、自作ツール・テンプレート型・月額定額型・オリジナル制作のタイプ別に解説。サーバー・ドメインなどの見落としがちな費用、1年目と3年間の総額の考え方、見積もりで確認すべき点も紹介します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/hp-cost-souba/",
+  "url": "https://fukushi-hp-hikaku.com/blog/hp-cost-souba/",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
+  "articleSection": "ホームページ制作の基礎",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v2-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/brand/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ホームページ制作の基礎",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/hp-seisaku/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "福祉事業所のホームページ制作費用の相場｜初期費用・月額費用・1年目の総額で比べる",
+      "item": "https://fukushi-hp-hikaku.com/blog/hp-cost-souba/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li><li aria-current="page">福祉事業所のホームページ制作費用の相場｜初期費用・月額費用・1年目の総額で比べる</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--hp-seisaku" href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a>
+<h1 class="blog-article__title">福祉事業所のホームページ制作費用の相場｜初期費用・月額費用・1年目の総額で比べる</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-08">2026年11月8日</time></span>
+
+<span>読了目安 約4分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<p class="blog-article__lead">「ホームページを作りたいけれど、いくらかかるのか見当がつかない」という声は、福祉事業所の運営者からよく聞かれます。制作費は数万円から100万円以上まで幅があり、月額費用の有無によっても総額が大きく変わります。この記事では、費用の相場と比べ方を整理します。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>制作方法ごとの費用相場（初期費用と月額費用）</li><li>見落としがちなサーバー・ドメイン・更新費用</li><li>「1年目の総額」と「3年間の総額」で比べる方法</li><li>見積もりで必ず確認すべき項目</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">制作方法別の費用相場</a></li><li><a href="#sec-2">費用の内訳を知っておこう</a></li><li><a href="#sec-3">見落としがちな費用</a></li><li><a href="#sec-4">「1年目の総額」と「3年間の総額」で比べる</a></li><li><a href="#sec-5">見積もりで必ず確認すべき項目</a></li><li><a href="#sec-6">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">制作方法別の費用相場</h2>
+<p>ホームページの費用は、「誰が」「どのように」作るかで大きく変わります。福祉事業所でよく選ばれる方法ごとの、一般的な費用の目安は次のとおりです。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">制作方法</th><th scope="col">初期費用の目安</th><th scope="col">月額費用の目安</th><th scope="col">向いている事業所</th></tr></thead><tbody><tr><th scope="row">ホームページ作成ツールで自作</th><td>0円〜数万円</td><td>0円〜数千円</td><td>職員にパソコン作業が得意な人がいて、時間をかけられる</td></tr><tr><th scope="row">テンプレート型・格安制作</th><td>数万円〜20万円程度</td><td>0円〜1万円程度</td><td>費用を抑えて早く公開したい、ページ数が少なくてよい</td></tr><tr><th scope="row">月額定額型（サブスクリプション）</th><td>0円〜数万円</td><td>数千円〜2万円程度</td><td>初期費用を抑え、更新も任せたい</td></tr><tr><th scope="row">オリジナル制作（中小の制作会社）</th><td>30万円〜100万円程度</td><td>数千円〜数万円</td><td>デザインや構成にこだわりたい、複数事業所の情報を載せたい</td></tr><tr><th scope="row">大規模・高機能サイト</th><td>100万円以上</td><td>数万円以上</td><td>法人全体のサイト、採用サイト、多数の事業所を掲載</td></tr></tbody></table></div>
+<p>※あくまで一般的な目安です。実際の料金は、ページ数、写真撮影や文章作成の有無、機能、保守内容によって変わります。福祉分野に対応した制作会社の具体的な料金は、当サイトの<a href="../../#comparisons">業種別比較記事</a>で確認できます。</p>
+<h2 id="sec-2">費用の内訳を知っておこう</h2>
+<h3>初期費用（制作費）に含まれるもの</h3>
+<ul class="blog-list"><li>構成（サイトマップ）の企画・設計</li><li>デザイン（トップページ、下層ページ）</li><li>コーディング・システムの設定（WordPressの導入など）</li><li>文章の作成・整理（ライティング）</li><li>写真撮影、画像の加工</li><li>問い合わせフォーム、Googleマップの設置</li><li>スマートフォン対応、基本的なSEO設定</li></ul>
+<p>どこまでが基本料金に含まれ、何がオプションになるかは会社によって大きく異なります。特に<strong>文章作成と写真撮影</strong>は別料金になっていることが多いため、注意が必要です。</p>
+<h3>月額費用に含まれるもの</h3>
+<ul class="blog-list"><li>サーバー・ドメインの維持費</li><li>ソフトウェアの更新、バックアップ（保守）</li><li>文章や写真の更新作業の代行</li><li>アクセス解析のレポート、改善提案</li></ul>
+<h2 id="sec-3">見落としがちな費用</h2>
+<p>制作会社の見積もりに含まれていない費用もあります。あとから「こんなはずではなかった」とならないよう、事前に確認しましょう。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">費用</th><th scope="col">目安</th><th scope="col">確認のポイント</th></tr></thead><tbody><tr><th scope="row">レンタルサーバー</th><td>年間1万〜3万円程度</td><td>制作会社が用意するか、自分で契約するか</td></tr><tr><th scope="row">独自ドメイン</th><td>年間1,000円〜数千円程度</td><td>契約者の名義が事業所になっているか</td></tr><tr><th scope="row">SSL証明書</th><td>無料〜年間数万円</td><td>無料SSLが使えるサーバーが多い</td></tr><tr><th scope="row">更新作業の代行</th><td>1回数千円〜</td><td>月額に含まれる回数・範囲</td></tr><tr><th scope="row">ページの追加</th><td>1ページ数千円〜数万円</td><td>事業所の新設やサービス追加の際に発生</td></tr><tr><th scope="row">有料プラグイン・テーマ</th><td>数千円〜数万円</td><td>年額更新が必要なものもある</td></tr><tr><th scope="row">写真撮影</th><td>数万円〜</td><td>撮影場所までの交通費が別の場合も</td></tr></tbody></table></div>
+<p>サーバーやドメインの基本は「<a href="../../blog/domain-server-ssl-basics/">ドメイン・サーバー・SSLの基礎知識</a>」で解説しています。</p>
+<h2 id="sec-4">「1年目の総額」と「3年間の総額」で比べる</h2>
+<p>ホームページの費用は、初期費用だけを比べると判断を誤ることがあります。<strong>初期費用＋月額費用×月数＋その他の費用</strong>で、複数年の総額を計算して比べましょう。</p>
+<h3>計算例</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">プラン</th><th scope="col">初期費用</th><th scope="col">月額費用</th><th scope="col">1年目の総額</th><th scope="col">3年間の総額</th></tr></thead><tbody><tr><th scope="row">A：初期費用重視型</th><td>30万円</td><td>3,000円</td><td>33.6万円</td><td>40.8万円</td></tr><tr><th scope="row">B：月額定額型</th><td>0円</td><td>1万円</td><td>12万円</td><td>36万円</td></tr><tr><th scope="row">C：格安制作＋自社運用</th><td>5万円</td><td>0円（サーバー等は別途年2万円）</td><td>7万円</td><td>11万円</td></tr></tbody></table></div>
+<p>※税込・税別の違いや、サーバー・ドメイン費用の扱いをそろえて計算することが大切です。</p>
+<p>この例では、1年目だけを見るとBやCが安く見えますが、更新作業を誰が行うかによって実際の負担は変わります。Cは費用が最も安い一方で、更新やセキュリティ対策を自分たちで行う必要があります。<strong>費用と、事業所側の手間・リスクのバランス</strong>で考えましょう。</p>
+<div class="blog-box blog-box--point"><p class="blog-box__title">月額費用は「何をしてくれるか」で比べる</p><p>月額費用が高くても、更新代行やセキュリティ対策、相談対応が含まれていれば、職員の負担を減らせます。反対に、月額費用がかからないプランでは、更新やトラブル対応を自分たちで行うか、都度費用を払って依頼する必要があります。</p></div>
+<h2 id="sec-5">見積もりで必ず確認すべき項目</h2>
+<ol class="blog-olist"><li><strong>税込か税別か</strong>：比較するときは表記をそろえる</li><li><strong>ページ数と、追加ページの料金</strong></li><li><strong>文章作成・写真撮影が含まれるか</strong></li><li><strong>スマートフォン対応、問い合わせフォーム、Googleマップの有無</strong></li><li><strong>公開後の更新は誰が行うか</strong>（自社で更新できるか、代行の場合の料金）</li><li><strong>保守（ソフトウェアの更新・バックアップ・復旧）の範囲</strong></li><li><strong>最低契約期間と解約時の条件</strong>（違約金、サイトやデータの引き渡し）</li><li><strong>サーバー・ドメインの名義</strong>（解約後も事業所が使い続けられるか）</li></ol>
+<div class="blog-box blog-box--warn"><p class="blog-box__title">解約後にドメインが使えなくなるケースも</p><p>制作会社の名義でドメインを取得している場合、解約するとそのドメインが使えなくなり、名刺やパンフレットに載せたホームページのアドレスを変えなければならないことがあります。契約前に、ドメインの名義と解約時の扱いを必ず確認しましょう。</p></div>
+<h2 id="sec-6">まとめ</h2>
+<p>福祉事業所のホームページ制作費用は、制作方法によって数万円から100万円以上まで幅があります。初期費用だけでなく月額費用や見落としがちな費用を含め、「1年目の総額」と「3年間の総額」で比べることが大切です。</p>
+<p>あわせて、更新を誰が行うのか、セキュリティ対策や解約時の条件はどうなっているのかを確認すれば、費用面での失敗を防げます。具体的な依頼先の比較は「<a href="../../blog/hp-company-choose/">失敗しない制作会社の選び方と質問リスト</a>」も参考にしてください。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>初期費用0円のプランはお得ですか？</summary><div class="blog-faq__a"><p>初期費用0円のプランは、制作費を月額料金に含めて分割で支払う仕組みになっていることが多く、最低契約期間が設定されているのが一般的です。月額料金×契約期間で総額を計算し、他のプランと比べてみましょう。途中解約時の違約金や、解約後にサイトを使い続けられるかも確認が必要です。</p></div></details><details class="blog-faq__item"><summary>ホームページ制作に使える補助金はありますか？</summary><div class="blog-faq__a"><p>国や自治体の補助金の中には、ホームページ関連の費用が対象になるものがあります。ただし、対象となる事業者（法人格の種類など）や経費、公募の時期は制度ごとに異なり、毎年見直されます。社会福祉法人やNPO法人が対象外となる制度もあるため、公募要領を確認するか、自治体・商工会議所などに相談してください。</p></div></details><details class="blog-faq__item"><summary>安い制作会社に頼むと品質が悪いのでしょうか？</summary><div class="blog-faq__a"><p>料金が安いことが必ずしも品質の低さを意味するわけではありません。テンプレートを活用して効率化している、ページ数を絞っているなど、安さには理由があります。大切なのは、料金に何が含まれていて、何が別料金なのかを確認し、自分たちの目的に合っているかで判断することです。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://fukushi-hp-hikaku.com/comparisons/welfare-comparison.html" target="_blank" rel="noopener">当サイト「福祉事業所向けホームページ制作会社比較」</a></li><li><a href="https://fukushi-hp-hikaku.com/comparisons/b-type-comparison.html" target="_blank" rel="noopener">当サイト「就労継続支援B型向けホームページ制作会社比較」</a></li><li><a href="https://mirasapo-plus.go.jp/" target="_blank" rel="noopener">中小企業庁「ミラサポplus（補助金・支援制度の検索）」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card" href="../../blog/hp-company-choose/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">福祉事業所のホームページ制作会社の選び方｜失敗しないための7つの基準と問い合わせ時の質問リスト</h3>
+<p class="blog-card__desc">福祉事業所がホームページ制作会社を選ぶときの7つの基準（福祉への理解、料金の透明性、更新のしやすさ、公開後の保守、セキュリティ、名義、相談のしやすさ）と、問い合わせ・見積もり時にそのまま使える質問リスト25問を紹介します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/hp-builder-vs-agency/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">ホームページは自作？制作会社に依頼？福祉事業所のための作り方4パターン比較</h3>
+<p class="blog-card__desc">福祉事業所のホームページを、作成ツールで自作する、WordPressで自作する、制作会社に依頼する、月額定額型サービスを使う、の4パターンで比較。費用、手間、デザイン、更新、セキュリティの違いと、事業所のタイプ別のおすすめを解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/domain-server-ssl-basics/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">ドメイン・サーバー・SSLの基礎知識｜福祉事業所が契約前に知っておきたいこと</h3>
+<p class="blog-card__desc">ホームページに必要な「ドメイン」「サーバー」「SSL」の役割と費用の目安を、福祉事業所の担当者向けにやさしく解説。名義の確認、更新切れのリスク、独自ドメインのメールアドレス、制作会社との役割分担までまとめました。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

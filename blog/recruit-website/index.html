@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>福祉事業所の採用ページ設計｜処遇改善の見える化とGoogleしごと検索（求人の構造化データ）への対応｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="福祉事業所の採用ページを、求職者が応募前に確認する情報から逆算して設計する方法を解説。処遇改善加算の取組の見える化、数字で見る職場、職員インタビューの質問例、求人の構造化データによるGoogleしごと検索への掲載、募集終了時の注意まで紹介します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/recruit-website/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="福祉事業所の採用ページ設計｜処遇改善の見える化とGoogleしごと検索（求人の構造化データ）への対応｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="福祉事業所の採用ページを、求職者が応募前に確認する情報から逆算して設計する方法を解説。処遇改善加算の取組の見える化、数字で見る職場、職員インタビューの質問例、求人の構造化データによるGoogleしごと検索への掲載、募集終了時の注意まで紹介します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/recruit-website/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta property="article:section" content="集客・採用・運用">
+<link rel="icon" href="../../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "福祉事業所の採用ページ設計｜処遇改善の見える化とGoogleしごと検索（求人の構造化データ）への対応",
+  "description": "福祉事業所の採用ページを、求職者が応募前に確認する情報から逆算して設計する方法を解説。処遇改善加算の取組の見える化、数字で見る職場、職員インタビューの質問例、求人の構造化データによるGoogleしごと検索への掲載、募集終了時の注意まで紹介します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/recruit-website/",
+  "url": "https://fukushi-hp-hikaku.com/blog/recruit-website/",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
+  "articleSection": "集客・採用・運用",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v2-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/brand/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "集客・採用・運用",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/unei/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "福祉事業所の採用ページ設計｜処遇改善の見える化とGoogleしごと検索（求人の構造化データ）への対応",
+      "item": "https://fukushi-hp-hikaku.com/blog/recruit-website/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/unei/">集客・採用・運用</a></li><li aria-current="page">福祉事業所の採用ページ設計｜処遇改善の見える化とGoogleしごと検索（求人の構造化データ）への対応</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--unei" href="../../blog/category/unei/">集客・採用・運用</a>
+<h1 class="blog-article__title">福祉事業所の採用ページ設計｜処遇改善の見える化とGoogleしごと検索（求人の構造化データ）への対応</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-08">2026年11月8日</time></span>
+
+<span>読了目安 約4分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<p class="blog-article__lead">求人サイトに募集を出しても応募が集まらない――多くの福祉事業所が抱える悩みです。求職者の多くは、応募する前に事業所のホームページを確認しています。ホームページの採用情報を充実させることは、応募数を増やし、入職後のミスマッチを減らすことにもつながります。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>求職者は応募前にホームページで「職場の様子」を確認している</li><li>採用ページに載せるべき項目と構成例</li><li>職員インタビュー・1日の流れの作り方</li><li>求人媒体・Googleしごと検索との連携</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">求職者は応募前にホームページを見ている</a></li><li><a href="#sec-2">採用ページに載せるべき項目</a></li><li><a href="#sec-3">職員インタビューの作り方</a></li><li><a href="#sec-4">求人媒体・Googleしごと検索との連携</a></li><li><a href="#sec-5">採用ページの構成例</a></li><li><a href="#sec-6">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">求職者は応募前にホームページを見ている</h2>
+<p>求人サイトやハローワークで福祉事業所の募集を見つけた求職者は、応募する前に事業所名で検索し、ホームページを確認することが多くあります。そこで知りたいのは、求人票だけではわからない「<strong>どんな職場なのか</strong>」です。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">求職者の疑問</th><th scope="col">ホームページで伝えたいこと</th></tr></thead><tbody><tr><th scope="row">どんな利用者さんがいるの？</th><td>サービスの種類、対象者、支援の方針</td></tr><tr><th scope="row">どんな仕事をするの？</th><td>1日の流れ、仕事内容、担当業務</td></tr><tr><th scope="row">未経験でも大丈夫？</th><td>研修制度、先輩のサポート、資格取得支援</td></tr><tr><th scope="row">どんな人が働いているの？</th><td>職員の年代・経歴、インタビュー</td></tr><tr><th scope="row">働きやすい職場？</th><td>休日、残業、有給休暇の取得状況、子育て支援</td></tr><tr><th scope="row">給料はどのくらい？</th><td>給与例、手当、処遇改善加算の配分方法</td></tr></tbody></table></div>
+<p>ホームページに採用情報がない、または古いままになっていると、「本当に募集しているのかな」「情報を出さない職場なのかな」と不安を感じさせてしまいます。</p>
+<h2 id="sec-2">採用ページに載せるべき項目</h2>
+<h3>基本の募集要項</h3>
+<ul class="blog-list"><li>募集職種（生活支援員、世話人、児童指導員、サービス管理責任者など）</li><li>雇用形態（正職員、パート、夜勤専従など）</li><li>給与（月給・時給の範囲、手当の内訳）</li><li>勤務時間・シフト、休日・休暇</li><li>必要な資格・経験（「資格不問」「未経験歓迎」なども明記）</li><li>勤務地（事業所の住所、最寄り駅、車通勤の可否）</li><li>福利厚生（社会保険、退職金制度、研修、資格取得支援など）</li><li>応募方法と選考の流れ</li></ul>
+<h3>職場の魅力を伝える情報</h3>
+<ul class="blog-list"><li>代表・管理者からのメッセージ（どんな人と働きたいか）</li><li>職員インタビュー（入職のきっかけ、やりがい、大変なこと）</li><li>1日の仕事の流れ</li><li>研修・キャリアアップの仕組み</li><li>数字で見る職場（職員数、平均年齢、男女比、有給休暇取得率、育休取得実績など）</li><li>職場の写真（事務所、休憩スペース、職員同士の様子）</li></ul>
+<div class="blog-box blog-box--point"><p class="blog-box__title">処遇改善の取組を見える化する</p><p>処遇改善加算を取得している場合は、賃金改善の内容や、職場環境の改善の取組（研修、ICTの活用、休暇取得の推進など）を採用ページで紹介しましょう。2026年度の臨時報酬改定でも処遇改善加算の見直しが行われており、求職者にとって給与や働きやすさに関わる重要な情報です。加算の要件によっては、職場環境等の取組を公表することが求められる場合もあります。</p></div>
+<h2 id="sec-3">職員インタビューの作り方</h2>
+<p>職員インタビューは、求職者が「自分がここで働く姿」をイメージするために、最も効果的なコンテンツのひとつです。</p>
+<h3>質問例</h3>
+<ol class="blog-olist"><li>入職する前はどんな仕事をしていましたか？</li><li>この事業所を選んだ理由は何ですか？</li><li>1日の仕事の流れを教えてください</li><li>仕事でうれしかったエピソードを教えてください</li><li>大変だったこと、それをどう乗り越えましたか？</li><li>職場の雰囲気や、職員同士の関係はどうですか？</li><li>応募を考えている方へメッセージをお願いします</li></ol>
+<h3>インタビューのコツ</h3>
+<ul class="blog-list"><li><strong>異なる立場の職員を紹介する</strong>：新人と中堅、正職員とパート、未経験入職と経験者など</li><li><strong>よいことだけを書かない</strong>：大変なことも正直に書くと、かえって信頼される</li><li><strong>利用者の個人情報に配慮する</strong>：エピソードに登場する利用者が特定されないようにする</li><li><strong>写真を添える</strong>：本人の同意を得て、仕事中の自然な表情を撮影する</li></ul>
+<h2 id="sec-4">求人媒体・Googleしごと検索との連携</h2>
+<h3>求人媒体からホームページへ誘導する</h3>
+<p>求人サイトやハローワークの求人票には、ホームページのアドレスを必ず記載しましょう。求人票で興味を持った人が、ホームページで詳しい情報を確認できるようにします。</p>
+<h3>Googleの求人検索に表示させる</h3>
+<p>Googleで「◯◯市 生活支援員 求人」などと検索すると、検索結果に求人情報がまとめて表示されることがあります。自社ホームページの求人ページに、Googleが定める形式（構造化データ）で求人情報を記述すると、ここに表示される可能性があります。制作会社に依頼する場合は、対応できるか確認してみましょう。</p>
+<div class="blog-box blog-box--warn"><p class="blog-box__title">募集を終えたら情報を更新</p><p>募集を終了した求人をそのまま掲載し続けると、応募者とのトラブルの原因になります。構造化データを使っている場合も、募集終了後は速やかに削除または更新しましょう。</p></div>
+<h2 id="sec-5">採用ページの構成例</h2>
+<ol class="blog-olist"><li><strong>キャッチコピーとメッセージ</strong>：どんな職場か、どんな人と働きたいか</li><li><strong>数字で見る職場</strong>：職員数、平均年齢、有給取得率など</li><li><strong>仕事内容と1日の流れ</strong></li><li><strong>職員インタビュー</strong>（2〜3名）</li><li><strong>研修・キャリアアップ・処遇改善の取組</strong></li><li><strong>募集要項</strong>（職種ごと）</li><li><strong>よくある質問</strong></li><li><strong>応募フォーム・見学の申込み</strong></li></ol>
+<div class="blog-box blog-box--check"><p class="blog-box__title">「職場見学」の受け付けも</p><p>いきなり応募するのはハードルが高いと感じる求職者もいます。「まずは職場見学から」「話を聞くだけでもOK」といった入口を用意すると、問い合わせが増えやすくなります。</p></div>
+<h2 id="sec-6">まとめ</h2>
+<p>福祉事業所の採用では、求人票だけでは伝わらない「職場の様子」を、ホームページでいかに伝えるかが重要です。募集要項に加えて、職員インタビュー、1日の流れ、研修や処遇改善の取組を掲載し、求職者の不安を解消しましょう。</p>
+<p>求人媒体やGoogleの求人検索とも連携させれば、ホームページは事業所の採用活動の拠点になります。地域での検索からの応募を増やすには「<a href="../../blog/local-seo-basics/">福祉事業所のホームページを地域検索で見つけてもらうSEOの基本</a>」もあわせてご覧ください。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>採用専用のサイトを作るべきですか？</summary><div class="blog-faq__a"><p>まずは今のホームページの中に、充実した採用ページを作ることから始めるのがおすすめです。複数の事業所で多くの職種を継続的に募集している法人では、採用専用サイトを作ることで情報を整理しやすくなります。</p></div></details><details class="blog-faq__item"><summary>給与はホームページに載せたほうがよいですか？</summary><div class="blog-faq__a"><p>載せることをおすすめします。給与や待遇は求職者が最も知りたい情報のひとつで、記載がないと応募をためらう原因になります。「月給◯万円〜◯万円（処遇改善加算による手当を含む）」のように、内訳や条件がわかる形で示しましょう。</p></div></details><details class="blog-faq__item"><summary>職員の写真や名前を載せるときの注意点はありますか？</summary><div class="blog-faq__a"><p>本人の同意を得ることが前提です。退職した場合に写真やインタビューをどう扱うか（削除する、一定期間は掲載を続けるなど）も事前に決めて伝えておきましょう。フルネームではなく、名字やイニシャルで掲載する方法もあります。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://www.mhlw.go.jp/stf/shingi/other-syougai_446935_00001.html" target="_blank" rel="noopener">厚生労働省「障害福祉サービス等報酬改定検討チーム」（処遇改善加算の見直しを含む）</a></li><li><a href="https://www.wam.go.jp/content/wamnet/pcpub/top/watch/20260515_003.html" target="_blank" rel="noopener">WAM NET「令和8年度障害福祉サービス等報酬改定に関する情報」</a></li><li><a href="https://developers.google.com/search/docs/appearance/structured-data/job-posting?hl=ja" target="_blank" rel="noopener">Google 検索セントラル「求人情報（JobPosting）の構造化データ」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card" href="../../blog/hp-must-have-contents/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">福祉事業所のホームページに載せるべき項目チェックリスト｜利用者・家族・相談支援専門員に選ばれる30項目</h3>
+<p class="blog-card__desc">福祉事業所のホームページに掲載すべき内容を、基本情報、サービス内容、費用、1日の流れ、公表情報、採用情報など30項目のチェックリストで紹介。利用者・家族・相談支援専門員それぞれが知りたい情報と、ページ構成の例も解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/google-business-profile/">
+<span class="blog-cat blog-cat--unei">集客・採用・運用</span>
+<h3 class="blog-card__title">Googleビジネスプロフィールのガイドラインと注意点｜福祉事業所がやってはいけない登録・口コミ対応</h3>
+<p class="blog-card__desc">福祉事業所がGoogleビジネスプロフィール（Googleマップ）を使うときに守るべきガイドラインと注意点を解説。ビジネス名へのキーワード追加の禁止、口コミ返信での個人情報の扱い、グループホームの住所非表示、オーナー確認と管理アカウント、代行営業への注意までまとめました。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/local-seo-basics/">
+<span class="blog-cat blog-cat--unei">集客・採用・運用</span>
+<h3 class="blog-card__title">福祉事業所のホームページを地域検索で見つけてもらうSEOの基本｜「◯◯市 B型」で上位を目指す10のポイント</h3>
+<p class="blog-card__desc">「◯◯市 放課後等デイサービス」「◯◯区 グループホーム」など、地域名とサービス名で検索されたときに福祉事業所のホームページを見つけてもらうためのSEOの基本を10のポイントで解説。タイトルの付け方、ページ構成、Googleマップとの連携、避けるべき手法も紹介します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

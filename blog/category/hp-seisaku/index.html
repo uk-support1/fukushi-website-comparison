@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>ホームページ制作の基礎の記事一覧｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="費用相場、載せるべき内容、制作会社の選び方など、福祉事業所がホームページを作るときに役立つ情報をまとめています。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/category/hp-seisaku/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ホームページ制作の基礎の記事一覧｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="費用相場、載せるべき内容、制作会社の選び方など、福祉事業所がホームページを作るときに役立つ情報をまとめています。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/category/hp-seisaku/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="../../../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../../assets/css/base.css">
+<link rel="stylesheet" href="../../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ホームページ制作の基礎",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/hp-seisaku/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../../">
+<span class="site-header__logo-icon"><img src="../../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../../">ホーム</a></li><li><a href="../../../blog/">お役立ち記事</a></li><li aria-current="page">ホームページ制作の基礎</li></ol></nav>
+<header class="blog-listhead">
+<h1>ホームページ制作の基礎の記事一覧</h1>
+<p>費用相場、載せるべき内容、制作会社の選び方など、福祉事業所がホームページを作るときに役立つ情報をまとめています。</p>
+</header>
+<nav class="blog-catnav" aria-label="カテゴリー"><ul>
+<li><a href="../../../blog/">すべて</a></li>
+<li><a href="../../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../../blog/category/hp-seisaku/" aria-current="page">ホームページ制作の基礎</a></li>
+<li><a href="../../../blog/category/unei/">集客・採用・運用</a></li>
+</ul></nav>
+<div class="blog-grid"><a class="blog-card" href="../../../blog/web-accessibility/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">改正障害者差別解消法とウェブアクセシビリティ｜福祉事業所が知っておきたい義務の範囲とJIS X 8341-3</h3>
+<p class="blog-card__desc">2024年4月施行の改正障害者差別解消法で、事業者の合理的配慮の提供が義務化されました。ウェブアクセシビリティは「環境の整備」として努力義務です。義務の範囲、JIS X 8341-3・WCAG 2.2の基準、福祉事業所のホームページでのセルフチェック方法を解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../../blog/hp-must-have-contents/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">福祉事業所のホームページに載せるべき項目チェックリスト｜利用者・家族・相談支援専門員に選ばれる30項目</h3>
+<p class="blog-card__desc">福祉事業所のホームページに掲載すべき内容を、基本情報、サービス内容、費用、1日の流れ、公表情報、採用情報など30項目のチェックリストで紹介。利用者・家族・相談支援専門員それぞれが知りたい情報と、ページ構成の例も解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../../blog/hp-cost-souba/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">福祉事業所のホームページ制作費用の相場｜初期費用・月額費用・1年目の総額で比べる</h3>
+<p class="blog-card__desc">福祉事業所のホームページ制作にかかる費用の相場を、自作ツール・テンプレート型・月額定額型・オリジナル制作のタイプ別に解説。サーバー・ドメインなどの見落としがちな費用、1年目と3年間の総額の考え方、見積もりで確認すべき点も紹介します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../../blog/hp-company-choose/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">福祉事業所のホームページ制作会社の選び方｜失敗しないための7つの基準と問い合わせ時の質問リスト</h3>
+<p class="blog-card__desc">福祉事業所がホームページ制作会社を選ぶときの7つの基準（福祉への理解、料金の透明性、更新のしやすさ、公開後の保守、セキュリティ、名義、相談のしやすさ）と、問い合わせ・見積もり時にそのまま使える質問リスト25問を紹介します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../../blog/hp-builder-vs-agency/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">ホームページは自作？制作会社に依頼？福祉事業所のための作り方4パターン比較</h3>
+<p class="blog-card__desc">福祉事業所のホームページを、作成ツールで自作する、WordPressで自作する、制作会社に依頼する、月額定額型サービスを使う、の4パターンで比較。費用、手間、デザイン、更新、セキュリティの違いと、事業所のタイプ別のおすすめを解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../../blog/domain-server-ssl-basics/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">ドメイン・サーバー・SSLの基礎知識｜福祉事業所が契約前に知っておきたいこと</h3>
+<p class="blog-card__desc">ホームページに必要な「ドメイン」「サーバー」「SSL」の役割と費用の目安を、福祉事業所の担当者向けにやさしく解説。名義の確認、更新切れのリスク、独自ドメインのメールアドレス、制作会社との役割分担までまとめました。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a></div>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../../">トップページ</a></li>
+<li><a href="../../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../../blog/">お役立ち記事</a></li>
+<li><a href="../../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../../assets/js/main.js"></script>
+</body>
+</html>

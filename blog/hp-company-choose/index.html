@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>福祉事業所のホームページ制作会社の選び方｜失敗しないための7つの基準と問い合わせ時の質問リスト｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="福祉事業所がホームページ制作会社を選ぶときの7つの基準（福祉への理解、料金の透明性、更新のしやすさ、公開後の保守、セキュリティ、名義、相談のしやすさ）と、問い合わせ・見積もり時にそのまま使える質問リスト25問を紹介します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/hp-company-choose/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="福祉事業所のホームページ制作会社の選び方｜失敗しないための7つの基準と問い合わせ時の質問リスト｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="福祉事業所がホームページ制作会社を選ぶときの7つの基準（福祉への理解、料金の透明性、更新のしやすさ、公開後の保守、セキュリティ、名義、相談のしやすさ）と、問い合わせ・見積もり時にそのまま使える質問リスト25問を紹介します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/hp-company-choose/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta property="article:section" content="ホームページ制作の基礎">
+<link rel="icon" href="../../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "福祉事業所のホームページ制作会社の選び方｜失敗しないための7つの基準と問い合わせ時の質問リスト",
+  "description": "福祉事業所がホームページ制作会社を選ぶときの7つの基準（福祉への理解、料金の透明性、更新のしやすさ、公開後の保守、セキュリティ、名義、相談のしやすさ）と、問い合わせ・見積もり時にそのまま使える質問リスト25問を紹介します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/hp-company-choose/",
+  "url": "https://fukushi-hp-hikaku.com/blog/hp-company-choose/",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
+  "articleSection": "ホームページ制作の基礎",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v2-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/brand/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ホームページ制作の基礎",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/hp-seisaku/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "福祉事業所のホームページ制作会社の選び方｜失敗しないための7つの基準と問い合わせ時の質問リスト",
+      "item": "https://fukushi-hp-hikaku.com/blog/hp-company-choose/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li><li aria-current="page">福祉事業所のホームページ制作会社の選び方｜失敗しないための7つの基準と問い合わせ時の質問リスト</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--hp-seisaku" href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a>
+<h1 class="blog-article__title">福祉事業所のホームページ制作会社の選び方｜失敗しないための7つの基準と問い合わせ時の質問リスト</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-08">2026年11月8日</time></span>
+
+<span>読了目安 約5分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<p class="blog-article__lead">ホームページ制作会社は数多くあり、料金もサービス内容もさまざまです。「安いと思って頼んだら、更新のたびに費用がかかった」「担当者と連絡が取れなくなった」といった失敗を防ぐには、比較の基準をあらかじめ決めておくことが大切です。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>福祉事業所が制作会社を選ぶときの7つの基準</li><li>よくある失敗例とその防ぎ方</li><li>問い合わせ・見積もり時に使える質問リスト25問</li><li>相見積もりの取り方と比較表の作り方</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">よくある失敗例</a></li><li><a href="#sec-2">制作会社を選ぶ7つの基準</a></li><li><a href="#sec-3">問い合わせ・見積もり時の質問リスト25問</a></li><li><a href="#sec-4">相見積もりの比較表を作ろう</a></li><li><a href="#sec-5">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">よくある失敗例</h2>
+<p>まずは、福祉事業所のホームページ制作でよく聞かれる失敗例を見てみましょう。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">失敗例</th><th scope="col">原因</th><th scope="col">防ぎ方</th></tr></thead><tbody><tr><th scope="row">文章を少し直すだけで毎回費用がかかる</th><td>自社で更新できない仕組み、更新が別料金</td><td>契約前に更新方法と料金を確認する</td></tr><tr><th scope="row">解約したらホームページもドメインも使えなくなった</th><td>制作会社名義のドメイン・サーバー、リース型の契約</td><td>名義と解約時の扱いを確認する</td></tr><tr><th scope="row">数年後に改ざんされた</th><td>公開後に誰もソフトウェアを更新していなかった</td><td>保守の範囲と担当を明確にする</td></tr><tr><th scope="row">福祉の用語や制度を一から説明する必要があった</th><td>福祉分野の制作経験が少ない</td><td>福祉事業所の制作実績を確認する</td></tr><tr><th scope="row">公開したが問い合わせがない</th><td>デザイン重視で、伝えるべき情報や導線が不足</td><td>目的（見学、採用など）を共有して提案を受ける</td></tr><tr><th scope="row">担当者と連絡が取れなくなった</th><td>連絡手段やサポート体制が不明確</td><td>連絡方法、対応時間、担当体制を確認する</td></tr></tbody></table></div>
+<h2 id="sec-2">制作会社を選ぶ7つの基準</h2>
+<h3>1. 福祉分野への理解があるか</h3>
+<p>障害福祉サービスの種類、利用の流れ、公表が求められる情報、利用者や家族が不安に感じることなどを理解している制作会社であれば、打ち合わせがスムーズに進み、必要な情報の提案も受けられます。福祉事業所の制作実績や、実際に制作したサイトを見せてもらいましょう。</p>
+<h3>2. 料金がわかりやすいか</h3>
+<p>初期費用・月額費用・オプション費用が明示されているか、追加費用が発生する条件が説明されているかを確認します。比較するときは「1年目の総額」「3年間の総額」で計算しましょう（詳しくは「<a href="../../blog/hp-cost-souba/">ホームページ制作費用の相場</a>」）。</p>
+<h3>3. 公開後に更新しやすいか</h3>
+<p>お知らせ、空き状況、行事の写真、公表情報など、福祉事業所のホームページは更新が欠かせません。<strong>自分たちで更新できるのか、更新を依頼する場合の料金と納期はどうか</strong>を確認しましょう。自社で更新する場合は、操作マニュアルや説明会があると安心です。</p>
+<h3>4. 公開後の保守内容が明確か</h3>
+<p>ソフトウェアの更新、バックアップ、障害時の対応など、公開後の保守を誰が行うかを確認します。保守契約がない場合は、自分たちで対応する体制が必要です。</p>
+<h3>5. セキュリティ対策を説明できるか</h3>
+<p>常時SSL、ソフトウェアの更新頻度、ログイン対策、バックアップ、改ざん時の対応について、具体的に説明できる会社を選びましょう。2026年にはWordPress本体の緊急脆弱性が実際に悪用されるなど、セキュリティ対策の重要性は高まっています（参考：「<a href="../../blog/welfare-website-cyber-attack/">福祉事業所のホームページが狙われている</a>」）。</p>
+<h3>6. ドメイン・サーバーの名義を事業所にできるか</h3>
+<p>ドメインとサーバーを事業所の名義で契約できるか、制作会社が代行取得する場合でも解約時に移管できるかを確認します。ドメインは名刺やパンフレットにも載せる「事業所の住所」のようなものです。</p>
+<h3>7. 相談しやすいか</h3>
+<p>電話・メール・オンライン会議など連絡手段、返信の早さ、担当者の説明のわかりやすさも重要です。問い合わせの段階での対応は、公開後のサポートの質を判断する材料になります。</p>
+<h2 id="sec-3">問い合わせ・見積もり時の質問リスト25問</h2>
+<p>制作会社に問い合わせるときに、そのまま使える質問リストです。必要な項目を選んで使ってください。</p>
+<h3>実績・体制</h3>
+<ol class="blog-olist"><li>福祉事業所（同じサービス種別）の制作実績はありますか？見せていただけますか？</li><li>打ち合わせは何回、どのような方法（訪問・オンライン）で行いますか？</li><li>担当者は制作から公開後まで同じ方ですか？</li><li>制作期間はどのくらいですか？急ぎの場合は対応できますか？</li></ol>
+<h3>料金</h3>
+<ol class="blog-olist"><li>見積もりは税込ですか、税別ですか？</li><li>基本料金に含まれるページ数と、追加ページの料金を教えてください</li><li>文章の作成や整理は料金に含まれますか？</li><li>写真撮影は料金に含まれますか？素材写真は使えますか？</li><li>月額費用には何が含まれますか？</li><li>最低契約期間と、途中解約時の費用を教えてください</li></ol>
+<h3>機能・内容</h3>
+<ol class="blog-olist"><li>スマートフォン表示に対応していますか？</li><li>問い合わせフォーム、Googleマップは設置できますか？</li><li>公表情報（支援プログラム、評価結果など）のページは作れますか？</li><li>基本的なSEO対策（タイトル、説明文、表示速度など）は含まれますか？</li><li>文字の大きさや色のコントラストなど、読みやすさへの配慮はありますか？</li></ol>
+<h3>更新・保守</h3>
+<ol class="blog-olist"><li>公開後、自分たちで更新できますか？操作の説明はありますか？</li><li>更新を依頼する場合の料金と、反映までの日数を教えてください</li><li>ソフトウェア（WordPressなど）の更新は誰が、どのくらいの頻度で行いますか？</li><li>バックアップはどのくらいの頻度で取っていますか？</li><li>改ざんや表示トラブルが起きた場合の対応と費用を教えてください</li></ol>
+<h3>名義・契約</h3>
+<ol class="blog-olist"><li>ドメインとサーバーは誰の名義で契約しますか？</li><li>解約した場合、ホームページのデータやドメインはどうなりますか？</li><li>管理画面やサーバーのログイン情報は共有してもらえますか？</li><li>制作したデザインや文章、写真の権利はどちらにありますか？</li><li>契約内容は書面（契約書・発注書）で確認できますか？</li></ol>
+<div class="blog-box blog-box--check"><p class="blog-box__title">回答は記録しておく</p><p>質問への回答は、メールなど記録が残る形でもらっておきましょう。後から「聞いていた内容と違う」という行き違いを防げます。</p></div>
+<h2 id="sec-4">相見積もりの比較表を作ろう</h2>
+<p>2〜3社から見積もりを取ったら、同じ項目で並べて比較すると判断しやすくなります。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">比較項目</th><th scope="col">A社</th><th scope="col">B社</th><th scope="col">C社</th></tr></thead><tbody><tr><th scope="row">初期費用（税込）</th><td></td><td></td><td></td></tr><tr><th scope="row">月額費用（税込）</th><td></td><td></td><td></td></tr><tr><th scope="row">3年間の総額</th><td></td><td></td><td></td></tr><tr><th scope="row">ページ数</th><td></td><td></td><td></td></tr><tr><th scope="row">文章作成・写真撮影</th><td></td><td></td><td></td></tr><tr><th scope="row">自社での更新</th><td></td><td></td><td></td></tr><tr><th scope="row">保守（更新・バックアップ）</th><td></td><td></td><td></td></tr><tr><th scope="row">ドメイン・サーバーの名義</th><td></td><td></td><td></td></tr><tr><th scope="row">福祉事業所の実績</th><td></td><td></td><td></td></tr><tr><th scope="row">担当者の対応</th><td></td><td></td><td></td></tr></tbody></table></div>
+<p>当サイトの業種別比較記事では、福祉事業所向けのホームページ制作サービスについて、こうした項目を公式情報をもとに整理しています。</p>
+<ul class="blog-list"><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較</a></li></ul>
+<h2 id="sec-5">まとめ</h2>
+<p>福祉事業所のホームページ制作会社を選ぶときは、料金の安さだけでなく、福祉への理解、更新のしやすさ、公開後の保守、セキュリティ、名義、相談のしやすさをあわせて確認することが大切です。</p>
+<p>質問リストを使って同じ条件で複数の会社に問い合わせ、比較表で整理すれば、自分たちの事業所に合った依頼先を選びやすくなります。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>相見積もりは何社くらいに依頼すればよいですか？</summary><div class="blog-faq__a"><p>2〜3社が目安です。多すぎると比較や打ち合わせに時間がかかり、少なすぎると相場感がつかめません。同じ条件（ページ数、必要な機能、更新の希望など）を伝えて見積もりを依頼すると比べやすくなります。</p></div></details><details class="blog-faq__item"><summary>福祉に特化した制作会社のほうがよいのでしょうか？</summary><div class="blog-faq__a"><p>福祉の制度や用語、利用者・家族の気持ちを理解している制作会社であれば、打ち合わせがスムーズで、伝えるべき情報の提案も受けやすくなります。一方で、一般的な制作会社でも、ヒアリングが丁寧で福祉事業所の制作実績があれば十分に対応できる場合があります。特化しているかどうかより、実績と提案の中身で判断しましょう。</p></div></details><details class="blog-faq__item"><summary>知り合いや個人のフリーランスに頼むのは危険ですか？</summary><div class="blog-faq__a"><p>危険とは限りませんが、その方が対応できなくなったときに更新や復旧ができなくなるリスクがあります。依頼する場合も、管理画面・サーバー・ドメインのログイン情報を事業所側で把握し、契約内容を書面で残しておくことが大切です。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://fukushi-hp-hikaku.com/comparisons/welfare-comparison.html" target="_blank" rel="noopener">当サイト「福祉事業所向けホームページ制作会社比較」</a></li><li><a href="https://fukushi-hp-hikaku.com/comparisons/group-home-comparison.html" target="_blank" rel="noopener">当サイト「障害者グループホーム向けホームページ制作会社比較」</a></li><li><a href="https://fukushi-hp-hikaku.com/comparisons/b-type-comparison.html" target="_blank" rel="noopener">当サイト「就労継続支援B型向けホームページ制作会社比較」</a></li><li><a href="https://www.ipa.go.jp/security/guide/sme/about.html" target="_blank" rel="noopener">IPA「中小企業の情報セキュリティ対策ガイドライン」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card" href="../../blog/hp-cost-souba/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">福祉事業所のホームページ制作費用の相場｜初期費用・月額費用・1年目の総額で比べる</h3>
+<p class="blog-card__desc">福祉事業所のホームページ制作にかかる費用の相場を、自作ツール・テンプレート型・月額定額型・オリジナル制作のタイプ別に解説。サーバー・ドメインなどの見落としがちな費用、1年目と3年間の総額の考え方、見積もりで確認すべき点も紹介します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/hp-builder-vs-agency/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">ホームページは自作？制作会社に依頼？福祉事業所のための作り方4パターン比較</h3>
+<p class="blog-card__desc">福祉事業所のホームページを、作成ツールで自作する、WordPressで自作する、制作会社に依頼する、月額定額型サービスを使う、の4パターンで比較。費用、手間、デザイン、更新、セキュリティの違いと、事業所のタイプ別のおすすめを解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/wordpress-security-checklist/">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">WordPressセキュリティ対策チェックリスト｜福祉事業所のホームページを改ざん・乗っ取りから守る20項目</h3>
+<p class="blog-card__desc">WordPressで作った福祉事業所のホームページを改ざんや乗っ取りから守るためのチェックリスト。更新、ログイン対策、プラグイン管理、バックアップ、サーバー設定、運用体制まで20項目を、専門知識がなくても確認できるよう解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

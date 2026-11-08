@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>障害者グループホーム（共同生活援助）の種類と違い｜介護サービス包括型・日中サービス支援型・外部サービス利用型｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="障害者グループホーム（共同生活援助）の3つの類型「介護サービス包括型」「日中サービス支援型」「外部サービス利用型」とサテライト型住居の違いを解説。地域連携推進会議など近年の制度変更や、入居希望者に伝わるホームページのポイントも紹介します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/group-home-types/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="障害者グループホーム（共同生活援助）の種類と違い｜介護サービス包括型・日中サービス支援型・外部サービス利用型｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="障害者グループホーム（共同生活援助）の3つの類型「介護サービス包括型」「日中サービス支援型」「外部サービス利用型」とサテライト型住居の違いを解説。地域連携推進会議など近年の制度変更や、入居希望者に伝わるホームページのポイントも紹介します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/group-home-types/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta property="article:section" content="福祉の基礎知識">
+<link rel="icon" href="../../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "障害者グループホーム（共同生活援助）の種類と違い｜介護サービス包括型・日中サービス支援型・外部サービス利用型",
+  "description": "障害者グループホーム（共同生活援助）の3つの類型「介護サービス包括型」「日中サービス支援型」「外部サービス利用型」とサテライト型住居の違いを解説。地域連携推進会議など近年の制度変更や、入居希望者に伝わるホームページのポイントも紹介します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/group-home-types/",
+  "url": "https://fukushi-hp-hikaku.com/blog/group-home-types/",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
+  "articleSection": "福祉の基礎知識",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v2-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/brand/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "福祉の基礎知識",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/fukushi-kiso/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "障害者グループホーム（共同生活援助）の種類と違い｜介護サービス包括型・日中サービス支援型・外部サービス利用型",
+      "item": "https://fukushi-hp-hikaku.com/blog/group-home-types/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li><li aria-current="page">障害者グループホーム（共同生活援助）の種類と違い｜介護サービス包括型・日中サービス支援型・外部サービス利用型</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--fukushi-kiso" href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a>
+<h1 class="blog-article__title">障害者グループホーム（共同生活援助）の種類と違い｜介護サービス包括型・日中サービス支援型・外部サービス利用型</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-08">2026年11月8日</time></span>
+
+<span>読了目安 約4分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<p class="blog-article__lead">障害者グループホーム（共同生活援助）は、障害のある方が地域の住まいで支援を受けながら暮らすためのサービスです。グループホームには複数の類型があり、介護の提供方法や日中の支援体制が異なります。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>共同生活援助の3類型とサテライト型住居の違い</li><li>対象者・支援体制・費用の考え方</li><li>地域連携推進会議の設置など近年の制度変更</li><li>入居希望者・家族・相談支援専門員に伝わるホームページの作り方</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">グループホーム（共同生活援助）とは</a></li><li><a href="#sec-2">3つの類型とサテライト型住居</a></li><li><a href="#sec-3">費用の考え方</a></li><li><a href="#sec-4">近年の制度変更：地域連携推進会議</a></li><li><a href="#sec-5">入居希望者に伝わるホームページの作り方</a></li><li><a href="#sec-6">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">グループホーム（共同生活援助）とは</h2>
+<p>障害者グループホームは、障害者総合支援法の「共同生活援助」にもとづくサービスです。主に夜間や休日に、共同生活を営む住居で、相談、入浴・排せつ・食事の介護、日常生活上の援助などを行います。</p>
+<p>一般的な住宅やアパートを活用し、少人数で暮らすのが特徴です。施設ではなく「地域の中の住まい」で、自立した生活を目指す場として位置づけられています。</p>
+<h2 id="sec-2">3つの類型とサテライト型住居</h2>
+<p>共同生活援助には、介護の提供方法や日中の支援体制によって3つの類型があります。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">類型</th><th scope="col">介護の提供</th><th scope="col">日中の支援</th><th scope="col">主な対象のイメージ</th></tr></thead><tbody><tr><th scope="row">介護サービス包括型</th><td>グループホームの職員が提供</td><td>日中は通所先などで過ごすことが多い</td><td>一定の介護が必要で、日中は就労や日中活動に通う方</td></tr><tr><th scope="row">外部サービス利用型</th><td>外部の居宅介護事業所に委託して提供</td><td>日中は通所先などで過ごすことが多い</td><td>介護の必要度が比較的低い方</td></tr><tr><th scope="row">日中サービス支援型</th><td>グループホームの職員が提供</td><td>日中も支援員を配置し、ホーム内で支援</td><td>重度の障害がある方、高齢化により日中の支援が必要な方</td></tr></tbody></table></div>
+<div class="blog-box blog-box--info"><p class="blog-box__title">サテライト型住居とは</p><p>本体となる住居と連携しながら、近くのアパートなどで一人暮らしに近い形で生活する住まいの形態です。一人暮らしを目指す方のステップとして利用されます。本体住居から一定の距離内にあることなど、設置には要件があります。</p></div>
+<h3>介護サービス包括型</h3>
+<p>もっとも多い類型です。グループホームの職員（世話人・生活支援員）が、相談や家事援助に加え、入浴・排せつ・食事などの介護も行います。日中は就労継続支援や生活介護などの事業所に通い、夕方以降と休日をホームで過ごすのが一般的なスタイルです。</p>
+<h3>外部サービス利用型</h3>
+<p>相談や家事援助はグループホームの職員が行い、介護が必要な場合は、ホームが委託した外部の居宅介護事業所が提供します。介護の必要度が比較的低い方が中心となります。</p>
+<h3>日中サービス支援型</h3>
+<p>2018年度に創設された類型で、昼夜を通じた支援体制をとるのが特徴です。重度の障害がある方や高齢の方など、日中も支援が必要な方に対応します。短期入所（ショートステイ）を併設することが求められており、地域の支援拠点としての役割も期待されています。</p>
+<h2 id="sec-3">費用の考え方</h2>
+<p>グループホームの利用にかかる費用は、大きく次の2つに分かれます。</p>
+<ul class="blog-list"><li><strong>障害福祉サービスの利用者負担</strong>：前年の世帯所得に応じた負担上限月額があり、多くの方は無料または低額</li><li><strong>実費（家賃・食費・光熱水費・日用品費など）</strong>：利用者が負担する。家賃には、所得に応じて月額1万円を上限とする補足給付がある</li></ul>
+<p>入居を検討する方にとって、「毎月いくらかかるのか」は最も重要な情報です。ホームページでは<strong>家賃・食費・光熱水費などの内訳と月額の目安</strong>を示しておくと、比較検討の段階で候補に残りやすくなります。</p>
+<h2 id="sec-4">近年の制度変更：地域連携推進会議</h2>
+<p>2024年度の報酬改定では、グループホームの運営の透明性を高め、サービスの質を確保するため、利用者・家族・地域の関係者などが参加する「<strong>地域連携推進会議</strong>」の設置が求められるようになりました（2024年度は努力義務、2025年度から義務化）。会議では運営状況を報告し、意見を聞く機会を設けるほか、構成員が事業所を見学する機会を設けることも求められています。</p>
+<p>地域との関わりや日々の運営を外に向けて発信するという点で、ホームページやお知らせの更新は相性のよい取り組みです。会議の開催報告や地域行事への参加の様子を、個人情報に配慮しながら掲載するのもよいでしょう。</p>
+<h2 id="sec-5">入居希望者に伝わるホームページの作り方</h2>
+<p>グループホームのホームページは、入居希望者本人、家族、相談支援専門員、病院のソーシャルワーカーなど、さまざまな立場の人に読まれます。次の情報をそろえておきましょう。</p>
+<ol class="blog-olist"><li><strong>類型と対象者</strong>：「介護サービス包括型／知的障害・精神障害のある方」など</li><li><strong>住居の情報</strong>：所在地（町名まで）、定員、居室の広さ、設備、写真</li><li><strong>費用の内訳</strong>：家賃・食費・光熱水費・日用品費、補足給付の有無</li><li><strong>支援体制</strong>：夜間の職員配置（夜勤・宿直・連絡体制）、日中の過ごし方</li><li><strong>空室状況</strong>：時点を明記し、こまめに更新する</li><li><strong>見学・体験入居の流れ</strong>：問い合わせから入居までのステップ</li></ol>
+<div class="blog-box blog-box--point"><p class="blog-box__title">「住まいの雰囲気」が伝わる写真を</p><p>居室、共有スペース、キッチン、浴室、外観などの写真は、入居後の生活をイメージしてもらうために欠かせません。明るい時間帯に撮影し、生活感のある小物を整えてから撮ると印象がよくなります。利用者が写る場合は必ず本人の同意を得ましょう。</p></div>
+<p>グループホームのホームページ制作を検討している場合は、<a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社の比較記事</a>もあわせてご覧ください。</p>
+<h2 id="sec-6">まとめ</h2>
+<p>障害者グループホームには、介護サービス包括型、外部サービス利用型、日中サービス支援型の3類型と、サテライト型住居という住まいの形があります。類型によって介護の提供方法や日中の支援体制が異なるため、ホームページでは類型と対象者、支援体制、費用の内訳をわかりやすく示すことが大切です。</p>
+<p>2025年度からは地域連携推進会議の設置も義務化され、グループホームには「地域に開かれた運営」が一層求められています。ホームページを情報発信の拠点として活用していきましょう。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>グループホームの家賃や食費はサービス費に含まれますか？</summary><div class="blog-faq__a"><p>含まれません。家賃、食材料費、光熱水費、日用品費などは利用者の実費負担となるのが一般的です。家賃については、所得の状況に応じて月額1万円を上限とする「特定障害者特別給付費（補足給付）」が支給される場合があります。ホームページでは月々の費用の目安を内訳つきで示すと親切です。</p></div></details><details class="blog-faq__item"><summary>日中はグループホームで過ごせますか？</summary><div class="blog-faq__a"><p>日中サービス支援型では、日中も支援員が配置され、ホーム内で過ごすことができます。介護サービス包括型・外部サービス利用型では、日中は就労継続支援や生活介護などの日中活動サービスに通うことが多くなります。</p></div></details><details class="blog-faq__item"><summary>空室情報をホームページに載せるべきですか？</summary><div class="blog-faq__a"><p>載せることをおすすめします。入居先を探している方や相談支援専門員は、空室の有無を最初に確認します。「◯年◯月時点」と時点を明記し、満室の場合も「待機の受付可否」を書いておくと問い合わせにつながります。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/service/naiyou.html" target="_blank" rel="noopener">厚生労働省「障害福祉サービスについて」</a></li><li><a href="https://www.wam.go.jp/sfkohyoout/" target="_blank" rel="noopener">WAM NET「障害福祉サービス等情報検索」</a></li><li><a href="https://www.mhlw.go.jp/stf/shingi/other-syougai_446935_00001.html" target="_blank" rel="noopener">厚生労働省「障害福祉サービス等報酬改定検討チーム」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card" href="../../blog/shogai-fukushi-service-list/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害福祉サービスの種類一覧｜介護給付・訓練等給付・障害児支援の違いをわかりやすく解説</h3>
+<p class="blog-card__desc">障害者総合支援法と児童福祉法にもとづく障害福祉サービスの種類を一覧で整理。介護給付・訓練等給付・相談支援・障害児通所支援の違いや、2025年10月に始まった就労選択支援まで、事業所運営者向けにわかりやすく解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/kouhyou-gimu-website/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害福祉事業所がホームページ等で公表すべき情報まとめ｜情報公表制度・未報告減算・重要事項の掲載</h3>
+<p class="blog-card__desc">障害福祉サービス等情報公表制度（WAM NET）の未報告減算、児童発達支援・放課後等デイサービスの支援プログラム未公表減算、重要事項のウェブサイト掲載など、障害福祉事業所が公表すべき情報と減算のリスクを一覧で整理します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/recruit-website/">
+<span class="blog-cat blog-cat--unei">集客・採用・運用</span>
+<h3 class="blog-card__title">福祉事業所の採用ページ設計｜処遇改善の見える化とGoogleしごと検索（求人の構造化データ）への対応</h3>
+<p class="blog-card__desc">福祉事業所の採用ページを、求職者が応募前に確認する情報から逆算して設計する方法を解説。処遇改善加算の取組の見える化、数字で見る職場、職員インタビューの質問例、求人の構造化データによるGoogleしごと検索への掲載、募集終了時の注意まで紹介します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>運営者情報・編集方針｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="福祉ホームページ制作比較ガイドの運営者情報、比較・記事作成の編集方針、掲載情報の取り扱いについて説明します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/about/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="website">
+<meta property="og:title" content="運営者情報・編集方針｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="福祉ホームページ制作比較ガイドの運営者情報、比較・記事作成の編集方針、掲載情報の取り扱いについて説明します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/about/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "運営者情報・編集方針",
+      "item": "https://fukushi-hp-hikaku.com/about/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "運営者情報・編集方針",
+  "url": "https://fukushi-hp-hikaku.com/about/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "url": "https://fukushi-hp-hikaku.com/"
+  }
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../">
+<span class="site-header__logo-icon"><img src="../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../">ホーム</a></li><li aria-current="page">運営者情報・編集方針</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head"><h1 class="blog-article__title">運営者情報・編集方針</h1></header>
+<div class="blog-body">
+<h2 id="sec-1">運営者</h2>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">項目</th><th scope="col">内容</th></tr></thead><tbody><tr><th scope="row">サイト名</th><td>福祉ホームページ制作比較ガイド</td></tr><tr><th scope="row">URL</th><td>https://fukushi-hp-hikaku.com/</td></tr><tr><th scope="row">運営</th><td>福祉ホームページ制作比較ガイド編集部</td></tr><tr><th scope="row">掲載企業との関係</th><td>当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。比較記事では同社も他社と同じ基準で確認・掲載しています。</td></tr><tr><th scope="row">内容</th><td>福祉事業所向けホームページ制作会社の業種別比較、福祉事業所のホームページ運営に関するお役立ち記事の掲載</td></tr></tbody></table></div>
+<h2 id="sec-2">このサイトの目的</h2>
+<p>障害福祉サービス事業所や介護事業所では、ホームページが「利用者・ご家族が事業所を知る入口」であり、「職員採用の窓口」であり、「行政や相談支援専門員が事業所を確認する資料」にもなっています。一方で、制作会社ごとに料金体系や対応範囲が大きく異なり、比較しにくいのが実情です。</p>
+<p>当サイトは、福祉事業所の運営者・担当者の方が、自分たちの事業所に合ったホームページの作り方や依頼先を判断できるよう、情報を整理してお届けすることを目的としています。</p>
+<h2 id="sec-3">比較記事の編集方針</h2>
+<ul class="blog-list"><li>料金・サービス内容は、各社の公式サイトなど公開情報を確認したうえで掲載し、確認した時点を記事内に明記します。</li><li>確認できなかった項目は「未確認」として扱い、推測で「対応している」「対応していない」と記載しません。</li><li>料金は比較しやすいよう税込相当の金額にそろえ、税別表記の場合はその旨を補足します。</li><li>比較の観点（料金、福祉分野への理解、デザイン、相談のしやすさ、公開後のサポート）はすべての会社に共通の基準で確認します。</li><li>掲載企業から広告費・紹介料は受け取っていません。今後、広告や提携による掲載を行う場合は、該当箇所に「広告」「PR」などと明示します。</li></ul>
+<h2 id="sec-4">お役立ち記事の編集方針</h2>
+<ul class="blog-list"><li>制度・法令・統計に関する記述は、厚生労働省、警察庁、個人情報保護委員会、IPA（情報処理推進機構）、都道府県などの公的機関の資料を優先して参照します。</li><li>民間企業の解説記事や報道を参照する場合も、出典を記事末尾の「参考資料・出典」に明記します。</li><li>記事には公開日と更新日を表示し、制度改正や新しい情報があった場合は内容を見直します。</li><li>本サイトの記事は一般的な情報提供を目的としたものです。加算・減算の算定、指定申請、法的な判断などは、指定権者（都道府県・市町村）や専門家に必ずご確認ください。</li></ul>
+<h2 id="sec-5">掲載情報についてのお願い</h2>
+<p>掲載している料金・サービス内容は、各社の都合により変更される場合があります。契約前には必ず各社の公式サイトで最新情報をご確認ください。また、比較結果は特定企業の利用を保証するものではありません。</p>
+<p>掲載内容に誤りや古い情報を見つけた場合は、確認のうえ速やかに修正します。</p>
+</div>
+</article>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../">トップページ</a></li>
+<li><a href="../#comparisons">比較記事一覧</a></li>
+<li><a href="../blog/">お役立ち記事</a></li>
+<li><a href="../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>WordPressセキュリティ対策チェックリスト｜福祉事業所のホームページを改ざん・乗っ取りから守る20項目｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="WordPressで作った福祉事業所のホームページを改ざんや乗っ取りから守るためのチェックリスト。更新、ログイン対策、プラグイン管理、バックアップ、サーバー設定、運用体制まで20項目を、専門知識がなくても確認できるよう解説します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/wordpress-security-checklist/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WordPressセキュリティ対策チェックリスト｜福祉事業所のホームページを改ざん・乗っ取りから守る20項目｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="WordPressで作った福祉事業所のホームページを改ざんや乗っ取りから守るためのチェックリスト。更新、ログイン対策、プラグイン管理、バックアップ、サーバー設定、運用体制まで20項目を、専門知識がなくても確認できるよう解説します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/wordpress-security-checklist/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta property="article:section" content="セキュリティ対策">
+<link rel="icon" href="../../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "WordPressセキュリティ対策チェックリスト｜福祉事業所のホームページを改ざん・乗っ取りから守る20項目",
+  "description": "WordPressで作った福祉事業所のホームページを改ざんや乗っ取りから守るためのチェックリスト。更新、ログイン対策、プラグイン管理、バックアップ、サーバー設定、運用体制まで20項目を、専門知識がなくても確認できるよう解説します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/wordpress-security-checklist/",
+  "url": "https://fukushi-hp-hikaku.com/blog/wordpress-security-checklist/",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
+  "articleSection": "セキュリティ対策",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v2-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/brand/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "セキュリティ対策",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/security/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "WordPressセキュリティ対策チェックリスト｜福祉事業所のホームページを改ざん・乗っ取りから守る20項目",
+      "item": "https://fukushi-hp-hikaku.com/blog/wordpress-security-checklist/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/security/">セキュリティ対策</a></li><li aria-current="page">WordPressセキュリティ対策チェックリスト｜福祉事業所のホームページを改ざん・乗っ取りから守る20項目</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--security" href="../../blog/category/security/">セキュリティ対策</a>
+<h1 class="blog-article__title">WordPressセキュリティ対策チェックリスト｜福祉事業所のホームページを改ざん・乗っ取りから守る20項目</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-08">2026年11月8日</time></span>
+
+<span>読了目安 約5分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<p class="blog-article__lead">WordPressは無料で使え、更新もしやすいことから福祉事業所のホームページでも広く使われています。一方で利用者が多いぶん、攻撃者に狙われやすいソフトでもあります。この記事では、確認すべき対策を20項目のチェックリストにまとめました。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>WordPressが狙われやすい理由と、2026年の緊急脆弱性の教訓</li><li>更新・ログイン・プラグイン・バックアップ・サーバー・運用の6分野20項目</li><li>制作会社に任せている場合に確認すべきこと</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">WordPressが狙われやすい理由</a></li><li><a href="#sec-2">チェックリスト20項目</a></li><li><a href="#sec-3">自動更新の設定を確認しよう</a></li><li><a href="#sec-4">制作会社に任せている場合の確認事項</a></li><li><a href="#sec-5">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">WordPressが狙われやすい理由</h2>
+<p>WordPressは世界中のウェブサイトで使われている、もっとも普及したホームページ作成ソフトです。利用者が多いということは、攻撃者にとっては「ひとつの弱点を見つければ、大量のサイトを攻撃できる」ということでもあります。</p>
+<p>2026年7月には、WordPress本体に、ログインしなくても外部から任意のプログラムを実行されるおそれがある緊急の脆弱性（通称「wp2shell」）が見つかり、実際の攻撃にも悪用されました。修正版が公開され、WordPressの運営側が強制的な自動更新を行う異例の対応となりました。このケースは、<strong>更新を止めているサイトほど危険にさらされる</strong>ことを改めて示しています。</p>
+<p>加えて、WordPressは「プラグイン」と呼ばれる拡張機能を組み合わせて使うのが一般的です。プラグインは世界中の開発者が作っており、品質や更新頻度はさまざまです。脆弱性の多くは、本体よりもプラグインやテーマで見つかっています。</p>
+<h2 id="sec-2">チェックリスト20項目</h2>
+<p>自分たちのホームページについて、ひとつずつ確認してみましょう。わからない項目は、制作会社や保守会社に問い合わせてください。</p>
+<h3>A. 更新（4項目）</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">No.</th><th scope="col">チェック項目</th><th scope="col">確認のポイント</th></tr></thead><tbody><tr><th scope="row">1</th><td>WordPress本体が最新版になっている</td><td>管理画面の「ダッシュボード」→「更新」で確認</td></tr><tr><th scope="row">2</th><td>プラグインがすべて最新版になっている</td><td>更新が長期間止まっているプラグインは代替を検討</td></tr><tr><th scope="row">3</th><td>テーマが最新版になっている</td><td>子テーマを使っている場合は親テーマも確認</td></tr><tr><th scope="row">4</th><td>サーバーのPHPが、サポート中のバージョンになっている</td><td>サーバー会社の管理画面で確認できることが多い</td></tr></tbody></table></div>
+<h3>B. ログイン対策（5項目）</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">No.</th><th scope="col">チェック項目</th><th scope="col">確認のポイント</th></tr></thead><tbody><tr><th scope="row">5</th><td>管理者のユーザー名が「admin」など推測しやすいものではない</td><td>推測しやすい場合は新しい管理者を作成して切り替える</td></tr><tr><th scope="row">6</th><td>パスワードは長く（12文字以上目安）、他のサービスと使い回していない</td><td>パスワード管理ツールの利用も有効</td></tr><tr><th scope="row">7</th><td>二段階認証（2要素認証）を設定している</td><td>プラグインやサーバーの機能で設定できる</td></tr><tr><th scope="row">8</th><td>ログイン試行回数の制限を設定している</td><td>総当たり攻撃への対策</td></tr><tr><th scope="row">9</th><td>退職者や使っていないアカウントを削除している</td><td>職員ごとにアカウントを分け、権限は必要最小限に</td></tr></tbody></table></div>
+<h3>C. プラグイン・テーマの管理（3項目）</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">No.</th><th scope="col">チェック項目</th><th scope="col">確認のポイント</th></tr></thead><tbody><tr><th scope="row">10</th><td>使っていないプラグイン・テーマを削除している</td><td>「無効化」ではなく「削除」する</td></tr><tr><th scope="row">11</th><td>入手元が公式ディレクトリや信頼できる販売元である</td><td>無料配布の改造版（いわゆる海賊版）は使わない</td></tr><tr><th scope="row">12</th><td>長期間更新されていないプラグインを使っていない</td><td>最終更新日が古いものは代替を検討</td></tr></tbody></table></div>
+<h3>D. バックアップ（3項目）</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">No.</th><th scope="col">チェック項目</th><th scope="col">確認のポイント</th></tr></thead><tbody><tr><th scope="row">13</th><td>ファイルとデータベースの両方を定期的にバックアップしている</td><td>更新頻度に応じて毎日〜毎週</td></tr><tr><th scope="row">14</th><td>バックアップをサーバーとは別の場所にも保存している</td><td>サーバーごと被害を受けても復元できるように</td></tr><tr><th scope="row">15</th><td>実際に復元できることを確認している</td><td>「取っているつもり」が一番危険</td></tr></tbody></table></div>
+<h3>E. サーバー・通信（3項目）</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">No.</th><th scope="col">チェック項目</th><th scope="col">確認のポイント</th></tr></thead><tbody><tr><th scope="row">16</th><td>常時SSL（https）化している</td><td>アドレスバーに鍵マークが表示されるか</td></tr><tr><th scope="row">17</th><td>サーバー会社のWAF（ウェブアプリケーションファイアウォール）を有効にしている</td><td>多くのレンタルサーバーで無料で使える</td></tr><tr><th scope="row">18</th><td>サーバーやFTPのパスワードも強固で、使い回していない</td><td>制作会社と共有したままになっていないか確認</td></tr></tbody></table></div>
+<h3>F. 運用体制（2項目）</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">No.</th><th scope="col">チェック項目</th><th scope="col">確認のポイント</th></tr></thead><tbody><tr><th scope="row">19</th><td>ホームページ・ドメイン・サーバーの管理者と連絡先が記録されている</td><td>担当者が異動・退職しても引き継げるように</td></tr><tr><th scope="row">20</th><td>改ざんなどが起きたときの連絡先と手順を決めている</td><td>制作会社、サーバー会社、自治体、警察など</td></tr></tbody></table></div>
+<div class="blog-box blog-box--point"><p class="blog-box__title">まずは5項目から</p><p>すべてを一度に対応するのが難しい場合は、<strong>No.1・2（本体とプラグインの更新）、No.6・7（パスワードと二段階認証）、No.13（バックアップ）</strong> の5項目から始めてください。これだけでも、被害にあう可能性を大きく下げられます。</p></div>
+<h2 id="sec-3">自動更新の設定を確認しよう</h2>
+<p>WordPressには自動更新の機能があります。管理画面の「ダッシュボード」→「更新」で、本体の自動更新の設定を確認できます。プラグインやテーマも、一覧画面で個別に「自動更新を有効化」できます。</p>
+<p>更新によって表示が崩れることを心配して自動更新を止めているケースもありますが、2026年7月の緊急脆弱性のように、<strong>公開から攻撃開始までの時間はどんどん短くなっています</strong>。少なくともセキュリティ修正を含む本体のマイナーアップデートは、自動で適用される状態にしておくのが安全です。</p>
+<h2 id="sec-4">制作会社に任せている場合の確認事項</h2>
+<p>制作会社や保守会社にホームページの管理を任せている場合は、次の点を確認しておきましょう。</p>
+<ul class="blog-list"><li>保守契約に「本体・プラグインの更新」「バックアップ」「改ざん監視」「復旧対応」が含まれているか</li><li>更新の頻度（毎月、四半期ごとなど）と、更新内容の報告があるか</li><li>改ざんが起きた場合の対応時間と費用</li><li>管理画面・サーバー・ドメインのログイン情報を事業所側でも把握できているか</li><li>契約終了時に、サイトのデータやアカウントを引き渡してもらえるか</li></ul>
+<div class="blog-box blog-box--warn"><p class="blog-box__title">「作りっぱなし」の契約に注意</p><p>制作費が安くても、公開後の保守が含まれていない契約では、誰も更新しないまま数年が経ってしまうことがあります。制作会社を比較するときは「公開後に誰が何をするのか」を必ず確認しましょう。選び方のポイントは「<a href="../../blog/hp-company-choose/">失敗しない制作会社の選び方と質問リスト</a>」で解説しています。</p></div>
+<h2 id="sec-5">まとめ</h2>
+<p>WordPressは便利な反面、更新や管理を怠ると改ざん・乗っ取りの被害にあいやすくなります。本体・プラグインの更新、強いパスワードと二段階認証、不要なプラグインの削除、バックアップという基本対策を確実に行い、チェックリストで定期的に点検しましょう。</p>
+<p>制作会社に任せている場合も、「誰が・何を・どのくらいの頻度で」行っているかを把握しておくことが、事業所のホームページを守る第一歩です。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>自動更新を有効にするとサイトが壊れることはありませんか？</summary><div class="blog-faq__a"><p>プラグインやテーマの組み合わせによっては、更新後に表示が崩れることがあります。ただし、更新しないまま放置するリスクの方がはるかに大きいため、少なくともWordPress本体のセキュリティ更新（マイナーアップデート）は自動更新にしておくことをおすすめします。更新前にバックアップを取る仕組みがあれば、万一の際も元に戻せます。</p></div></details><details class="blog-faq__item"><summary>セキュリティプラグインを入れれば安心ですか？</summary><div class="blog-faq__a"><p>ログイン試行の制限や改ざんの検知などに役立ちますが、それだけで安全になるわけではありません。本体・プラグインの更新、強いパスワード、不要なプラグインの削除、バックアップといった基本対策と組み合わせることが前提です。</p></div></details><details class="blog-faq__item"><summary>WordPress以外のホームページ作成サービスなら安全ですか？</summary><div class="blog-faq__a"><p>Wix、Jimdo、ペライチなどのクラウド型サービスは、ソフトウェアの更新をサービス提供会社が行うため、利用者側の更新作業は不要です。ただし、アカウントの乗っ取り対策（強いパスワード、二段階認証）は利用者側の責任です。詳しくは「ホームページ作成ツールと制作会社の比較」の記事も参考にしてください。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://developer.wordpress.org/advanced-administration/security/hardening/" target="_blank" rel="noopener">WordPress.org「Hardening WordPress（WordPressの堅牢化）」</a></li><li><a href="https://blog.flatt.tech/entry/wp2shell_wordpress" target="_blank" rel="noopener">GMO Flatt Security Blog「WordPressの深刻度『緊急』脆弱性 wp2shell の概要と対応指針」</a></li><li><a href="https://internet.watch.impress.co.jp/docs/news/2126952.html" target="_blank" rel="noopener">INTERNET Watch「WordPressに管理者権限なしで遠隔でのコード実行が可能になる深刻な脆弱性」</a></li><li><a href="https://www.ipa.go.jp/security/vuln/websecurity/about.html" target="_blank" rel="noopener">IPA「安全なウェブサイトの作り方」</a></li><li><a href="https://www.ipa.go.jp/security/guide/sme/about.html" target="_blank" rel="noopener">IPA「中小企業の情報セキュリティ対策ガイドライン」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card" href="../../blog/welfare-website-cyber-attack/">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">福祉事業所のホームページが狙われている｜2026年のサイバー攻撃の動向と今すぐできる対策</h3>
+<p class="blog-card__desc">ランサムウェア被害は2026年上半期に過去最多を更新し、WordPress本体の緊急脆弱性「wp2shell」も悪用されました。福祉・介護事業所のホームページが狙われる理由、最近の動向、小規模な事業所でも今すぐできる対策をわかりやすく解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/website-hacked-first-response/">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">ホームページが改ざん・乗っ取りされたときの初動対応マニュアル｜福祉事業所向け</h3>
+<p class="blog-card__desc">福祉事業所のホームページが改ざん・乗っ取りされた疑いがあるときの初動対応を、気づくサイン、最初の1時間でやること、復旧、個人情報保護委員会への報告、再発防止の流れで解説。連絡先リストのひな形つきです。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/domain-server-ssl-basics/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">ドメイン・サーバー・SSLの基礎知識｜福祉事業所が契約前に知っておきたいこと</h3>
+<p class="blog-card__desc">ホームページに必要な「ドメイン」「サーバー」「SSL」の役割と費用の目安を、福祉事業所の担当者向けにやさしく解説。名義の確認、更新切れのリスク、独自ドメインのメールアドレス、制作会社との役割分担までまとめました。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>福祉の基礎知識の記事一覧｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="障害福祉サービスの種類や制度、報酬改定など、事業所運営とホームページづくりの前提になる基礎知識をまとめています。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/category/fukushi-kiso/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="website">
+<meta property="og:title" content="福祉の基礎知識の記事一覧｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="障害福祉サービスの種類や制度、報酬改定など、事業所運営とホームページづくりの前提になる基礎知識をまとめています。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/category/fukushi-kiso/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="../../../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../../assets/css/base.css">
+<link rel="stylesheet" href="../../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "福祉の基礎知識",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/fukushi-kiso/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../../">
+<span class="site-header__logo-icon"><img src="../../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../../">ホーム</a></li><li><a href="../../../blog/">お役立ち記事</a></li><li aria-current="page">福祉の基礎知識</li></ol></nav>
+<header class="blog-listhead">
+<h1>福祉の基礎知識の記事一覧</h1>
+<p>障害福祉サービスの種類や制度、報酬改定など、事業所運営とホームページづくりの前提になる基礎知識をまとめています。</p>
+</header>
+<nav class="blog-catnav" aria-label="カテゴリー"><ul>
+<li><a href="../../../blog/">すべて</a></li>
+<li><a href="../../../blog/category/fukushi-kiso/" aria-current="page">福祉の基礎知識</a></li>
+<li><a href="../../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../../blog/category/unei/">集客・採用・運用</a></li>
+</ul></nav>
+<div class="blog-grid"><a class="blog-card" href="../../../blog/shogai-fukushi-service-list/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害福祉サービスの種類一覧｜介護給付・訓練等給付・障害児支援の違いをわかりやすく解説</h3>
+<p class="blog-card__desc">障害者総合支援法と児童福祉法にもとづく障害福祉サービスの種類を一覧で整理。介護給付・訓練等給付・相談支援・障害児通所支援の違いや、2025年10月に始まった就労選択支援まで、事業所運営者向けにわかりやすく解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../../blog/kouhyou-gimu-website/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害福祉事業所がホームページ等で公表すべき情報まとめ｜情報公表制度・未報告減算・重要事項の掲載</h3>
+<p class="blog-card__desc">障害福祉サービス等情報公表制度（WAM NET）の未報告減算、児童発達支援・放課後等デイサービスの支援プログラム未公表減算、重要事項のウェブサイト掲載など、障害福祉事業所が公表すべき情報と減算のリスクを一覧で整理します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../../blog/hokago-day-jihatsu-difference/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">放課後等デイサービスと児童発達支援の違い｜対象年齢・支援内容・5領域と支援プログラムの公表</h3>
+<p class="blog-card__desc">放課後等デイサービスと児童発達支援の違いを、対象年齢・支援内容・利用時間の観点から比較。2024年度報酬改定で義務化された5領域の支援プログラムの公表や、ホームページで公開すべき情報もあわせて解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../../blog/group-home-types/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害者グループホーム（共同生活援助）の種類と違い｜介護サービス包括型・日中サービス支援型・外部サービス利用型</h3>
+<p class="blog-card__desc">障害者グループホーム（共同生活援助）の3つの類型「介護サービス包括型」「日中サービス支援型」「外部サービス利用型」とサテライト型住居の違いを解説。地域連携推進会議など近年の制度変更や、入居希望者に伝わるホームページのポイントも紹介します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../../blog/a-type-b-type-difference/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">就労継続支援A型とB型の違いとは？対象者・給与（工賃）・働き方を比較表で解説</h3>
+<p class="blog-card__desc">就労継続支援A型とB型の違いを、雇用契約の有無、対象者、賃金・工賃、利用期間、年齢などの観点から比較表で解説。就労移行支援や2025年10月開始の就労選択支援との関係、事業所ホームページで伝えるべきポイントも紹介します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a></div>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../../">トップページ</a></li>
+<li><a href="../../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../../blog/">お役立ち記事</a></li>
+<li><a href="../../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../../assets/js/main.js"></script>
+</body>
+</html>

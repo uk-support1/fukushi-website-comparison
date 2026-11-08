@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>ホームページが改ざん・乗っ取りされたときの初動対応マニュアル｜福祉事業所向け｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="福祉事業所のホームページが改ざん・乗っ取りされた疑いがあるときの初動対応を、気づくサイン、最初の1時間でやること、復旧、個人情報保護委員会への報告、再発防止の流れで解説。連絡先リストのひな形つきです。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/website-hacked-first-response/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ホームページが改ざん・乗っ取りされたときの初動対応マニュアル｜福祉事業所向け｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="福祉事業所のホームページが改ざん・乗っ取りされた疑いがあるときの初動対応を、気づくサイン、最初の1時間でやること、復旧、個人情報保護委員会への報告、再発防止の流れで解説。連絡先リストのひな形つきです。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/website-hacked-first-response/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta property="article:section" content="セキュリティ対策">
+<link rel="icon" href="../../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ホームページが改ざん・乗っ取りされたときの初動対応マニュアル｜福祉事業所向け",
+  "description": "福祉事業所のホームページが改ざん・乗っ取りされた疑いがあるときの初動対応を、気づくサイン、最初の1時間でやること、復旧、個人情報保護委員会への報告、再発防止の流れで解説。連絡先リストのひな形つきです。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/website-hacked-first-response/",
+  "url": "https://fukushi-hp-hikaku.com/blog/website-hacked-first-response/",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
+  "articleSection": "セキュリティ対策",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v2-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/brand/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "セキュリティ対策",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/security/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "ホームページが改ざん・乗っ取りされたときの初動対応マニュアル｜福祉事業所向け",
+      "item": "https://fukushi-hp-hikaku.com/blog/website-hacked-first-response/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/security/">セキュリティ対策</a></li><li aria-current="page">ホームページが改ざん・乗っ取りされたときの初動対応マニュアル｜福祉事業所向け</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--security" href="../../blog/category/security/">セキュリティ対策</a>
+<h1 class="blog-article__title">ホームページが改ざん・乗っ取りされたときの初動対応マニュアル｜福祉事業所向け</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-08">2026年11月8日</time></span>
+
+<span>読了目安 約5分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<p class="blog-article__lead">ホームページの改ざんは、ある日突然気づくことがほとんどです。慌てて自己流で対処すると、証拠が消えたり、被害が広がったりすることもあります。この記事では、改ざんに気づいたときに落ち着いて対応できるよう、初動の手順をまとめました。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>改ざん・乗っ取りに気づくサイン</li><li>最初の1時間でやるべきこと・やってはいけないこと</li><li>個人情報が漏えいした可能性がある場合の報告義務</li><li>復旧と再発防止、事前に用意しておく連絡先リスト</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">こんなサインがあったら改ざんを疑う</a></li><li><a href="#sec-2">最初の1時間でやること</a></li><li><a href="#sec-3">個人情報が漏えいした可能性がある場合</a></li><li><a href="#sec-4">復旧と再発防止</a></li><li><a href="#sec-5">事前に準備しておきたい連絡先リスト</a></li><li><a href="#sec-6">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">こんなサインがあったら改ざんを疑う</h2>
+<p>次のような症状がひとつでもあれば、改ざんや乗っ取りの可能性があります。</p>
+<ul class="blog-list"><li>ホームページを開くと、見覚えのない別のサイト（通販サイト、懸賞、警告画面など）に移動する</li><li>Googleの検索結果に、事業所名とともに不審な日本語や商品名が表示される</li><li>検索結果に「このサイトはハッキングされている可能性があります」と表示される</li><li>ブラウザやセキュリティソフトが「危険なサイト」と警告する</li><li>サーバー会社から「不正なファイルを検知した」「迷惑メールを大量送信している」と連絡が来る</li><li>WordPressの管理画面に、知らない管理者ユーザーが追加されている</li><li>管理画面にログインできなくなった</li></ul>
+<div class="blog-box blog-box--info"><p class="blog-box__title">自分では気づきにくいことも</p><p>改ざんの中には、スマートフォンから検索経由でアクセスしたときだけ不正なサイトに移動するなど、管理者が普段見ている画面では気づけないものもあります。利用者や家族、取引先から「ホームページがおかしい」と言われたら、軽視せずに確認しましょう。</p></div>
+<h2 id="sec-2">最初の1時間でやること</h2>
+<h3>1. 落ち着いて記録を残す</h3>
+<p>いつ、誰が、どの画面で、どんな症状に気づいたかを記録します。画面のスクリーンショットを撮り、表示されたURLも控えておきましょう。後の調査や報告で必要になります。</p>
+<h3>2. 被害の拡大を止める</h3>
+<p>閲覧者への被害を防ぐため、ホームページの公開を一時的に止めます。具体的な方法は環境によって異なるため、制作会社やサーバー会社の指示に従ってください。サーバー会社の管理画面からサイトを一時停止できる場合もあります。</p>
+<h3>3. 関係者に連絡する</h3>
+<ul class="blog-list"><li><strong>制作会社・保守会社</strong>：調査と復旧を依頼する</li><li><strong>サーバー会社</strong>：不正アクセスの記録（ログ）の確認、サーバー側の対応を依頼する</li><li><strong>法人内の責任者</strong>：管理者・理事長などへ報告し、対応の判断を仰ぐ</li></ul>
+<h3>4. パスワードを変更する</h3>
+<p>ホームページの管理画面だけでなく、サーバー、FTP、データベース、ドメイン管理、関連するメールアカウントのパスワードを変更します。ウイルスに感染している可能性がある端末からは変更しないようにしましょう。</p>
+<div class="blog-box blog-box--warn"><p class="blog-box__title">やってはいけないこと</p><ul class="blog-list"><li>改ざんされたファイルを、記録を残さずにすぐ削除・上書きする</li><li>原因がわからないまま、バックアップから復元してそのまま公開を再開する</li><li>「被害はありません」と根拠なく公表する</li><li>一人で抱え込み、法人内の責任者に報告しない</li></ul></div>
+<h2 id="sec-3">個人情報が漏えいした可能性がある場合</h2>
+<p>問い合わせフォームや見学申込みフォームを設置している場合、入力された情報が盗まれた可能性も考えなければなりません。</p>
+<p>個人情報保護法では、次のような場合に<strong>個人情報保護委員会への報告と本人への通知</strong>が義務付けられています。</p>
+<ul class="blog-list"><li><strong>要配慮個人情報</strong>（病歴、障害の有無など）が含まれる個人データの漏えい等（そのおそれを含む）が発生した場合</li><li><strong>不正アクセスなど不正の目的</strong>による漏えい等（そのおそれを含む）が発生した場合</li><li>財産的被害が生じるおそれがある場合</li><li>1,000人を超える漏えい等が発生した場合</li></ul>
+<p>報告は、事態を知ってから<strong>速やかに（おおむね3〜5日以内）速報</strong>を、原則として<strong>30日以内（不正の目的による場合は60日以内）に確報</strong>を行います。福祉事業所の場合、問い合わせの内容に障害や病気に関する情報が含まれることが多いため、対象になる可能性が高いと考えておきましょう。</p>
+<div class="blog-box blog-box--check"><p class="blog-box__title">フォームから送信される情報も対象に</p><p>2024年4月の個人情報保護法施行規則の改正により、ホームページのフォームに入力されて送信される途中の情報など、事業者が「取得しようとしている」個人情報が不正アクセスで盗まれた場合も、報告の対象に含まれることが明確になりました。フォームを設置している事業所は特に注意が必要です。</p></div>
+<p>あわせて、指定権者である都道府県・市町村の障害福祉担当課にも連絡し、必要な対応を確認しましょう。被害の内容によっては、警察への相談も検討します。</p>
+<h2 id="sec-4">復旧と再発防止</h2>
+<h3>原因を調べてから復旧する</h3>
+<p>改ざんの原因（侵入経路）を特定しないまま元に戻すと、同じ方法で再び攻撃される可能性があります。制作会社や専門家に、次のような点を調査してもらいましょう。</p>
+<ul class="blog-list"><li>どのファイル・ページが改ざんされたか</li><li>古いソフトウェアやプラグインの脆弱性が使われたか</li><li>不正なログインがあったか、いつからか</li><li>不正なファイル（バックドア）が残っていないか</li></ul>
+<h3>安全なバックアップから復元する</h3>
+<p>改ざんされる前の時点のバックアップから復元し、WordPress本体やプラグインを最新版に更新したうえで公開を再開します。Googleの検索結果に警告が出ている場合は、Search Consoleから再審査をリクエストします。</p>
+<h3>再発防止策を実施する</h3>
+<ul class="blog-list"><li>ソフトウェアの更新体制を見直す（自動更新、保守契約）</li><li>不要なプラグイン・アカウントを削除する</li><li>二段階認証を設定する</li><li>定期的なバックアップと復元テストを行う</li></ul>
+<p>具体的な対策は「<a href="../../blog/wordpress-security-checklist/">WordPressセキュリティ対策チェックリスト</a>」を参考にしてください。</p>
+<h2 id="sec-5">事前に準備しておきたい連絡先リスト</h2>
+<p>いざというときに慌てないよう、次の連絡先を一覧にして、紙でも保管しておきましょう。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">連絡先</th><th scope="col">用途</th><th scope="col">記入例</th></tr></thead><tbody><tr><th scope="row">制作会社・保守会社</th><td>調査・復旧の依頼</td><td>会社名、担当者、電話番号、受付時間</td></tr><tr><th scope="row">サーバー会社</th><td>ログ確認・サイト停止</td><td>契約ID、サポート窓口</td></tr><tr><th scope="row">ドメイン管理会社</th><td>ドメインの乗っ取り対応</td><td>契約ID、サポート窓口</td></tr><tr><th scope="row">法人内の責任者</th><td>対応の判断・公表の決定</td><td>氏名、連絡先</td></tr><tr><th scope="row">指定権者（自治体）</th><td>事故報告・相談</td><td>障害福祉担当課の電話番号</td></tr><tr><th scope="row">個人情報保護委員会</th><td>漏えい等の報告</td><td>委員会ホームページの報告フォーム</td></tr><tr><th scope="row">都道府県警察</th><td>サイバー犯罪の相談</td><td>サイバー犯罪相談窓口</td></tr><tr><th scope="row">IPA・JPCERT/CC</th><td>技術的な相談・報告</td><td>各窓口のホームページ</td></tr></tbody></table></div>
+<h2 id="sec-6">まとめ</h2>
+<p>ホームページの改ざんに気づいたら、まず記録を残し、公開を止めて被害の拡大を防ぎ、関係者に連絡することが大切です。個人情報の漏えいのおそれがある場合は、個人情報保護委員会への報告と本人への通知が必要になることがあります。</p>
+<p>原因を調べずに元に戻すと再び被害にあうおそれがあります。日頃から連絡先リストとバックアップを用意し、「何かあったら誰に連絡するか」を決めておくことが、最大の備えになります。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>改ざんされたページを自分で削除して直してもよいですか？</summary><div class="blog-faq__a"><p>すぐに削除すると、侵入経路を調べるための記録（ログや不正ファイル）が失われ、同じ手口で再び改ざんされるおそれがあります。まずは公開を止めるなどして被害の拡大を防ぎ、制作会社やサーバー会社、専門家に相談してから復旧作業を行ってください。</p></div></details><details class="blog-faq__item"><summary>利用者や家族にはどのように知らせればよいですか？</summary><div class="blog-faq__a"><p>事実関係（発生日時、影響の範囲、閲覧した場合の注意点）、現在の対応状況、問い合わせ窓口を、わかる範囲で速やかにお知らせします。個人情報の漏えいのおそれがある場合は、本人への通知が法律上必要になることがあります。推測で「被害はありません」と断定しないよう注意してください。</p></div></details><details class="blog-faq__item"><summary>復旧にはどのくらいの費用がかかりますか？</summary><div class="blog-faq__a"><p>被害の範囲やサイトの規模、調査の有無によって大きく異なります。保守契約に復旧対応が含まれていれば追加費用がかからない場合もあります。事前に契約内容を確認しておくことが大切です。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://www.ppc.go.jp/personalinfo/legal/leakAction/" target="_blank" rel="noopener">個人情報保護委員会「漏えい等の対応とお役立ち資料」</a></li><li><a href="https://www.jpcert.or.jp/form/" target="_blank" rel="noopener">JPCERT/CC「インシデント対応依頼」</a></li><li><a href="https://www.ipa.go.jp/security/anshin/about.html" target="_blank" rel="noopener">IPA「情報セキュリティ安心相談窓口」</a></li><li><a href="https://www.npa.go.jp/bureau/cyber/soudan.html" target="_blank" rel="noopener">警察庁「サイバー事案に関する相談窓口」</a></li><li><a href="https://www.ipa.go.jp/security/guide/sme/about.html" target="_blank" rel="noopener">IPA「中小企業の情報セキュリティ対策ガイドライン」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card" href="../../blog/welfare-website-cyber-attack/">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">福祉事業所のホームページが狙われている｜2026年のサイバー攻撃の動向と今すぐできる対策</h3>
+<p class="blog-card__desc">ランサムウェア被害は2026年上半期に過去最多を更新し、WordPress本体の緊急脆弱性「wp2shell」も悪用されました。福祉・介護事業所のホームページが狙われる理由、最近の動向、小規模な事業所でも今すぐできる対策をわかりやすく解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/wordpress-security-checklist/">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">WordPressセキュリティ対策チェックリスト｜福祉事業所のホームページを改ざん・乗っ取りから守る20項目</h3>
+<p class="blog-card__desc">WordPressで作った福祉事業所のホームページを改ざんや乗っ取りから守るためのチェックリスト。更新、ログイン対策、プラグイン管理、バックアップ、サーバー設定、運用体制まで20項目を、専門知識がなくても確認できるよう解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/contact-form-personal-info/">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">福祉事業所の問い合わせフォームと個人情報保護｜要配慮個人情報の扱いとプライバシーポリシーの書き方</h3>
+<p class="blog-card__desc">福祉事業所のホームページに設置する問い合わせ・見学申込みフォームで注意すべき個人情報保護のポイントを解説。要配慮個人情報の取得、SSL化、入力項目の最小化、プライバシーポリシーに書くべき内容、迷惑送信対策までまとめました。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

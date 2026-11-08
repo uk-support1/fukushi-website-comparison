@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>障害福祉事業所がホームページ等で公表すべき情報まとめ｜情報公表制度・未報告減算・重要事項の掲載｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="障害福祉サービス等情報公表制度（WAM NET）の未報告減算、児童発達支援・放課後等デイサービスの支援プログラム未公表減算、重要事項のウェブサイト掲載など、障害福祉事業所が公表すべき情報と減算のリスクを一覧で整理します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/kouhyou-gimu-website/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="障害福祉事業所がホームページ等で公表すべき情報まとめ｜情報公表制度・未報告減算・重要事項の掲載｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="障害福祉サービス等情報公表制度（WAM NET）の未報告減算、児童発達支援・放課後等デイサービスの支援プログラム未公表減算、重要事項のウェブサイト掲載など、障害福祉事業所が公表すべき情報と減算のリスクを一覧で整理します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/kouhyou-gimu-website/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta property="article:section" content="福祉の基礎知識">
+<link rel="icon" href="../../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "障害福祉事業所がホームページ等で公表すべき情報まとめ｜情報公表制度・未報告減算・重要事項の掲載",
+  "description": "障害福祉サービス等情報公表制度（WAM NET）の未報告減算、児童発達支援・放課後等デイサービスの支援プログラム未公表減算、重要事項のウェブサイト掲載など、障害福祉事業所が公表すべき情報と減算のリスクを一覧で整理します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/kouhyou-gimu-website/",
+  "url": "https://fukushi-hp-hikaku.com/blog/kouhyou-gimu-website/",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
+  "articleSection": "福祉の基礎知識",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v2-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/brand/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "福祉の基礎知識",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/fukushi-kiso/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "障害福祉事業所がホームページ等で公表すべき情報まとめ｜情報公表制度・未報告減算・重要事項の掲載",
+      "item": "https://fukushi-hp-hikaku.com/blog/kouhyou-gimu-website/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li><li aria-current="page">障害福祉事業所がホームページ等で公表すべき情報まとめ｜情報公表制度・未報告減算・重要事項の掲載</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--fukushi-kiso" href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a>
+<h1 class="blog-article__title">障害福祉事業所がホームページ等で公表すべき情報まとめ｜情報公表制度・未報告減算・重要事項の掲載</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-08">2026年11月8日</time></span>
+
+<span>読了目安 約5分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<p class="blog-article__lead">障害福祉の分野では、ここ数年で「事業所の情報をインターネットで公表すること」が制度上も重視されるようになりました。公表していないと報酬が減算されるものもあります。この記事では、事業所が押さえておきたい公表の義務を一覧で整理します。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>障害福祉サービス等情報公表制度（WAM NET）と未報告減算（2024年4月〜）</li><li>児童発達支援・放課後等デイサービスの支援プログラム未公表減算（2025年4月〜）</li><li>重要事項のウェブサイト掲載が求められる流れ</li><li>公表情報を管理しやすいホームページの作り方</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">まず押さえたい「公表」の全体像</a></li><li><a href="#sec-2">障害福祉サービス等情報公表制度と未報告減算</a></li><li><a href="#sec-3">支援プログラムの公表（障害児通所支援）</a></li><li><a href="#sec-4">重要事項のウェブサイト掲載</a></li><li><a href="#sec-5">そのほか、ホームページで公表・発信しておきたい情報</a></li><li><a href="#sec-6">公表情報を管理しやすいホームページの作り方</a></li><li><a href="#sec-7">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">まず押さえたい「公表」の全体像</h2>
+<p>障害福祉事業所に関係する主な公表の仕組みは、次のとおりです。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">公表の仕組み</th><th scope="col">対象</th><th scope="col">公表先</th><th scope="col">未対応の場合</th></tr></thead><tbody><tr><th scope="row">障害福祉サービス等情報公表制度</th><td>障害福祉サービス・障害児支援のほぼすべての事業所</td><td>情報公表システム（WAM NETで閲覧）</td><td>情報公表未報告減算（2024年4月〜）</td></tr><tr><th scope="row">支援プログラムの公表</th><td>児童発達支援、放課後等デイサービス、居宅訪問型児童発達支援</td><td>インターネット等（自治体へ届出）</td><td>支援プログラム未公表減算（2025年4月〜）</td></tr><tr><th scope="row">自己評価・保護者評価結果の公表</th><td>児童発達支援、放課後等デイサービスなど</td><td>インターネット等</td><td>自己評価結果等未公表減算</td></tr><tr><th scope="row">重要事項の掲示・ウェブサイト掲載</th><td>指定を受けた事業所（基準により異なる）</td><td>事業所内の掲示、ウェブサイト</td><td>運営基準違反として指導の対象</td></tr></tbody></table></div>
+<p>それぞれの内容を順に見ていきましょう。</p>
+<h2 id="sec-2">障害福祉サービス等情報公表制度と未報告減算</h2>
+<h3>制度の概要</h3>
+<p>障害福祉サービス等情報公表制度は、利用者が事業所を比較・検討して選べるよう、事業所の基本情報や運営状況を公表する仕組みです。事業所は、所在地、サービス内容、職員体制、利用料などの情報を都道府県等に報告し、その内容は独立行政法人福祉医療機構の<strong>WAM NET</strong>（障害福祉サービス等情報検索）で誰でも閲覧できます。</p>
+<h3>2024年度から未報告減算が始まった</h3>
+<p>2024年度の報酬改定で、情報公表システム上で未報告となっている事業所に対する「<strong>情報公表未報告減算</strong>」が創設されました。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">区分</th><th scope="col">主なサービス</th><th scope="col">減算率</th></tr></thead><tbody><tr><th scope="row">施設・居住系</th><td>療養介護、施設入所支援、共同生活援助、宿泊型自立訓練、障害児入所施設</td><td>所定単位数の10％</td></tr><tr><th scope="row">訪問・通所系など</th><td>居宅介護、重度訪問介護、生活介護、就労継続支援、放課後等デイサービス、児童発達支援、計画相談支援など</td><td>所定単位数の5％</td></tr></tbody></table></div>
+<p>また、都道府県知事等は、指定の更新申請の際に情報公表の報告が行われているかを確認することとされています。</p>
+<div class="blog-box blog-box--warn"><p class="blog-box__title">報告内容とホームページの内容を一致させる</p><p>情報公表システムに報告した営業日・定員・利用料などと、自社ホームページの記載が食い違っていると、利用者や相談支援専門員を混乱させてしまいます。報告内容を更新したら、ホームページも同時に見直す運用にしておきましょう。</p></div>
+<h2 id="sec-3">支援プログラムの公表（障害児通所支援）</h2>
+<p>児童発達支援・放課後等デイサービス・居宅訪問型児童発達支援では、2024年度の報酬改定で、5領域（健康・生活／運動・感覚／認知・行動／言語・コミュニケーション／人間関係・社会性）との関係を明らかにした<strong>支援プログラムの作成・公表</strong>が義務付けられました。</p>
+<p>2025年4月以降、支援プログラムを公表し指定権者へ届け出ていない場合は「支援プログラム未公表減算」の対象となり、自治体の案内では所定単位数の15％が減算されるとされています。届出書に<strong>インターネットでの公表先URL</strong>の記載を求める自治体もあり、ホームページへの掲載が実務上の前提になりつつあります。</p>
+<p>詳しくは「<a href="../../blog/hokago-day-jihatsu-difference/">放課後等デイサービスと児童発達支援の違い</a>」で解説しています。</p>
+<h2 id="sec-4">重要事項のウェブサイト掲載</h2>
+<p>事業所は、運営規程の概要、従業者の勤務体制、利用料、苦情処理の体制など、利用者のサービス選択に関わる重要事項を事業所内に掲示することが求められています。</p>
+<p>2024年度の報酬改定では、介護保険サービスを中心に「重要事項を<strong>原則としてウェブサイトに掲載</strong>する」方向の見直しが行われ、介護保険サービスでは2025年4月から義務化されています。障害福祉サービスについても、自治体の集団指導などで重要事項のウェブサイト掲載に関する説明が行われています。対象となるサービスや掲載項目、時期は指定権者によって案内の仕方が異なる場合があるため、所管の自治体の最新資料を必ず確認してください。</p>
+<h3>重要事項として掲載されることが多い項目</h3>
+<ul class="blog-list"><li>事業の目的・運営の方針</li><li>従業者の職種・員数・職務内容</li><li>営業日・営業時間、利用定員</li><li>サービスの内容と利用料、その他の費用</li><li>通常の事業の実施地域</li><li>緊急時・事故発生時の対応</li><li>苦情受付の窓口と対応体制</li><li>虐待防止のための措置</li><li>第三者評価の実施状況</li></ul>
+<h2 id="sec-5">そのほか、ホームページで公表・発信しておきたい情報</h2>
+<p>制度上の義務とまではいえなくても、次の情報は公表しておくと信頼性が高まります。</p>
+<ul class="blog-list"><li><strong>処遇改善加算に関する取組</strong>：職場環境等の改善の取組を、情報公表システムや自社ホームページで「見える化」することが加算の要件に含まれる場合がある</li><li><strong>虐待防止・身体拘束適正化の取組</strong>：委員会の開催や研修の実施状況</li><li><strong>BCP（業務継続計画）の策定状況</strong>：2024年度から全事業所で策定が義務化されている</li><li><strong>地域連携推進会議の開催報告</strong>（グループホームなど）</li></ul>
+<h2 id="sec-6">公表情報を管理しやすいホームページの作り方</h2>
+<p>公表が必要な情報は、年度ごとに更新が発生します。担当者が変わっても迷わず更新できるよう、ホームページ側でも仕組みを整えておきましょう。</p>
+<ol class="blog-olist"><li><strong>「公表情報」専用ページを作る</strong>：支援プログラム、評価結果、重要事項、運営規程の概要などを1ページにまとめる</li><li><strong>PDFだけでなく本文でも掲載する</strong>：PDFはスマートフォンで読みにくく、検索エンジンにも内容が伝わりにくい</li><li><strong>更新日を明記する</strong>：「令和8年4月1日更新」のように時点を示す</li><li><strong>フッターから常にリンクする</strong>：どのページからでも公表情報にたどり着けるようにする</li><li><strong>自分たちで更新できるか確認する</strong>：制作会社に依頼する場合は、更新を依頼するたびに費用がかかるのか、自社で更新できるのかを事前に確認する</li></ol>
+<div class="blog-box blog-box--point"><p class="blog-box__title">制作会社への依頼時に確認したいこと</p><p>「公表情報ページの作成は料金に含まれるか」「年度更新のときに自分たちでPDFを差し替えられるか」「更新を依頼する場合の費用と納期」を事前に確認しておきましょう。制作会社の選び方は「<a href="../../blog/hp-company-choose/">失敗しない制作会社の選び方と質問リスト</a>」で解説しています。</p></div>
+<h2 id="sec-7">まとめ</h2>
+<p>障害福祉事業所では、情報公表システムへの報告、支援プログラムや評価結果の公表、重要事項のウェブサイト掲載など、インターネットでの情報公開が制度として求められるようになっています。未対応の場合は報酬の減算や指導の対象になることもあります。</p>
+<p>自社のホームページに「公表情報」ページを設け、年度ごとに更新できる体制を整えておくことが、減算リスクを避けるとともに、利用者や家族からの信頼を得ることにもつながります。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>WAM NETに情報を載せていれば、自社のホームページは不要ですか？</summary><div class="blog-faq__a"><p>情報公表システムへの報告は制度上の義務であり、自社ホームページの代わりにはなりません。WAM NETは全国共通の項目を掲載する仕組みのため、事業所の雰囲気や支援の特色、写真、空き状況などを伝えるには自社のホームページが必要です。両方を整え、内容を一致させておくことが大切です。</p></div></details><details class="blog-faq__item"><summary>減算の対象かどうかはどこで確認できますか？</summary><div class="blog-faq__a"><p>指定権者（都道府県・指定都市・中核市など）の障害福祉担当課の案内や、集団指導の資料で確認できます。減算の要件や届出方法は改定で変わることがあるため、毎年度の通知を確認してください。</p></div></details><details class="blog-faq__item"><summary>SNSやブログサービスでの公表でもよいですか？</summary><div class="blog-faq__a"><p>重要事項の掲載については「原則としてウェブサイトに掲載する」とされ、SNSでの代替は自治体によって扱いが異なります。自社で管理できるホームページに掲載しておくのが確実です。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://www.wam.go.jp/sfkohyoout/" target="_blank" rel="noopener">WAM NET「障害福祉サービス等情報検索」</a></li><li><a href="https://www.shougaifukushi.metro.tokyo.lg.jp/Lib/Download.php?sqid=2557" target="_blank" rel="noopener">東京都障害者サービス情報「情報公表未報告減算について」</a></li><li><a href="https://www.city.kobe.lg.jp/a20315/business/annaitsuchi/shogaifukushi/jouhoukouhyou.html" target="_blank" rel="noopener">神戸市「障害福祉サービス等情報公表制度について」</a></li><li><a href="https://www.pref.kagoshima.jp/ae07/kenko-fukushi/syogai-syakai/syougaiji/jigyousya/shien-program.html" target="_blank" rel="noopener">鹿児島県「障害児通所支援事業所における支援プログラムの公表について」</a></li><li><a href="https://www.city.toyoake.lg.jp/secure/26317/2.webkeisai.pdf" target="_blank" rel="noopener">豊明市「重要事項のウェブサイト掲載について」（介護保険サービス、PDF）</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card" href="../../blog/hokago-day-jihatsu-difference/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">放課後等デイサービスと児童発達支援の違い｜対象年齢・支援内容・5領域と支援プログラムの公表</h3>
+<p class="blog-card__desc">放課後等デイサービスと児童発達支援の違いを、対象年齢・支援内容・利用時間の観点から比較。2024年度報酬改定で義務化された5領域の支援プログラムの公表や、ホームページで公開すべき情報もあわせて解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/hp-must-have-contents/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">福祉事業所のホームページに載せるべき項目チェックリスト｜利用者・家族・相談支援専門員に選ばれる30項目</h3>
+<p class="blog-card__desc">福祉事業所のホームページに掲載すべき内容を、基本情報、サービス内容、費用、1日の流れ、公表情報、採用情報など30項目のチェックリストで紹介。利用者・家族・相談支援専門員それぞれが知りたい情報と、ページ構成の例も解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/group-home-types/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害者グループホーム（共同生活援助）の種類と違い｜介護サービス包括型・日中サービス支援型・外部サービス利用型</h3>
+<p class="blog-card__desc">障害者グループホーム（共同生活援助）の3つの類型「介護サービス包括型」「日中サービス支援型」「外部サービス利用型」とサテライト型住居の違いを解説。地域連携推進会議など近年の制度変更や、入居希望者に伝わるホームページのポイントも紹介します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
