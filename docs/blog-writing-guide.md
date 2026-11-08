@@ -44,3 +44,20 @@
 - 料金・制度は時点を明記。改定があったら `updated` を更新して見直す。
 - 特定の制作会社を推す表現は避け、比較記事への導線は中立的に。広告・提携による掲載をする場合は「広告」「PR」を明示する（景品表示法のステルスマーケティング規制）。
 - 追加後は `node scripts/build-blog.cjs` を実行し、生成物をまとめてコミットする。
+
+## 掲載企業のブログとの重複を避ける（独立した立場で書く）
+
+- 本サイトの記事は、掲載企業（福祉ITパートナーを含む）から独立した編集部の立場で書く。
+- 掲載企業のブログ記事を下敷きにしたり、構成・見出し・文章を流用したりしない。同じテーマを扱う場合も、切り口（比較・チェックリスト・制度の一次資料の解説など）を変え、本文は独自に書く。
+- 掲載企業の記事を出典にする場合は、他の情報源（公的機関・報道・他社）と並べて使い、そのページだけに依拠しない。
+- 新しい記事を書く前に、下の一覧とテーマ・タイトルが重ならないか確認する。一覧は分かり次第追記する。
+
+### 福祉ITパートナーのブログで扱っていることが確認できたテーマ（重複を避ける）
+
+| テーマ | 同社記事URL |
+| --- | --- |
+| 2026年10月のPHPの重大な脆弱性 | https://fukushi-it-partner.com/blog/critical-php-vulnerability-2026-10.html |
+| PHPを使わないホームページ（静的サイト）のしくみ | https://fukushi-it-partner.com/blog/homepage-without-php.html |
+| PHPのアップデート費用 | https://fukushi-it-partner.com/blog/php-update-cost.html |
+| PHPを使わない問い合わせフォームの代替方法 | https://fukushi-it-partner.com/blog/php-contact-form-alternatives.html |
+| Ameba Owndのホームページが見られない原因 | https://fukushi-it-partner.com/blog/ameba-ownd-cannot-view.html |
