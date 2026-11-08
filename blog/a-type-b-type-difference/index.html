@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>就労継続支援A型とB型の違いとは？対象者・給与（工賃）・働き方を比較表で解説｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="就労継続支援A型とB型の違いを、雇用契約の有無、対象者、賃金・工賃、利用期間、年齢などの観点から比較表で解説。就労移行支援や2025年10月開始の就労選択支援との関係、事業所ホームページで伝えるべきポイントも紹介します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/a-type-b-type-difference/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="就労継続支援A型とB型の違いとは？対象者・給与（工賃）・働き方を比較表で解説｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="就労継続支援A型とB型の違いを、雇用契約の有無、対象者、賃金・工賃、利用期間、年齢などの観点から比較表で解説。就労移行支援や2025年10月開始の就労選択支援との関係、事業所ホームページで伝えるべきポイントも紹介します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/a-type-b-type-difference/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta property="article:section" content="福祉の基礎知識">
+<link rel="icon" href="../../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "就労継続支援A型とB型の違いとは？対象者・給与（工賃）・働き方を比較表で解説",
+  "description": "就労継続支援A型とB型の違いを、雇用契約の有無、対象者、賃金・工賃、利用期間、年齢などの観点から比較表で解説。就労移行支援や2025年10月開始の就労選択支援との関係、事業所ホームページで伝えるべきポイントも紹介します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/a-type-b-type-difference/",
+  "url": "https://fukushi-hp-hikaku.com/blog/a-type-b-type-difference/",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
+  "articleSection": "福祉の基礎知識",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v2-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/brand/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "福祉の基礎知識",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/fukushi-kiso/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "就労継続支援A型とB型の違いとは？対象者・給与（工賃）・働き方を比較表で解説",
+      "item": "https://fukushi-hp-hikaku.com/blog/a-type-b-type-difference/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li><li aria-current="page">就労継続支援A型とB型の違いとは？対象者・給与（工賃）・働き方を比較表で解説</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--fukushi-kiso" href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a>
+<h1 class="blog-article__title">就労継続支援A型とB型の違いとは？対象者・給与（工賃）・働き方を比較表で解説</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-08">2026年11月8日</time></span>
+
+<span>読了目安 約4分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<p class="blog-article__lead">「A型とB型は何が違うの？」は、利用を検討するご本人・ご家族から最も多く寄せられる質問のひとつです。事業所としても、違いを正しく説明できることは信頼につながります。この記事では、両者の違いを比較表で整理します。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>A型とB型の最大の違いは「雇用契約の有無」</li><li>対象者・賃金（工賃）・年齢・利用期間の違い</li><li>就労移行支援・就労選択支援との関係</li><li>事業所ホームページで違いを伝えるときの注意点</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">A型とB型の違いを一言でいうと</a></li><li><a href="#sec-2">比較表で見るA型とB型</a></li><li><a href="#sec-3">B型を利用するまでの流れと就労選択支援</a></li><li><a href="#sec-4">就労移行支援との違い</a></li><li><a href="#sec-5">事業所のホームページで伝えたいこと</a></li><li><a href="#sec-6">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">A型とB型の違いを一言でいうと</h2>
+<p>就労継続支援A型とB型は、どちらも「一般企業で働くことが難しい障害のある方に、働く場と訓練の機会を提供する」サービスです。最大の違いは、<strong>事業所と利用者が雇用契約を結ぶかどうか</strong>です。</p>
+<ul class="blog-list"><li><strong>A型（雇用型）</strong>：事業所と雇用契約を結び、労働者として働く。最低賃金以上の給与が支払われる</li><li><strong>B型（非雇用型）</strong>：雇用契約を結ばず、体調やペースに合わせて作業する。生産活動の成果に応じた「工賃」が支払われる</li></ul>
+<h2 id="sec-2">比較表で見るA型とB型</h2>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">項目</th><th scope="col">就労継続支援A型</th><th scope="col">就労継続支援B型</th></tr></thead><tbody><tr><th scope="row">雇用契約</th><td>あり</td><td>なし</td></tr><tr><th scope="row">収入</th><td>給与（最低賃金以上）</td><td>工賃（生産活動の収益から支払う）</td></tr><tr><th scope="row">労働法規</th><td>労働基準法・最低賃金法などが適用される</td><td>雇用契約がないため原則適用されない</td></tr><tr><th scope="row">対象者のイメージ</th><td>一定の支援があれば、雇用契約にもとづいて継続的に働ける方</td><td>年齢や体力などの理由で雇用契約を結んで働くことが難しい方</td></tr><tr><th scope="row">年齢</th><td>原則として利用開始時に65歳未満</td><td>上限なし</td></tr><tr><th scope="row">利用期間</th><td>定めなし</td><td>定めなし</td></tr><tr><th scope="row">勤務時間</th><td>雇用契約で定める（短時間勤務が多い）</td><td>比較的柔軟（週数日・短時間からも可能な事業所が多い）</td></tr><tr><th scope="row">社会保険・雇用保険</th><td>条件を満たせば加入</td><td>原則対象外</td></tr><tr><th scope="row">利用料</th><td>前年の世帯所得に応じた負担上限あり（多くの方が無料）</td><td>同左</td></tr></tbody></table></div>
+<div class="blog-box blog-box--info"><p class="blog-box__title">平均賃金・平均工賃の目安</p><p>厚生労働省の調査では、A型の平均賃金は月額8万円台、B型の平均工賃は月額2万円台で推移しています（年度により変動します）。B型の工賃は事業所の生産活動の内容によって大きく差があり、平均工賃は基本報酬の区分にも関係します。2026年度の臨時報酬改定では、平均工賃の上昇を踏まえて基本報酬区分の基準額が見直されています。</p></div>
+<h2 id="sec-3">B型を利用するまでの流れと就労選択支援</h2>
+<p>B型を新たに利用する場合、これまでは就労移行支援事業所などによる「就労アセスメント」を経るのが一般的でした。2025年10月からは、<strong>新たにB型を利用する方は原則として「就労選択支援」を利用する</strong>仕組みに変わっています。</p>
+<p>ただし、次のような方は就労選択支援を経ずにB型を利用できる場合があります（本人が希望すれば利用することも可能）。</p>
+<ul class="blog-list"><li>就労経験があり、年齢や体力の面で一般企業に雇用されることが困難になった方</li><li>50歳に達している方</li><li>障害基礎年金1級を受給している方</li></ul>
+<p>A型・就労移行支援についても、2027年4月から就労選択支援の原則利用が予定されています。制度の詳しい運用は自治体によって案内が異なる場合があるため、市町村の窓口で確認しましょう。</p>
+<h2 id="sec-4">就労移行支援との違い</h2>
+<p>就労移行支援は、<strong>一般企業への就職を目指す方</strong>が、原則2年間の標準利用期間の中で職業訓練や就職活動の支援を受けるサービスです。働く場そのものを提供するA型・B型とは目的が異なります。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">サービス</th><th scope="col">目的</th><th scope="col">収入</th><th scope="col">利用期間</th></tr></thead><tbody><tr><th scope="row">就労移行支援</th><td>一般就労に向けた訓練・就職活動</td><td>原則なし</td><td>原則2年</td></tr><tr><th scope="row">就労継続支援A型</th><td>雇用契約にもとづく就労の場</td><td>給与</td><td>定めなし</td></tr><tr><th scope="row">就労継続支援B型</th><td>自分のペースでの就労の場</td><td>工賃</td><td>定めなし</td></tr></tbody></table></div>
+<h2 id="sec-5">事業所のホームページで伝えたいこと</h2>
+<p>A型・B型の事業所を探している方は、「どんな作業があるか」「どのくらい通えばいいか」「いくらもらえるか」を特に気にしています。ホームページでは次の情報を具体的に載せると、見学・問い合わせにつながりやすくなります。</p>
+<ol class="blog-olist"><li><strong>作業内容</strong>：軽作業、農作業、カフェ・飲食、パソコン作業など。写真があるとイメージしやすい</li><li><strong>利用日数・時間の目安</strong>：「週2日・1日2時間から相談可」など、始めやすさを伝える</li><li><strong>工賃・給与の実績</strong>：B型の場合は前年度の平均工賃、A型の場合は時給と勤務時間の目安</li><li><strong>送迎・昼食の有無</strong>：通いやすさに直結する情報</li><li><strong>見学・体験の流れ</strong>：問い合わせから利用開始までのステップを図や番号付きで説明</li></ol>
+<div class="blog-box blog-box--warn"><p class="blog-box__title">工賃・給与の表記は正確に</p><p>平均工賃や給与を掲載する場合は、「令和7年度実績」のように時点を明記し、実績と異なる金額を書かないよう注意しましょう。誇張した表現は、利用者とのトラブルや行政指導の原因になります。</p></div>
+<p>B型事業所のホームページ制作を検討している場合は、<a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社の比較記事</a>も参考にしてください。</p>
+<h2 id="sec-6">まとめ</h2>
+<p>A型とB型の違いは「雇用契約の有無」が基本です。A型は最低賃金以上の給与を得て働く雇用型、B型は自分のペースで工賃を得ながら作業する非雇用型です。2025年10月からはB型の利用にあたって就労選択支援が原則となるなど、仕組みも変わりつつあります。</p>
+<p>事業所としては、こうした違いをホームページでわかりやすく説明し、作業内容や通い方、工賃の実績などを具体的に伝えることが、利用者に選ばれる第一歩になります。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>A型とB型を同時に利用することはできますか？</summary><div class="blog-faq__a"><p>一般的には、同じ時間帯にA型とB型を併用することはできません。ただし、市町村が必要と認めた場合に異なるサービスを組み合わせる例もあるため、詳しくは市町村の障害福祉担当窓口に確認してください。</p></div></details><details class="blog-faq__item"><summary>B型からA型や一般就労へステップアップできますか？</summary><div class="blog-faq__a"><p>可能です。B型で生活リズムや作業に慣れたあと、A型や就労移行支援、一般企業への就職へ進む方もいます。事業所のホームページで「卒業生の進路実績」を紹介すると、利用を検討する方の参考になります（個人が特定されないよう配慮が必要です）。</p></div></details><details class="blog-faq__item"><summary>A型の利用に年齢制限はありますか？</summary><div class="blog-faq__a"><p>A型は雇用契約を結ぶため、原則として利用開始時に65歳未満の方が対象です。65歳以上の方は、65歳になる前から引き続き利用している場合など、一定の条件で利用できることがあります。B型には年齢の上限はありません。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/service/naiyou.html" target="_blank" rel="noopener">厚生労働省「障害福祉サービスについて」</a></li><li><a href="https://www.pref.kagoshima.jp/ae07/sisetsu/syuurousentakusien.html" target="_blank" rel="noopener">鹿児島県「就労選択支援について」</a></li><li><a href="https://www.wam.go.jp/content/wamnet/pcpub/top/watch/20260515_003.html" target="_blank" rel="noopener">WAM NET「令和8年度障害福祉サービス等報酬改定に関する情報」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card" href="../../blog/shogai-fukushi-service-list/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害福祉サービスの種類一覧｜介護給付・訓練等給付・障害児支援の違いをわかりやすく解説</h3>
+<p class="blog-card__desc">障害者総合支援法と児童福祉法にもとづく障害福祉サービスの種類を一覧で整理。介護給付・訓練等給付・相談支援・障害児通所支援の違いや、2025年10月に始まった就労選択支援まで、事業所運営者向けにわかりやすく解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/kouhyou-gimu-website/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害福祉事業所がホームページ等で公表すべき情報まとめ｜情報公表制度・未報告減算・重要事項の掲載</h3>
+<p class="blog-card__desc">障害福祉サービス等情報公表制度（WAM NET）の未報告減算、児童発達支援・放課後等デイサービスの支援プログラム未公表減算、重要事項のウェブサイト掲載など、障害福祉事業所が公表すべき情報と減算のリスクを一覧で整理します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/hp-must-have-contents/">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">福祉事業所のホームページに載せるべき項目チェックリスト｜利用者・家族・相談支援専門員に選ばれる30項目</h3>
+<p class="blog-card__desc">福祉事業所のホームページに掲載すべき内容を、基本情報、サービス内容、費用、1日の流れ、公表情報、採用情報など30項目のチェックリストで紹介。利用者・家族・相談支援専門員それぞれが知りたい情報と、ページ構成の例も解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

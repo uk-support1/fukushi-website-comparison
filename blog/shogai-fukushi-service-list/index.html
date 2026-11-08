@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>障害福祉サービスの種類一覧｜介護給付・訓練等給付・障害児支援の違いをわかりやすく解説｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="障害者総合支援法と児童福祉法にもとづく障害福祉サービスの種類を一覧で整理。介護給付・訓練等給付・相談支援・障害児通所支援の違いや、2025年10月に始まった就労選択支援まで、事業所運営者向けにわかりやすく解説します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/shogai-fukushi-service-list/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="障害福祉サービスの種類一覧｜介護給付・訓練等給付・障害児支援の違いをわかりやすく解説｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="障害者総合支援法と児童福祉法にもとづく障害福祉サービスの種類を一覧で整理。介護給付・訓練等給付・相談支援・障害児通所支援の違いや、2025年10月に始まった就労選択支援まで、事業所運営者向けにわかりやすく解説します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/shogai-fukushi-service-list/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/brand/logo.png">
+<meta name="twitter:card" content="summary">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta property="article:section" content="福祉の基礎知識">
+<link rel="icon" href="../../favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v2-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v2-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v2-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v2.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v2-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "障害福祉サービスの種類一覧｜介護給付・訓練等給付・障害児支援の違いをわかりやすく解説",
+  "description": "障害者総合支援法と児童福祉法にもとづく障害福祉サービスの種類を一覧で整理。介護給付・訓練等給付・相談支援・障害児通所支援の違いや、2025年10月に始まった就労選択支援まで、事業所運営者向けにわかりやすく解説します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/shogai-fukushi-service-list/",
+  "url": "https://fukushi-hp-hikaku.com/blog/shogai-fukushi-service-list/",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
+  "articleSection": "福祉の基礎知識",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v2-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/brand/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "福祉の基礎知識",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/fukushi-kiso/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "障害福祉サービスの種類一覧｜介護給付・訓練等給付・障害児支援の違いをわかりやすく解説",
+      "item": "https://fukushi-hp-hikaku.com/blog/shogai-fukushi-service-list/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li><li aria-current="page">障害福祉サービスの種類一覧｜介護給付・訓練等給付・障害児支援の違いをわかりやすく解説</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--fukushi-kiso" href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a>
+<h1 class="blog-article__title">障害福祉サービスの種類一覧｜介護給付・訓練等給付・障害児支援の違いをわかりやすく解説</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-08">2026年11月8日</time></span>
+
+<span>読了目安 約6分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<p class="blog-article__lead">障害福祉サービスは種類が多く、名前も似ているため「自分の事業所はどの制度の、どの位置づけなのか」を説明しにくいと感じる方も多いはずです。この記事では、サービスの全体像を一覧で整理し、ホームページで事業内容を伝えるときのポイントもあわせて紹介します。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>障害福祉サービスの全体像（介護給付・訓練等給付・相談支援・地域生活支援事業・障害児支援）</li><li>主なサービスの対象者と内容の違い</li><li>2024年度・2025年度に始まった新しい仕組み（就労選択支援など）</li><li>ホームページで「どんな事業所か」を正しく伝えるコツ</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">障害福祉サービスの全体像</a></li><li><a href="#sec-2">介護給付：日常生活の介護を受けるサービス</a></li><li><a href="#sec-3">訓練等給付：自立・就労に向けた訓練を受けるサービス</a></li><li><a href="#sec-4">相談支援：サービス利用の計画づくりを支える</a></li><li><a href="#sec-5">障害児支援：児童福祉法にもとづくサービス</a></li><li><a href="#sec-6">ホームページで事業内容を正しく伝えるコツ</a></li><li><a href="#sec-7">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">障害福祉サービスの全体像</h2>
+<p>障害のある方への福祉サービスは、主に次の2つの法律にもとづいて提供されています。</p>
+<ul class="blog-list"><li><strong>障害者総合支援法</strong>：主に18歳以上の方（一部は児童も対象）への介護・訓練・相談支援など</li><li><strong>児童福祉法</strong>：障害のある児童への通所支援・入所支援・相談支援</li></ul>
+<p>障害者総合支援法のサービスは、国が費用を負担する「<strong>自立支援給付</strong>」と、市町村や都道府県が地域の実情に応じて行う「<strong>地域生活支援事業</strong>」に大きく分かれます。自立支援給付の中心が、介護を受けるための「介護給付」と、自立や就労に向けた訓練を受けるための「訓練等給付」です。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">区分</th><th scope="col">主なサービス</th><th scope="col">根拠法</th></tr></thead><tbody><tr><th scope="row">介護給付</th><td>居宅介護、重度訪問介護、同行援護、行動援護、重度障害者等包括支援、短期入所、療養介護、生活介護、施設入所支援</td><td>障害者総合支援法</td></tr><tr><th scope="row">訓練等給付</th><td>自立訓練（機能訓練・生活訓練）、就労選択支援、就労移行支援、就労継続支援（A型・B型）、就労定着支援、自立生活援助、共同生活援助（グループホーム）</td><td>障害者総合支援法</td></tr><tr><th scope="row">相談支援</th><td>計画相談支援、地域移行支援、地域定着支援</td><td>障害者総合支援法</td></tr><tr><th scope="row">地域生活支援事業</th><td>移動支援、日中一時支援、地域活動支援センター、相談支援事業など（市町村等が実施）</td><td>障害者総合支援法</td></tr><tr><th scope="row">障害児通所支援</th><td>児童発達支援、放課後等デイサービス、居宅訪問型児童発達支援、保育所等訪問支援</td><td>児童福祉法</td></tr><tr><th scope="row">障害児入所支援</th><td>福祉型障害児入所施設、医療型障害児入所施設</td><td>児童福祉法</td></tr><tr><th scope="row">障害児相談支援</th><td>障害児支援利用計画の作成など</td><td>児童福祉法</td></tr></tbody></table></div>
+<div class="blog-box blog-box--info"><p class="blog-box__title">「障害福祉サービス」という言葉の範囲</p><p>法律上の「障害福祉サービス」は介護給付と訓練等給付のサービスを指しますが、一般的には相談支援や障害児支援まで含めて「障害福祉サービス」と呼ぶことが多くあります。この記事でも広い意味で使っています。</p></div>
+<h2 id="sec-2">介護給付：日常生活の介護を受けるサービス</h2>
+<p>介護給付は、日常生活に介護が必要な方を対象としたサービスです。多くのサービスで、市町村による「障害支援区分」の認定が必要になります。</p>
+<h3>訪問系サービス</h3>
+<ul class="blog-list"><li><strong>居宅介護（ホームヘルプ）</strong>：自宅での入浴・排せつ・食事などの介護、家事援助</li><li><strong>重度訪問介護</strong>：重度の肢体不自由や行動障害のある方への、長時間にわたる総合的な介護と外出支援</li><li><strong>同行援護</strong>：視覚障害により移動が難しい方への外出時の同行・情報提供</li><li><strong>行動援護</strong>：知的障害・精神障害により行動上著しい困難がある方への、危険回避などの支援</li></ul>
+<h3>日中活動・入所系サービス</h3>
+<ul class="blog-list"><li><strong>生活介護</strong>：主に日中、施設で入浴・排せつ・食事の介護や、創作的活動・生産活動の機会を提供</li><li><strong>療養介護</strong>：医療と常時介護が必要な方への、病院での機能訓練・療養上の管理・看護・介護</li><li><strong>短期入所（ショートステイ）</strong>：介護者の病気などの際に、短期間施設で介護を行う</li><li><strong>施設入所支援</strong>：施設に入所する方への、夜間や休日の介護</li></ul>
+<h2 id="sec-3">訓練等給付：自立・就労に向けた訓練を受けるサービス</h2>
+<p>訓練等給付は、自立した生活や就労に向けた訓練・支援を行うサービスです。原則として障害支援区分の認定は不要です（共同生活援助で介護を受ける場合などを除く）。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">サービス</th><th scope="col">内容</th><th scope="col">ポイント</th></tr></thead><tbody><tr><th scope="row">自立訓練（機能訓練）</th><td>身体機能の維持・向上のための訓練</td><td>標準利用期間は原則1年6か月</td></tr><tr><th scope="row">自立訓練（生活訓練）</th><td>生活能力の維持・向上のための訓練</td><td>標準利用期間は原則2年</td></tr><tr><th scope="row">就労選択支援</th><td>本人と一緒に就労に関する適性や希望を整理し、働き方の選択を支援</td><td>2025年10月開始の新サービス</td></tr><tr><th scope="row">就労移行支援</th><td>一般企業への就職を目指す方への訓練・求職活動の支援</td><td>標準利用期間は原則2年</td></tr><tr><th scope="row">就労継続支援A型</th><td>雇用契約を結んで働く場の提供</td><td>最低賃金以上の給与</td></tr><tr><th scope="row">就労継続支援B型</th><td>雇用契約を結ばずに、自分のペースで働く場の提供</td><td>生産活動の対価として工賃を支払う</td></tr><tr><th scope="row">就労定着支援</th><td>一般就労した方の職場定着の支援</td><td>利用期間は最長3年</td></tr><tr><th scope="row">自立生活援助</th><td>一人暮らしを始めた方への定期訪問・相談</td><td>標準利用期間は原則1年</td></tr><tr><th scope="row">共同生活援助</th><td>グループホームでの共同生活の支援</td><td>複数の類型がある</td></tr></tbody></table></div>
+<p>就労系サービスの違いは「<a href="../../blog/a-type-b-type-difference/">就労継続支援A型とB型の違い</a>」、グループホームについては「<a href="../../blog/group-home-types/">障害者グループホームの種類と違い</a>」で詳しく解説しています。</p>
+<div class="blog-box blog-box--point"><p class="blog-box__title">就労選択支援が始まっています</p><p>就労選択支援は、障害のある方が自分に合った働き方を選べるよう、作業場面でのアセスメントなどを通じて適性や希望を整理するサービスです。2025年10月から、<strong>新たに就労継続支援B型を利用する方は原則としてこの就労選択支援を利用</strong>することになりました。就労継続支援A型・就労移行支援についても、2027年4月から原則利用とする予定が示されています。詳細な対象者や例外は、市町村の案内を確認してください。</p></div>
+<h2 id="sec-4">相談支援：サービス利用の計画づくりを支える</h2>
+<p>障害福祉サービスを利用するときは、相談支援専門員が本人の希望や状況を聞き取り、「サービス等利用計画」を作成します（計画相談支援）。また、施設や病院から地域生活へ移るための支援（地域移行支援）、一人暮らしの方の緊急時対応（地域定着支援）もあります。</p>
+<p>相談支援専門員は、利用者に事業所を紹介する立場でもあります。事業所を選ぶとき、相談支援専門員がホームページで「対象者」「定員」「空き状況」「送迎範囲」などを確認するケースは少なくありません。<strong>事業所のホームページは、利用者本人や家族だけでなく、専門職にも読まれている</strong>ことを意識しておきましょう。</p>
+<h2 id="sec-5">障害児支援：児童福祉法にもとづくサービス</h2>
+<p>障害のある児童へのサービスは、児童福祉法にもとづいて提供されます。代表的なのが通所型の「児童発達支援」と「放課後等デイサービス」です。</p>
+<ul class="blog-list"><li><strong>児童発達支援</strong>：主に未就学の児童に、日常生活の基本的な動作や集団生活への適応などの支援を行う</li><li><strong>放課後等デイサービス</strong>：就学している児童に、放課後や休日に生活能力向上のための支援や居場所を提供する</li><li><strong>居宅訪問型児童発達支援</strong>：重度の障害などで外出が難しい児童の自宅を訪問して支援</li><li><strong>保育所等訪問支援</strong>：保育所や学校などを訪問し、集団生活への適応を支援</li></ul>
+<p>なお、2024年4月からは、それまで「福祉型」と「医療型」に分かれていた児童発達支援が一元化されました。児童発達支援と放課後等デイサービスの違いは「<a href="../../blog/hokago-day-jihatsu-difference/">放課後等デイサービスと児童発達支援の違い</a>」で解説しています。</p>
+<h2 id="sec-6">ホームページで事業内容を正しく伝えるコツ</h2>
+<p>サービスの種類が多いからこそ、事業所のホームページでは「どの制度にもとづく、どんなサービスなのか」を正確に、かつわかりやすく伝えることが大切です。</p>
+<ol class="blog-olist"><li><strong>正式なサービス名を明記する</strong>：「就労継続支援B型」「共同生活援助（日中サービス支援型）」など、指定を受けている正式名称を記載する</li><li><strong>平易な言葉で言い換える</strong>：「自分のペースで働きながら工賃を得られる場所です」のように、初めての方にも伝わる説明を添える</li><li><strong>対象者・定員・利用料の考え方を書く</strong>：「どんな人が使えるのか」「費用はどのくらいか」は最も多い疑問です</li><li><strong>1日の流れや写真を載せる</strong>：実際の雰囲気が伝わると、見学や問い合わせにつながりやすくなります</li><li><strong>事業所番号や運営法人を記載する</strong>：行政や相談支援専門員が確認しやすくなり、信頼性も高まります</li></ol>
+<p>ホームページに載せたい項目は「<a href="../../blog/hp-must-have-contents/">福祉事業所のホームページに載せるべき項目チェックリスト</a>」にまとめています。</p>
+<h2 id="sec-7">まとめ</h2>
+<p>障害福祉サービスは、障害者総合支援法の「介護給付」「訓練等給付」「相談支援」「地域生活支援事業」と、児童福祉法の「障害児支援」に大きく整理できます。2025年10月には就労選択支援が始まるなど、制度は少しずつ変化しています。</p>
+<p>事業所のホームページでは、正式なサービス名と平易な説明を組み合わせ、利用者・家族・相談支援専門員のそれぞれが知りたい情報を載せることが、信頼と問い合わせにつながります。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>障害福祉サービスを利用するには何が必要ですか？</summary><div class="blog-faq__a"><p>原則として、お住まいの市町村に申請して「障害福祉サービス受給者証」の交付を受ける必要があります。介護給付では障害支援区分の認定も行われます。申請前には相談支援事業所でサービス等利用計画（案）を作成するのが一般的です。</p></div></details><details class="blog-faq__item"><summary>障害者手帳がないと利用できませんか？</summary><div class="blog-faq__a"><p>障害者手帳がなくても、医師の診断書などで障害があると認められれば利用できるサービスがあります。対象となるかどうかは市町村の判断になるため、障害福祉担当窓口で確認してください。</p></div></details><details class="blog-faq__item"><summary>事業所のホームページには、どのサービス名を書けばよいですか？</summary><div class="blog-faq__a"><p>指定を受けているサービスの正式名称（例：「就労継続支援B型」「共同生活援助（介護サービス包括型）」）を必ず記載し、そのうえで「どんな方が、どのように過ごす場所なのか」を平易な言葉で補足するのがおすすめです。正式名称は検索や行政・相談支援専門員の確認にも使われます。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/service/naiyou.html" target="_blank" rel="noopener">厚生労働省「障害福祉サービスについて」</a></li><li><a href="https://www.wam.go.jp/sfkohyoout/" target="_blank" rel="noopener">WAM NET「障害福祉サービス等情報検索」</a></li><li><a href="https://www.pref.kagoshima.jp/ae07/sisetsu/syuurousentakusien.html" target="_blank" rel="noopener">鹿児島県「就労選択支援について」</a></li><li><a href="https://www.pref.hokkaido.lg.jp/hf/shf/shuurousentaku.html" target="_blank" rel="noopener">北海道「就労選択支援について」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card" href="../../blog/a-type-b-type-difference/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">就労継続支援A型とB型の違いとは？対象者・給与（工賃）・働き方を比較表で解説</h3>
+<p class="blog-card__desc">就労継続支援A型とB型の違いを、雇用契約の有無、対象者、賃金・工賃、利用期間、年齢などの観点から比較表で解説。就労移行支援や2025年10月開始の就労選択支援との関係、事業所ホームページで伝えるべきポイントも紹介します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/hokago-day-jihatsu-difference/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">放課後等デイサービスと児童発達支援の違い｜対象年齢・支援内容・5領域と支援プログラムの公表</h3>
+<p class="blog-card__desc">放課後等デイサービスと児童発達支援の違いを、対象年齢・支援内容・利用時間の観点から比較。2024年度報酬改定で義務化された5領域の支援プログラムの公表や、ホームページで公開すべき情報もあわせて解説します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a>
+<a class="blog-card" href="../../blog/group-home-types/">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害者グループホーム（共同生活援助）の種類と違い｜介護サービス包括型・日中サービス支援型・外部サービス利用型</h3>
+<p class="blog-card__desc">障害者グループホーム（共同生活援助）の3つの類型「介護サービス包括型」「日中サービス支援型」「外部サービス利用型」とサテライト型住居の違いを解説。地域連携推進会議など近年の制度変更や、入居希望者に伝わるホームページのポイントも紹介します。</p>
+<span class="blog-card__meta"><time datetime="2026-11-08">2026年11月8日</time>更新</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
