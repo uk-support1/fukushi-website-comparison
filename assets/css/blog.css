@@ -345,7 +345,12 @@
 }
 
 .blog-body strong {
-  background: linear-gradient(transparent 62%, var(--color-yellow-light) 62%);
+  color: var(--color-green-dark);
+  text-decoration: underline;
+  text-decoration-color: rgba(42, 165, 172, 0.55);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: none;
 }
 
 .blog-list li,
