@@ -18,6 +18,12 @@
 - GitHub Actions（`.github/workflows/scheduled-publish.yml`）が毎日0時15分ごろ（日本時間）に再ビルドし、公開日を迎えた記事があれば main にコミットして公開する。手動実行も可能（Actions画面の「Run workflow」）。
 - 特定の日付時点の表示を確かめたいときは `BUILD_DATE=2026-12-01 node scripts/build-blog.cjs` のように実行する（確認後は日付指定なしで再ビルドしてからコミットする）。
 
+## カバー画像
+
+- 各記事のカバー画像（一覧カード・記事上部・SNS共有用）は `node scripts/make-blog-covers.cjs` で生成する。Playwright が必要なため手元で実行し、生成した `assets/images/blog/` の画像をコミットする（予約投稿用のGitHub Actionsでは生成しない）。
+- 見出しはメタ情報の `cover`（`{"catch": "短い見出し／改行位置", "sub": "補足"}`）で指定する。`／` が改行位置。指定がなければタイトルから自動で作る。
+- 見出しを変えたら `node scripts/make-blog-covers.cjs --force` で作り直す。
+
 ## 原稿の書式
 
 先頭に `---json` と `---` で囲んだメタ情報（JSON）、その後に本文（Markdown）を書く。
@@ -28,6 +34,7 @@
 | description | ○ | 検索結果の説明文（80〜120文字程度） |
 | category | ○ | `fukushi-kiso` / `security` / `hp-seisaku` / `unei` |
 | date | ○ | 公開日 `YYYY-MM-DD` |
+| cover | | カバー画像の見出し `{"catch": "...／...", "sub": "..."}` |
 | updated | | 更新日。内容を見直したら必ず更新する |
 | lead | | 導入文 |
 | summary | | 「この記事でわかること」（配列） |
