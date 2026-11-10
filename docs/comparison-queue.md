@@ -3,7 +3,7 @@
 毎日の自動作成では、上から順に「- [ ]」の業種を1つ選ぶ。作成したら「- [x]」にして公開日とファイル名を書き添える。
 掲載できる会社が3社に満たない場合は「- [ ]（保留：理由）」として次の業種に進む。
 
-- [ ] 放課後等デイサービス（slug: houkago-day）
+- [x] 放課後等デイサービス（slug: houkago-day）2026-11-11 公開：comparisons/houkago-day-comparison.html
 - [ ] 児童発達支援（slug: jihatsu）
 - [x] 就労移行支援（slug: shuro-iko）2026-11-10 公開：comparisons/shuro-iko-comparison.html（手動作成）
 - [ ] 就労継続支援A型（slug: a-type）
