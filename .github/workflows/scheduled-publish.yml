@@ -1,0 +1,38 @@
+# 予約投稿の自動公開
+# 毎日 日本時間0時15分ごろにブログを再生成し、公開日を迎えた記事があればmainにコミットする。
+# GitHub Pages（mainブランチから配信）が自動で反映する。
+name: scheduled-publish
+
+on:
+  schedule:
+    - cron: "15 15 * * *" # UTC 15:15 = JST 0:15
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scheduled-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Build blog
+        run: node scripts/build-blog.cjs
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "予約投稿の記事を公開（$(TZ=Asia/Tokyo date +%Y-%m-%d)）"
+            git push
+          else
+            echo "公開する記事はありません"
+          fi

@@ -34,6 +34,12 @@ const CATEGORIES = [
 ];
 const CAT = Object.fromEntries(CATEGORIES.map(c => [c.slug, c]));
 
+// 公開日（date）が今日（日本時間）より後の記事は「予約投稿」として生成しない。
+// GitHub Actions（.github/workflows/scheduled-publish.yml）が毎日ビルドし直して公開する。
+// BUILD_DATE=YYYY-MM-DD を指定すると、その日付時点でビルドできる。
+const TODAY = process.env.BUILD_DATE || new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
+let PUBLISHED = new Set(); // 公開済み記事のスラッグ（本文リンクの判定に使う）
+
 const COMPARISONS = [
   { href: 'comparisons/welfare-comparison.html', title: '福祉事業所向けホームページ制作会社比較' },
   { href: 'comparisons/group-home-comparison.html', title: '障害者グループホーム向けホームページ制作会社比較' },
@@ -65,6 +71,8 @@ function inline(text, prefix) {
     const raw = url.replace(/&amp;/g, '&');
     if (/^https?:\/\//.test(raw)) return `<a href="${esc(raw)}" target="_blank" rel="noopener">${label}</a>`;
     // サイト内リンクは "/" 始まりで書き、ページ位置からの相対パスに変換する
+    const m2 = raw.match(/^\/blog\/([a-z0-9-]+)\/$/);
+    if (m2 && !PUBLISHED.has(m2[1])) return label; // 予約投稿中の記事へのリンクは公開まで文字のみ
     const rel = raw.startsWith('/') ? prefix + raw.slice(1) : raw;
     return `<a href="${esc(rel)}">${label}</a>`;
   });
@@ -173,7 +181,12 @@ function loadPosts() {
   posts.sort((a, b) => (b.date + b.slug).localeCompare(a.date + a.slug));
   const slugs = new Set(posts.map(p => p.slug));
   for (const p of posts) for (const r of p.related || []) if (!slugs.has(r)) throw new Error(`${p.slug}: 関連記事 ${r} が存在しません`);
-  return posts;
+  const published = posts.filter(p => p.date <= TODAY);
+  const scheduled = posts.filter(p => p.date > TODAY);
+  PUBLISHED = new Set(published.map(p => p.slug));
+  for (const p of published) p.related = (p.related || []).filter(r => PUBLISHED.has(r));
+  if (scheduled.length) console.log(`予約投稿（未公開）: ${scheduled.map(p => `${p.slug}(${p.date})`).join(', ')}`);
+  return published;
 }
 
 /* -------------------------------------------------------------------------
@@ -499,7 +512,7 @@ function main() {
   writeFile('about/index.html', renderAbout());
   writeFile('sitemap.xml', renderSitemap(posts));
   updateTopPage(posts);
-  console.log(`ブログ記事 ${posts.length} 件を生成しました。`);
+  console.log(`ブログ記事 ${posts.length} 件を生成しました（基準日 ${TODAY}）。`);
 }
 
 main();
