@@ -259,12 +259,12 @@ ${ANALYTICS}
 <meta property="og:image" content="${BASE}assets/images/brand/logo.png">
 <meta name="twitter:card" content="summary">
 ${extraHead}
-<link rel="icon" href="${prefix}favicon.ico?v=2" sizes="any">
-<link rel="icon" type="image/png" sizes="16x16" href="${prefix}favicon-v2-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="${prefix}favicon-v2-32x32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="${prefix}favicon-v2-48x48.png">
-<link rel="apple-touch-icon" href="${prefix}apple-touch-icon-v2.png">
-<link rel="icon" type="image/png" sizes="192x192" href="${BASE}favicon-v2-192x192.png">
+<link rel="icon" href="${prefix}favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="${prefix}favicon-v3-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="${prefix}favicon-v3-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="${prefix}favicon-v3-48x48.png">
+<link rel="apple-touch-icon" href="${prefix}apple-touch-icon-v3.png">
+<link rel="icon" type="image/png" sizes="192x192" href="${BASE}favicon-v3-192x192.png">
 <link rel="manifest" href="${prefix}site.webmanifest">
 <meta name="theme-color" content="#1e493c">
 
@@ -345,7 +345,7 @@ function renderPost(p, posts) {
       datePublished: p.date, dateModified: p.updated,
       articleSection: c.name, inLanguage: 'ja',
       author: { '@type': 'Organization', name: EDITOR, url: `${BASE}about/` },
-      publisher: { '@type': 'Organization', name: SITE, logo: { '@type': 'ImageObject', url: `${BASE}favicon-v2-512x512.png` } },
+      publisher: { '@type': 'Organization', name: SITE, logo: { '@type': 'ImageObject', url: `${BASE}favicon-v3-512x512.png` } },
       image: `${BASE}assets/images/brand/logo.png`,
     },
     breadcrumbSchema(crumbs),
