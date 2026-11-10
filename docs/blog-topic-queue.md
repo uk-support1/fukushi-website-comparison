@@ -7,7 +7,7 @@
 ## 候補
 
 - [x] security：ランサムウェアからデータを守るバックアップの考え方（3-2-1ルール、オフライン保管、復元テスト）（2026-11-10 公開: ransomware-backup-basics）
-- [ ] fukushi-kiso：サービス管理責任者・児童発達支援管理責任者とは（役割・要件・研修）
+- [x] fukushi-kiso：サービス管理責任者・児童発達支援管理責任者とは（役割・要件・研修）（2026-11-11 公開: sabikan-jihatsukan）
 - [ ] unei：Google Search Consoleの基本（検索キーワードの確認、インデックス登録、エラー対応）
 - [ ] hp-seisaku：ホームページの表示速度とCore Web Vitals（画像の軽量化、確認ツール）
 - [ ] fukushi-kiso：業務継続計画（BCP）の基本と、災害時の情報発信の準備
