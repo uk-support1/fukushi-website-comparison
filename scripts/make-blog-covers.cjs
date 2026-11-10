@@ -31,9 +31,17 @@ const THEMES = {
     icon: '<path d="M32 6l22 8v16c0 14-9.5 23-22 28C19.5 53 10 44 10 30V14z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M22 31l7 7 13-14" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>' },
   'hp-seisaku': { name: 'ホームページ制作の基礎', c1: '#4fbcc4', c2: '#a3e3e3', ink: '#156a70', pos: ['60% 40%', '70% 70%', '45% 35%'],
     icon: '<rect x="6" y="10" width="52" height="36" rx="5" fill="none" stroke="currentColor" stroke-width="4"/><path d="M22 54h20M32 46v8" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M16 22h20M16 30h28" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>' },
+  compare: { name: '業種別 比較記事', c1: '#2aa5ac', c2: '#9fdfd8', ink: '#16656a', pos: ['30% 50%', '65% 55%', '50% 40%'],
+    icon: '<rect x="8" y="12" width="14" height="40" rx="3" fill="none" stroke="currentColor" stroke-width="4"/><rect x="25" y="12" width="14" height="40" rx="3" fill="none" stroke="currentColor" stroke-width="4"/><rect x="42" y="12" width="14" height="40" rx="3" fill="none" stroke="currentColor" stroke-width="4"/><path d="M11 24l3 3 5-6M28 24l3 3 5-6M45 24l3 3 5-6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' },
   unei: { name: '集客・採用・運用', c1: '#f0a865', c2: '#f7d9a6', ink: '#8a4f12', pos: ['85% 20%', '95% 40%', '75% 15%'],
     icon: '<path d="M8 26v12h10l20 12V14L18 26z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M46 22c3 3 3 17 0 20M52 16c6 6 6 26 0 32" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>' },
 };
+
+const COMPARE_COVERS = [
+  { slug: 'welfare', catch: '福祉事業所向け／制作会社比較', sub: '料金・福祉への理解・公開後の支援' },
+  { slug: 'group-home', catch: 'グループホーム向け／制作会社比較', sub: '入居者募集・職員採用に強いサイトづくり' },
+  { slug: 'b-type', catch: '就労継続支援B型／制作会社比較', sub: '料金・自社更新・Googleマップ対応' },
+];
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -92,6 +100,11 @@ async function main() {
     if (!force && fs.existsSync(out)) continue;
     const meta = JSON.parse(fs.readFileSync(path.join(CONTENT_DIR, f), 'utf8').match(/^---json\n([\s\S]*?)\n---\n/)[1]);
     todo.push({ slug, meta, out });
+  }
+  // トップページの比較記事カード用（assets/images/comparisons/<スラッグ>/card.jpg）
+  for (const c of COMPARE_COVERS) {
+    const out = path.join(ROOT, 'assets', 'images', 'comparisons', c.slug, 'card.jpg');
+    if (force || !fs.existsSync(out)) todo.push({ slug: c.slug, meta: { category: 'compare', title: c.catch, cover: { catch: c.catch, sub: c.sub } }, out });
   }
   if (!todo.length) { console.log('新しく作るカバー画像はありません。'); return; }
   const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
