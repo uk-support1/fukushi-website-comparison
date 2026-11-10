@@ -1004,3 +1004,41 @@
     grid-row: auto;
   }
 }
+
+/* ◎○△の評価セル（根拠を小さく添える） */
+.cw-matrix-table td.cw-matrix-eval {
+  vertical-align: top;
+}
+
+.cw-matrix-table td.cw-matrix-eval {
+  position: relative;
+}
+
+.cw-matrix-table td.cw-matrix-eval.cw-matrix-best {
+  background: var(--color-blue-light);
+}
+
+.cw-matrix-table td.cw-matrix-eval.cw-matrix-best::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--color-blue);
+}
+
+.cw-matrix-table td.cw-matrix-eval.cw-matrix-best .cw-matrix-symbol {
+  color: var(--color-blue);
+  font-size: 1.3rem;
+}
+
+.cw-eval-note {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text-sub);
+}
