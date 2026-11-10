@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>ランサムウェア対策のバックアップ入門｜福祉事業所の記録データを守る3-2-1ルールと復元テスト｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="ランサムウェア被害ではバックアップも暗号化され、復元できない例が多いと警察庁の調査が示しています。福祉事業所の記録や請求データを守るため、3-2-1ルール、オフライン保管、復元テストの考え方をチェックリスト付きで解説します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/ransomware-backup-basics/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ランサムウェア対策のバックアップ入門｜福祉事業所の記録データを守る3-2-1ルールと復元テスト｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="ランサムウェア被害ではバックアップも暗号化され、復元できない例が多いと警察庁の調査が示しています。福祉事業所の記録や請求データを守るため、3-2-1ルール、オフライン保管、復元テストの考え方をチェックリスト付きで解説します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/ransomware-backup-basics/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/blog/ransomware-backup-basics.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-11-10">
+<meta property="article:modified_time" content="2026-11-10">
+<meta property="article:section" content="セキュリティ対策">
+<link rel="icon" href="../../favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v3-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v3-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v3-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v3.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v3-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ランサムウェア対策のバックアップ入門｜福祉事業所の記録データを守る3-2-1ルールと復元テスト",
+  "description": "ランサムウェア被害ではバックアップも暗号化され、復元できない例が多いと警察庁の調査が示しています。福祉事業所の記録や請求データを守るため、3-2-1ルール、オフライン保管、復元テストの考え方をチェックリスト付きで解説します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/ransomware-backup-basics/",
+  "url": "https://fukushi-hp-hikaku.com/blog/ransomware-backup-basics/",
+  "datePublished": "2026-11-10",
+  "dateModified": "2026-11-10",
+  "articleSection": "セキュリティ対策",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v3-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/blog/ransomware-backup-basics.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "セキュリティ対策",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/security/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "ランサムウェア対策のバックアップ入門｜福祉事業所の記録データを守る3-2-1ルールと復元テスト",
+      "item": "https://fukushi-hp-hikaku.com/blog/ransomware-backup-basics/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/security/">セキュリティ対策</a></li><li aria-current="page">ランサムウェア対策のバックアップ入門｜福祉事業所の記録データを守る3-2-1ルールと復元テスト</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--security" href="../../blog/category/security/">セキュリティ対策</a>
+<h1 class="blog-article__title">ランサムウェア対策のバックアップ入門｜福祉事業所の記録データを守る3-2-1ルールと復元テスト</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-10">2026年11月10日</time></span>
+
+<span>読了目安 約7分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<figure class="blog-article__cover"><img src="../../assets/images/blog/ransomware-backup-basics.jpg" alt="" width="1200" height="630" fetchpriority="high"></figure>
+<p class="blog-article__lead">「バックアップは取っているから大丈夫」と考えている事業所は少なくありません。しかし、ランサムウェアの被害にあった組織の多くは、バックアップを取っていたのに元に戻せませんでした。この記事では、警察庁の調査結果をもとに、なぜ復元できないのか、小規模な福祉事業所でも取り入れやすいバックアップの考え方を整理します。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>被害組織の多くがバックアップから復元できなかった理由（警察庁の調査）</li><li>福祉事業所でバックアップの対象にしたいデータの洗い出し方</li><li>3-2-1ルールとオフライン保管の考え方</li><li>見落とされがちな「復元テスト」と運用のチェックリスト</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">「バックアップがあったのに戻せない」が多数派</a></li><li><a href="#sec-2">福祉事業所で守りたいデータを洗い出す</a></li><li><a href="#sec-3">3-2-1ルールとオフライン保管の考え方</a></li><li><a href="#sec-4">見落とされがちな復元テスト</a></li><li><a href="#sec-5">バックアップ運用のチェックリスト</a></li><li><a href="#sec-6">被害にあったときに知っておきたいこと</a></li><li><a href="#sec-7">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">「バックアップがあったのに戻せない」が多数派</h2>
+<p>ランサムウェアは、パソコンやサーバーのデータを暗号化して使えない状態にし、元に戻すことと引き換えに金銭を要求する不正プログラムです。近年は、データを盗んだうえで「支払わなければ公開する」と脅す二重恐喝が多くを占めると、警察庁は説明しています。</p>
+<p>警察庁が2026年9月に公表した「令和８年上半期におけるサイバー空間をめぐる脅威の情勢等について」によると、2026年上半期に報告されたランサムウェア被害は123件で、半期として統計開始以来最多でした。被害企業・団体の規模別では中小企業が約6割を占めています。</p>
+<p>同じ資料には、被害にあった組織へのアンケート結果として、バックアップに関する数字が載っています。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">項目（令和8年上半期のアンケート）</th><th scope="col">結果</th></tr></thead><tbody><tr><th scope="row">バックアップを取得していた</th><td>有効回答50件のうち44件</td></tr><tr><th scope="row">バックアップから復元できた</th><td>有効回答40件のうち11件</td></tr><tr><th scope="row">復元できなかった</th><td>有効回答40件のうち29件</td></tr><tr><th scope="row">復元できなかった理由で最も多いもの</th><td>バックアップも暗号化・消去された（29件中14件）</td></tr></tbody></table></div>
+<p>つまり、<strong>ほとんどの組織がバックアップを取っていたにもかかわらず、復元できたのは4分の1程度</strong>でした。復元できなかった理由には、バックアップ自体が暗号化・消去されたことのほか、「運用不備」（29件中8件）も挙がっています。過去の年も同じ傾向が続いています。</p>
+<div class="blog-box blog-box--warn"><p class="blog-box__title">攻撃者はバックアップを探してから暗号化する</p><p>警察庁の資料では、攻撃者がネットワークに侵入したあと、内部を探索して重要なデータやバックアップを物色し、データを盗み出してから暗号化を実行する流れが紹介されています。パソコンから手の届く場所に置いたバックアップは、最初から狙われていると考えたほうが安全です。</p></div>
+<h2 id="sec-2">福祉事業所で守りたいデータを洗い出す</h2>
+<p>バックアップを考える前に、「何が失われると業務が止まるか」を書き出しておきます。福祉事業所では、例えば次のようなデータがあります。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">データの例</th><th scope="col">失われたときの影響</th><th scope="col">置き場所の例</th></tr></thead><tbody><tr><th scope="row">利用者の基本情報・受給者証の情報</th><td>サービス提供・請求ができない</td><td>記録ソフト、表計算ファイル</td></tr><tr><th scope="row">個別支援計画・アセスメント・支援記録</th><td>支援の継続、実地指導への対応が困難に</td><td>記録ソフト、共有フォルダ</td></tr><tr><th scope="row">サービス提供実績・請求データ</th><td>報酬の請求が遅れる</td><td>請求ソフト</td></tr><tr><th scope="row">職員の勤務表・資格証の写し</th><td>人員配置の確認ができない</td><td>共有フォルダ</td></tr><tr><th scope="row">契約書・重要事項説明書の控え</th><td>契約内容の確認ができない</td><td>紙とスキャンデータ</td></tr><tr><th scope="row">ホームページのデータ</th><td>情報発信が止まる</td><td>サーバー、制作会社</td></tr></tbody></table></div>
+<p>障害の有無や病歴など、利用者の情報の多くは個人情報保護法の「要配慮個人情報」にあたります。こうしたデータは「消えたら困る」だけでなく、「盗まれたら報告が必要になる」データでもあります（後述）。</p>
+<p>洗い出しの際は、データごとに<strong>どこに保存されているか</strong>と<strong>誰が管理しているか</strong>も一緒に書き出しておくと、バックアップの抜け漏れに気づきやすくなります。クラウドの記録ソフトを使っている場合は、サービス提供会社のバックアップの範囲と保存期間も確認しておきましょう。</p>
+<h2 id="sec-3">3-2-1ルールとオフライン保管の考え方</h2>
+<p>バックアップの考え方として広く知られているのが「3-2-1ルール」です。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">数字</th><th scope="col">意味</th><th scope="col">福祉事業所での例</th></tr></thead><tbody><tr><th scope="row">3</th><td>データを3つ持つ（元データ＋複製2つ）</td><td>パソコン上の元データ、外付けディスク、クラウド</td></tr><tr><th scope="row">2</th><td>2種類以上の媒体に保存する</td><td>外付けディスクとクラウドストレージ</td></tr><tr><th scope="row">1</th><td>1つは別の場所に保管する</td><td>法人本部、別の事業所、クラウド</td></tr></tbody></table></div>
+<p>ランサムウェア対策としては、これに加えて<strong>ネットワークから切り離した（オフラインの）複製を1つ持つ</strong>ことが重要です。警察庁も「バックアップはなるべくこまめに取得し、ネットワークから切り離してオフラインで保存する」ことを推奨しています。</p>
+<p>小規模な事業所で取り入れやすい方法の例は次のとおりです。</p>
+<ul class="blog-list"><li><strong>外付けディスクを2台用意して交互に使う</strong>：バックアップが終わったらケーブルを外し、鍵のかかる場所に保管する。1台は別の場所に置く</li><li><strong>クラウドの「版の履歴（バージョン履歴）」を活用する</strong>：上書きや暗号化されたファイルでも、以前の版に戻せる機能があるか確認する</li><li><strong>共有フォルダ（NAS）の世代管理機能を使う</strong>：機器によっては、一定期間前の状態を残す機能（スナップショット）がある。ただし、管理者アカウントが乗っ取られると消される可能性があるため、管理用パスワードは別にする</li></ul>
+<div class="blog-box blog-box--point"><p class="blog-box__title">「同期」と「バックアップ」は別物</p><p>パソコンとクラウドを自動で同期するサービスは便利ですが、パソコン上のファイルが暗号化されると、その状態がクラウドにも同期されることがあります。同期は「最新の状態をそろえる仕組み」であり、「過去の状態に戻す仕組み」ではありません。過去の版を残せる設定になっているかを確認しましょう。</p></div>
+<h2 id="sec-4">見落とされがちな復元テスト</h2>
+<p>警察庁の調査で「運用不備」が復元できなかった理由に挙がっているように、バックアップは<strong>戻せることを確かめて初めて意味があります</strong>。警察庁は、被害を想定した訓練の中で、バックアップによる復旧手順も確認しておくことを推奨しています。</p>
+<p>復元テストでは、次の点を確かめます。</p>
+<ol class="blog-olist"><li>バックアップから、実際に別のパソコンや別のフォルダへファイルを戻せるか</li><li>戻したファイルが開けるか（記録ソフトや請求ソフトのデータは、ソフト側で読み込めるか）</li><li>どの時点のデータまで戻るか（最後にバックアップを取った日はいつか）</li><li>戻すのにどのくらい時間がかかるか、手順を知っている職員は誰か</li></ol>
+<p>一度に全部を試す必要はありません。例えば「毎月1回、ファイルを1つ選んで戻してみる」「年に1回は記録ソフトのデータを丸ごと戻す手順を確認する」など、続けられる形で決めておくことが大切です。手順は紙にも印刷して保管しておくと、パソコンが使えないときにも参照できます。</p>
+<h2 id="sec-5">バックアップ運用のチェックリスト</h2>
+<p>自分たちの事業所の状況を確認してみましょう。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">確認項目</th><th scope="col">チェック</th></tr></thead><tbody><tr><th scope="row">守るべきデータと保存場所の一覧がある</th><td>□</td></tr><tr><th scope="row">バックアップの担当者と代理の担当者が決まっている</th><td>□</td></tr><tr><th scope="row">バックアップの頻度が決まっている（例：毎日・毎週）</th><td>□</td></tr><tr><th scope="row">少なくとも1つはネットワークから切り離して保管している</th><td>□</td></tr><tr><th scope="row">少なくとも1つは別の場所（本部・クラウド等）にある</th><td>□</td></tr><tr><th scope="row">複数世代（過去の時点）のバックアップを残している</th><td>□</td></tr><tr><th scope="row">定期的に復元テストをしている</th><td>□</td></tr><tr><th scope="row">復元の手順書が紙でも保管されている</th><td>□</td></tr><tr><th scope="row">バックアップ機器の管理用パスワードは使い回していない</th><td>□</td></tr><tr><th scope="row">クラウドサービスのバックアップ範囲と保存期間を確認した</th><td>□</td></tr></tbody></table></div>
+<p>あわせて、バックアップは「被害のあとに戻す」ための対策であり、侵入そのものを防ぐ対策ではない点も押さえておきましょう。警察庁の資料では、侵入経路はVPN機器が約5割を占めるとされています。機器やパソコンの更新プログラムの適用、推測されにくいパスワードと多要素認証の設定など、入口の対策と組み合わせることが前提です。ホームページについての対策は「<a href="../../blog/welfare-website-cyber-attack/">福祉事業所のホームページが狙われている</a>」も参考にしてください。</p>
+<h2 id="sec-6">被害にあったときに知っておきたいこと</h2>
+<p>万一ランサムウェアの被害が疑われたら、警察庁は次のような対応を案内しています。</p>
+<ul class="blog-list"><li>感染したパソコン等のLANケーブルを抜く、無線をオフにするなどしてネットワークから隔離する（調査に必要な記録が消えることがあるため、電源は落とさない）</li><li>都道府県警察のサイバー犯罪相談窓口に通報・相談する</li><li>侵入経路や被害の範囲を調べ、同じ経路からの再被害を防ぐ</li></ul>
+<p>このとき、<strong>バックアップ用のディスクを慌ててつながない</strong>ことも大切です。原因がわからないうちに接続すると、バックアップまで暗号化されるおそれがあります。</p>
+<p>また、個人情報保護委員会は、ランサムウェア等により個人データが暗号化され復元できなくなった場合を、報告が必要となる事態の例に挙げています。不正の目的で行われたおそれがある漏えい等は、まず速やかに報告し、発覚日から60日以内に報告することが求められています。指定権者（自治体）への事故報告が必要かどうかも確認しましょう。初動の流れは「<a href="../../blog/website-hacked-first-response/">ホームページが改ざん・乗っ取りされたときの初動対応マニュアル</a>」でも整理しています。</p>
+<div class="blog-box blog-box--info"><p class="blog-box__title">業務継続計画（BCP）とあわせて考える</p><p>障害福祉サービス事業所では、感染症や自然災害を想定した業務継続計画の策定が求められています。警察庁は、サイバー攻撃を想定したBCPを準備し、対処の流れや警察等の連絡先を整理しておくことも推奨しています。既存のBCPに「データが使えなくなったときの手順」を書き加えておくと、紙での記録への切り替えなども含めて検討しやすくなります。</p></div>
+<h2 id="sec-7">まとめ</h2>
+<p>警察庁の調査では、ランサムウェアの被害にあった組織の多くがバックアップを取っていたものの、復元できたのは4分の1程度にとどまりました。主な原因は、バックアップ自体の暗号化・消去と、運用の不備です。</p>
+<p>福祉事業所でまず取り組みたいのは、守るべきデータの洗い出し、ネットワークから切り離したバックアップの用意、そして定期的な復元テストの3つです。高価な仕組みでなくても、外付けディスクの交互運用やクラウドの版の履歴などを組み合わせれば、備えは大きく変わります。担当者を決め、無理なく続けられる手順にしておきましょう。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>クラウドの記録ソフトを使っていれば、自分たちでバックアップを取る必要はありませんか？</summary><div class="blog-faq__a"><p>サービス提供会社がサーバー側でバックアップを取っていることが一般的ですが、保存期間や、誤って削除・上書きしたデータを利用者側の依頼で戻せるかどうかはサービスによって異なります。契約内容や利用規約で確認し、必要に応じてデータの書き出し（エクスポート）を定期的に行っておくと安心です。</p></div></details><details class="blog-faq__item"><summary>外付けハードディスクを常につないで自動バックアップしています。これで十分ですか？</summary><div class="blog-faq__a"><p>常に接続している外付けディスクや共有フォルダ（NAS）は、パソコンがランサムウェアに感染すると一緒に暗号化されるおそれがあります。自動バックアップ自体は便利なので続けつつ、少なくとも1つはバックアップ後にケーブルを外して保管するなど、ネットワークから切り離した複製を用意することをおすすめします。</p></div></details><details class="blog-faq__item"><summary>ランサムウェアの被害にあったら、身代金を払えばデータは戻りますか？</summary><div class="blog-faq__a"><p>支払ってもデータが戻る保証はなく、盗まれたデータが公開されないという保証もありません。被害が疑われたら、感染した機器をネットワークから切り離し、都道府県警察のサイバー犯罪相談窓口などへ早めに相談してください。利用者の個人データが含まれる場合は、個人情報保護委員会への報告が必要になることがあります。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://www.npa.go.jp/publications/statistics/cybersecurity/data/R8kami/R08_kami_cyber_jousei.pdf" target="_blank" rel="noopener">警察庁「令和８年上半期におけるサイバー空間をめぐる脅威の情勢等について」</a><span>（本文9〜11頁、統計編147〜149頁（バックアップの取得状況・復元結果・復元できなかった理由））</span></li><li><a href="https://www.npa.go.jp/bureau/cyber/countermeasures/ransom.html" target="_blank" rel="noopener">警察庁「ランサムウェア被害防止対策」</a></li><li><a href="https://www.ppc.go.jp/personalinfo/legal/leakAction/" target="_blank" rel="noopener">個人情報保護委員会「漏えい等の対応とお役立ち資料」</a></li><li><a href="https://www.ipa.go.jp/security/10threats/10threats2026.html" target="_blank" rel="noopener">IPA「情報セキュリティ10大脅威 2026」</a></li><li><a href="https://www.ipa.go.jp/security/guide/sme/about.html" target="_blank" rel="noopener">IPA「中小企業の情報セキュリティ対策ガイドライン」</a></li><li><a href="https://www.mhlw.go.jp/stf/newpage_17517.html" target="_blank" rel="noopener">厚生労働省「障害福祉サービス事業所等における自然災害発生時の業務継続ガイドライン等について」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card blog-card--security" href="../../blog/welfare-website-cyber-attack/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/welfare-website-cyber-attack-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">福祉事業所のホームページが狙われている｜2026年のサイバー攻撃の動向と今すぐできる対策</h3>
+<p class="blog-card__desc">ランサムウェア被害は2026年上半期に過去最多を更新し、WordPress本体の緊急脆弱性「wp2shell」も悪用されました。福祉・介護事業所のホームページが狙われる理由、最近の動向、小規模な事業所でも今すぐできる対策をわかりやすく解説します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-10-20">2026年10月20日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--security" href="../../blog/website-hacked-first-response/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/website-hacked-first-response-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">ホームページが改ざん・乗っ取りされたときの初動対応マニュアル｜福祉事業所向け</h3>
+<p class="blog-card__desc">福祉事業所のホームページが改ざん・乗っ取りされた疑いがあるときの初動対応を、気づくサイン、最初の1時間でやること、復旧、個人情報保護委員会への報告、再発防止の流れで解説。連絡先リストのひな形つきです。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-09-16">2026年9月16日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--security" href="../../blog/contact-form-personal-info/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/contact-form-personal-info-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">福祉事業所の問い合わせフォームと個人情報保護｜要配慮個人情報の扱いとプライバシーポリシーの書き方</h3>
+<p class="blog-card__desc">福祉事業所のホームページに設置する問い合わせ・見学申込みフォームで注意すべき個人情報保護のポイントを解説。要配慮個人情報の取得、SSL化、入力項目の最小化、プライバシーポリシーに書くべき内容、迷惑送信対策までまとめました。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-09-16">2026年9月16日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
