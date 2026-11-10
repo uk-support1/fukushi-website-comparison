@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>就労移行支援向けホームページ制作会社4社を比較（2026年版）｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="就労移行支援事業所向けのホームページ制作サービス4社（tomonico・福祉ITパートナー・Onenet・アトラボ）を、初期費用・月額費用・1年目と3年間の総額・更新のしやすさで比較。就職実績や訓練内容など、就労移行支援のホームページに載せたい内容も解説します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/comparisons/shuro-iko-comparison.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="就労移行支援向けホームページ制作会社4社を比較（2026年版）">
+<meta property="og:description" content="就労移行支援事業所向けのホームページ制作サービス4社（tomonico・福祉ITパートナー・Onenet・アトラボ）を、初期費用・月額費用・1年目と3年間の総額・更新のしやすさで比較。就職実績や訓練内容など、就労移行支援のホームページに載せたい内容も解説します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/comparisons/shuro-iko-comparison.html">
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/comparisons/shuro-iko/card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="就労移行支援向けホームページ制作会社4社を比較（2026年版）">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "headline": "就労移行支援向けホームページ制作会社4社を比較（2026年版）",
+  "url": "https://fukushi-hp-hikaku.com/comparisons/shuro-iko-comparison.html",
+  "datePublished": "2026-11-10",
+  "dateModified": "2026-11-10",
+  "image": "https://fukushi-hp-hikaku.com/assets/images/comparisons/shuro-iko/card.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://fukushi-hp-hikaku.com/" },
+    { "@type": "ListItem", "position": 2, "name": "就労移行支援向け", "item": "https://fukushi-hp-hikaku.com/comparisons/shuro-iko-comparison.html" }
+  ]
+}
+</script>
+
+<link rel="icon" href="../favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-v3-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-v3-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../favicon-v3-48x48.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon-v3.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v3-192x192.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/comparison.css">
+</head>
+<body class="cw-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../">
+<span class="site-header__logo-icon"><img src="../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+
+  <!-- ===== ヒーロー ===== -->
+  <section class="cw-hero">
+    <div class="container">
+      <div class="cw-banner cw-banner--overlay">
+        <img src="../assets/images/comparisons/b-type/hero.png" alt="ホームページの画面や比較資料を前に、複数人で相談している様子のイラスト">
+        <div class="cw-banner-scrim"></div>
+        <div class="cw-banner-text">
+          <h1>就労移行支援向け<br>ホームページ制作会社4社を比較（2026年版）</h1>
+          <p class="cw-hero-lead">料金・更新のしやすさ・公開後のサポートを比較</p>
+          <p class="cw-hero-note">2026年11月10日時点の公式情報をもとに比較</p>
+          <a href="#compare-table" class="btn btn--primary">まず比較表を見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 導入文・目次 ===== -->
+  <section class="cw-section cw-section--tight">
+    <div class="container">
+      <div class="cw-wrap">
+        <p>就労移行支援事業所のホームページは、利用を考えている本人やご家族だけでなく、相談支援専門員、ハローワークや医療機関の担当者、実習を受け入れる企業など、さまざまな立場の人に読まれます。就職実績や訓練の内容、就職後の支援まで、「ここなら安心して任せられる」と判断してもらうための情報を、きちんと届けることが大切です。</p>
+        <p>この記事では、福祉事業所向けのホームページ制作を行っている4社（tomonico・福祉ITパートナー・Onenet・アトラボ）について、各社の公式サイトで確認できた料金や対応内容を、就労移行支援事業所の視点で比較します。あわせて、就労移行支援のホームページに載せたい内容も整理しました。</p>
+        <p>各社の掲載順は、<strong>初期費用の安い順（最小プラン・税込相当）</strong>です。特定の会社を優先する並べ方はしていません。</p>
+
+        <h2 class="cw-toc-title">目次</h2>
+        <div class="cw-toc-box">
+          <nav class="cw-toc" aria-label="目次">
+            <a href="#compare-table"><span class="num">1．</span><span class="label">4社の比較表</span><span class="arrow">›</span></a>
+            <a href="#by-purpose"><span class="num">2．</span><span class="label">目的別に選ぶ</span><span class="arrow">›</span></a>
+            <a href="#companies"><span class="num">3．</span><span class="label">4社の料金・特徴</span><span class="arrow">›</span></a>
+            <a href="#detail-compare"><span class="num">4．</span><span class="label">費用を詳しく比較（1年目・3年間の試算）</span><span class="arrow">›</span></a>
+            <a href="#how-to-choose"><span class="num">5．</span><span class="label">就労移行支援のホームページに載せたい6つの内容</span><span class="arrow">›</span></a>
+            <a href="#summary"><span class="num">6．</span><span class="label">まとめ｜目的に合った依頼先を選ぼう</span><span class="arrow">›</span></a>
+            <a href="#faq"><span class="num">7．</span><span class="label">よくある質問</span><span class="arrow">›</span></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 1．比較表 ===== -->
+  <section class="cw-section cw-section--tight" id="compare-table">
+    <div class="container">
+      <div class="cw-wrap-wide">
+        <div class="cw-banner cw-banner--overlay cw-chapter-banner">
+          <img src="../assets/images/comparisons/welfare/chapter-1-compare-table.png" alt="虫眼鏡とチェックリストで比較表を確認している担当者のイラスト">
+          <div class="cw-banner-scrim"></div>
+          <div class="cw-banner-text">
+            <h2>1．4社の比較表</h2>
+          </div>
+        </div>
+        <p class="cw-section-lead">まずは4社の違いを一覧で比べられます。金額は税込相当（税別表示の会社は10％を加えた額）で、カッコ内に公式サイトの表示を載せています。</p>
+
+        <p class="cw-matrix-hint">← 左右にスライドして比較できます →</p>
+        <div class="cw-matrix-wrap">
+          <table class="cw-matrix-table">
+            <thead>
+              <tr>
+                <th scope="col">比較項目</th>
+                <th scope="col"><span class="cw-matrix-name">tomonico</span><span class="cw-matrix-type">月額保守・更新代行型</span></th>
+                <th scope="col"><span class="cw-matrix-name">福祉ITパートナー</span><span class="cw-matrix-type">低価格・短納期型</span></th>
+                <th scope="col"><span class="cw-matrix-name">Onenet</span><span class="cw-matrix-type">福祉特化・自社更新型</span></th>
+                <th scope="col"><span class="cw-matrix-name">アトラボ</span><span class="cw-matrix-type">WordPress・オリジナルデザイン型</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">初期費用（最小プラン）</th>
+                <td class="cw-matrix-text cw-matrix-best">0円<br>トモニコプラン</td>
+                <td class="cw-matrix-text">19,800円<br>おまかせライト（1ページ）</td>
+                <td class="cw-matrix-text">107,800円<br>（税別98,000円・5ページまで）</td>
+                <td class="cw-matrix-text">297,000円～<br>テンプレート利用（5ページ）</td>
+              </tr>
+              <tr>
+                <th scope="row">月額費用</th>
+                <td class="cw-matrix-text">9,790円<br>（税別8,900円・3年契約）</td>
+                <td class="cw-matrix-text">月額契約なし<br>公開後の更新は別途相談</td>
+                <td class="cw-matrix-text">7,480円<br>（税別6,800円）</td>
+                <td class="cw-matrix-text">公式サイトで金額を確認できず（要問い合わせ）</td>
+              </tr>
+              <tr>
+                <th scope="row">1年目の目安<br><span class="cw-matrix-sub">制作費＋月額×12か月</span></th>
+                <td class="cw-matrix-text">117,480円</td>
+                <td class="cw-matrix-text cw-matrix-best">19,800円～55,000円</td>
+                <td class="cw-matrix-text">197,560円</td>
+                <td class="cw-matrix-text">297,000円～＋月額</td>
+              </tr>
+              <tr>
+                <th scope="row">ページ構成</th>
+                <td class="cw-matrix-text">基本7ページ</td>
+                <td class="cw-matrix-text">ライト1ページ／ブランディングは構成を提案</td>
+                <td class="cw-matrix-text">5ページまで（複数事業所は10ページまで）</td>
+                <td class="cw-matrix-text">テンプレートは5ページ。追加は別料金</td>
+              </tr>
+              <tr>
+                <th scope="row">公開後の更新</th>
+                <td class="cw-matrix-text">月額内で更新を代行（5営業日以内が目安）。ブログ・お知らせは自社でも更新可</td>
+                <td class="cw-matrix-text">自分で更新できる</td>
+                <td class="cw-matrix-text">自分で編集できる（マニュアルあり）</td>
+                <td class="cw-matrix-text">WordPress。専用マニュアルあり。運用代行プランもあり</td>
+              </tr>
+              <tr>
+                <th scope="row">納期の目安</th>
+                <td class="cw-matrix-text">公式サイトに記載なし</td>
+                <td class="cw-matrix-text cw-matrix-best">最短48時間～（通常14日）</td>
+                <td class="cw-matrix-text">公式サイトに記載なし</td>
+                <td class="cw-matrix-text">公式サイトで要確認</td>
+              </tr>
+              <tr>
+                <th scope="row">就労移行支援に関する公式サイトの記載</th>
+                <td class="cw-matrix-text">障害福祉事業所向けに専門。就労移行支援の制作実績は確認できず</td>
+                <td class="cw-matrix-text">対応サービスに就労移行支援・就労定着支援を明記</td>
+                <td class="cw-matrix-text cw-matrix-best">制作実績に就労移行支援事業所あり</td>
+                <td class="cw-matrix-text">社会福祉施設向けの専用ページあり。就労移行支援の実績は確認できず</td>
+              </tr>
+              <tr>
+                <th scope="row">こんな方に</th>
+                <td class="cw-matrix-text">初期費用を抑え、更新も任せたい事業所</td>
+                <td class="cw-matrix-text">まず1ページで早く公開したい事業所</td>
+                <td class="cw-matrix-text">福祉出身の担当者に相談しつつ、自分たちで更新したい事業所</td>
+                <td class="cw-matrix-text">オリジナルデザインや採用ページにも力を入れたい事業所</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cw-note">
+          <p>※2026年11月10日に各社の公式サイトで確認した情報です。料金やサービス内容は変更される場合があります。契約前に必ず公式サイトで最新情報をご確認ください。</p>
+          <p>※サーバー・ドメインの費用は、会社によって扱いが異なるため、1年目の目安には含めていません（詳しくは「4．費用を詳しく比較」をご覧ください）。</p>
+          <p>※tomonicoの月額は3年契約のトモニコプランの場合です。ほかに、初期費用189,000円（税別）のミドルプラン、298,000円（税別）のフリープランがあります。</p>
+          <p>※福祉ITパートナーは、おまかせライト19,800円と、ブランディング55,000円（いずれも税込）の2プランです。1年目の金額は、月額サポートを利用しない場合です。</p>
+          <p>※「就労移行支援に関する公式サイトの記載」は、各社の公式サイトで確認できた範囲です。記載がないことは、対応できないという意味ではありません。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2．目的別 ===== -->
+  <section class="cw-section" id="by-purpose">
+    <div class="container">
+      <div class="cw-wrap-wide">
+        <div class="cw-banner cw-banner--overlay cw-chapter-banner">
+          <img src="../assets/images/comparisons/welfare/chapter-2-purpose.png" alt="費用・納期・デザイン・相談の選択肢を前に考えている3人のイラスト">
+          <div class="cw-banner-scrim"></div>
+          <div class="cw-banner-text">
+            <h2>2．目的別に選ぶ</h2>
+          </div>
+        </div>
+      </div>
+      <div class="cw-wrap-wide">
+        <div class="cw-pick-grid">
+          <div class="cw-purpose-card">
+            <span class="cw-purpose-label">初期費用をかけずに始めたい</span>
+            <div class="cw-purpose-recommend">
+              <span class="cw-purpose-recommend-label">候補：</span>
+              <span class="cw-purpose-links">
+                <a class="cw-purpose-btn" href="#tomonico">tomonico</a>
+                <a class="cw-purpose-btn" href="#fukushi-it-partner">福祉ITパートナー</a>
+              </span>
+            </div>
+            <p class="cw-purpose-desc">tomonicoは初期費用0円（月額制）、福祉ITパートナーは1ページ19,800円からです。毎月の費用と更新の手間も合わせて比べましょう。</p>
+          </div>
+          <div class="cw-purpose-card">
+            <span class="cw-purpose-label">公開後の更新も任せたい</span>
+            <div class="cw-purpose-recommend">
+              <span class="cw-purpose-recommend-label">候補：</span>
+              <span class="cw-purpose-links">
+                <a class="cw-purpose-btn" href="#tomonico">tomonico</a>
+              </span>
+            </div>
+            <p class="cw-purpose-desc">月額の保守費用の中で、文章の書き換えや写真の差し替えを依頼できます。パソコン作業が得意な職員がいない事業所向けです。</p>
+          </div>
+          <div class="cw-purpose-card">
+            <span class="cw-purpose-label">自分たちで更新して、月額費用を抑えたい</span>
+            <div class="cw-purpose-recommend">
+              <span class="cw-purpose-recommend-label">候補：</span>
+              <span class="cw-purpose-links">
+                <a class="cw-purpose-btn" href="#fukushi-it-partner">福祉ITパートナー</a>
+                <a class="cw-purpose-btn" href="#onenet">Onenet</a>
+                <a class="cw-purpose-btn" href="#attlabo">アトラボ</a>
+              </span>
+            </div>
+            <p class="cw-purpose-desc">3社とも、公開後は自分で文章や写真を更新できると案内しています（Onenetとアトラボはマニュアルを提供）。就職者の紹介やお知らせを、職員が自由に更新したい事業所向けです。</p>
+          </div>
+          <div class="cw-purpose-card">
+            <span class="cw-purpose-label">就労移行支援の制作実績を重視したい</span>
+            <div class="cw-purpose-recommend">
+              <span class="cw-purpose-recommend-label">候補：</span>
+              <span class="cw-purpose-links">
+                <a class="cw-purpose-btn" href="#onenet">Onenet</a>
+              </span>
+            </div>
+            <p class="cw-purpose-desc">公式サイトの制作実績に就労移行支援事業所が掲載されています。福祉ITパートナーは対応サービスに就労移行支援を挙げています。</p>
+          </div>
+          <div class="cw-purpose-card">
+            <span class="cw-purpose-label">デザインや職員採用ページにもこだわりたい</span>
+            <div class="cw-purpose-recommend">
+              <span class="cw-purpose-recommend-label">候補：</span>
+              <span class="cw-purpose-links">
+                <a class="cw-purpose-btn" href="#attlabo">アトラボ</a>
+              </span>
+            </div>
+            <p class="cw-purpose-desc">オリジナルデザインのプランがあり、社会福祉施設向けのページで採用ページの制作にも力を入れていると案内しています。費用は4社の中で最も高めです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3．各社の料金・特徴 ===== -->
+  <section class="cw-section cw-section--tight" id="companies">
+    <div class="container">
+      <div class="cw-wrap-wide">
+        <div class="cw-banner cw-banner--overlay cw-chapter-banner">
+          <img src="../assets/images/comparisons/welfare/chapter-3-price-feature.png" alt="担当者が4つのサービスカードを紹介しているイラスト">
+          <div class="cw-banner-scrim"></div>
+          <div class="cw-banner-text">
+            <h2>3．4社の料金・特徴</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="cw-wrap">
+        <!-- tomonico -->
+        <div class="cw-company" id="tomonico">
+          <span class="cw-company-type">月額保守・更新代行型</span>
+          <h2>tomonico</h2>
+          <a class="cw-site-shot" href="https://tomonico.com/service/fukushi" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/comparisons/b-type/tomonico-hero.png" alt="tomonico公式サイトのトップページ画面" loading="lazy">
+            <span class="cw-site-shot-caption">公式サイトを見る ↗</span>
+          </a>
+          <p class="cw-company-lead">障害福祉事業所向けのホームページ制作と更新代行を行う会社です。公式サイトによると、代表自身が障害当事者で、制作から公開後の更新まで、すべてオンラインで進めます。</p>
+
+          <div class="cw-spec-grid">
+            <div class="cw-spec-item">
+              <span class="cw-spec-label">料金の目安（税込相当）</span>
+              <span class="cw-spec-value">初期0円＋月額9,790円（3年契約）</span>
+            </div>
+            <div class="cw-spec-item">
+              <span class="cw-spec-label">1年目の目安</span>
+              <span class="cw-spec-value">117,480円</span>
+            </div>
+          </div>
+          <div class="cw-note">
+            <p>公式サイトの表示は税別で、トモニコプランは初期0円・月額8,900円（3年契約）です。ミドルプラン（初期189,000円・月額5,000円・2年契約。契約6か月目まで保守・更新費は無料）、フリープラン（初期298,000円・保守契約なし）もあります。</p>
+          </div>
+
+          <h3>メリット</h3>
+          <ul>
+            <li>初期費用0円で始められるプランがある（制作期間中も月額は定額）</li>
+            <li>サーバー・ドメインの契約管理から、構成・デザイン・文章作成まで任せられる</li>
+            <li>月額の保守費用の中で、文章の書き換え・写真の差し替え・簡易なレイアウト変更を依頼できる</li>
+            <li>お問い合わせフォーム、Googleマップ、ブログ、基本のSEO対策、Googleビジネスプロフィールの基本設定が全プランに含まれる</li>
+          </ul>
+
+          <h3>注意点</h3>
+          <ul>
+            <li>基本は7ページ程度で、超える場合は1ページごとに追加費用がかかる</li>
+            <li>トモニコプランは3年契約で、月額費用がずっと続く（4年目以降は月額3,900円（税別）の契約に変更可）</li>
+            <li>更新は依頼する形が基本（目安は土日祝を除く5営業日以内）。ブログやお知らせは、希望すれば自社で更新できる設計にできる</li>
+            <li>公式サイトで確認できた制作実績は、就労継続支援B型・訪問看護・放課後等デイサービスなど。就労移行支援の実績は確認できなかった</li>
+          </ul>
+
+          <h3>こんな方におすすめ</h3>
+          <p>まとまった初期費用をかけずに公開したい事業所、職員にホームページの知識がなく、更新も任せたい事業所</p>
+
+          <div class="cw-btn-row">
+            <a href="https://tomonico.com/service/fukushi" class="btn btn--outline" target="_blank" rel="noopener noreferrer">tomonico公式サイトを見る ↗</a>
+          </div>
+        </div>
+
+        <!-- 福祉ITパートナー -->
+        <div class="cw-company" id="fukushi-it-partner">
+          <span class="cw-company-type">低価格・短納期型</span>
+          <h2>福祉ITパートナー</h2>
+          <a class="cw-site-shot" href="https://fukushi-it-partner.com/" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/companies/fukushi-it-partner-hero.png" alt="福祉ITパートナー公式サイトのトップページ画面" loading="lazy">
+            <span class="cw-site-shot-caption">公式サイトを見る ↗</span>
+          </a>
+          <p class="cw-company-lead">福祉・介護・医療分野のホームページ制作と、IT活用の支援を行っています。公式サイトでは、精神保健福祉士として現場に立った経験があると紹介されています。<strong>なお、当サイトの運営者は同社の関連会社です。</strong>他社と同じ基準で確認し、掲載しています。</p>
+
+          <div class="cw-spec-grid">
+            <div class="cw-spec-item">
+              <span class="cw-spec-label">料金（税込）</span>
+              <span class="cw-spec-value">おまかせライト19,800円／ブランディング55,000円</span>
+            </div>
+            <div class="cw-spec-item">
+              <span class="cw-spec-label">納期の目安</span>
+              <span class="cw-spec-value">最短48時間～（目安14日）</span>
+            </div>
+          </div>
+          <div class="cw-note">
+            <p>おまかせライトは1ページ構成（制作中の修正1回まで）、ブランディングは事業所に合わせて構成を提案（修正3回まで）です。サーバー契約・ドメイン取得・公開作業は基本料金に含まれず、金額の記載も公式サイトでは確認できませんでした。</p>
+          </div>
+
+          <h3>メリット</h3>
+          <ul>
+            <li>制作費が19,800円から、と4社の中で最も低い（ブランディングでも55,000円）</li>
+            <li>料金を先に提示する明朗会計で、素材がそろえば最短48時間から</li>
+            <li>スマホ対応、基本のSEO設定、Googleマップの設置が両プランに含まれる</li>
+            <li>公開後の文章修正や写真の差し替えは、自分で行える</li>
+            <li>ブランディングプランでは、文章の整理・リライト、写真の選定・加工、オリジナルロゴの作成まで相談できる</li>
+          </ul>
+
+          <h3>注意点</h3>
+          <ul>
+            <li>ライトは1ページのみで、問い合わせフォームは付かない（導線の設置のみ）。フォームが必要な場合はブランディングを選ぶ</li>
+            <li>サーバー・ドメインの契約は別で、選び方の比較ページは案内されているが、実費は自分で確認する必要がある</li>
+            <li>公開後の更新代行や保守は、必要に応じて別途相談となる</li>
+            <li>公式サイトでは対応サービスに就労移行支援を挙げているが、制作実績の例として確認できたのは就労継続支援B型とグループホーム</li>
+          </ul>
+
+          <h3>こんな方におすすめ</h3>
+          <p>まず1ページで早く公開したい事業所、費用を抑えつつ福祉の現場を知る相手に相談したい事業所、更新は自分たちで行える事業所</p>
+
+          <div class="cw-btn-row">
+            <a href="https://fukushi-it-partner.com/homepage-plan.html" class="btn btn--outline" target="_blank" rel="noopener noreferrer">福祉ITパートナー公式サイトを見る ↗</a>
+          </div>
+        </div>
+
+        <!-- Onenet -->
+        <div class="cw-company" id="onenet">
+          <span class="cw-company-type">福祉特化・自社更新型</span>
+          <h2>Onenet（合同会社フェレット）</h2>
+          <a class="cw-site-shot" href="https://one1-net.com/web-site-production/" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/comparisons/b-type/onenet-hero.png" alt="Onenet公式サイトのトップページ画面" loading="lazy">
+            <span class="cw-site-shot-caption">公式サイトを見る ↗</span>
+          </a>
+          <p class="cw-company-lead">福祉業界出身の技術者で構成される会社で、福祉事業所向けのホームページ制作サービス「Onenet」を提供しています。公式サイトの制作実績には、就労移行支援事業所のサンプルや、就労継続支援B型／就労移行支援の事業所が載っています。</p>
+
+          <div class="cw-spec-grid">
+            <div class="cw-spec-item">
+              <span class="cw-spec-label">料金の目安（税込相当）</span>
+              <span class="cw-spec-value">初期107,800円＋月額7,480円</span>
+            </div>
+            <div class="cw-spec-item">
+              <span class="cw-spec-label">1年目の目安</span>
+              <span class="cw-spec-value">197,560円</span>
+            </div>
+          </div>
+          <div class="cw-note">
+            <p>公式サイトの表示は税別で、5ページまで（1事業所のみ掲載）は初期98,000円・月額6,800円です。複数の事業所を掲載する10ページまでのプランは、初期148,000円・月額9,800円です。ブログ機能の設置は29,800円（税別）です。</p>
+          </div>
+
+          <h3>メリット</h3>
+          <ul>
+            <li>福祉業界出身の技術者が、事業所に合わせて設計とデザインを行う</li>
+            <li>スマホ対応、問い合わせフォーム、Googleマップへの登録、独自ドメインの取得が料金プランに含まれる</li>
+            <li>納品後は、テキストや画像を自分で編集でき、編集用のマニュアルも渡される</li>
+            <li>複数の事業所を同時に掲載するプランがあり、法人内に複数の事業所がある場合に使いやすい</li>
+            <li>すでにホームページがある事業所向けに、設計の見直しや、自分で更新できるようにする改良の相談も受け付けている</li>
+          </ul>
+
+          <h3>注意点</h3>
+          <ul>
+            <li>月額費用が続く。ブログ機能は別料金（29,800円・税別）</li>
+            <li>1ページタイプ（29,800円）は訪問介護・訪問看護のみが対象のため、就労移行支援事業所は5ページまでのプラン（98,000円・税別）以上になる</li>
+            <li>納期の目安は、公式サイトで確認できなかった</li>
+            <li>制作時には、掲載内容を入力する提出シートの作成が必要になる</li>
+          </ul>
+
+          <h3>こんな方におすすめ</h3>
+          <p>福祉の現場を知る担当者に相談しながら作りたい事業所、公開後は自分たちで更新したい事業所、複数の事業所を運営している法人</p>
+
+          <div class="cw-btn-row">
+            <a href="https://one1-net.com/web-site-production/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Onenet公式サイトを見る ↗</a>
+          </div>
+        </div>
+
+        <!-- アトラボ -->
+        <div class="cw-company" id="attlabo">
+          <span class="cw-company-type">WordPress・オリジナルデザイン型</span>
+          <h2>株式会社アトラボ</h2>
+          <a class="cw-site-shot" href="https://attlabo.com/business/welfare/" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/comparisons/b-type/attlabo-hero.png" alt="アトラボ公式サイトのトップページ画面" loading="lazy">
+            <span class="cw-site-shot-caption">公式サイトを見る ↗</span>
+          </a>
+          <p class="cw-company-lead">千葉県のホームページ制作会社で、業種を限らず制作しています。公式サイトには「社会福祉施設」向けの専用ページがあり、利用者や家族に伝わりやすい構成や、採用ページの制作に力を入れていると案内されています。</p>
+
+          <div class="cw-spec-grid">
+            <div class="cw-spec-item">
+              <span class="cw-spec-label">料金の目安（税込）</span>
+              <span class="cw-spec-value">テンプレート利用297,000円～／オリジナルデザイン495,000円～</span>
+            </div>
+            <div class="cw-spec-item">
+              <span class="cw-spec-label">月額の保守費用</span>
+              <span class="cw-spec-value">公式サイトで金額を確認できず</span>
+            </div>
+          </div>
+          <div class="cw-note">
+            <p>WordPressのテンプレート利用プランは、5ページ・WordPress基本設定込みで297,000円～（ディレクション・ライティング・カスタム投稿の設定などは別途）です。オリジナルデザインの制作プランは495,000円（サブページ2ページ）からで、追加ページは1ページ33,000円～です。写真・文章のデータは原則として自社で準備する必要があります。</p>
+          </div>
+
+          <h3>メリット</h3>
+          <ul>
+            <li>オリジナルデザインに対応し、他の事業所と差をつけたい場合の選択肢になる</li>
+            <li>WordPressで制作し、お知らせやブログ、求人情報を自分で更新できる（専用の管理マニュアルあり）</li>
+            <li>社会福祉施設向けに、「施設の特徴」「先輩スタッフの声」「研修制度」などを盛り込んだ採用ページの制作を案内している</li>
+            <li>常時SSL化に対応。運用を任せられるWordPressサポートプランもある</li>
+          </ul>
+
+          <h3>注意点</h3>
+          <ul>
+            <li>4社の中で初期費用が最も高く、ディレクションやライティングが別料金になることがある</li>
+            <li>月額の保守費用は、公式サイトで金額を確認できなかった</li>
+            <li>千葉県内の顧客は、原則として訪問での打ち合わせが無料（定額制プランを除く）。県外はオンライン等の相談が前提になる</li>
+            <li>公式サイトで確認できた福祉分野の制作実績の中に、就労移行支援は確認できなかった</li>
+          </ul>
+
+          <h3>こんな方におすすめ</h3>
+          <p>デザインにこだわりたい事業所、職員採用にも力を入れたい法人、複数施設のホームページに統一感を持たせたい法人</p>
+
+          <div class="cw-btn-row">
+            <a href="https://attlabo.com/business/welfare/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">アトラボ公式サイトを見る ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4．費用を詳しく比較 ===== -->
+  <section class="cw-section cw-section--tight" id="detail-compare">
+    <div class="container">
+      <div class="cw-wrap-wide">
+        <div class="cw-banner cw-banner--overlay cw-chapter-banner">
+          <img src="../assets/images/comparisons/welfare/chapter-4-detail-compare.png" alt="料金、サーバー、クラウド、ヘッドセットの相談員が描かれたイラスト">
+          <div class="cw-banner-scrim"></div>
+          <div class="cw-banner-text">
+            <h2>4．費用を詳しく比較</h2>
+          </div>
+        </div>
+        <p class="cw-section-lead">初期費用だけでなく、1年目と3年間の総額で比べると、印象が変わります。税込相当の金額で、サーバー・ドメインの実費は含めていません。</p>
+
+        <p class="cw-matrix-hint">← 左右にスライドして比較できます →</p>
+        <div class="cw-matrix-wrap">
+          <table class="cw-matrix-table">
+            <thead>
+              <tr>
+                <th scope="col">比較項目</th>
+                <th scope="col"><span class="cw-matrix-name">tomonico</span><span class="cw-matrix-type">トモニコプラン</span></th>
+                <th scope="col"><span class="cw-matrix-name">福祉ITパートナー</span><span class="cw-matrix-type">ライト／ブランディング</span></th>
+                <th scope="col"><span class="cw-matrix-name">Onenet</span><span class="cw-matrix-type">5ページまで</span></th>
+                <th scope="col"><span class="cw-matrix-name">アトラボ</span><span class="cw-matrix-type">テンプレート利用</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">初期費用</th>
+                <td class="cw-matrix-text cw-matrix-best">0円</td>
+                <td class="cw-matrix-text">19,800円／55,000円</td>
+                <td class="cw-matrix-text">107,800円</td>
+                <td class="cw-matrix-text">297,000円～</td>
+              </tr>
+              <tr>
+                <th scope="row">月額費用</th>
+                <td class="cw-matrix-text">9,790円（3年間）</td>
+                <td class="cw-matrix-text cw-matrix-best">月額契約なし</td>
+                <td class="cw-matrix-text">7,480円</td>
+                <td class="cw-matrix-text">公式サイトで確認できず</td>
+              </tr>
+              <tr>
+                <th scope="row">1年目の目安</th>
+                <td class="cw-matrix-text">117,480円</td>
+                <td class="cw-matrix-text cw-matrix-best">19,800円／55,000円</td>
+                <td class="cw-matrix-text">197,560円</td>
+                <td class="cw-matrix-text">297,000円～＋月額</td>
+              </tr>
+              <tr>
+                <th scope="row">3年間の目安</th>
+                <td class="cw-matrix-text">352,440円</td>
+                <td class="cw-matrix-text cw-matrix-best">19,800円／55,000円<br>（公開後の更新を自社で行う場合）</td>
+                <td class="cw-matrix-text">377,080円</td>
+                <td class="cw-matrix-text">297,000円～＋月額</td>
+              </tr>
+              <tr>
+                <th scope="row">サーバー・ドメイン</th>
+                <td class="cw-matrix-text">契約管理・サポートを含む（実費の扱いは要確認）</td>
+                <td class="cw-matrix-text">基本料金に含まれない（取得・公開作業は別途）</td>
+                <td class="cw-matrix-text">独自ドメインの取得を含む（実費の扱いは要確認）</td>
+                <td class="cw-matrix-text">公式サイトで要確認</td>
+              </tr>
+              <tr>
+                <th scope="row">公開後の更新</th>
+                <td class="cw-matrix-text">月額内で代行（簡易な変更）</td>
+                <td class="cw-matrix-text">自分で更新</td>
+                <td class="cw-matrix-text">自分で更新</td>
+                <td class="cw-matrix-text">自分で更新（運用サポートプランもあり）</td>
+              </tr>
+              <tr>
+                <th scope="row">追加費用がかかるもの</th>
+                <td class="cw-matrix-text">8ページ目以降の追加ページ、大きなレイアウト変更</td>
+                <td class="cw-matrix-text">公開作業、公開後の更新代行（相談）</td>
+                <td class="cw-matrix-text">ブログ機能（29,800円・税別）、ページ追加</td>
+                <td class="cw-matrix-text">ディレクション、ライティング、追加ページ（33,000円～）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cw-note">
+          <p>※1年目＝初期費用＋月額×12か月、3年間＝初期費用＋月額×36か月です。税別表示の会社は10％を加えた額で計算しています（tomonico：月額8,900円×1.1＝9,790円、Onenet：98,000円×1.1＝107,800円・月額6,800円×1.1＝7,480円）。</p>
+          <p>※tomonicoのミドルプラン（初期189,000円・月額5,000円）の1年目は、保守・更新費が無料の6か月を除き計算すると、約240,900円（税込相当）です。フリープランは初期298,000円（税込相当327,800円）で、月額の保守費用はかかりません。</p>
+          <p>※福祉ITパートナーは、更新を自社で行う前提の金額です。更新代行を依頼する場合は別途相談となり、公式サイトに金額の記載はありません。</p>
+          <p>※アトラボの月額（管理保守料金）は、公式サイトで具体的な金額を確認できなかったため、金額を記載していません。</p>
+        </div>
+
+        <h3 class="cw-subhead">費用を見るときの3つの視点</h3>
+        <ul>
+          <li><strong>更新を誰が行うか：</strong>就労移行支援では、就職者の紹介、見学会のお知らせ、空き状況などを頻繁に更新したくなります。自分で更新できれば月額は不要でも、職員の手間がかかります。更新を任せる場合は、月額費用と依頼できる範囲を確認しましょう。</li>
+          <li><strong>3年間の総額：</strong>月額が低く見えるプランも、3年続くと初期費用の高いプランと同じくらいになることがあります。契約期間と解約時の条件もあわせて確認してください。</li>
+          <li><strong>含まれないもの：</strong>サーバー・ドメイン、写真撮影、文章作成、ページ追加は、会社によって扱いが違います。見積もりの段階で「この金額に何が含まれるか」を書面で確認しましょう。</li>
+        </ul>
+        <p>費用の考え方は「<a href="../blog/hp-cost-souba/">福祉事業所のホームページ制作費用の相場</a>」、問い合わせ時の質問例は「<a href="../blog/hp-company-choose/">制作会社の選び方と質問リスト</a>」でも詳しく解説しています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5．就労移行支援のホームページに載せたい内容 ===== -->
+  <section class="cw-section" id="how-to-choose">
+    <div class="container">
+      <div class="cw-wrap-wide">
+        <div class="cw-banner cw-banner--overlay cw-chapter-banner">
+          <img src="../assets/images/comparisons/welfare/chapter-5-how-to-choose.png" alt="男女が大きなチェックリストを見ながら相談しているイラスト">
+          <div class="cw-banner-scrim"></div>
+          <div class="cw-banner-text">
+            <h2>5．就労移行支援のホームページに載せたい6つの内容</h2>
+          </div>
+        </div>
+      </div>
+      <div class="cw-wrap-wide">
+        <p class="cw-section-lead">就労移行支援のホームページは、「通えば就職できそうか」「どんな人が、どう支援してくれるのか」を判断してもらう場です。制作会社に依頼する前に、次の6つを整理しておくと、見積もりも打ち合わせもスムーズになります。</p>
+
+        <div class="cw-guide-grid">
+          <div class="cw-guide-card">
+            <h3>1．就職実績と定着の状況</h3>
+            <p>利用を考える方が最も知りたいのは、これまでにどのくらいの人が、どんな仕事に就いたかです。</p>
+            <p><strong>載せたい内容</strong></p>
+            <ul>
+              <li>年度ごとの就職者数と、就職先の業種・職種の例</li>
+              <li>就職後6か月以上、職場に定着した人の状況</li>
+              <li>数字の対象年度と、数え方（利用者の範囲）</li>
+            </ul>
+            <p>「就職率100％」のような断定や、実績を実際より良く見せる表現は避けましょう。実際と違う内容を示すと、景品表示法の優良誤認表示にあたるおそれがあります。</p>
+          </div>
+          <div class="cw-guide-card">
+            <h3>2．訓練の内容と1日の流れ</h3>
+            <p>「何をするのか」がわかると、通う姿を具体的に想像できます。</p>
+            <p><strong>載せたい内容</strong></p>
+            <ul>
+              <li>パソコン、ビジネスマナー、グループワーク、職場実習などの内容</li>
+              <li>1日の時間割と、通所日数・時間の考え方（週2日から相談可、など）</li>
+              <li>体調管理や生活リズムの整え方への支援</li>
+              <li>訓練の様子の写真（本人の同意を得たもの）</li>
+            </ul>
+          </div>
+          <div class="cw-guide-card">
+            <h3>3．対象となる方と利用期間・費用</h3>
+            <p>就労移行支援には、対象や期間のルールがあります。制度の説明を、平易な言葉で添えておくと安心されます。</p>
+            <p><strong>載せたい内容</strong></p>
+            <ul>
+              <li>一般企業への就職を希望する65歳未満の方が対象であること</li>
+              <li>利用期間は原則2年であること</li>
+              <li>利用料は所得に応じた上限があり、多くの方が無料であること</li>
+              <li>得意とする障害特性や、受け入れの考え方</li>
+            </ul>
+          </div>
+          <div class="cw-guide-card">
+            <h3>4．利用開始までの流れ</h3>
+            <p>「何から始めればいいのか」が最初の壁です。見学から利用開始までを、順番に示しましょう。</p>
+            <p><strong>載せたい内容</strong></p>
+            <ul>
+              <li>見学・体験 → 受給者証の申請 → 契約・利用開始のステップ</li>
+              <li>受給者証をお持ちでない方も相談できること</li>
+              <li>就労選択支援との関係（2027年4月から、新たに就労移行支援を使う方は原則として就労選択支援を利用する予定）</li>
+            </ul>
+          </div>
+          <div class="cw-guide-card">
+            <h3>5．企業・関係機関向けの情報</h3>
+            <p>就労移行支援は、企業との連携が成果に直結します。企業や支援者が必要とする情報も掲載しましょう。</p>
+            <p><strong>載せたい内容</strong></p>
+            <ul>
+              <li>職場実習の受け入れや、障害者雇用の相談窓口</li>
+              <li>ハローワーク、相談支援専門員、医療機関向けの連絡先</li>
+              <li>就職後の支援（就労定着支援を行っているか）</li>
+            </ul>
+          </div>
+          <div class="cw-guide-card">
+            <h3>6．公表が必要な情報</h3>
+            <p>障害福祉サービスの事業所には、情報公表システムへの報告などが求められています。未報告の場合は報酬の減算の対象になります。</p>
+            <p><strong>載せたい内容</strong></p>
+            <ul>
+              <li>事業所の基本情報、運営規程の概要、利用料</li>
+              <li>苦情の相談窓口、虐待防止などの取組</li>
+              <li>更新日（情報の時点）</li>
+            </ul>
+            <p>詳しくは「<a href="../blog/kouhyou-gimu-website/">障害福祉事業所がホームページ等で公表すべき情報まとめ</a>」をご覧ください。</p>
+          </div>
+        </div>
+
+        <p class="cw-section-lead">掲載したい項目の全体像は「<a href="../blog/hp-must-have-contents/">福祉事業所のホームページに載せるべき項目チェックリスト</a>」、職員採用に使うページは「<a href="../blog/recruit-website/">福祉事業所の採用ページ設計</a>」で紹介しています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6．まとめ ===== -->
+  <section class="cw-section cw-section--tight" id="summary">
+    <div class="container">
+      <div class="cw-wrap-wide">
+        <div class="cw-banner cw-banner--overlay cw-chapter-banner">
+          <img src="../assets/images/comparisons/welfare/chapter-6-summary.png" alt="担当者と利用者家族が握手を交わし、ホームページ完成を喜んでいるイラスト">
+          <div class="cw-banner-scrim"></div>
+          <div class="cw-banner-text">
+            <h2>6．まとめ｜目的に合った依頼先を選ぼう</h2>
+          </div>
+        </div>
+      </div>
+      <div class="cw-wrap">
+        <p>就労移行支援事業所のホームページ制作は、初期費用だけでなく、<strong>更新を誰が行うか、公開後の費用がいくらか</strong>で、向いている依頼先が変わります。</p>
+        <ul>
+          <li>初期費用をかけずに始め、更新も任せたい → tomonico（月額制）</li>
+          <li>まず1ページを低価格・短期間で公開したい → 福祉ITパートナー（更新は自分で）</li>
+          <li>福祉出身の担当者に相談し、自分たちで更新したい → Onenet</li>
+          <li>オリジナルデザインや採用ページにも力を入れたい → アトラボ（費用は高め）</li>
+        </ul>
+        <p>どの会社を選ぶ場合も、<strong>1年目と3年間の総額、公開後に依頼できる範囲、サーバー・ドメインの名義</strong>を契約前に確認しましょう。そして、就職実績・訓練内容・利用までの流れ・公表情報といった、就労移行支援ならではの内容を、制作会社と一緒に整理することが、見学や問い合わせにつながる第一歩です。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7．よくある質問 ===== -->
+  <section class="cw-section cw-section--tight" id="faq">
+    <div class="container">
+      <div class="cw-wrap">
+        <h2 class="cw-faq-title">7．よくある質問</h2>
+        <details class="cw-faq-item">
+          <summary>開所したばかりで実績がありません。ホームページには何を載せればよいですか？</summary>
+          <div class="cw-faq-a">
+            <p>実績の数字がない時期は、訓練内容、1日の流れ、支援員の経歴や支援方針、見学・体験の流れ、利用料の考え方を厚く書きましょう。実績がない状態で数字を作ることは避け、「開所準備中」「◯月開所」など、事実をそのまま伝えることが信頼につながります。</p>
+          </div>
+        </details>
+        <details class="cw-faq-item">
+          <summary>1ページだけのホームページでも足りますか？</summary>
+          <div class="cw-faq-a">
+            <p>まず事業所の存在と連絡先を知ってもらう目的なら、1ページでも役に立ちます。ただし、訓練内容、就職実績、利用の流れ、公表情報をすべて1ページに入れると読みにくくなります。1ページで始め、情報がそろったらページを増やす方法も現実的です。ページを後から増やせるか、追加の費用はいくらかを、契約前に確認しておきましょう。</p>
+          </div>
+        </details>
+        <details class="cw-faq-item">
+          <summary>すでにあるホームページをリニューアルしたい場合も相談できますか？</summary>
+          <div class="cw-faq-a">
+            <p>Onenetは、すでにホームページがある事業所向けに、設計の見直しや、自分で更新できるようにする改良の相談を受け付けていると案内しています。福祉ITパートナーも、既存のホームページの維持費の見直し診断（0円）を案内しています。リニューアルの対応は各社で異なるため、現在のサイトの契約内容（サーバー・ドメインの名義など）を確認したうえで問い合わせましょう。</p>
+          </div>
+        </details>
+        <details class="cw-faq-item">
+          <summary>サーバー・ドメインの費用は、料金に含まれていますか？</summary>
+          <div class="cw-faq-a">
+            <p>会社によって異なります。福祉ITパートナーは、サーバー契約・ドメイン取得・公開作業が基本料金に含まれません。tomonicoは契約管理やサポートを含みますが、実費の扱いは契約前に確認が必要です。Onenetは独自ドメインの取得が料金プランに含まれています。名義が制作会社になっていると、解約時にドメインを引き継げないことがあるため、名義の確認も忘れずに行いましょう。基本は「<a href="../blog/domain-server-ssl-basics/">ドメイン・サーバー・SSLの基礎知識</a>」で解説しています。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 本記事の比較について（開示） ===== -->
+  <section class="cw-disclosure">
+    <div class="container">
+      <div class="cw-wrap">
+        <h2>本記事の比較について</h2>
+        <div class="cw-photo-split">
+          <img src="../assets/images/comparisons/welfare/disclosure.jpg" alt="ノートパソコンでメールの内容を確認している落ち着いたデスクの様子" loading="lazy">
+          <div class="cw-disclosure-box">
+            <p>本記事は、各社の公式サイトで公開されている情報をもとに、料金・特徴・サポート内容などを比較しています。確認日は2026年11月10日です。</p>
+            <p>金額は税込相当に統一し、税別表示の会社は10％を加えた額で計算しています。掲載順は、初期費用の安い順（最小プラン・税込相当）です。</p>
+            <p>当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。同社も他社と同じ基準で確認・掲載しており、広告費・紹介料は受け取っていません。</p>
+            <p>料金やサービス内容は各社の都合により変更される場合があります。最新の情報は、各社の公式サイトで直接ご確認ください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../">トップページ</a></li>
+<li><a href="../#comparisons">比較記事一覧</a></li>
+<li><a href="../blog/">お役立ち記事</a></li>
+<li><a href="../#criteria">比較基準</a></li>
+<li><a href="../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

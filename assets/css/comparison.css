@@ -863,3 +863,83 @@
 .article-card--visual:hover .article-card__link {
   filter: brightness(0.92);
 }
+
+/* ==========================================================================
+   比較記事の補助スタイル（小見出し・表の補足・よくある質問）
+   ========================================================================== */
+.cw-matrix-sub {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-text-sub);
+}
+
+.cw-subhead {
+  margin-top: 36px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--color-border);
+  font-size: 18px;
+  color: var(--color-green);
+}
+
+.cw-faq-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: var(--color-green);
+}
+
+.cw-faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  background-color: var(--color-white);
+}
+
+.cw-faq-item + .cw-faq-item {
+  margin-top: 10px;
+}
+
+.cw-faq-item summary {
+  position: relative;
+  padding: 14px 44px 14px 46px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.cw-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.cw-faq-item summary::before {
+  content: "Q";
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  font-weight: 800;
+  color: var(--color-blue);
+}
+
+.cw-faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  font-size: 20px;
+  color: var(--color-green);
+}
+
+.cw-faq-item[open] summary::after {
+  content: "−";
+}
+
+.cw-faq-a {
+  padding: 0 20px 16px 46px;
+  font-size: 15px;
+}
+
+.cw-faq-a a {
+  color: #1b6f74;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
