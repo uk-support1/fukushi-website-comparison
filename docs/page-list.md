@@ -11,5 +11,5 @@
 | 日本語名 | URL | 原稿・生成 |
 | --- | --- | --- |
 | お役立ち記事一覧 | /blog/ | `scripts/build-blog.cjs` で生成 |
-| お役立ち記事（18本、4カテゴリー） | /blog/<スラッグ>/ | `content/blog/*.md`（手順は docs/blog-writing-guide.md） |
+| お役立ち記事（4カテゴリー、予約投稿を含む） | /blog/<スラッグ>/ | `content/blog/*.md`（手順は docs/blog-writing-guide.md） |
 | 運営者情報・編集方針 | /about/ | `content/about.md` |
