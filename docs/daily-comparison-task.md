@@ -66,6 +66,16 @@
 2. push してプルリクエストを作成し（本文に掲載会社・確認日・出典URL・確認結果を日本語で書く）、マージする（運営者から確認なしでのマージ・公開の許可あり）。
 3. 本番URLが表示されることを確認する。GitHub Pages の公開処理がタイムアウトで失敗していたら、該当の実行を再実行する。
 
+### プルリクエスト用のツールがない場合
+
+GitHub のプルリクエスト作成・マージのツール（mcp__github__*）が使えない環境では、次の方法で公開する（運営者の許可あり）。
+
+1. `compare/YYYYMMDD` ブランチを push して記録を残す（失敗しても続行してよい）。
+2. `git fetch origin main && git checkout main && git reset --hard origin/main` で最新の main にする。
+3. `git merge --no-ff compare/YYYYMMDD -m "<コミットメッセージと同じ内容>"` でマージする。
+4. `node scripts/build-blog.cjs` と `node scripts/check-links.cjs .` をもう一度実行し、生成物に差分があればコミットする。
+5. `git push origin main` で公開する。push が拒否された場合は無理に回避せず、状況を報告して終了する。
+
 ## うまくいかないとき
 
 - 3社以上の確認ができない、根拠が不十分、ビルドやリンクチェックが通らない場合は公開しない。キューに保留理由を書き、下書きのプルリクエストに状況を残して終了する。

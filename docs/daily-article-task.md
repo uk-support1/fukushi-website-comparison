@@ -39,6 +39,16 @@
 3. プルリクエストをマージする（運営者から「確認なしでマージしてよい」と許可を得ている）。
 4. 数分後に https://fukushi-hp-hikaku.com/blog/<スラッグ>/ が表示されることを確認する。GitHub Pages の公開処理がタイムアウトで失敗していたら、Actions の該当実行を再実行する。
 
+### プルリクエスト用のツールがない場合
+
+GitHub のプルリクエスト作成・マージのツール（mcp__github__*）が使えない環境では、次の方法で公開する（運営者の許可あり）。
+
+1. `daily/YYYYMMDD` ブランチを push して記録を残す（失敗しても続行してよい）。
+2. `git fetch origin main && git checkout main && git reset --hard origin/main` で最新の main にする。
+3. `git merge --no-ff daily/YYYYMMDD -m "<コミットメッセージと同じ内容>"` でマージする。
+4. `node scripts/build-blog.cjs` と `node scripts/check-links.cjs .` をもう一度実行し、生成物に差分があればコミットする。
+5. `git push origin main` で公開する。push が拒否された場合は無理に回避せず、状況を報告して終了する。
+
 ## うまくいかないとき
 
 - 調査で十分な根拠が得られない、ビルドやリンクチェックが通らない場合は、無理に公開しない。プルリクエストを下書きのまま残し、理由を本文に書いて終了する。
