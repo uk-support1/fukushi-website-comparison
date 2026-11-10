@@ -37,11 +37,7 @@ const THEMES = {
     icon: '<path d="M8 26v12h10l20 12V14L18 26z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M46 22c3 3 3 17 0 20M52 16c6 6 6 26 0 32" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>' },
 };
 
-const COMPARE_COVERS = [
-  { slug: 'welfare', catch: '福祉事業所向け／制作会社比較', sub: '料金・福祉への理解・公開後の支援' },
-  { slug: 'group-home', catch: 'グループホーム向け／制作会社比較', sub: '入居者募集・職員採用に強いサイトづくり' },
-  { slug: 'b-type', catch: '就労継続支援B型／制作会社比較', sub: '料金・自社更新・Googleマップ対応' },
-];
+const COMPARE_COVERS = require(path.join(ROOT, 'assets', 'data', 'comparisons.json')).map(c => ({ slug: c.slug, catch: c.cover.catch, sub: c.cover.sub }));
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 

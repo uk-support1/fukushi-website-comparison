@@ -40,11 +40,8 @@ const CAT = Object.fromEntries(CATEGORIES.map(c => [c.slug, c]));
 const TODAY = process.env.BUILD_DATE || new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
 let PUBLISHED = new Set(); // 公開済み記事のスラッグ（本文リンクの判定に使う）
 
-const COMPARISONS = [
-  { href: 'comparisons/welfare-comparison.html', title: '福祉事業所向けホームページ制作会社比較' },
-  { href: 'comparisons/group-home-comparison.html', title: '障害者グループホーム向けホームページ制作会社比較' },
-  { href: 'comparisons/b-type-comparison.html', title: '就労継続支援B型向けホームページ制作会社比較' },
-];
+// 業種別の比較記事（assets/data/comparisons.json で管理。トップページのカード・記事内の導線・サイトマップに使う）
+const COMPARISONS = require(path.join(ROOT, 'assets', 'data', 'comparisons.json')).map(c => ({ ...c, href: c.file }));
 
 /* -------------------------------------------------------------------------
  * ユーティリティ
@@ -475,11 +472,25 @@ ${html}
 /* -------------------------------------------------------------------------
  * トップページの新着記事（<!-- BLOG:LATEST --> ～ <!-- /BLOG:LATEST --> を置換）
  * ---------------------------------------------------------------------- */
+function compareCard(c) {
+  return `<a class="card article-card article-card--visual" data-category="${c.slug}" href="${c.file}">
+<span class="article-card__thumb"><img src="assets/images/comparisons/${c.slug}/card-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="article-card__body">
+<span class="article-card__chips"><span class="article-card__chip">${c.companies}社を比較</span><span class="article-card__chip article-card__chip--sub">${esc(c.infoDate)}の公式情報</span></span>
+<h3 class="article-card__title">${esc(c.cardTitle)}</h3>
+<p class="article-card__desc">${esc(c.desc)}</p>
+<span class="article-card__link">比較を見る<span aria-hidden="true"> →</span></span>
+</span>
+</a>`;
+}
+
 function updateTopPage(posts) {
   const file = path.join(ROOT, 'index.html');
-  const src = fs.readFileSync(file, 'utf8');
+  let src = fs.readFileSync(file, 'utf8');
+  const cre = /<!-- COMPARE:CARDS -->[\s\S]*?<!-- \/COMPARE:CARDS -->/;
+  if (cre.test(src)) src = src.replace(cre, `<!-- COMPARE:CARDS -->\n${COMPARISONS.map(compareCard).join('\n\n')}\n<!-- /COMPARE:CARDS -->`);
   const re = /<!-- BLOG:LATEST -->[\s\S]*?<!-- \/BLOG:LATEST -->/;
-  if (!re.test(src)) return;
+  if (!re.test(src)) { fs.writeFileSync(file, src); return; }
   const html = `<!-- BLOG:LATEST -->\n<div class="blog-grid">\n${posts.slice(0, 6).map(p => postCard(p, '')).join('\n')}\n</div>\n<!-- /BLOG:LATEST -->`;
   fs.writeFileSync(file, src.replace(re, html));
 }
@@ -491,9 +502,7 @@ function renderSitemap(posts) {
   const lastmod = posts.reduce((a, p) => (p.updated > a ? p.updated : a), '0000');
   const urls = [
     { loc: BASE },
-    { loc: `${BASE}comparisons/welfare-comparison.html` },
-    { loc: `${BASE}comparisons/group-home-comparison.html` },
-    { loc: `${BASE}comparisons/b-type-comparison.html` },
+    ...COMPARISONS.map(c => ({ loc: `${BASE}${c.file}` })),
     { loc: `${BASE}about/` },
     { loc: `${BASE}blog/`, lastmod },
     ...CATEGORIES.filter(c => posts.some(p => p.category === c.slug)).map(c => ({ loc: `${BASE}blog/category/${c.slug}/` })),
