@@ -581,13 +581,15 @@
   margin-top: 48px;
   padding: 24px 28px;
   border-radius: var(--radius-large);
-  background-color: var(--color-green);
-  color: var(--color-white);
+  background: linear-gradient(135deg, #eaf7f1 0%, #e3f4f5 100%);
+  border: 1px solid #cfe8de;
+  color: var(--color-text);
 }
 
 .blog-cta__title {
   font-size: 18px;
   font-weight: 700;
+  color: var(--color-green);
 }
 
 .blog-cta p + p {
@@ -605,6 +607,7 @@
 .blog-cta a {
   display: block;
   padding: 10px 14px;
+  border: 1px solid #cfe8de;
   border-radius: var(--radius-base);
   background-color: var(--color-white);
   color: var(--color-green);

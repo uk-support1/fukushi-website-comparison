@@ -350,14 +350,20 @@ h3 {
    フッター
    ========================================================================== */
 .site-footer {
-  background-color: var(--color-green-dark);
-  color: var(--color-white);
+  background: linear-gradient(135deg, #eaf7f1 0%, #e3f4f5 100%);
+  color: var(--color-text);
   padding: 40px 0;
+  border-top: 1px solid #cfe8de;
   border-radius: 28px 28px 0 0;
 }
 
 .site-footer a {
-  color: var(--color-white);
+  color: var(--color-green);
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .site-footer__logo {
@@ -388,7 +394,7 @@ h3 {
 .site-footer__logo-text {
   font-size: 18px;
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--color-green);
   white-space: nowrap;
   line-height: 1.2;
 }
@@ -396,11 +402,12 @@ h3 {
 .site-footer__copyright {
   margin-top: 16px;
   font-size: 12px;
-  opacity: 0.8;
+  color: var(--color-text-sub);
 }
 
 .site-footer__sitename {
   font-weight: 700;
+  color: var(--color-green);
 }
 
 .site-footer__nav ul {
@@ -417,7 +424,7 @@ h3 {
 .site-footer__disclaimer {
   margin-top: 16px;
   font-size: 12px;
-  opacity: 0.8;
+  color: var(--color-text-sub);
 }
 
 /* ==========================================================================
@@ -505,5 +512,5 @@ h3 {
 .site-footer__disclosure {
   margin-top: 12px;
   font-size: 11px;
-  opacity: 0.75;
+  color: var(--color-text-sub);
 }
