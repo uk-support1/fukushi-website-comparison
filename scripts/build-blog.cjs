@@ -49,6 +49,8 @@ const COMPARISONS = [
 /* -------------------------------------------------------------------------
  * ユーティリティ
  * ---------------------------------------------------------------------- */
+// 記事のカバー画像（scripts/make-blog-covers.cjs で生成）。ない場合はロゴを使う
+const coverPath = slug => fs.existsSync(path.join(ROOT, 'assets', 'images', 'blog', `${slug}.jpg`)) ? `assets/images/blog/${slug}.jpg` : null;
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const jsonLd = obj => `<script type="application/ld+json">\n${JSON.stringify(obj, null, 2).replace(/</g, '\\u003c')}\n</script>`;
 const fmtDate = d => { const [y, m, dd] = d.split('-').map(Number); return `${y}年${m}月${dd}日`; };
@@ -238,7 +240,7 @@ ${CATEGORIES.map(c => `<li><a href="${prefix}blog/category/${c.slug}/">${c.name}
 </footer>`;
 }
 
-function page({ prefix, title, description, url, type = 'website', schema = [], body, extraHead = '' }) {
+function page({ prefix, title, description, url, type = 'website', schema = [], body, extraHead = '', image = null }) {
   return `<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -256,8 +258,8 @@ ${ANALYTICS}
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${BASE}assets/images/brand/logo.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="${BASE}${image || 'assets/images/brand/logo.png'}">
+${image ? '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta name="twitter:card" content="summary_large_image">' : '<meta name="twitter:card" content="summary">'}
 ${extraHead}
 <link rel="icon" href="${prefix}favicon.ico?v=3" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="${prefix}favicon-v3-16x16.png">
@@ -305,11 +307,15 @@ function readMinutes(md) {
 
 function postCard(p, prefix) {
   const c = CAT[p.category];
-  return `<a class="blog-card" href="${prefix}blog/${p.slug}/">
+  const img = coverPath(p.slug);
+  return `<a class="blog-card blog-card--${c.slug}" href="${prefix}blog/${p.slug}/">
+${img ? `<span class="blog-card__thumb"><img src="${prefix}${img.replace(/\.jpg$/, '-sm.jpg')}" alt="" width="600" height="315" loading="lazy" decoding="async"></span>` : ''}
+<span class="blog-card__body">
 <span class="blog-cat blog-cat--${c.slug}">${c.name}</span>
 <h3 class="blog-card__title">${esc(p.title)}</h3>
 <p class="blog-card__desc">${esc(p.description)}</p>
-<span class="blog-card__meta"><time datetime="${p.updated}">${fmtDate(p.updated)}</time>更新</span>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="${p.updated}">${fmtDate(p.updated)}</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
 </a>`;
 }
 
@@ -346,7 +352,7 @@ function renderPost(p, posts) {
       articleSection: c.name, inLanguage: 'ja',
       author: { '@type': 'Organization', name: EDITOR, url: `${BASE}about/` },
       publisher: { '@type': 'Organization', name: SITE, logo: { '@type': 'ImageObject', url: `${BASE}favicon-v3-512x512.png` } },
-      image: `${BASE}assets/images/brand/logo.png`,
+      image: `${BASE}${coverPath(p.slug) || 'assets/images/brand/logo.png'}`,
     },
     breadcrumbSchema(crumbs),
   ];
@@ -363,6 +369,7 @@ ${p.updated !== p.date ? `<span>更新日 <time datetime="${p.updated}">${fmtDat
 <span>読了目安 約${readMinutes(p.body)}分</span>
 <span>執筆・編集 <a href="${prefix}about/">${EDITOR}</a></span>
 </p>
+${coverPath(p.slug) ? `<figure class="blog-article__cover"><img src="${prefix}${coverPath(p.slug)}" alt="" width="1200" height="630" fetchpriority="high"></figure>` : ''}
 ${p.lead ? `<p class="blog-article__lead">${inline(p.lead, prefix)}</p>` : ''}
 </header>
 ${summary}
@@ -378,7 +385,7 @@ ${related.length ? `<section class="blog-related"><h2 class="blog-related__title
 </div>`;
 
   return page({
-    prefix, title: `${p.title}｜${SITE}`, description: p.description, url, type: 'article', schema, body,
+    prefix, title: `${p.title}｜${SITE}`, description: p.description, url, type: 'article', schema, body, image: coverPath(p.slug),
     extraHead: `<meta property="article:published_time" content="${p.date}">\n<meta property="article:modified_time" content="${p.updated}">\n<meta property="article:section" content="${esc(c.name)}">`,
   });
 }
