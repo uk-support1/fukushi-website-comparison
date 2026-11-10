@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>サービス管理責任者・児童発達支援管理責任者とは｜役割・実務経験の要件・研修の流れを整理｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="障害福祉サービスのサービス管理責任者（サビ管）と、障害児支援の児童発達支援管理責任者（児発管）の役割、実務経験の要件、基礎・実践・更新研修の流れ、欠けたときの「みなし配置」までを、国の通知と自治体の案内をもとに整理します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/sabikan-jihatsukan/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="サービス管理責任者・児童発達支援管理責任者とは｜役割・実務経験の要件・研修の流れを整理｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="障害福祉サービスのサービス管理責任者（サビ管）と、障害児支援の児童発達支援管理責任者（児発管）の役割、実務経験の要件、基礎・実践・更新研修の流れ、欠けたときの「みなし配置」までを、国の通知と自治体の案内をもとに整理します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/sabikan-jihatsukan/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/blog/sabikan-jihatsukan.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-11-11">
+<meta property="article:modified_time" content="2026-11-11">
+<meta property="article:section" content="福祉の基礎知識">
+<link rel="icon" href="../../favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v3-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v3-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v3-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v3.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v3-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "サービス管理責任者・児童発達支援管理責任者とは｜役割・実務経験の要件・研修の流れを整理",
+  "description": "障害福祉サービスのサービス管理責任者（サビ管）と、障害児支援の児童発達支援管理責任者（児発管）の役割、実務経験の要件、基礎・実践・更新研修の流れ、欠けたときの「みなし配置」までを、国の通知と自治体の案内をもとに整理します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/sabikan-jihatsukan/",
+  "url": "https://fukushi-hp-hikaku.com/blog/sabikan-jihatsukan/",
+  "datePublished": "2026-11-11",
+  "dateModified": "2026-11-11",
+  "articleSection": "福祉の基礎知識",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v3-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/blog/sabikan-jihatsukan.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "福祉の基礎知識",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/fukushi-kiso/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "サービス管理責任者・児童発達支援管理責任者とは｜役割・実務経験の要件・研修の流れを整理",
+      "item": "https://fukushi-hp-hikaku.com/blog/sabikan-jihatsukan/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li><li aria-current="page">サービス管理責任者・児童発達支援管理責任者とは｜役割・実務経験の要件・研修の流れを整理</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--fukushi-kiso" href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a>
+<h1 class="blog-article__title">サービス管理責任者・児童発達支援管理責任者とは｜役割・実務経験の要件・研修の流れを整理</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-11">2026年11月11日</time></span>
+
+<span>読了目安 約6分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<figure class="blog-article__cover"><img src="../../assets/images/blog/sabikan-jihatsukan.jpg" alt="" width="1200" height="630" fetchpriority="high"></figure>
+<p class="blog-article__lead">障害福祉サービスの事業所には「サービス管理責任者（サビ管）」、障害児通所支援などの事業所には「児童発達支援管理責任者（児発管）」の配置が求められています。求人でもよく見かける職種ですが、なるための要件は実務経験と複数の研修の組み合わせで、少し複雑です。この記事では、国の通知と自治体の案内をもとに、役割と要件、研修の流れを整理します。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>サビ管・児発管の役割と、2つの違い</li><li>実務経験の要件（5年・8年・3年の3つのルート）</li><li>基礎研修→OJT→実践研修→5年ごとの更新研修の流れと、OJTを6か月にできる特例</li><li>サビ管・児発管が欠けたときの「みなし配置」と、事業所が日頃から備えたいこと</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">サビ管・児発管はどんな役割の人か</a></li><li><a href="#sec-2">なるための要件は「実務経験」と「研修修了」の両方</a></li><li><a href="#sec-3">研修の流れ：基礎→OJT→実践→5年ごとの更新</a></li><li><a href="#sec-4">サビ管等が欠けたときの「みなし配置」</a></li><li><a href="#sec-5">採用・情報発信で押さえたいこと</a></li><li><a href="#sec-6">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">サビ管・児発管はどんな役割の人か</h2>
+<p>障害福祉サービスや障害児支援の事業所では、人員基準により「サービス管理責任者」または「児童発達支援管理責任者」（以下、あわせて「サビ管等」）を置くことが定められています。</p>
+<p>厚生労働省の通知「サービス管理責任者研修事業の実施について」では、サビ管等の役割を次のように説明しています。</p>
+<ul class="blog-list"><li>利用者一人ひとりの最初の状態の把握（アセスメント）、個別支援計画の作成、定期的な評価など、<strong>サービス提供のプロセス全体に責任を持つ</strong></li><li>障害特性や生活実態についての専門的な知識と、個別支援計画を作成・評価する技術を持つ</li><li>ほかの職員に対して<strong>指導的な役割</strong>を果たす</li></ul>
+<p>つまり、サビ管等は「支援の質を管理する人」です。利用者や家族、相談支援専門員にとっては、事業所の支援方針について話し合う中心的な窓口にもなります。</p>
+<h3>サビ管と児発管の違い</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">項目</th><th scope="col">サービス管理責任者（サビ管）</th><th scope="col">児童発達支援管理責任者（児発管）</th></tr></thead><tbody><tr><th scope="row">主な配置先</th><td>生活介護、就労移行支援、就労継続支援、共同生活援助（グループホーム）などの障害福祉サービス事業所</td><td>児童発達支援、放課後等デイサービスなどの障害児通所支援、障害児入所施設</td></tr><tr><th scope="row">根拠となる告示</th><td>厚生労働大臣が定めるもの</td><td>こども家庭庁長官が定めるもの</td></tr><tr><th scope="row">研修</th><td>共通のカリキュラム（基礎・実践・更新）</td><td>共通のカリキュラム（基礎・実践・更新）</td></tr><tr><th scope="row">実務経験</th><td>障害福祉サービスの要件に沿った業務</td><td>児童分野を含む要件に沿った業務</td></tr></tbody></table></div>
+<p>研修のカリキュラムは共通化されていますが、千葉市の案内にもあるとおり、<strong>実務経験として認められる業務の範囲はサビ管と児発管で異なります</strong>。サビ管として働いてきた人が児発管になれるとは限らないため、注意が必要です。</p>
+<h2 id="sec-2">なるための要件は「実務経験」と「研修修了」の両方</h2>
+<p>サビ管等になるには、次の2つの要件を<strong>両方</strong>満たす必要があります。</p>
+<ol class="blog-olist"><li>実務経験の要件</li><li>研修修了の要件（基礎研修・実践研修などの修了）</li></ol>
+<h3>実務経験の要件（3つのルート）</h3>
+<p>千葉市の案内では、障害者の保健・医療・福祉・就労・教育の分野での直接支援・相談支援などの実務経験が、次のいずれかを満たすこととされています。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">ルート</th><th scope="col">必要な期間</th><th scope="col">日数の目安</th></tr></thead><tbody><tr><th scope="row">相談支援業務と直接支援業務</th><td>通算5年以上</td><td>900日以上</td></tr><tr><th scope="row">直接支援業務のみ</th><td>通算8年以上</td><td>1,440日以上</td></tr><tr><th scope="row">国家資格による業務（※）</th><td>通算3年以上</td><td>540日以上</td></tr></tbody></table></div>
+<p>日数は、国の事務連絡で「1年につき180日の勤務（時間は問わない）」とされていることから計算した目安です。※対象となる国家資格の種類や、あわせて必要な業務の条件は、告示と自治体の一覧表で確認してください。実務経験は、<strong>サビ管等に就任する時点で満たしている</strong>ことが必要です。</p>
+<div class="blog-box blog-box--warn"><p class="blog-box__title">対象となる業務は自治体の一覧表で確認を</p><p>どの職場・どの業務が「相談支援業務」「直接支援業務」にあたるかは細かく定められており、多くの自治体が実務経験の一覧表を公開しています。採用や配置の前に、所管の自治体の一覧表と、本人の実務経験証明書の内容を照らし合わせておきましょう。</p></div>
+<h2 id="sec-3">研修の流れ：基礎→OJT→実践→5年ごとの更新</h2>
+<p>研修の体系は2019年度（令和元年度）から見直され、現在は次の3段階になっています。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">段階</th><th scope="col">内容</th><th scope="col">受講のタイミング</th></tr></thead><tbody><tr><th scope="row">基礎研修</th><td>個別支援計画の作成などの基礎を学ぶ</td><td>受講に必要な実務経験などの条件は、都道府県の募集案内で確認</td></tr><tr><th scope="row">実践研修</th><td>サビ管等として必要な実践的な内容を学ぶ</td><td>基礎研修修了後、原則2年以上の実務経験（OJT）を経てから</td></tr><tr><th scope="row">更新研修</th><td>実践を振り返り、知識・技能を更新する</td><td>実践研修修了後、5年度ごと</td></tr></tbody></table></div>
+<p>あわせて、<strong>相談支援従事者初任者研修（講義部分）</strong>の修了も必要です。沖縄県の案内では、配置にはサビ管等研修（実践研修または更新研修）の修了に加え、相談支援従事者初任者研修（講義部分）の修了と実務経験が必要だと説明されています。</p>
+<h3>OJTを「6か月以上」にできる特例</h3>
+<p>基礎研修から実践研修までの実務経験（OJT）は原則2年以上ですが、2023年6月30日付の告示改正で、次の場合は<strong>例外的に6か月以上</strong>でよいとされました。</p>
+<ul class="blog-list"><li>基礎研修の受講開始時点で、すでに実務経験の要件を満たしている</li><li>障害福祉サービスの個別支援計画の作成の一連の業務に従事している</li><li>そのことを指定権者（都道府県・市）に届け出ている</li></ul>
+<p>届出の様式や方法は自治体ごとに異なります。東京都や千葉市は、届出の方法をウェブサイトで案内しています。</p>
+<h3>更新研修を受け忘れないために</h3>
+<p>更新研修は、実践研修の修了後、5年度ごとに受講が必要です。研修の修了証書には、<strong>次に更新研修を修了すべき期日</strong>が記載されます。</p>
+<p>期限までに更新研修を修了できなかった場合は、サビ管等として従事できなくなります。国の事務連絡では、その場合でも実践研修を改めて修了すれば（実践研修を受けるための実務経験は不要、基礎研修の受け直しも不要）、修了日以後は再び従事できるとされています。とはいえ、その間は配置ができないため、期限の管理が大切です。</p>
+<div class="blog-box blog-box--check"><p class="blog-box__title">事業所で管理しておきたいこと</p><ul class="blog-list"><li>サビ管等とその候補者の、基礎研修・実践研修・更新研修の修了日と、次の更新期限</li><li>相談支援従事者初任者研修（講義部分）の修了の有無</li><li>実務経験証明書（以前の職場で発行してもらうもの）の保管場所</li><li>都道府県の研修の募集時期（年に数回など、自治体によって異なる）</li></ul></div>
+<h2 id="sec-4">サビ管等が欠けたときの「みなし配置」</h2>
+<p>退職や病気など、事業所の責任ではない理由でサビ管等が急にいなくなることがあります。このような「やむを得ない事由」の場合、一定の要件のもとで、実務経験のある職員をサビ管等とみなして配置できる措置があります。</p>
+<p>2023年6月30日付の事務連絡では、従来の措置（欠けた時から1年間）に加えて、次のすべてを満たす職員は、<strong>実践研修を修了するまでの間に限り、最長2年間</strong>サビ管等とみなして配置できるとされました。</p>
+<ul class="blog-list"><li>実務経験の要件を満たしている</li><li>サビ管等が欠けた時点で、すでに基礎研修を修了している</li><li>サビ管等が欠ける前から、その事業所に配置されている</li></ul>
+<p>この措置を使えない場合、サビ管等の不在が続くと人員欠如減算の対象になることがあります。<strong>基礎研修を修了した職員を事業所内で育てておく</strong>ことが、いざというときの備えになります。具体的な手続きは、指定権者に確認してください。</p>
+<h2 id="sec-5">採用・情報発信で押さえたいこと</h2>
+<p>サビ管等は、多くの事業所で採用が難しい職種のひとつです。求人やホームページで情報を出すときは、次の点に気をつけると、応募者とのすれ違いを減らせます。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">場面</th><th scope="col">押さえたいこと</th></tr></thead><tbody><tr><th scope="row">求人の応募条件</th><td>「実践研修修了済み」「基礎研修修了済みで実践研修の受講予定」など、どの段階の人を求めているかを明記する</td></tr><tr><th scope="row">応募者の確認</th><td>研修の修了証書（更新期限）と、実務経験証明書を取得できるかを確認する</td></tr><tr><th scope="row">育成の方針</th><td>基礎研修の受講支援や、OJTの体制があるかを伝えると、将来サビ管等を目指す人にも届きやすい</td></tr><tr><th scope="row">事業所紹介</th><td>サビ管等が個別支援計画の作成や見直しの中心になることを、利用者・家族向けにわかりやすく説明する</td></tr></tbody></table></div>
+<p>採用ページの作り方は「<a href="../../blog/recruit-website/">福祉事業所の採用ページ設計</a>」、サービスの種類ごとの違いは「<a href="../../blog/shogai-fukushi-service-list/">障害福祉サービスの種類一覧</a>」でも整理しています。児発管を置く放課後等デイサービス・児童発達支援については「<a href="../../blog/hokago-day-jihatsu-difference/">放課後等デイサービスと児童発達支援の違い</a>」も参考にしてください。</p>
+<h2 id="sec-6">まとめ</h2>
+<p>サービス管理責任者・児童発達支援管理責任者は、個別支援計画を中心に、事業所の支援の質に責任を持つ職種です。なるには、5年・8年・3年のいずれかの実務経験と、基礎研修・実践研修（OJTを含む）、相談支援従事者初任者研修（講義部分）の修了が必要で、その後も5年度ごとの更新研修が欠かせません。</p>
+<p>要件や届出の方法は、国の告示をもとに自治体ごとに運用されています。研修の修了日と更新期限を一覧で管理し、基礎研修を修了した職員を育てておくことが、サビ管等の不在による減算を防ぐ現実的な備えです。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>サビ管と児発管は、同じ人が兼ねられますか？</summary><div class="blog-faq__a"><p>研修のカリキュラムは共通化されていますが、実務経験として認められる業務の範囲はそれぞれ異なります。両方の要件を満たしていれば、どちらの立場でも従事できる可能性がありますが、同じ時間帯に複数の事業所で兼務できるかどうかは、サービスの種類や人員基準によって扱いが違います。配置を考える際は、事前に指定権者（都道府県・市）に確認してください。</p></div></details><details class="blog-faq__item"><summary>更新研修を受け忘れたら、どうなりますか？</summary><div class="blog-faq__a"><p>期限までに更新研修を修了できなかった場合、そのままではサービス管理責任者等として従事できなくなります。国の事務連絡では、実践研修を改めて修了すれば（実践研修受講のための実務経験は不要、基礎研修の受け直しも不要）、修了日以後は再び従事できるとされています。修了証書には次に更新研修を修了すべき期日が記載されるため、事業所で一覧にして管理しておくと安心です。</p></div></details><details class="blog-faq__item"><summary>実務経験の「1年」は、何日働けば認められますか？</summary><div class="blog-faq__a"><p>サービス管理責任者等として従事するための実務経験や、基礎研修・実践研修を受講するための実務経験は、1年につき180日以上の勤務（時間は問わない）が目安とされています。例えば5年の実務経験が必要な場合は、5年以上かつ900日以上の勤務が必要です。認められる業務の範囲は自治体の一覧表で確認しましょう。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://www.fukushi.metro.tokyo.lg.jp/documents/d/fukushi/2025-01-30-125852-194" target="_blank" rel="noopener">こども家庭庁・厚生労働省 事務連絡「サービス管理責任者等に関する告示の改正について」（令和5年6月30日、東京都福祉局掲載）</a></li><li><a href="https://www.fukushi.metro.tokyo.lg.jp/documents/d/fukushi/2025-01-30-130413-124" target="_blank" rel="noopener">厚生労働省「サービス管理責任者研修事業の実施について」（東京都福祉局掲載）</a></li><li><a href="https://www.fukushi.metro.tokyo.lg.jp/shougai/shogai/sakan" target="_blank" rel="noopener">東京都福祉局「サービス管理責任者研修」</a></li><li><a href="https://www.city.chiba.jp/hokenfukushi/koreishogai/shogaifukushi/sabikannjihatukann.html" target="_blank" rel="noopener">千葉市「サービス管理責任者及び児童発達支援管理責任者について」</a></li><li><a href="https://www.pref.okinawa.jp/kyoiku/shogaifukushi/1007022/1024523/1007592.html" target="_blank" rel="noopener">沖縄県「サービス管理責任者等研修」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/shuro-iko-comparison.html">就労移行支援向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/houkago-day-comparison.html">放課後等デイサービス向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card blog-card--fukushi-kiso" href="../../blog/shogai-fukushi-service-list/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/shogai-fukushi-service-list-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害福祉サービスの種類一覧｜介護給付・訓練等給付・障害児支援の違いをわかりやすく解説</h3>
+<p class="blog-card__desc">障害者総合支援法と児童福祉法にもとづく障害福祉サービスの種類を一覧で整理。介護給付・訓練等給付・相談支援・障害児通所支援の違いや、2025年10月に始まった就労選択支援まで、事業所運営者向けにわかりやすく解説します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-07-17">2026年7月17日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--fukushi-kiso" href="../../blog/hokago-day-jihatsu-difference/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/hokago-day-jihatsu-difference-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">放課後等デイサービスと児童発達支援の違い｜対象年齢・支援内容・5領域と支援プログラムの公表</h3>
+<p class="blog-card__desc">放課後等デイサービスと児童発達支援の違いを、対象年齢・支援内容・利用時間の観点から比較。2024年度報酬改定で義務化された5領域の支援プログラムの公表や、ホームページで公開すべき情報もあわせて解説します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-06-09">2026年6月9日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--unei" href="../../blog/recruit-website/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/recruit-website-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--unei">集客・採用・運用</span>
+<h3 class="blog-card__title">福祉事業所の採用ページ設計｜処遇改善の見える化とGoogleしごと検索（求人の構造化データ）への対応</h3>
+<p class="blog-card__desc">福祉事業所の採用ページを、求職者が応募前に確認する情報から逆算して設計する方法を解説。処遇改善加算の取組の見える化、数字で見る職場、職員インタビューの質問例、求人の構造化データによるGoogleしごと検索への掲載、募集終了時の注意まで紹介します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-10-30">2026年10月30日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
