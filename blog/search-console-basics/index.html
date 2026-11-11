@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>Google Search Consoleの基本｜福祉事業所が見たい検索キーワード・インデックス登録・エラー対応｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="Google Search Console（サーチコンソール）の始め方と、福祉事業所がまず見ておきたい検索パフォーマンス、URL検査、ページのインデックス登録の見方を、Googleの公式ヘルプをもとに解説します。制作会社に任せている場合に確認したいことも整理しました。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/search-console-basics/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google Search Consoleの基本｜福祉事業所が見たい検索キーワード・インデックス登録・エラー対応｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="Google Search Console（サーチコンソール）の始め方と、福祉事業所がまず見ておきたい検索パフォーマンス、URL検査、ページのインデックス登録の見方を、Googleの公式ヘルプをもとに解説します。制作会社に任せている場合に確認したいことも整理しました。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/search-console-basics/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/blog/search-console-basics.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-11-12">
+<meta property="article:modified_time" content="2026-11-12">
+<meta property="article:section" content="集客・採用・運用">
+<link rel="icon" href="../../favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v3-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v3-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v3-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v3.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v3-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Google Search Consoleの基本｜福祉事業所が見たい検索キーワード・インデックス登録・エラー対応",
+  "description": "Google Search Console（サーチコンソール）の始め方と、福祉事業所がまず見ておきたい検索パフォーマンス、URL検査、ページのインデックス登録の見方を、Googleの公式ヘルプをもとに解説します。制作会社に任せている場合に確認したいことも整理しました。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/search-console-basics/",
+  "url": "https://fukushi-hp-hikaku.com/blog/search-console-basics/",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
+  "articleSection": "集客・採用・運用",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v3-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/blog/search-console-basics.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "集客・採用・運用",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/unei/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Google Search Consoleの基本｜福祉事業所が見たい検索キーワード・インデックス登録・エラー対応",
+      "item": "https://fukushi-hp-hikaku.com/blog/search-console-basics/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/unei/">集客・採用・運用</a></li><li aria-current="page">Google Search Consoleの基本｜福祉事業所が見たい検索キーワード・インデックス登録・エラー対応</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--unei" href="../../blog/category/unei/">集客・採用・運用</a>
+<h1 class="blog-article__title">Google Search Consoleの基本｜福祉事業所が見たい検索キーワード・インデックス登録・エラー対応</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-12">2026年11月12日</time></span>
+
+<span>読了目安 約7分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<figure class="blog-article__cover"><img src="../../assets/images/blog/search-console-basics.jpg" alt="" width="1200" height="630" fetchpriority="high"></figure>
+<p class="blog-article__lead">ホームページを公開したあと、「どんな言葉で検索されているのか」「新しいページはGoogleに載っているのか」は、なかなか見えません。Googleが無料で提供しているSearch Consoleを使うと、これらを確認できます。この記事では、福祉事業所の担当者が最低限押さえておきたい使い方を、Googleの公式ヘルプにそって整理します。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>Search Consoleでわかることと、登録の流れ（プロパティの追加と所有権の確認）</li><li>検索パフォーマンス レポートで見たい4つの指標と、福祉事業所での読み方</li><li>URL検査とページのインデックス登録レポートで、載っていないページを見つける方法</li><li>制作会社に任せている場合に確認したい権限の持ち方</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">Search Consoleでわかること</a></li><li><a href="#sec-2">登録の流れ：プロパティの追加と所有権の確認</a></li><li><a href="#sec-3">まず見たい「検索パフォーマンス」レポート</a></li><li><a href="#sec-4">載っていないページを見つける：URL検査とインデックス登録</a></li><li><a href="#sec-5">制作会社に任せている場合に確認したいこと</a></li><li><a href="#sec-6">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">Search Consoleでわかること</h2>
+<p>Google Search Console（以下、サーチコンソール）は、Google検索でのサイトの状況を確認・改善するための、Googleの無料サービスです。Googleのヘルプでは、主に次のことができると説明されています。</p>
+<ul class="blog-list"><li>Googleがサイトを見つけて、読み取れているか（クロールできているか）を確認する</li><li>インデックス登録（Googleのデータベースへの登録）の問題を直し、新しいページや更新したページの登録をリクエストする</li><li>サイトが検索結果に表示された回数や、表示されたときの検索語句、クリックされた回数を確認する</li><li>インデックス登録やスパム、ハッキングなどの問題が見つかったときに通知を受け取る</li></ul>
+<div class="blog-box blog-box--info"><p class="blog-box__title">登録しても順位は上がらない</p><p>サーチコンソールに登録しなくても、サイトはGoogle検索に表示されます。Googleのヘルプでも、プロパティを追加することがGoogle検索に影響することはないと説明されています。サーチコンソールは「順位を上げる道具」ではなく、「状況を知り、問題に気づくための道具」です。</p></div>
+<p>Googleのヘルプでは、対象ユーザーとして「ビジネスオーナー」も挙げられています。自分で操作しない場合でも、何がわかる道具なのかを知っておくと、制作会社とのやりとりがスムーズになります。</p>
+<h2 id="sec-2">登録の流れ：プロパティの追加と所有権の確認</h2>
+<p>サーチコンソールでは、確認・管理したいサイトを「プロパティ」として追加し、そのサイトの所有者であることを証明（所有権の確認）します。</p>
+<h3>プロパティの種類</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">種類</th><th scope="col">対象になる範囲</th><th scope="col">所有権の確認方法</th></tr></thead><tbody><tr><th scope="row">ドメイン プロパティ</th><td>example.com のすべて（www の有無、http/https、サブドメインを含む）</td><td>ドメイン名プロバイダ（DNSレコード）での確認のみ</td></tr><tr><th scope="row">URL プレフィックス プロパティ</th><td>指定したURLで始まるページだけ（https:// と http:// は別扱い）</td><td>HTMLファイル、HTMLタグ、Googleアナリティクス、Googleタグ マネージャーなど</td></tr></tbody></table></div>
+<p>ドメインの管理画面を操作できるなら、サイト全体をまとめて見られるドメイン プロパティが便利です。難しい場合は、URL プレフィックス プロパティで始めても構いません。</p>
+<h3>所有権の確認方法</h3>
+<p>Googleのヘルプでは、主な確認方法として次のものが紹介されています。</p>
+<ul class="blog-list"><li><strong>HTMLファイルのアップロード</strong>：指定されたファイルをサーバーに置く</li><li><strong>HTMLタグ</strong>：トップページのHTMLに、指定されたタグを追加する</li><li><strong>Googleアナリティクス／Googleタグ マネージャー</strong>：すでにサイトに設定していれば、それを使って確認できる</li><li><strong>ドメイン名プロバイダ</strong>：ドメインの管理画面でDNSレコードを追加する</li></ul>
+<p>WordPress、Wix、Shopifyなどのサービスを使っている場合は、サービスごとにおすすめの方法があります。Googleアナリティクスを設定済みの事業所なら、その方法がいちばん手軽な場合が多いでしょう。データの収集はプロパティを追加した時点から始まりますが、レポートに表示されるまでには数日かかることがあると案内されています。</p>
+<h2 id="sec-3">まず見たい「検索パフォーマンス」レポート</h2>
+<p>検索パフォーマンス レポートでは、Google検索の結果でのサイトの成績を確認できます。初期設定では過去3か月間のデータが表示されます。</p>
+<h3>4つの指標</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">指標</th><th scope="col">意味</th><th scope="col">福祉事業所での見方の例</th></tr></thead><tbody><tr><th scope="row">クリック数</th><td>検索結果からサイトがクリックされた回数</td><td>実際にホームページを見に来た人の数の目安</td></tr><tr><th scope="row">表示回数（インプレッション）</th><td>検索結果にサイトが表示された回数</td><td>地域名＋サービス名などで、どれだけ目に触れているか</td></tr><tr><th scope="row">CTR（クリック率）</th><td>クリック数÷表示回数</td><td>表示はされているのに選ばれていないページの発見に</td></tr><tr><th scope="row">平均掲載順位</th><td>検索結果での平均的な順位</td><td>大まかな傾向をつかむ目安（日々の上下に一喜一憂しない）</td></tr></tbody></table></div>
+<h3>「クエリ」と「ページ」を見る</h3>
+<p>表の切り替えで「クエリ」（検索語句）を選ぶと、どんな言葉で検索されたときにサイトが表示・クリックされたかがわかります。福祉事業所なら、例えば次のような点を確認してみましょう。</p>
+<ul class="blog-list"><li>「◯◯市 グループホーム」「◯◯区 放課後等デイサービス」など、<strong>地域名＋サービス名</strong>で表示されているか</li><li>事業所名で検索されたときに、きちんとクリックされているか（されていなければ、検索結果に出るページのタイトルや説明文を見直すきっかけに）</li><li>「求人」「採用」など、<strong>職員募集に関する言葉</strong>で表示されているか</li></ul>
+<p>「ページ」を選ぶと、どのページが検索から見られているかがわかります。空き状況のページや採用ページなど、見てほしいページが検索から見られていない場合は、ページの内容やタイトルを見直す材料になります。</p>
+<div class="blog-box blog-box--point"><p class="blog-box__title">比較は「前の期間」と</p><p>季節や年度替わりで、検索される言葉や回数は変わります。期間の比較機能を使い、前の3か月や前年同月と比べると、傾向がつかみやすくなります。地域名での検索対策の考え方は「<a href="../../blog/local-seo-basics/">地域で見つけてもらうためのSEOの基本</a>」も参考にしてください。</p></div>
+<h2 id="sec-4">載っていないページを見つける：URL検査とインデックス登録</h2>
+<p>新しく作ったページが検索に出てこないときは、そもそもGoogleに登録（インデックス登録）されていない可能性があります。</p>
+<h3>URL検査ツール</h3>
+<p>調べたいページのURLを、サーチコンソール上部の検索窓に入力すると、そのページがGoogleに登録されているかどうかがわかります。</p>
+<ul class="blog-list"><li>「URL は Google に登録されています」と出れば、検索結果に表示される条件を満たしている（必ず表示されるとは限らない）</li><li>登録されていない場合は、理由が表示される</li><li>新しいページや大きく更新したページは、「インデックス登録をリクエスト」でGoogleに知らせることができる</li></ul>
+<p>Googleのヘルプによると、登録は通常1日程度ですが、長くかかる場合もあり、リクエストしても登録されるとは限りません。リクエストできる数には1日あたりの上限があるため、多くのページをまとめて知らせたい場合は、サイトマップを送信する方法が案内されています。</p>
+<h3>ページのインデックス登録レポート</h3>
+<p>サイト全体で、登録されているページと登録されていないページの数、その理由を一覧で確認できます。よく見かける理由と、受け止め方の例は次のとおりです。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">表示される理由</th><th scope="col">意味</th><th scope="col">対応の考え方</th></tr></thead><tbody><tr><th scope="row">見つかりませんでした（404）</th><td>そのURLのページが存在しない</td><td>削除したページなら問題ないことも多い。必要なページなら、リンク切れやURLの変更を確認</td></tr><tr><th scope="row">クロール済み - インデックス未登録</th><td>Googleが読み取ったが登録していない</td><td>Googleはすべてのページを登録するわけではなく、多くのサイトで見られる。重要なページなら内容の充実を検討</td></tr><tr><th scope="row">検出 - インデックス未登録</th><td>URLは見つけたが、まだ読み取っていない</td><td>時間をおいて様子を見る</td></tr><tr><th scope="row">ページにリダイレクトがあります</th><td>別のURLに転送されている</td><td>URLを変更した場合などに表示される。意図どおりなら問題なし</td></tr><tr><th scope="row">ソフト 404</th><td>ページはあるが中身がほとんどない、などと判断された</td><td>空のページや「準備中」だけのページがないか確認</td></tr></tbody></table></div>
+<p>レポートに出ている項目が、すべて直すべきエラーとは限りません。Googleのヘルプでも、登録されていないことが必ずしもエラーによるものではないと説明されています。<strong>問い合わせ・空き状況・アクセスなど、見てほしいページが登録されているか</strong>を優先して確認しましょう。</p>
+<h3>サイトマップは必要？</h3>
+<p>サイトマップは、サイト内のページをGoogleに知らせるためのファイルです。Googleのヘルプでは、ページ数がおよそ500ページ以下で、トップページからリンクをたどってすべてのページに行ける小規模なサイトなら、サイトマップはおそらく必要ないとされています。WixやSquarespaceなどのサービスでは、サービス側でサイトマップが管理されていることも多いと案内されています。</p>
+<h2 id="sec-5">制作会社に任せている場合に確認したいこと</h2>
+<p>ホームページの制作や保守を外部に任せていると、サーチコンソールの登録も制作会社のアカウントで行われていることがあります。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">確認したいこと</th><th scope="col">理由</th></tr></thead><tbody><tr><th scope="row">サーチコンソールに登録されているか</th><td>未登録だと、インデックス登録の問題やハッキングの警告に気づけない</td></tr><tr><th scope="row">事業所のGoogleアカウントにも権限があるか</th><td>制作会社だけが所有者だと、契約終了後に見られなくなることがある</td></tr><tr><th scope="row">通知メールが誰に届くか</th><td>問題が見つかったときの通知が、担当者に届く設定になっているか</td></tr><tr><th scope="row">月1回程度の報告をもらえるか</th><td>自分で見る時間がない場合は、主な数字の報告を依頼する</td></tr></tbody></table></div>
+<p>Googleのヘルプでは、確認済みの所有者がいなくなった場合は、改めて所有権の確認が必要になると説明されています。担当者の異動や制作会社の変更に備えて、<strong>事業所側のアカウントも所有者またはユーザーとして登録しておく</strong>と安心です。</p>
+<p>ハッキングなどの問題が通知されたときの対応は「<a href="../../blog/website-hacked-first-response/">ホームページが改ざん・乗っ取りされたときの初動対応マニュアル</a>」で、Googleマップでの見え方は「<a href="../../blog/google-business-profile/">Googleビジネスプロフィールの基本</a>」で解説しています。</p>
+<h2 id="sec-6">まとめ</h2>
+<p>サーチコンソールは、Google検索から見た自分たちのホームページの「健康診断」のような道具です。登録しただけで順位が上がるわけではありませんが、どんな言葉で見つけてもらえているか、見てほしいページがGoogleに登録されているかを確かめられます。</p>
+<p>最初は、月に1回、検索パフォーマンスの「クエリ」と「ページ」を見て、ページのインデックス登録レポートで大事なページが漏れていないかを確認するだけでも十分です。制作会社に任せている場合も、事業所側のアカウントで見られる状態にしておきましょう。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>Search Consoleに登録すると、検索順位が上がりますか？</summary><div class="blog-faq__a"><p>上がりません。Googleのヘルプでも、Search Consoleに登録しなくてもGoogle検索結果に表示されるとされ、プロパティの追加がGoogle検索に影響することはないと説明されています。Search Consoleは、状況を確認し、問題に気づいて直すための道具です。</p></div></details><details class="blog-faq__item"><summary>Googleアナリティクスとは何が違いますか？</summary><div class="blog-faq__a"><p>Search Consoleは、Google検索の結果でサイトがどう表示され、どの言葉でクリックされたかなど、主に「サイトに来る前」の情報がわかります。Googleアナリティクスは、サイトに来たあとにどのページが見られ、問い合わせにつながったかなど、「サイトに来たあと」の行動を見る道具です。両方を組み合わせると全体像がつかみやすくなります。</p></div></details><details class="blog-faq__item"><summary>WixやJimdoなどのサービスで作ったサイトでも使えますか？</summary><div class="blog-faq__a"><p>使えます。所有権の確認方法はサービスによって異なり、Googleのヘルプでもホスティング サービスごとの方法を確認するよう案内されています。サイトマップも、こうしたサービスでは自動で管理されていることが多く、自分で作る必要がない場合があります。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://support.google.com/webmasters/answer/9128668?hl=ja" target="_blank" rel="noopener">Search Console ヘルプ「Search Console の概要」</a></li><li><a href="https://support.google.com/webmasters/answer/34592?hl=ja" target="_blank" rel="noopener">Search Console ヘルプ「ウェブサイトまたはプラットフォームのプロパティを Search Console に追加する」</a></li><li><a href="https://support.google.com/webmasters/answer/9008080?hl=ja" target="_blank" rel="noopener">Search Console ヘルプ「サイトの所有権を確認する」</a></li><li><a href="https://support.google.com/webmasters/answer/7576553?hl=ja" target="_blank" rel="noopener">Search Console ヘルプ「検索パフォーマンス レポート（検索結果）: 概要と基本設定」</a></li><li><a href="https://support.google.com/webmasters/answer/9012289?hl=ja" target="_blank" rel="noopener">Search Console ヘルプ「URL 検査ツール」</a></li><li><a href="https://support.google.com/webmasters/answer/7440203?hl=ja" target="_blank" rel="noopener">Search Console ヘルプ「ページのインデックス登録レポート」</a></li><li><a href="https://support.google.com/webmasters/answer/7451001?hl=ja" target="_blank" rel="noopener">Search Console ヘルプ「サイトマップ レポートを使用してサイトマップを管理する」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/shuro-iko-comparison.html">就労移行支援向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/houkago-day-comparison.html">放課後等デイサービス向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/jihatsu-comparison.html">児童発達支援向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card blog-card--unei" href="../../blog/local-seo-basics/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/local-seo-basics-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--unei">集客・採用・運用</span>
+<h3 class="blog-card__title">福祉事業所のホームページを地域検索で見つけてもらうSEOの基本｜「◯◯市 B型」で上位を目指す10のポイント</h3>
+<p class="blog-card__desc">「◯◯市 放課後等デイサービス」「◯◯区 グループホーム」など、地域名とサービス名で検索されたときに福祉事業所のホームページを見つけてもらうためのSEOの基本を10のポイントで解説。タイトルの付け方、ページ構成、Googleマップとの連携、避けるべき手法も紹介します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-10-08">2026年10月8日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--unei" href="../../blog/google-business-profile/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/google-business-profile-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--unei">集客・採用・運用</span>
+<h3 class="blog-card__title">Googleビジネスプロフィールのガイドラインと注意点｜福祉事業所がやってはいけない登録・口コミ対応</h3>
+<p class="blog-card__desc">福祉事業所がGoogleビジネスプロフィール（Googleマップ）を使うときに守るべきガイドラインと注意点を解説。ビジネス名へのキーワード追加の禁止、口コミ返信での個人情報の扱い、グループホームの住所非表示、オーナー確認と管理アカウント、代行営業への注意までまとめました。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-10-08">2026年10月8日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--security" href="../../blog/website-hacked-first-response/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/website-hacked-first-response-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">ホームページが改ざん・乗っ取りされたときの初動対応マニュアル｜福祉事業所向け</h3>
+<p class="blog-card__desc">福祉事業所のホームページが改ざん・乗っ取りされた疑いがあるときの初動対応を、気づくサイン、最初の1時間でやること、復旧、個人情報保護委員会への報告、再発防止の流れで解説。連絡先リストのひな形つきです。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-09-16">2026年9月16日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
