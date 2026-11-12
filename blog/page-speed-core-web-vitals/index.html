@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>ホームページの表示速度とCore Web Vitals｜福祉事業所でもできる画像の軽量化と確認ツールの使い方｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="ホームページの表示速度の目安となるCore Web Vitals（LCP・INP・CLS）の意味と基準値、PageSpeed InsightsとSearch Consoleでの確認方法、写真の多い福祉事業所のサイトで効果の出やすい画像の軽量化を、Googleの公式情報をもとに解説します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/page-speed-core-web-vitals/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ホームページの表示速度とCore Web Vitals｜福祉事業所でもできる画像の軽量化と確認ツールの使い方｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="ホームページの表示速度の目安となるCore Web Vitals（LCP・INP・CLS）の意味と基準値、PageSpeed InsightsとSearch Consoleでの確認方法、写真の多い福祉事業所のサイトで効果の出やすい画像の軽量化を、Googleの公式情報をもとに解説します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/page-speed-core-web-vitals/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/blog/page-speed-core-web-vitals.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-11-13">
+<meta property="article:modified_time" content="2026-11-13">
+<meta property="article:section" content="ホームページ制作の基礎">
+<link rel="icon" href="../../favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v3-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v3-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v3-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v3.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v3-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ホームページの表示速度とCore Web Vitals｜福祉事業所でもできる画像の軽量化と確認ツールの使い方",
+  "description": "ホームページの表示速度の目安となるCore Web Vitals（LCP・INP・CLS）の意味と基準値、PageSpeed InsightsとSearch Consoleでの確認方法、写真の多い福祉事業所のサイトで効果の出やすい画像の軽量化を、Googleの公式情報をもとに解説します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/page-speed-core-web-vitals/",
+  "url": "https://fukushi-hp-hikaku.com/blog/page-speed-core-web-vitals/",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "articleSection": "ホームページ制作の基礎",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v3-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/blog/page-speed-core-web-vitals.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ホームページ制作の基礎",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/hp-seisaku/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "ホームページの表示速度とCore Web Vitals｜福祉事業所でもできる画像の軽量化と確認ツールの使い方",
+      "item": "https://fukushi-hp-hikaku.com/blog/page-speed-core-web-vitals/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li><li aria-current="page">ホームページの表示速度とCore Web Vitals｜福祉事業所でもできる画像の軽量化と確認ツールの使い方</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--hp-seisaku" href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a>
+<h1 class="blog-article__title">ホームページの表示速度とCore Web Vitals｜福祉事業所でもできる画像の軽量化と確認ツールの使い方</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-13">2026年11月13日</time></span>
+
+<span>読了目安 約6分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<figure class="blog-article__cover"><img src="../../assets/images/blog/page-speed-core-web-vitals.jpg" alt="" width="1200" height="630" fetchpriority="high"></figure>
+<p class="blog-article__lead">スマートフォンでホームページを開いたとき、なかなか表示されなかったり、読もうとした文章が急にずれたりすると、見る人は待たずに離れてしまいます。Googleは、こうした「使い心地」を測る指標としてCore Web Vitalsを示しています。この記事では、指標の意味と確認方法、写真の多い福祉事業所のサイトで取り組みやすい改善策を整理します。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>Core Web Vitalsの3つの指標（LCP・INP・CLS）と「良好」の目安</li><li>PageSpeed InsightsとSearch Consoleでの確認方法と、数字の読み方の注意点</li><li>写真の多いサイトで効果の出やすい画像の軽量化のポイント</li><li>制作会社やホームページ作成サービスに確認したいこと</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">なぜ表示速度が大切なのか</a></li><li><a href="#sec-2">Core Web Vitalsの3つの指標と目安</a></li><li><a href="#sec-3">確認方法1：PageSpeed Insights</a></li><li><a href="#sec-4">確認方法2：Search ConsoleのCore Web Vitalsレポート</a></li><li><a href="#sec-5">効果の出やすい改善：画像の軽量化</a></li><li><a href="#sec-6">そのほかの見直しポイント</a></li><li><a href="#sec-7">制作会社・作成サービスに確認したいこと</a></li><li><a href="#sec-8">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">なぜ表示速度が大切なのか</h2>
+<p>福祉事業所のホームページは、利用を考えている本人や家族、相談支援専門員、求職者などが、スマートフォンで外出先から見ることも多いものです。表示が遅かったり、画面が急にずれて押し間違えたりすると、知りたい情報にたどり着く前に離れてしまうかもしれません。</p>
+<p>Googleは、ページの読み込み、操作への反応、見た目の安定性という、実際のユーザーが感じる使い心地を測る指標として「Core Web Vitals（コア ウェブ バイタル）」を示しています。Google検索セントラルでは、Core Web Vitalsはほかのページ エクスペリエンスの要素とともに、Googleのランキング システムが考慮する要素だと説明されています。</p>
+<div class="blog-box blog-box--info"><p class="blog-box__title">速度は「順位のため」より「読む人のため」</p><p>Core Web Vitalsは検索順位に関係する要素のひとつですが、それだけで順位が決まるわけではありません。まずは、スマートフォンで見る人がストレスなく読めるかという視点で考えると、取り組む優先順位がはっきりします。</p></div>
+<h2 id="sec-2">Core Web Vitalsの3つの指標と目安</h2>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">指標</th><th scope="col">何を測るか</th><th scope="col">「良好」の目安</th><th scope="col">身近なたとえ</th></tr></thead><tbody><tr><th scope="row">LCP（Largest Contentful Paint）</th><td>読み込みの速さ。ページ内でいちばん大きな画像や文章のかたまりが表示されるまでの時間</td><td>2.5秒以内</td><td>トップの大きな写真がなかなか出てこない</td></tr><tr><th scope="row">INP（Interaction to Next Paint）</th><td>操作への反応の速さ。タップやクリックをしてから画面が変わるまでの時間</td><td>200ミリ秒以下</td><td>メニューを押しても反応が遅い</td></tr><tr><th scope="row">CLS（Cumulative Layout Shift）</th><td>見た目の安定性。読み込み中にレイアウトがどれだけずれるか</td><td>0.1以下</td><td>読んでいる途中で文章が下にずれる</td></tr></tbody></table></div>
+<p>web.devでは、これらの目安を、モバイルとパソコンに分けたページ読み込みの<strong>75パーセンタイル</strong>（多くの訪問者が体験する値）で満たすことが推奨されており、3つの指標すべてで目安を満たすとページは「合格」とみなされると説明されています。</p>
+<h2 id="sec-3">確認方法1：PageSpeed Insights</h2>
+<p>PageSpeed Insights（ページスピード インサイト）は、URLを入力するだけでページの速さを調べられるGoogleの無料ツールです。結果には、性質の違う2種類のデータが表示されます。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">データの種類</th><th scope="col">内容</th><th scope="col">使い方</th></tr></thead><tbody><tr><th scope="row">実際のユーザーのデータ（フィールド データ）</th><td>Chromeを使う実際のユーザーの過去28日間のデータ（CrUX）。Core Web Vitalsの評価はこちら</td><td>実際に訪問者が感じている状態を知る</td></tr><tr><th scope="row">診断（ラボデータ）</th><td>決まった条件の環境で、その場でページを読み込んで測った結果</td><td>何が遅さの原因になっているかを調べる</td></tr></tbody></table></div>
+<p>公式の説明では、実際のユーザーのデータを表示するには十分なデータ量が必要で、公開して間もないページなどでは表示されないことがあるとされています。小規模な事業所のサイトでは、ラボデータだけが表示されることも珍しくありません。</p>
+<div class="blog-box blog-box--point"><p class="blog-box__title">点数だけで一喜一憂しない</p><p>ラボデータの点数は、測るたびに多少変わります。「何点か」よりも、診断の項目にどんな指摘が出ているか（画像の大きさや形式、読み込みを遅らせている要素など）を見ると、改善の手がかりになります。</p></div>
+<h2 id="sec-4">確認方法2：Search ConsoleのCore Web Vitalsレポート</h2>
+<p>Search Consoleに登録している場合は、「Core Web Vitals」レポートで、サイト全体の状況をモバイルとパソコンに分けて確認できます。似たページをまとめた「URLグループ」ごとに、「良好」「改善が必要」「低速」の3段階で表示されます。</p>
+<p>ただし、このレポートも実際のユーザーのデータにもとづくため、データ量が足りないページはレポートに表示されません。「データがありません」と表示される場合は、プロパティが新しいか、利用できるデータが不足していることが考えられます。Search Consoleの基本は「<a href="../../blog/search-console-basics/">Google Search Consoleの基本</a>」で解説しています。</p>
+<h2 id="sec-5">効果の出やすい改善：画像の軽量化</h2>
+<p>福祉事業所のホームページは、活動の様子や建物の写真を多く使います。スマートフォンやデジタルカメラで撮った写真をそのまま載せると、1枚のデータが大きく、表示が遅くなる原因になりがちです。web.devでも、HTTP Archiveの調査をもとに、ほとんどのウェブサイトで画像はもっともリクエストの多い種類のデータだと紹介されています。</p>
+<h3>写真を載せる前のチェックリスト</h3>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">チェック項目</th><th scope="col">理由</th></tr></thead><tbody><tr><th scope="row">表示する大きさに合わせて縮小してから載せている</th><td>画面に小さく表示する写真に、大きな元データは不要</td></tr><tr><th scope="row">画質を少し落として保存（圧縮）している</th><td>見た目をほとんど変えずにデータ量を減らせることが多い</td></tr><tr><th scope="row">WebPなど、軽い画像形式を使える場合は使っている</th><td>web.devでもJPEGのほか、WebP・AVIFといった形式が紹介されている</td></tr><tr><th scope="row">トップページの写真を何枚も並べすぎていない</th><td>最初の画面の読み込みが遅くなり、LCPに影響しやすい</td></tr><tr><th scope="row">画像に幅と高さ（width・height）を指定している</th><td>ブラウザが表示場所を確保でき、読み込み中のずれ（CLS）を防げる</td></tr></tbody></table></div>
+<h3>「遅延読み込み」は下の方の画像に</h3>
+<p>画面の下の方にある画像は、近くまでスクロールされたときに読み込む「遅延読み込み（loading=&quot;lazy&quot;）」を使うと、最初の表示を軽くできます。一方、web.devでは、最初の画面に表示される画像、特にLCPにあたる画像は優先して読み込むべきだとしています。トップの大きな写真まで遅延読み込みにすると、かえって表示が遅くなることがあるので注意しましょう。</p>
+<h2 id="sec-6">そのほかの見直しポイント</h2>
+<ul class="blog-list"><li><strong>使っていない機能を減らす</strong>：WordPressなどで、使わなくなったプラグインや埋め込み（SNSの投稿、地図、動画など）が多いと、読み込みが重くなります</li><li><strong>大きな動画の自動再生を避ける</strong>：トップページで大きな動画を自動再生すると、通信量が増えます</li><li><strong>広告やポップアップでレイアウトがずれないか</strong>：後から表示される要素は、CLSの原因になりやすいです</li></ul>
+<p>なお、使っていないプラグインの削除や更新は、セキュリティの面からも大切です。</p>
+<h2 id="sec-7">制作会社・作成サービスに確認したいこと</h2>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">確認したいこと</th><th scope="col">質問の例</th></tr></thead><tbody><tr><th scope="row">画像の扱い</th><td>アップロードした写真は自動で縮小・圧縮されますか？</td></tr><tr><th scope="row">速度の確認</th><td>公開前にPageSpeed Insightsなどで確認していますか？</td></tr><tr><th scope="row">改善の範囲</th><td>保守契約の中で、表示速度の改善も相談できますか？</td></tr><tr><th scope="row">更新時の注意</th><td>職員が写真を載せるときに気をつけることを教えてもらえますか？</td></tr></tbody></table></div>
+<p>ホームページ作成サービスと制作会社の違いは「<a href="../../blog/hp-builder-vs-agency/">ホームページ作成ツールと制作会社の比較</a>」、誰にとっても読みやすいページづくりは「<a href="../../blog/web-accessibility/">福祉事業所のウェブアクセシビリティ</a>」も参考にしてください。</p>
+<h2 id="sec-8">まとめ</h2>
+<p>Core Web Vitalsは、読み込みの速さ（LCP）、操作への反応（INP）、見た目の安定性（CLS）という、見る人の使い心地を測る指標です。PageSpeed InsightsやSearch Consoleで状況を確認し、点数そのものより「何が遅さの原因か」を見ることが大切です。</p>
+<p>写真の多い福祉事業所のサイトでは、写真を縮小・圧縮してから載せる、最初の画面の画像を詰め込みすぎない、といった基本的な工夫だけでも効果が期待できます。職員が写真を載せるときのルールとして共有しておきましょう。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>PageSpeed Insightsの点数が低いと、検索順位は大きく下がりますか？</summary><div class="blog-faq__a"><p>PageSpeed Insightsの点数（ラボデータのスコア）そのものが順位を決めるわけではありません。Googleは、Core Web Vitalsはほかのページ エクスペリエンスの要素とともにランキングで考慮される要素だと説明しています。点数を上げること自体を目的にせず、実際のユーザーにとって表示が遅い・ずれるといった問題がないかを確認する道具として使いましょう。</p></div></details><details class="blog-faq__item"><summary>「実際のユーザーのデータがありません」と表示されます。問題ですか？</summary><div class="blog-faq__a"><p>問題ではありません。実際のユーザーのデータ（CrUX）は、表示するのに十分なデータ量が必要です。公開して間もないページやアクセスの少ないページでは表示されないことがあります。その場合は、同じ画面のラボデータ（診断結果）を参考に、改善できる点を確認しましょう。</p></div></details><details class="blog-faq__item"><summary>WixやJimdoなどのサービスで作ったサイトでも改善できますか？</summary><div class="blog-faq__a"><p>サービス側で自動的に最適化される部分も多く、利用者が細かい設定を変えられない場合があります。それでも、写真をアップロードする前に小さくする、トップページに大きな画像や動画をたくさん並べすぎない、といった工夫は利用者側でもできます。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://web.dev/articles/vitals?hl=ja" target="_blank" rel="noopener">web.dev「ウェブに関する主な指標（Core Web Vitals）」</a></li><li><a href="https://developers.google.com/search/docs/appearance/core-web-vitals?hl=ja" target="_blank" rel="noopener">Google 検索セントラル「Core Web Vitals と Google 検索の検索結果について」</a></li><li><a href="https://support.google.com/webmasters/answer/9205520?hl=ja" target="_blank" rel="noopener">Search Console ヘルプ「Core Web Vitals レポート」</a></li><li><a href="https://developers.google.com/speed/docs/insights/v5/about?hl=ja" target="_blank" rel="noopener">PageSpeed Insights「PageSpeed Insights について」</a></li><li><a href="https://web.dev/articles/browser-level-image-lazy-loading?hl=ja" target="_blank" rel="noopener">web.dev「ブラウザレベルでのウェブ画像の遅延読み込み」</a></li><li><a href="https://web.dev/learn/images?hl=ja" target="_blank" rel="noopener">web.dev「Learn Images」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/shuro-iko-comparison.html">就労移行支援向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/houkago-day-comparison.html">放課後等デイサービス向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/jihatsu-comparison.html">児童発達支援向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/a-type-comparison.html">就労継続支援A型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card blog-card--unei" href="../../blog/search-console-basics/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/search-console-basics-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--unei">集客・採用・運用</span>
+<h3 class="blog-card__title">Google Search Consoleの基本｜福祉事業所が見たい検索キーワード・インデックス登録・エラー対応</h3>
+<p class="blog-card__desc">Google Search Console（サーチコンソール）の始め方と、福祉事業所がまず見ておきたい検索パフォーマンス、URL検査、ページのインデックス登録の見方を、Googleの公式ヘルプをもとに解説します。制作会社に任せている場合に確認したいことも整理しました。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-11-12">2026年11月12日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--hp-seisaku" href="../../blog/web-accessibility/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/web-accessibility-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">改正障害者差別解消法とウェブアクセシビリティ｜福祉事業所が知っておきたい義務の範囲とJIS X 8341-3</h3>
+<p class="blog-card__desc">2024年4月施行の改正障害者差別解消法で、事業者の合理的配慮の提供が義務化されました。ウェブアクセシビリティは「環境の整備」として努力義務です。義務の範囲、JIS X 8341-3・WCAG 2.2の基準、福祉事業所のホームページでのセルフチェック方法を解説します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-08-27">2026年8月27日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--hp-seisaku" href="../../blog/hp-builder-vs-agency/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/hp-builder-vs-agency-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--hp-seisaku">ホームページ制作の基礎</span>
+<h3 class="blog-card__title">ホームページは自作？制作会社に依頼？福祉事業所のための作り方4パターン比較</h3>
+<p class="blog-card__desc">福祉事業所のホームページを、作成ツールで自作する、WordPressで自作する、制作会社に依頼する、月額定額型サービスを使う、の4パターンで比較。費用、手間、デザイン、更新、セキュリティの違いと、事業所のタイプ別のおすすめを解説します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-08-18">2026年8月18日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
