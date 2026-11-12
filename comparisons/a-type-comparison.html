@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>就労継続支援A型向けホームページ制作会社5社を比較（2026年版）｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="就労継続支援A型の事業所向けホームページ制作サービス5社（さくっとホームページ・福祉ITパートナー・AMS・tomonico・ストーンシャープ）を、1年間の費用・更新の方法・契約条件で比較。スコア表の公表や、利用者・企業・取引先それぞれに向けた情報など、A型のホームページに載せたい内容も解説します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/comparisons/a-type-comparison.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="就労継続支援A型向けホームページ制作会社5社を比較（2026年版）">
+<meta property="og:description" content="就労継続支援A型の事業所向けホームページ制作サービス5社（さくっとホームページ・福祉ITパートナー・AMS・tomonico・ストーンシャープ）を、1年間の費用・更新の方法・契約条件で比較。スコア表の公表や、利用者・企業・取引先それぞれに向けた情報など、A型のホームページに載せたい内容も解説します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/comparisons/a-type-comparison.html">
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/comparisons/a-type/card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="就労継続支援A型向けホームページ制作会社5社を比較（2026年版）">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "headline": "就労継続支援A型向けホームページ制作会社5社を比較（2026年版）",
+  "url": "https://fukushi-hp-hikaku.com/comparisons/a-type-comparison.html",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "image": "https://fukushi-hp-hikaku.com/assets/images/comparisons/a-type/card.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://fukushi-hp-hikaku.com/" },
+    { "@type": "ListItem", "position": 2, "name": "就労継続支援A型向け", "item": "https://fukushi-hp-hikaku.com/comparisons/a-type-comparison.html" }
+  ]
+}
+</script>
+
+<link rel="icon" href="../favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-v3-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-v3-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../favicon-v3-48x48.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon-v3.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v3-192x192.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/comparison.css">
+</head>
+<body class="cw-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../">
+<span class="site-header__logo-icon"><img src="../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+
+  <!-- ===== ヒーロー ===== -->
+  <section class="cw-hero">
+    <div class="container">
+      <div class="cw-banner cw-banner--overlay">
+        <img src="../assets/images/comparisons/b-type/hero.png" alt="ホームページの画面や比較資料を前に、複数人で相談している様子のイラスト">
+        <div class="cw-banner-scrim"></div>
+        <div class="cw-banner-text">
+          <h1>就労継続支援A型向け<br>ホームページ制作会社5社を比較（2026年版）</h1>
+          <p class="cw-hero-lead">1年間の費用・更新の方法・契約条件を比較</p>
+          <p class="cw-hero-note">2026年11月13日時点の公式情報をもとに比較</p>
+          <a href="#compare-table" class="btn btn--primary">まず比較表を見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 導入文・目次 ===== -->
+  <section class="cw-section cw-section--tight">
+    <div class="container">
+      <div class="cw-wrap">
+        <p>就労継続支援A型（雇用型）は、事業所と利用者が雇用契約を結んで働くサービスです。そのためA型のホームページは、福祉サービスの案内であると同時に、<strong>「働く場所」を探している人への求人情報</strong>の役割も持ちます。さらに、生産活動の仕事を発注してくれる企業や取引先、利用者を紹介してくれる支援機関も、事業所を知る手がかりとしてホームページを見ます。</p>
+        <p>加えてA型には、毎年の<strong>スコア表（評価点）の公表</strong>という、ほかのサービスにはない公表の決まりがあり、公表していないと報酬が減算されます。毎年4月に確実に更新できる仕組みかどうかも、制作会社選びのポイントです。</p>
+        <p>この記事では、A型事業所のホームページ制作に対応している5社（さくっとホームページ・福祉ITパートナー・AMS・tomonico・ストーンシャープ）について、各社の公式サイトで確認できた料金や更新の方法を比較します。掲載順は、<strong>1年間の費用の安い順を基本</strong>にしていますが、運営の関連会社である福祉ITパートナーは、先頭にせず2番目に掲載しています。</p>
+
+        <h2 class="cw-toc-title">目次</h2>
+        <div class="cw-toc-box">
+          <nav class="cw-toc" aria-label="目次">
+            <a href="#compare-table"><span class="num">1．</span><span class="label">5社の比較表</span><span class="arrow">›</span></a>
+            <a href="#by-purpose"><span class="num">2．</span><span class="label">目的別に選ぶ</span><span class="arrow">›</span></a>
+            <a href="#companies"><span class="num">3．</span><span class="label">5社の料金・特徴</span><span class="arrow">›</span></a>
+            <a href="#detail-compare"><span class="num">4．</span><span class="label">費用と更新の方法を詳しく比較</span><span class="arrow">›</span></a>
+            <a href="#how-to-choose"><span class="num">5．</span><span class="label">A型のホームページに載せたい6つの内容</span><span class="arrow">›</span></a>
+            <a href="#summary"><span class="num">6．</span><span class="label">まとめ｜毎年の公表まで続けられる依頼先を</span><span class="arrow">›</span></a>
+            <a href="#faq"><span class="num">7．</span><span class="label">よくある質問</span><span class="arrow">›</span></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 1．比較表 ===== -->
+  <section class="cw-section cw-section--tight" id="compare-table">
+    <div class="container">
+      <div class="cw-wrap-wide">
+        <div class="cw-banner cw-banner--overlay cw-chapter-banner">
+          <img src="../assets/images/comparisons/welfare/chapter-1-compare-table.png" alt="虫眼鏡とチェックリストで比較表を確認している担当者のイラスト">
+          <div class="cw-banner-scrim"></div>
+          <div class="cw-banner-text">
+            <h2>1．5社の比較表</h2>
+          </div>
+        </div>
+        <p class="cw-section-lead">5社の違いを一覧で比べられます。<strong>1年間にかかる費用の目安（初期費用＋月額×12か月）</strong>を中心に載せ、内訳は小さく添えています。金額は税込相当（税別表示の会社は10％を加えた額）で、税区分の記載がない会社は表示額のまま載せています。</p>
+
+        <p class="cw-matrix-hint">← 左右にスライドして比較できます →</p>
+        <div class="cw-matrix-wrap">
+          <table class="cw-matrix-table">
+            <thead>
+              <tr>
+                <th scope="col">比較項目</th>
+                <th scope="col"><span class="cw-matrix-name">さくっとホームページ</span><span class="cw-matrix-type">WordPress・買い切り型</span></th>
+                <th scope="col"><span class="cw-matrix-name">福祉ITパートナー</span><span class="cw-matrix-type">低価格・短納期型</span></th>
+                <th scope="col"><span class="cw-matrix-name">AMS</span><span class="cw-matrix-type">月額制・自社更新型</span></th>
+                <th scope="col"><span class="cw-matrix-name">tomonico</span><span class="cw-matrix-type">月額保守・更新代行型</span></th>
+                <th scope="col"><span class="cw-matrix-name">ストーンシャープ</span><span class="cw-matrix-type">集客設計・保守契約型</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1年間の費用の目安<span class="cw-matrix-sub">税込相当・初期費用＋月額×12か月</span></th>
+                <td class="cw-matrix-price"><span class="cw-price-total">50,000円～</span><span class="cw-price-break">制作5万円～（5ページ）。月々の保守料なし。サーバー代は別（税区分は公式サイトに記載なし）</span></td>
+                <td class="cw-matrix-price cw-matrix-best"><span class="cw-price-total">19,800円～55,000円</span><span class="cw-price-break">ライト19,800円／ブランディング55,000円（月額なし。更新を自社で行う場合。税区分は公式サイトに記載なし）</span></td>
+                <td class="cw-matrix-price"><span class="cw-price-total">66,000円</span><span class="cw-price-break">初期0円＋月額5,500円×12か月（DMARCオプションは別。下記注記）</span></td>
+                <td class="cw-matrix-price"><span class="cw-price-total">117,480円</span><span class="cw-price-break">初期0円＋月額9,790円×12か月（トモニコプラン）</span></td>
+                <td class="cw-matrix-price"><span class="cw-price-total">360,000円～</span><span class="cw-price-break">制作300,000円～＋保守（基本）月額5,000円×12か月（税区分は公式サイトに記載なし）</span></td>
+              </tr>
+              <tr>
+                <th scope="row">更新の方法</th>
+                <td class="cw-matrix-text">WordPressで自分で更新（専用マニュアルあり）</td>
+                <td class="cw-matrix-text">自分で更新できる。更新代行は別途相談</td>
+                <td class="cw-matrix-text">独自CMSで自分で更新（電話サポートあり）。代行は有料</td>
+                <td class="cw-matrix-text">月額内で更新を代行（5営業日以内が目安）</td>
+                <td class="cw-matrix-text">WordPressで自分で更新。コンテンツ作成の代行プランあり</td>
+              </tr>
+              <tr>
+                <th scope="row">ページ数</th>
+                <td class="cw-matrix-text">5ページ～</td>
+                <td class="cw-matrix-text">ライト1ページ／ブランディングは構成を提案</td>
+                <td class="cw-matrix-text">基本5ページ。公開後は自分で無制限に追加可</td>
+                <td class="cw-matrix-text">基本7ページ</td>
+                <td class="cw-matrix-text">公式サイトに記載なし（見積もり）</td>
+              </tr>
+              <tr>
+                <th scope="row">契約期間</th>
+                <td class="cw-matrix-text">長期契約なし（1年毎・月々毎の契約と案内）</td>
+                <td class="cw-matrix-text">月額契約なし（買い切り）</td>
+                <td class="cw-matrix-text">最低利用期間なし・違約金なし</td>
+                <td class="cw-matrix-text">3年（トモニコプラン）</td>
+                <td class="cw-matrix-text">保守契約が前提（期間は公式サイトに記載なし）</td>
+              </tr>
+              <tr>
+                <th scope="row">A型に関する公式サイトの記載</th>
+                <td class="cw-matrix-text">制作実績に千葉市のA型事業所あり</td>
+                <td class="cw-matrix-text">対応事業所に就労継続支援A型を明記</td>
+                <td class="cw-matrix-text">「就労継続支援事業所（A型・B型）」の制作事例ページあり（掲載事例はB型など）</td>
+                <td class="cw-matrix-text">障害福祉に特化。A型の実績は確認できず（B型の実績あり）</td>
+                <td class="cw-matrix-text">A型・B型のサイト制作の考え方を解説した制作事例ページあり</td>
+              </tr>
+              <tr>
+                <th scope="row">こんな方に</th>
+                <td class="cw-matrix-text">月額をかけずにWordPressのサイトを持ちたい法人</td>
+                <td class="cw-matrix-text">短期間・低予算で公開し、更新は自分で行う事業所</td>
+                <td class="cw-matrix-text">月額を抑えつつ、契約の縛りなく始めたい事業所</td>
+                <td class="cw-matrix-text">障害福祉に詳しい相手に、更新まで任せたい事業所</td>
+                <td class="cw-matrix-text">求人・仕事の受注まで含めて集客を設計したい法人</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cw-note">
+          <p>※2026年11月13日に各社の公式サイトで確認した情報です。料金やサービス内容は変更される場合があります。契約前に必ず公式サイトで最新情報をご確認ください。</p>
+          <p>※AMSは税込表示、tomonicoは税別表示に10％を加えた額です。さくっとホームページ・福祉ITパートナー・ストーンシャープは、公式サイトに税込・税別の記載がなかったため表示額のまま載せています。</p>
+          <p>※AMSは、なりすまし対策のDMARCオプション（月額1,650円・税込）が標準で付き、6か月は無料・いつでも解約可能と案内されています。7か月目以降も続ける場合、1年目は9,900円が加わります。</p>
+          <p>※さくっとホームページ・福祉ITパートナーは月額契約がなく、更新代行やサーバー・ドメインの費用は含みません（さくっとホームページはレンタルサーバー年額6,000円のキャンペーンを案内）。</p>
+          <p>※「A型に関する公式サイトの記載」は、各社の公式サイトで確認できた範囲です。記載がないことは、対応できないという意味ではありません。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2．目的別 ===== -->
+  <section class="cw-section" id="by-purpose">
+    <div class="container">
+      <div class="cw-wrap-wide">
+        <div class="cw-banner cw-banner--overlay cw-chapter-banner">
+          <img src="../assets/images/comparisons/welfare/chapter-2-purpose.png" alt="費用・納期・デザイン・相談の選択肢を前に考えている3人のイラスト">
+          <div class="cw-banner-scrim"></div>
+          <div class="cw-banner-text">
+            <h2>2．目的別に選ぶ</h2>
+          </div>
+        </div>
+      </div>
+      <div class="cw-wrap-wide">
+        <div class="cw-pick-grid">
+          <div class="cw-purpose-card">
+            <span class="cw-purpose-label">1年間の費用をできるだけ抑えたい</span>
+            <div class="cw-purpose-recommend">
+              <span class="cw-purpose-recommend-label">候補：</span>
+              <span class="cw-purpose-links">
+                <a class="cw-purpose-btn" href="#sakutto">さくっとホームページ</a>
+                <a class="cw-purpose-btn" href="#fukushi-it-partner">福祉ITパートナー</a>
+                <a class="cw-purpose-btn" href="#ams">AMS</a>
+              </span>
+            </div>
+            <p class="cw-purpose-desc">1年間の費用は、福祉ITパートナーが19,800円～55,000円、さくっとホームページが50,000円～、AMSが66,000円です。前の2社は月額なし（サーバー等は別）、AMSは月額にサーバー管理などを含みます。</p>
+          </div>
+          <div class="cw-purpose-card">
+            <span class="cw-purpose-label">スコア表や求人を、職員がすぐ更新したい</span>
+            <div class="cw-purpose-recommend">
+              <span class="cw-purpose-recommend-label">候補：</span>
+              <span class="cw-purpose-links">
+                <a class="cw-purpose-btn" href="#sakutto">さくっとホームページ</a>
+                <a class="cw-purpose-btn" href="#ams">AMS</a>
+                <a class="cw-purpose-btn" href="#stonesharp">ストーンシャープ</a>
+              </span>
+            </div>
+            <p class="cw-purpose-desc">いずれも自分で更新する前提のサービスです。AMSはページを何ページ追加しても月額が変わらず、電話サポートもあります。毎年4月のスコア表の差し替えや、求人の更新を自分たちのタイミングで行えます。</p>
+          </div>
+          <div class="cw-purpose-card">
+            <span class="cw-purpose-label">更新作業はまとめて任せたい</span>
+            <div class="cw-purpose-recommend">
+              <span class="cw-purpose-recommend-label">候補：</span>
+              <span class="cw-purpose-links">
+                <a class="cw-purpose-btn" href="#tomonico">tomonico</a>
+              </span>
+            </div>
+            <p class="cw-purpose-desc">月額の保守費用の中で、文章の書き換えや写真の差し替えを依頼できます。スコア表の差し替えも依頼できるか、反映までの日数とあわせて事前に確認しておきましょう。</p>
+          </div>
+          <div class="cw-purpose-card">
+            <span class="cw-purpose-label">仕事の受注や職員採用まで含めて設計したい</span>
+            <div class="cw-purpose-recommend">
+              <span class="cw-purpose-recommend-label">候補：</span>
+              <span class="cw-purpose-links">
+                <a class="cw-purpose-btn" href="#stonesharp">ストーンシャープ</a>
+              </span>
+            </div>
+            <p class="cw-purpose-desc">制作事例のページで、A型・B型のサイトでは「職員の求人」「仕事をいかに集めるか」「利用者を集める」「事業への想いを伝える」の4つが重要だと解説しています。費用は5社の中で最も高めです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3．各社の料金・特徴 ===== -->
+  <section class="cw-section cw-section--tight" id="companies">
+    <div class="container">
+      <div class="cw-wrap-wide">
+        <div class="cw-banner cw-banner--overlay cw-chapter-banner">
+          <img src="../assets/images/comparisons/welfare/chapter-3-price-feature.png" alt="担当者がサービスカードを紹介しているイラスト">
+          <div class="cw-banner-scrim"></div>
+          <div class="cw-banner-text">
+            <h2>3．5社の料金・特徴</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="cw-wrap">
+        <!-- さくっとホームページ -->
+        <div class="cw-company" id="sakutto">
+          <span class="cw-company-type">WordPress・買い切り型</span>
+          <h2>さくっとホームページ（株式会社TEAM STACCATO）</h2>
+          <a class="cw-site-shot" href="https://www.sakutto-homepage.com/" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/comparisons/a-type/sakutto-hero.png" alt="さくっとホームページ公式サイトのトップページ画面" loading="lazy">
+            <span class="cw-site-shot-caption">公式サイトを見る ↗</span>
+          </a>
+          <p class="cw-company-lead">東京都中央区の制作会社で、中小企業・個人事業主向けのホームページ制作を行っています。福祉専門ではありませんが、制作実績に千葉市の就労継続支援A型事業所や、社会福祉法人のホームページが掲載されています。</p>
+
+          <div class="cw-spec-grid cw-spec-grid--price">
+            <div class="cw-spec-item cw-spec-item--main">
+              <span class="cw-spec-label">1年間の費用の目安</span>
+              <span class="cw-spec-value cw-spec-value--main">50,000円～</span>
+            </div>
+            <div class="cw-spec-item">
+              <span class="cw-spec-label">内訳</span>
+              <span class="cw-spec-value cw-spec-value--sub">制作5万円～（5ページ）。月々の保守料なし</span>
+            </div>
+          </div>
+          <div class="cw-note">
+            <p>公式サイトでは「一番ミニマムなHP作成ですと、5万円(5頁)～」と案内されています。税込・税別の記載は確認できませんでした。レンタルサーバーは年額6,000円のキャンペーン価格を案内しています（キャンペーンのため変更の可能性があります）。</p>
+          </div>
+
+          <h3>メリット</h3>
+          <ul>
+            <li>WordPressで制作し、専用マニュアルも作成。納品後は自分で更新でき、月々の保守料が不要と案内している</li>
+            <li>5年リースのような長期契約はなく、1年毎・月々毎の契約と案内している</li>
+            <li>見積もり以上の金額は請求せず、追加費用が必要な場合は事前に伝えると案内している</li>
+            <li>ドメイン取得やレンタルサーバーの用意も依頼できる</li>
+          </ul>
+
+          <h3>注意点</h3>
+          <ul>
+            <li>税区分、ページ追加の料金、制作期間は公式サイトで確認できなかった</li>
+            <li>保守料がない分、WordPressの更新やバックアップを誰が行うかを決めておく必要がある</li>
+            <li>中小企業向けの全業種のサービスで、福祉の専門知識をうたうものではない</li>
+            <li>無料の説明訪問は東京都・神奈川県内が対象</li>
+          </ul>
+
+          <h3>こんな方におすすめ</h3>
+          <p>月額費用をかけずにWordPressのサイトを持ちたい事業所、更新を自分たちで行える職員がいる事業所</p>
+
+          <div class="cw-btn-row">
+            <a href="https://www.sakutto-homepage.com/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">さくっとホームページ公式サイトを見る ↗</a>
+          </div>
+        </div>
+
+        <!-- 福祉ITパートナー -->
+        <div class="cw-company" id="fukushi-it-partner">
+          <span class="cw-company-type">低価格・短納期型</span>
+          <h2>福祉ITパートナー</h2>
+          <a class="cw-site-shot" href="https://fukushi-it-partner.com/" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/companies/fukushi-it-partner-hero.png" alt="福祉ITパートナー公式サイトのトップページ画面" loading="lazy">
+            <span class="cw-site-shot-caption">公式サイトを見る ↗</span>
+          </a>
+          <p class="cw-company-lead">福祉・介護・医療分野のホームページ制作と、IT活用の支援を行っています。料金ページでは、対応する事業所として就労継続支援A型・B型などを挙げています。<strong>なお、当サイトの運営者は同社の関連会社です。</strong>他社と同じ基準で確認し、掲載しています。</p>
+
+          <div class="cw-spec-grid cw-spec-grid--price">
+            <div class="cw-spec-item cw-spec-item--main">
+              <span class="cw-spec-label">1年間の費用の目安</span>
+              <span class="cw-spec-value cw-spec-value--main">19,800円～55,000円</span>
+            </div>
+            <div class="cw-spec-item">
+              <span class="cw-spec-label">内訳</span>
+              <span class="cw-spec-value cw-spec-value--sub">ライト19,800円／ブランディング55,000円（月額なし）</span>
+            </div>
+          </div>
+          <div class="cw-note">
+            <p>おまかせライトは1ページ構成（制作中の修正1回まで）、ブランディングは事業所に合わせて構成を提案（修正3回まで）です。2026年11月13日時点の料金ページには、2プランの金額について税込・税別の記載がありませんでした。サーバー契約・ドメイン取得・公開作業は基本料金に含まれません。</p>
+          </div>
+
+          <h3>メリット</h3>
+          <ul>
+            <li>1年間の費用が5社の中で最も低く、月額契約もない</li>
+            <li>素材がそろえば最短48時間からと、制作期間が短い</li>
+            <li>スマホ対応、基本のSEO設定、Googleマップの設置が両プランに含まれる</li>
+            <li>ブランディングプランでは、文章の整理・言い換えや写真の調整まで相談できる</li>
+          </ul>
+
+          <h3>注意点</h3>
+          <ul>
+            <li>ライトは1ページのみで、問い合わせフォームは付かない（導線の設置のみ）。スコア表や求人、企業向けの情報を分けて載せたい場合はブランディングで構成を相談する</li>
+            <li>サーバー・ドメインの契約と公開作業は別で、実費は自分で確認する必要がある</li>
+            <li>公開後の更新代行は、必要に応じて別途相談となる（金額の記載なし）</li>
+            <li>公式サイトで確認できた制作実績の例は就労継続支援B型とグループホームで、A型の実績例は確認できなかった</li>
+          </ul>
+
+          <h3>こんな方におすすめ</h3>
+          <p>短期間で公開したい事業所、月額費用をかけずに始め、更新は自分たちで行える事業所</p>
+
+          <div class="cw-btn-row">
+            <a href="https://fukushi-it-partner.com/homepage-plan.html" class="btn btn--outline" target="_blank" rel="noopener noreferrer">福祉ITパートナー公式サイトを見る ↗</a>
+          </div>
+        </div>
+
+        <!-- AMS -->
+        <div class="cw-company" id="ams">
+          <span class="cw-company-type">月額制・自社更新型</span>
+          <h2>AMS（株式会社AMS）</h2>
+          <a class="cw-site-shot" href="https://amsstudio.jp/hp_agency" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/comparisons/a-type/ams-hero.png" alt="AMS公式サイトのホームページ制作代行のページ画面" loading="lazy">
+            <span class="cw-site-shot-caption">公式サイトを見る ↗</span>
+          </a>
+          <p class="cw-company-lead">石川県金沢市の会社で、独自開発のCMS「AMS」を使った月額制のホームページ制作・運用を行っています。業種を問わないサービスですが、公式サイトに「就労継続支援事業所（A型・B型）」の制作事例ページがあり、B型・生活介護・就労移行支援などの事業所のサイトが紹介されています。</p>
+
+          <div class="cw-spec-grid cw-spec-grid--price">
+            <div class="cw-spec-item cw-spec-item--main">
+              <span class="cw-spec-label">1年間の費用の目安（税込）</span>
+              <span class="cw-spec-value cw-spec-value--main">66,000円</span>
+            </div>
+            <div class="cw-spec-item">
+              <span class="cw-spec-label">内訳</span>
+              <span class="cw-spec-value cw-spec-value--sub">初期0円＋月額5,500円×12か月</span>
+            </div>
+          </div>
+          <div class="cw-note">
+            <p>基本となる5ページの制作費は0円で、月額5,500円（税込）にドメイン取得、サーバー管理、セキュリティ対策、問い合わせフォーム、アクセス解析などが含まれると案内されています。最初から6ページ以上をまとめて制作する場合などは、別途制作費がかかることがあります。DMARCオプション（月額1,650円・税込、6か月無料・いつでも解約可）が標準で付きます。</p>
+          </div>
+
+          <h3>メリット</h3>
+          <ul>
+            <li>最低利用期間や解約時の違約金がなく、いつでも解約できる</li>
+            <li>公開後は自分でページを追加でき、何ページ増やしても月額は変わらない</li>
+            <li>機械が苦手な人向けに電話サポートがある</li>
+            <li>急ぎの場合は最短2～3営業日で仮公開できると案内している（本公開まではおおよそ1～2か月）</li>
+          </ul>
+
+          <h3>注意点</h3>
+          <ul>
+            <li>更新は自分で行うスタイルが基本で、代行は有料</li>
+            <li>独自開発のCMSのため、解約後に別の会社へ移る場合のデータの扱いは事前に確認したい</li>
+            <li>制作事例ページで確認できた事例はB型・生活介護・就労移行支援などで、A型の事業所かどうかは確認できなかった</li>
+            <li>全業種向けのサービスで、福祉の専門知識をうたうものではない</li>
+          </ul>
+
+          <h3>こんな方におすすめ</h3>
+          <p>月額を抑えつつ契約の縛りなく始めたい事業所、求人やお知らせを自分たちで頻繁に更新したい事業所</p>
+
+          <div class="cw-btn-row">
+            <a href="https://amsstudio.jp/hp_agency" class="btn btn--outline" target="_blank" rel="noopener noreferrer">AMS公式サイトを見る ↗</a>
+          </div>
+        </div>
+
+        <!-- tomonico -->
+        <div class="cw-company" id="tomonico">
+          <span class="cw-company-type">月額保守・更新代行型</span>
+          <h2>tomonico</h2>
+          <a class="cw-site-shot" href="https://tomonico.com/service/fukushi" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/comparisons/b-type/tomonico-hero.png" alt="tomonico公式サイトのトップページ画面" loading="lazy">
+            <span class="cw-site-shot-caption">公式サイトを見る ↗</span>
+          </a>
+          <p class="cw-company-lead">障害福祉事業所に特化したホームページ制作と更新代行を行う会社です。公式サイトによると代表自身が障害当事者で、制作から更新の依頼まで、すべてオンラインで進めます。制作実績には就労継続支援B型の事業所が掲載されていますが、A型の実績は確認できませんでした。</p>
+
+          <div class="cw-spec-grid cw-spec-grid--price">
+            <div class="cw-spec-item cw-spec-item--main">
+              <span class="cw-spec-label">1年間の費用の目安（税込相当）</span>
+              <span class="cw-spec-value cw-spec-value--main">117,480円</span>
+            </div>
+            <div class="cw-spec-item">
+              <span class="cw-spec-label">内訳</span>
+              <span class="cw-spec-value cw-spec-value--sub">初期0円＋月額9,790円×12か月（3年契約）</span>
+            </div>
+          </div>
+          <div class="cw-note">
+            <p>公式サイトの表示は税別で、トモニコプランは月額8,900円（3年間）です。ほかに、ミドルプラン（初期189,000円・月額5,000円）、フリープラン（初期298,000円・保守契約なし）があります。</p>
+          </div>
+
+          <h3>メリット</h3>
+          <ul>
+            <li>月額の保守費用の中で、文章の書き換え・写真の差し替え・簡易なレイアウト変更を依頼できる</li>
+            <li>お問い合わせフォーム、Googleマップ表示、ブログ、基本のSEO対策、Googleビジネスプロフィールの基本設定が全プランに含まれる</li>
+            <li>ブログやお知らせは、希望すれば自社でも更新できる設計にできる</li>
+            <li>障害福祉の分野に特化しており、制度の話が通じやすい</li>
+          </ul>
+
+          <h3>注意点</h3>
+          <ul>
+            <li>トモニコプランは3年契約で、月額費用がずっと続く（4年目以降は月額3,900円（税別）の契約に変更可）</li>
+            <li>基本は7ページ程度で、超える場合は1ページごとに追加費用がかかる</li>
+            <li>更新の反映は土日祝を除く5営業日以内が目安。スコア表の公表期限（原則4月中）に間に合うよう、早めの依頼が必要</li>
+            <li>制作期間の目安は、公式サイトで確認できなかった</li>
+          </ul>
+
+          <h3>こんな方におすすめ</h3>
+          <p>障害福祉に詳しい相手に制作から更新まで任せたい事業所、毎月の費用を定額にしたい事業所</p>
+
+          <div class="cw-btn-row">
+            <a href="https://tomonico.com/service/fukushi" class="btn btn--outline" target="_blank" rel="noopener noreferrer">tomonico公式サイトを見る ↗</a>
+          </div>
+        </div>
+
+        <!-- ストーンシャープ -->
+        <div class="cw-company" id="stonesharp">
+          <span class="cw-company-type">集客設計・保守契約型</span>
+          <h2>株式会社ストーンシャープ</h2>
+          <a class="cw-site-shot" href="https://s-sharp.co.jp/plan" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/comparisons/a-type/stonesharp-hero.png" alt="ストーンシャープ公式サイトの料金プランのページ画面" loading="lazy">
+            <span class="cw-site-shot-caption">公式サイトを見る ↗</span>
+          </a>
+          <p class="cw-company-lead">岡山のWeb制作・コンサルティング会社で、SEOや地図検索の対策、AI活用の支援も行っています。制作事例のページで、A型・B型の就労継続支援サイトの制作依頼を複数受けてきたと紹介し、職員の求人、仕事の集め方、利用者の集め方、事業への想いの伝え方という4つの視点を解説しています。</p>
+
+          <div class="cw-spec-grid cw-spec-grid--price">
+            <div class="cw-spec-item cw-spec-item--main">
+              <span class="cw-spec-label">1年間の費用の目安</span>
+              <span class="cw-spec-value cw-spec-value--main">360,000円～</span>
+            </div>
+            <div class="cw-spec-item">
+              <span class="cw-spec-label">内訳</span>
+              <span class="cw-spec-value cw-spec-value--sub">制作300,000円～＋保守（基本）月額5,000円×12か月</span>
+            </div>
+          </div>
+          <div class="cw-note">
+            <p>料金ページでは、HP作成の基本料金は300,000円～（保守契約時）で、WordPress・SSL化・スマホ対応・問い合わせフォーム・Googleアナリティクス登録・Googleマップ登録を含み、ディレクション費用は別とされています。保守は基本代金月額5,000円（サイトバックアップ月1回）、保守月額10,000円（データベースのバックアップも月1回）、保守とSEOコンサルティングの集客パック2が月額30,000円です。税込・税別の記載は確認できませんでした。</p>
+          </div>
+
+          <h3>メリット</h3>
+          <ul>
+            <li>A型・B型のサイトで、利用者・家族・支援機関・取引先など複数の相手に向けて情報を整理する考え方を示している</li>
+            <li>WordPressで制作し、お知らせなどを自分たちで素早く更新できる方針</li>
+            <li>保守契約でバックアップや不具合時の復旧に対応する</li>
+            <li>SEOコンサルティングや、ブログ・コンテンツ作成の代行プランもある</li>
+          </ul>
+
+          <h3>注意点</h3>
+          <ul>
+            <li>5社の中で1年間の費用が最も高く、ディレクション費用は別</li>
+            <li>保守契約が基本で、月額費用が続く（契約期間は公式サイトに記載なし）</li>
+            <li>ページ数や制作期間は公式サイトで確認できず、見積もりになる</li>
+            <li>現在はAI活用支援なども手がけており、Web制作の詳しい内容は問い合わせて確認したい</li>
+          </ul>
+
+          <h3>こんな方におすすめ</h3>
+          <p>利用者募集だけでなく、職員採用や生産活動の仕事の受注まで含めてホームページを設計したい法人</p>
+
+          <div class="cw-btn-row">
+            <a href="https://s-sharp.co.jp/plan" class="btn btn--outline" target="_blank" rel="noopener noreferrer">ストーンシャープ公式サイトを見る ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4．費用と更新の方法を詳しく比較 ===== -->
+  <section class="cw-section cw-section--tight" id="detail-compare">
+    <div class="container">
+      <div class="cw-wrap-wide">
+        <div class="cw-banner cw-banner--overlay cw-chapter-banner">
+          <img src="../assets/images/comparisons/welfare/chapter-4-detail-compare.png" alt="料金、サーバー、クラウド、ヘッドセットの相談員が描かれたイラスト">
+          <div class="cw-banner-scrim"></div>
+          <div class="cw-banner-text">
+            <h2>4．費用と更新の方法を詳しく比較</h2>
+          </div>
+        </div>
+        <p class="cw-section-lead">A型では、毎年のスコア表の公表に加えて、求人や生産活動の案内など、更新したい情報が多くあります。3年間の目安とあわせて、<strong>誰がどうやって更新するか</strong>を比べましょう。</p>
+
+        <p class="cw-matrix-hint">← 左右にスライドして比較できます →</p>
+        <div class="cw-matrix-wrap">
+          <table class="cw-matrix-table">
+            <thead>
+              <tr>
+                <th scope="col">比較項目</th>
+                <th scope="col"><span class="cw-matrix-name">さくっとホームページ</span><span class="cw-matrix-type">5ページ～</span></th>
+                <th scope="col"><span class="cw-matrix-name">福祉ITパートナー</span><span class="cw-matrix-type">ライト／ブランディング</span></th>
+                <th scope="col"><span class="cw-matrix-name">AMS</span><span class="cw-matrix-type">基本料金</span></th>
+                <th scope="col"><span class="cw-matrix-name">tomonico</span><span class="cw-matrix-type">トモニコプラン</span></th>
+                <th scope="col"><span class="cw-matrix-name">ストーンシャープ</span><span class="cw-matrix-type">基本料金＋基本保守</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1年間の費用の目安<span class="cw-matrix-sub">税込相当・初期費用＋月額×12か月</span></th>
+                <td class="cw-matrix-price"><span class="cw-price-total">50,000円～</span><span class="cw-price-break">月々の保守料なし。サーバー代は別</span></td>
+                <td class="cw-matrix-price cw-matrix-best"><span class="cw-price-total">19,800円～55,000円</span><span class="cw-price-break">月額なし。更新を自社で行う場合</span></td>
+                <td class="cw-matrix-price"><span class="cw-price-total">66,000円</span><span class="cw-price-break">初期0円＋月額5,500円×12か月</span></td>
+                <td class="cw-matrix-price"><span class="cw-price-total">117,480円</span><span class="cw-price-break">初期0円＋月額9,790円×12か月</span></td>
+                <td class="cw-matrix-price"><span class="cw-price-total">360,000円～</span><span class="cw-price-break">制作300,000円～＋月額5,000円×12か月</span></td>
+              </tr>
+              <tr>
+                <th scope="row">3年間の目安</th>
+                <td class="cw-matrix-text">50,000円～＋サーバー代</td>
+                <td class="cw-matrix-text">19,800円／55,000円<br>（公開後の更新を自社で行う場合）</td>
+                <td class="cw-matrix-text">198,000円</td>
+                <td class="cw-matrix-text">352,440円</td>
+                <td class="cw-matrix-text">480,000円～</td>
+              </tr>
+              <tr>
+                <th scope="row">サーバー・ドメイン</th>
+                <td class="cw-matrix-text">依頼可能（サーバーは年額6,000円のキャンペーンを案内）</td>
+                <td class="cw-matrix-text">基本料金に含まれない（自分で契約）</td>
+                <td class="cw-matrix-text">月額にドメイン取得・サーバー管理を含む</td>
+                <td class="cw-matrix-text">契約をサポート（実費の扱いは要確認）</td>
+                <td class="cw-matrix-text">公式サイトで要確認</td>
+              </tr>
+              <tr>
+                <th scope="row">保守・バックアップ</th>
+                <td class="cw-matrix-text">月々の保守料なし（保守の範囲は要確認）</td>
+                <td class="cw-matrix-text">公開後の保守は別途相談</td>
+                <td class="cw-matrix-text">月額にセキュリティ対策を含む</td>
+                <td class="cw-matrix-text">月額保守に含む</td>
+                <td class="cw-matrix-text">基本保守でサイトバックアップ月1回</td>
+              </tr>
+              <tr>
+                <th scope="row">追加費用がかかるもの</th>
+                <td class="cw-matrix-text">公式サイトに記載なし（見積もり以上は請求しないと案内）</td>
+                <td class="cw-matrix-text">公開作業、公開後の更新代行（相談）</td>
+                <td class="cw-matrix-text">6ページ以上の初回制作、更新代行、DMARCオプション（7か月目以降）</td>
+                <td class="cw-matrix-text">8ページ目以降の追加ページ、大きなレイアウト変更</td>
+                <td class="cw-matrix-text">ディレクション、コンテンツ作成（1ページ30,000円～）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cw-note">
+          <p>※1年目＝初期費用＋月額×12か月、3年間＝初期費用＋月額×36か月です。tomonicoは税別表示の月額8,900円に10％を加えた9,790円で計算しています。</p>
+          <p>※ストーンシャープの3年間は、基本料金300,000円＋基本代金の保守月額5,000円×36か月で計算しています。</p>
+          <p>※さくっとホームページのサーバー代（年額6,000円）はキャンペーン価格のため、3年間の金額には含めていません。</p>
+        </div>
+
+        <h3 class="cw-subhead">A型ならではの費用の見方</h3>
+        <ul>
+          <li><strong>毎年4月のスコア表の更新：</strong>スコア表は原則4月中に公表し、指定権者へ報告する必要があります。自分で更新するなら操作の手順を、依頼するなら反映までの日数と費用を確認しておきましょう。</li>
+          <li><strong>求人ページの更新頻度：</strong>A型では利用者自身が「働く人」として応募してきます。募集の状況は変わりやすいため、求人ページを自分で更新できるかどうかで、毎月の手間と費用が変わります。</li>
+          <li><strong>保守の中身：</strong>月額が0円でも、WordPressの更新やバックアップを誰が担うかが決まっていないと、改ざんなどのリスクが残ります。保守の範囲を書面で確認しましょう。</li>
+        </ul>
+        <p>WordPressの保守については「<a href="../blog/wordpress-security-checklist/">WordPressセキュリティ対策チェックリスト</a>」、費用の考え方は「<a href="../blog/hp-cost-souba/">福祉事業所のホームページ制作費用の相場</a>」で解説しています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5．A型のホームページに載せたい内容 ===== -->
+  <section class="cw-section" id="how-to-choose">
+    <div class="container">
+      <div class="cw-wrap-wide">
+        <div class="cw-banner cw-banner--overlay cw-chapter-banner">
+          <img src="../assets/images/comparisons/welfare/chapter-5-how-to-choose.png" alt="男女が大きなチェックリストを見ながら相談しているイラスト">
+          <div class="cw-banner-scrim"></div>
+          <div class="cw-banner-text">
+            <h2>5．A型のホームページに載せたい6つの内容</h2>
+          </div>
+        </div>
+      </div>
+      <div class="cw-wrap-wide">
+        <p class="cw-section-lead">A型のホームページを見る人は、働きたい本人、家族、相談支援専門員やハローワークなどの支援機関、仕事を依頼する企業、そして職員の求職者と、立場がさまざまです。誰に向けた情報かを分けて整理しましょう。</p>
+
+        <div class="cw-guide-grid">
+          <div class="cw-guide-card">
+            <h3>1．スコア表の公表ページ</h3>
+            <p>A型事業所は、国の留意事項にそって作成したスコアの合計点と詳細（スコア表）を、原則4月中に公表し、指定権者へ報告します。神戸市の案内では、未公表の場合は利用者全員について所定単位数の15％が減算されるとされています。</p>
+            <p><strong>載せたい内容</strong></p>
+            <ul>
+              <li>スコア表（所定の様式）と公表日</li>
+              <li>地域連携活動や、利用者の知識・能力の向上のための支援を行っている場合は、その報告書（公表がないと該当の項目を算定できない）</li>
+              <li>経営改善計画書を作成している場合は、あわせて公表することが望ましいとされている</li>
+            </ul>
+            <p>新規指定の事業所は、初年度（年度途中の指定は2年度目まで）はスコアを算出できないため公表不要とされています。詳しくは指定権者の案内を確認してください。</p>
+          </div>
+          <div class="cw-guide-card">
+            <h3>2．「働く場所」としての情報</h3>
+            <p>A型は、雇用契約にもとづいて働くサービスです。利用を考える人は、福祉サービスを探すと同時に、職場を探しています。</p>
+            <p><strong>載せたい内容</strong></p>
+            <ul>
+              <li>勤務日・勤務時間の例（短時間から始められるかなど）</li>
+              <li>賃金の考え方や、雇用契約の内容の概要</li>
+              <li>職場の雰囲気がわかる写真（本人の同意を得たもの）</li>
+            </ul>
+          </div>
+          <div class="cw-guide-card">
+            <h3>3．仕事（生産活動）の内容</h3>
+            <p>「どんな仕事をするのか」は、本人にとっても家族にとっても大きな判断材料です。</p>
+            <p><strong>載せたい内容</strong></p>
+            <ul>
+              <li>主な仕事の種類と、1日の流れ</li>
+              <li>苦手なことへの配慮や、仕事の切り出し方の工夫</li>
+              <li>一般企業への就職を目指す人への支援</li>
+            </ul>
+          </div>
+          <div class="cw-guide-card">
+            <h3>4．企業・取引先向けの情報</h3>
+            <p>生産活動の仕事を安定して確保することは、A型の運営に直結します。発注を考える企業が知りたい情報もまとめておきましょう。</p>
+            <p><strong>載せたい内容</strong></p>
+            <ul>
+              <li>請け負える仕事の内容と、品質・納期への取り組み</li>
+              <li>これまでの取引の例（先方の了承を得たもの）</li>
+              <li>見積もり・相談の窓口</li>
+            </ul>
+          </div>
+          <div class="cw-guide-card">
+            <h3>5．利用までの流れと対象となる方</h3>
+            <p>厚生労働省の説明では、A型の対象は、企業等に就労することが困難な人で、雇用契約にもとづいて継続的に働くことが可能な人とされています。</p>
+            <p><strong>載せたい内容</strong></p>
+            <ul>
+              <li>見学・体験・面接 → 受給者証の申請 → 雇用契約・利用開始のステップ</li>
+              <li>相談支援専門員やハローワークなど、関係機関向けの連絡先</li>
+            </ul>
+          </div>
+          <div class="cw-guide-card">
+            <h3>6．読みやすさへの配慮</h3>
+            <p>神戸市の案内では、公表した内容について、テキストデータへの変換や読み仮名付きの資料の作成など、情報のアクセシビリティに配慮することが望ましいとされています。</p>
+            <p><strong>意識したいこと</strong></p>
+            <ul>
+              <li>スコア表をPDFの画像だけにせず、要点を本文でも説明する</li>
+              <li>専門用語を言い換え、必要に応じてふりがなを付ける</li>
+            </ul>
+            <p>詳しくは「<a href="../blog/web-accessibility/">福祉事業所のウェブアクセシビリティ</a>」をご覧ください。</p>
+          </div>
+        </div>
+
+        <p class="cw-section-lead">B型も運営している場合は「<a href="b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較</a>」、A型とB型の違いは「<a href="../blog/a-type-b-type-difference/">就労継続支援A型とB型の違い</a>」、職員の採用ページは「<a href="../blog/recruit-website/">福祉事業所の採用ページ設計</a>」も参考にしてください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6．まとめ ===== -->
+  <section class="cw-section cw-section--tight" id="summary">
+    <div class="container">
+      <div class="cw-wrap-wide">
+        <div class="cw-banner cw-banner--overlay cw-chapter-banner">
+          <img src="../assets/images/comparisons/welfare/chapter-6-summary.png" alt="担当者と利用者家族が握手を交わし、ホームページ完成を喜んでいるイラスト">
+          <div class="cw-banner-scrim"></div>
+          <div class="cw-banner-text">
+            <h2>6．まとめ｜毎年の公表まで続けられる依頼先を</h2>
+          </div>
+        </div>
+      </div>
+      <div class="cw-wrap">
+        <p>就労継続支援A型のホームページは、利用者募集・求人・取引先への案内・スコア表の公表と、役割の多いホームページです。初期費用だけでなく、<strong>毎年の公表や求人の更新を、誰がどうやって続けるか</strong>を基準に選びましょう。</p>
+        <ul>
+          <li>月額をかけずにWordPressのサイトを持ちたい → さくっとホームページ（サーバー代は別）</li>
+          <li>1年間の費用を最も抑え、短期間で公開したい → 福祉ITパートナー（更新は自分で）</li>
+          <li>月額を抑えつつ、契約の縛りなく始めたい → AMS（更新は自分で、代行は有料）</li>
+          <li>障害福祉に詳しい相手に、更新まで任せたい → tomonico（3年契約）</li>
+          <li>求人や仕事の受注まで含めて設計したい → ストーンシャープ（費用は高め）</li>
+        </ul>
+        <p>どの会社を選ぶ場合も、<strong>スコア表を4月中に確実に公表できる手順</strong>と、サーバー・ドメインの名義、保守の範囲を契約前に確認しておくことが、減算やトラブルを防ぐ第一歩です。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7．よくある質問 ===== -->
+  <section class="cw-section cw-section--tight" id="faq">
+    <div class="container">
+      <div class="cw-wrap">
+        <h2 class="cw-faq-title">7．よくある質問</h2>
+        <details class="cw-faq-item">
+          <summary>スコア表は、PDFを載せるだけでよいですか？</summary>
+          <div class="cw-faq-a">
+            <p>所定の様式で公表することが基本ですが、神戸市の案内では、テキストデータへの変換など、情報のアクセシビリティに配慮することが望ましいとされています。PDFに加えて、合計点や主な取り組みを本文でも短く説明しておくと、利用を考える人や家族にも伝わりやすくなります。公表方法の詳細は、指定権者の案内に従ってください。</p>
+          </div>
+        </details>
+        <details class="cw-faq-item">
+          <summary>スコア表の公表は、毎年いつまでに行えばよいですか？</summary>
+          <div class="cw-faq-a">
+            <p>神戸市の案内では、原則4月中に公表し、その旨を市へ報告するよう求めています。報告の方法や期限は指定権者によって異なるため、所管の自治体の案内を確認しましょう。ホームページの更新を制作会社に依頼している場合は、反映までの日数を見込んで早めに準備することが大切です。</p>
+          </div>
+        </details>
+        <details class="cw-faq-item">
+          <summary>求人サイトに載せていれば、ホームページの求人ページは不要ですか？</summary>
+          <div class="cw-faq-a">
+            <p>求人サイトは多くの人の目に触れる一方、掲載できる情報量や表現に限りがあります。ホームページの求人ページでは、仕事の内容や職場の雰囲気、支援の方針などを詳しく伝えられ、求人サイトから事業所名で検索してきた人の判断材料にもなります。両方を使い分けるのがおすすめです。</p>
+          </div>
+        </details>
+        <details class="cw-faq-item">
+          <summary>月額制と買い切り、A型にはどちらが向いていますか？</summary>
+          <div class="cw-faq-a">
+            <p>求人やスコア表などを自分たちで更新できる職員がいれば、買い切り型や自社更新型で月額を抑えられます。ただし、WordPressの場合は保守（ソフトの更新やバックアップ）を誰が担うかを決めておく必要があります。更新や保守をまとめて任せたい場合は、月額制で依頼できる範囲と反映までの日数を確認しましょう。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 本記事の比較について（開示） ===== -->
+  <section class="cw-disclosure">
+    <div class="container">
+      <div class="cw-wrap">
+        <h2>本記事の比較について</h2>
+        <div class="cw-photo-split">
+          <img src="../assets/images/comparisons/welfare/disclosure.jpg" alt="ノートパソコンでメールの内容を確認している落ち着いたデスクの様子" loading="lazy">
+          <div class="cw-disclosure-box">
+            <p>本記事は、各社の公式サイトで公開されている情報をもとに、料金・特徴・更新の方法などを比較しています。確認日は2026年11月13日です。制度については、神戸市「【就労継続支援A型事業所】スコア表の公表及び報告」と、厚生労働省「障害福祉サービスについて」を参照しました。</p>
+            <p>金額は税込相当に統一し、税別表示の会社は10％を加えた額で計算しています。税区分の記載がない金額は、その旨を注記しています。掲載順は、1年間の費用の安い順を基本としていますが、運営の関連会社である福祉ITパートナーは、先頭にせず2番目に掲載しています。</p>
+            <p>当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。同社も他社と同じ基準で確認・掲載しており、広告費・紹介料は受け取っていません。</p>
+            <p>料金やサービス内容は各社の都合により変更される場合があります。最新の情報は、各社の公式サイトで直接ご確認ください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../">トップページ</a></li>
+<li><a href="../#comparisons">比較記事一覧</a></li>
+<li><a href="../blog/">お役立ち記事</a></li>
+<li><a href="../#criteria">比較基準</a></li>
+<li><a href="../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

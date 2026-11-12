@@ -6,7 +6,7 @@
 - [x] 放課後等デイサービス（slug: houkago-day）2026-11-11 公開：comparisons/houkago-day-comparison.html
 - [x] 児童発達支援（slug: jihatsu）2026-11-12 公開：comparisons/jihatsu-comparison.html
 - [x] 就労移行支援（slug: shuro-iko）2026-11-10 公開：comparisons/shuro-iko-comparison.html（手動作成）
-- [ ] 就労継続支援A型（slug: a-type）
+- [x] 就労継続支援A型（slug: a-type）2026-11-13 公開：comparisons/a-type-comparison.html
 - [ ] 生活介護（slug: seikatsu-kaigo）
 - [ ] 相談支援事業所（計画相談・障害児相談）（slug: soudan-shien）
 - [ ] 居宅介護・重度訪問介護（ヘルパー事業所）（slug: homon-kaigo）
