@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>就労移行支援とは？対象者・利用期間2年・利用の流れと、就労定着支援・就労選択支援との関係｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="一般企業への就職を目指す障害のある方が利用する就労移行支援について、対象者（原則65歳未満）、標準利用期間2年、訓練内容、利用料、利用開始までの流れ、就職後の就労定着支援や2027年4月から原則利用となる就労選択支援との関係を解説します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/shuro-iko-shien/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="就労移行支援とは？対象者・利用期間2年・利用の流れと、就労定着支援・就労選択支援との関係｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="一般企業への就職を目指す障害のある方が利用する就労移行支援について、対象者（原則65歳未満）、標準利用期間2年、訓練内容、利用料、利用開始までの流れ、就職後の就労定着支援や2027年4月から原則利用となる就労選択支援との関係を解説します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/shuro-iko-shien/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/blog/shuro-iko-shien.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-11-13">
+<meta property="article:modified_time" content="2026-11-13">
+<meta property="article:section" content="福祉の基礎知識">
+<link rel="icon" href="../../favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v3-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v3-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v3-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v3.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v3-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "就労移行支援とは？対象者・利用期間2年・利用の流れと、就労定着支援・就労選択支援との関係",
+  "description": "一般企業への就職を目指す障害のある方が利用する就労移行支援について、対象者（原則65歳未満）、標準利用期間2年、訓練内容、利用料、利用開始までの流れ、就職後の就労定着支援や2027年4月から原則利用となる就労選択支援との関係を解説します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/shuro-iko-shien/",
+  "url": "https://fukushi-hp-hikaku.com/blog/shuro-iko-shien/",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "articleSection": "福祉の基礎知識",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v3-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/blog/shuro-iko-shien.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "福祉の基礎知識",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/fukushi-kiso/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "就労移行支援とは？対象者・利用期間2年・利用の流れと、就労定着支援・就労選択支援との関係",
+      "item": "https://fukushi-hp-hikaku.com/blog/shuro-iko-shien/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li><li aria-current="page">就労移行支援とは？対象者・利用期間2年・利用の流れと、就労定着支援・就労選択支援との関係</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--fukushi-kiso" href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a>
+<h1 class="blog-article__title">就労移行支援とは？対象者・利用期間2年・利用の流れと、就労定着支援・就労選択支援との関係</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-13">2026年11月13日</time></span>
+
+<span>読了目安 約3分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<figure class="blog-article__cover"><img src="../../assets/images/blog/shuro-iko-shien.jpg" alt="" width="1200" height="630" fetchpriority="high"></figure>
+<p class="blog-article__lead">就労移行支援は、一般企業などへの就職を目指す障害のある方が、職業訓練や就職活動の支援を受けられるサービスです。「働きたいけれど、いきなり就職するのは不安」という方の準備の場として利用されています。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>就労移行支援の目的と、受けられる支援</li><li>対象者と標準利用期間（原則2年）</li><li>利用開始までの流れと利用料</li><li>就職後の就労定着支援、就労選択支援との関係</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">就労移行支援とは</a></li><li><a href="#sec-2">対象となる方</a></li><li><a href="#sec-3">利用期間は原則2年</a></li><li><a href="#sec-4">利用開始までの流れ</a></li><li><a href="#sec-5">利用料</a></li><li><a href="#sec-6">就労定着支援・就労選択支援との関係</a></li><li><a href="#sec-7">事業所選びで確認したいこと</a></li><li><a href="#sec-8">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">就労移行支援とは</h2>
+<p>就労移行支援は、障害者総合支援法の「訓練等給付」にもとづくサービスです。一般企業などで働くことを希望する障害のある方に、一定の期間、就職に必要な知識や能力を身につける訓練と、就職活動の支援を行います。</p>
+<p>主な支援内容は次のとおりです。</p>
+<ul class="blog-list"><li><strong>基礎訓練</strong>：生活リズムの安定、体調管理、通所の習慣づけ</li><li><strong>職業訓練</strong>：パソコン操作、事務作業、軽作業、コミュニケーションやビジネスマナー</li><li><strong>職場体験・実習</strong>：企業での実習を通じた適性の確認</li><li><strong>就職活動の支援</strong>：自己理解、応募書類の作成、面接練習、求人の紹介、ハローワークとの連携</li><li><strong>就職後の定着支援</strong>：就職後6か月間は、就労移行支援事業所が職場への定着を支援</li></ul>
+<h2 id="sec-2">対象となる方</h2>
+<p>就労を希望する<strong>65歳未満</strong>の障害のある方で、通常の事業所に雇用されることが可能と見込まれる方が対象です。身体障害、知的障害、精神障害、発達障害、難病などの方が利用できます。障害者手帳がなくても、医師の診断などにより市町村が認めれば利用できる場合があります。</p>
+<div class="blog-box blog-box--info"><p class="blog-box__title">65歳以上の方</p><p>65歳に達する前の5年間に障害福祉サービスの支給決定を受けていたなど、一定の条件を満たす場合は、65歳以上でも利用できることがあります。市町村に確認してください。</p></div>
+<h2 id="sec-3">利用期間は原則2年</h2>
+<p>就労移行支援の標準利用期間は<strong>2年間</strong>です。市町村が必要と認めた場合は、最大1年間の延長が認められることがあります。</p>
+<p>限られた期間で就職を目指すサービスのため、事業所を選ぶときは、どのような段階を経て就職を目指すのか、計画の立て方を確認しておくことが大切です。</p>
+<h2 id="sec-4">利用開始までの流れ</h2>
+<ol class="blog-olist"><li><strong>情報収集・見学</strong>：複数の事業所を見学・体験し、雰囲気や訓練内容を比べる</li><li><strong>市町村に申請</strong>：障害福祉担当窓口でサービスの利用を申請する</li><li><strong>サービス等利用計画案の作成</strong>：相談支援専門員と一緒に作成する（本人が作るセルフプランの場合もある）</li><li><strong>支給決定・受給者証の交付</strong>：市町村が利用を決定し、受給者証が交付される</li><li><strong>事業所と契約・利用開始</strong>：個別支援計画を作成し、訓練を始める</li></ol>
+<p>相談支援専門員の役割は「計画相談支援とは」で解説しています。</p>
+<h2 id="sec-5">利用料</h2>
+<p>利用者負担は原則1割ですが、本人と配偶者の所得に応じた負担上限月額があり、多くの方が無料で利用しています。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">世帯の区分</th><th scope="col">負担上限月額</th></tr></thead><tbody><tr><th scope="row">生活保護受給世帯</th><td>0円</td></tr><tr><th scope="row">市町村民税非課税世帯</th><td>0円</td></tr><tr><th scope="row">市町村民税課税世帯（所得割16万円未満）</th><td>9,300円</td></tr><tr><th scope="row">上記以外</th><td>37,200円</td></tr></tbody></table></div>
+<p>昼食代や交通費などは事業所によって扱いが異なります。交通費の助成を行っている自治体もあります。</p>
+<h2 id="sec-6">就労定着支援・就労選択支援との関係</h2>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">サービス</th><th scope="col">利用する時期</th><th scope="col">内容</th></tr></thead><tbody><tr><th scope="row">就労選択支援</th><td>就労系サービスを使い始める前</td><td>作業場面でのアセスメントなどを通じて、本人に合った働き方を一緒に考える</td></tr><tr><th scope="row">就労移行支援</th><td>就職に向けた準備期間（原則2年）</td><td>訓練と就職活動の支援</td></tr><tr><th scope="row">就労定着支援</th><td>就職して6か月が経過した後（最長3年）</td><td>職場での困りごとの相談、生活面の支援、企業との調整</td></tr></tbody></table></div>
+<p>就労選択支援は2025年10月に始まった新しいサービスです。就労移行支援については、<strong>2027年4月から</strong>新たに利用する方は原則として就労選択支援を利用する予定とされています（自治体の案内による）。就職後の支援については「就労定着支援とは」で詳しく解説しています。</p>
+<h2 id="sec-7">事業所選びで確認したいこと</h2>
+<ol class="blog-olist"><li><strong>就職実績</strong>：過去の就職者数と、就職後6か月以上の定着状況</li><li><strong>訓練内容</strong>：希望する仕事に近い訓練があるか（事務、IT、軽作業など）</li><li><strong>得意とする障害特性</strong>：精神障害、発達障害など、支援の経験が豊富な分野</li><li><strong>企業実習の機会</strong>：連携している企業や実習先の種類</li><li><strong>通いやすさ</strong>：最寄り駅からの距離、通所日数の調整</li><li><strong>就職後のサポート</strong>：就労定着支援を事業所で実施しているか</li></ol>
+<p>就労移行支援の基本報酬は、就職後6か月以上職場に定着した人の割合などによって決まる仕組みです。定着の実績は、事業所の支援の質を判断するひとつの材料になります。</p>
+<h2 id="sec-8">まとめ</h2>
+<p>就労移行支援は、一般企業への就職を目指す65歳未満の障害のある方が、原則2年の期間で訓練と就職活動の支援を受けられるサービスです。就職後は就労定着支援へとつながり、2027年4月からは利用前の就労選択支援が原則となる予定です。</p>
+<p>事業所を選ぶときは、就職と定着の実績、訓練内容、得意な支援分野を見学で確認しましょう。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>就労移行支援を利用している間、収入はありますか？</summary><div class="blog-faq__a"><p>就労移行支援は訓練の場のため、原則として給与や工賃は支払われません（生産活動を行う事業所では工賃が支払われる場合もあります）。利用中の生活費については、障害年金や家族の支援、各種手当などを組み合わせて考える必要があります。</p></div></details><details class="blog-faq__item"><summary>2年で就職できなかった場合はどうなりますか？</summary><div class="blog-faq__a"><p>市町村が必要と認めた場合に、最大1年間利用期間を延長できることがあります。延長が認められない場合は、就労継続支援A型・B型など、ほかのサービスへの移行を相談支援専門員と一緒に検討します。</p></div></details><details class="blog-faq__item"><summary>在職中や休職中でも利用できますか？</summary><div class="blog-faq__a"><p>原則として一般就労を目指す方が対象ですが、休職中の方が復職に向けて利用できる場合があります。企業や主治医の意見、市町村の判断が必要になるため、事前に市町村の窓口に相談してください。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://www.wam.go.jp/content/wamnet/sppub/syogai/handbook/service/c078-p02-02-Shogai-20.html" target="_blank" rel="noopener">WAM NET「障害福祉サービスの内容：就労移行支援」</a></li><li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/service/naiyou.html" target="_blank" rel="noopener">厚生労働省「障害福祉サービスについて」</a></li><li><a href="https://www.pref.kagoshima.jp/ae07/sisetsu/syuurousentakusien.html" target="_blank" rel="noopener">鹿児島県「就労選択支援について」</a></li><li><a href="https://www.pref.hokkaido.lg.jp/hf/shf/shuurousentaku.html" target="_blank" rel="noopener">北海道「就労選択支援について」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/shuro-iko-comparison.html">就労移行支援向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/houkago-day-comparison.html">放課後等デイサービス向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/jihatsu-comparison.html">児童発達支援向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/a-type-comparison.html">就労継続支援A型向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card blog-card--fukushi-kiso" href="../../blog/a-type-b-type-difference/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/a-type-b-type-difference-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">就労継続支援A型とB型の違いとは？対象者・給与（工賃）・働き方を比較表で解説</h3>
+<p class="blog-card__desc">就労継続支援A型とB型の違いを、雇用契約の有無、対象者、賃金・工賃、利用期間、年齢などの観点から比較表で解説。就労移行支援や2025年10月開始の就労選択支援との関係、事業所ホームページで伝えるべきポイントも紹介します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-06-18">2026年6月18日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--fukushi-kiso" href="../../blog/sabikan-jihatsukan/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/sabikan-jihatsukan-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">サービス管理責任者・児童発達支援管理責任者とは｜役割・実務経験の要件・研修の流れを整理</h3>
+<p class="blog-card__desc">障害福祉サービスのサービス管理責任者（サビ管）と、障害児支援の児童発達支援管理責任者（児発管）の役割、実務経験の要件、基礎・実践・更新研修の流れ、欠けたときの「みなし配置」までを、国の通知と自治体の案内をもとに整理します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-11-11">2026年11月11日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--fukushi-kiso" href="../../blog/seikatsu-kaigo/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/seikatsu-kaigo-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">生活介護とは？対象者（障害支援区分）・支援内容・利用料と、2024年度改定の時間区分</h3>
+<p class="blog-card__desc">障害者総合支援法の生活介護について、対象となる障害支援区分（区分3以上、50歳以上は区分2以上）、日中の支援内容、利用料と実費、2024年度報酬改定で導入されたサービス提供時間ごとの基本報酬までわかりやすく解説します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-11-10">2026年11月10日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
