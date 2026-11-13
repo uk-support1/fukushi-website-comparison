@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>障害福祉事業所の業務継続計画（BCP）の基本｜義務・未策定減算・作り方と災害時の連絡体制｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="障害福祉サービス事業所に義務付けられた業務継続計画（BCP）の基本を、厚生労働省のガイドラインと自治体の案内をもとに解説。未策定減算、盛り込む項目、通所系・訪問系で準備したいこと、災害時の連絡手段の整え方まで整理します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/bcp-basics/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="障害福祉事業所の業務継続計画（BCP）の基本｜義務・未策定減算・作り方と災害時の連絡体制｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="障害福祉サービス事業所に義務付けられた業務継続計画（BCP）の基本を、厚生労働省のガイドラインと自治体の案内をもとに解説。未策定減算、盛り込む項目、通所系・訪問系で準備したいこと、災害時の連絡手段の整え方まで整理します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/bcp-basics/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/blog/bcp-basics.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-11-14">
+<meta property="article:modified_time" content="2026-11-14">
+<meta property="article:section" content="福祉の基礎知識">
+<link rel="icon" href="../../favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v3-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v3-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v3-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v3.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v3-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "障害福祉事業所の業務継続計画（BCP）の基本｜義務・未策定減算・作り方と災害時の連絡体制",
+  "description": "障害福祉サービス事業所に義務付けられた業務継続計画（BCP）の基本を、厚生労働省のガイドラインと自治体の案内をもとに解説。未策定減算、盛り込む項目、通所系・訪問系で準備したいこと、災害時の連絡手段の整え方まで整理します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/bcp-basics/",
+  "url": "https://fukushi-hp-hikaku.com/blog/bcp-basics/",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "articleSection": "福祉の基礎知識",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v3-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/blog/bcp-basics.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "福祉の基礎知識",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/fukushi-kiso/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "障害福祉事業所の業務継続計画（BCP）の基本｜義務・未策定減算・作り方と災害時の連絡体制",
+      "item": "https://fukushi-hp-hikaku.com/blog/bcp-basics/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li><li aria-current="page">障害福祉事業所の業務継続計画（BCP）の基本｜義務・未策定減算・作り方と災害時の連絡体制</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--fukushi-kiso" href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a>
+<h1 class="blog-article__title">障害福祉事業所の業務継続計画（BCP）の基本｜義務・未策定減算・作り方と災害時の連絡体制</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-14">2026年11月14日</time></span>
+
+<span>読了目安 約6分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<figure class="blog-article__cover"><img src="../../assets/images/blog/bcp-basics.jpg" alt="" width="1200" height="630" fetchpriority="high"></figure>
+<p class="blog-article__lead">地震や台風、感染症の流行などで、いつも通りに事業所を運営できなくなることがあります。障害福祉サービスの事業所には、そうした事態に備える「業務継続計画（BCP）」の策定が義務付けられています。この記事では、厚生労働省のガイドラインをもとに、BCPの考え方と作り方、日頃から準備しておきたい連絡体制を整理します。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>BCPとは何か、防災計画との違い</li><li>策定・周知・研修・訓練・見直しの義務と、業務継続計画未策定減算</li><li>BCPに盛り込む主な項目と、通所系・訪問系で準備したいこと</li><li>災害時に連絡がつかなくならないための連絡手段の整え方</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">BCP（業務継続計画）とは</a></li><li><a href="#sec-2">策定は義務。未策定だと減算に</a></li><li><a href="#sec-3">BCPに盛り込む主な項目</a></li><li><a href="#sec-4">通所系・訪問系で準備したいこと</a></li><li><a href="#sec-5">災害時の連絡手段を整える</a></li><li><a href="#sec-6">作り方と見直しの進め方</a></li><li><a href="#sec-7">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">BCP（業務継続計画）とは</h2>
+<p>BCPは「Business Continuity Plan」の略で、業務継続計画と訳されます。厚生労働省の「障害福祉サービス事業所等における自然災害発生時の業務継続ガイドライン」では、感染症や大地震などで通常どおりの業務が難しくなったときに、<strong>業務を中断させないように準備し、中断した場合でも優先業務を実施するための方策を、あらかじめ計画書にまとめておくもの</strong>と説明されています。</p>
+<p>ガイドラインでは、BCPで重要な取組として次のような例が挙げられています。</p>
+<ul class="blog-list"><li>担当者をあらかじめ決めておくこと（誰が、いつ、何をするか）</li><li>連絡先をあらかじめ整理しておくこと</li><li>必要な物資をあらかじめ整理・準備しておくこと</li><li>これらを組織で共有すること</li><li>定期的に見直し、必要に応じて研修・訓練を行うこと</li></ul>
+<h3>防災計画との違い</h3>
+<p>ガイドラインによると、防災計画の主な目的は「身体・生命の安全確保」と「物的被害の軽減」です。BCPはこれを前提としたうえで、<strong>優先的に続けるべき重要な業務を継続する、または早く復旧させる</strong>ことを目指します。すでに防災計画（非常災害対策計画）がある事業所は、そこに避難の確保やサービスの継続といった視点を加えて考えると取り組みやすくなります。</p>
+<h2 id="sec-2">策定は義務。未策定だと減算に</h2>
+<h3>義務の内容</h3>
+<p>沖縄県の案内では、2021年度の報酬改定で、すべての障害福祉サービス等事業者に、次のことが義務付けられたと説明されています（経過措置は2024年3月31日まで）。</p>
+<ol class="blog-olist"><li>感染症や非常災害の発生時に備えたBCPを策定すること</li><li>その内容を従業者に周知すること</li><li>必要な研修と訓練を定期的に実施すること</li></ol>
+<p>あわせて、計画は定期的に見直し、必要に応じて変更することが求められています。</p>
+<h3>業務継続計画未策定減算</h3>
+<p>2024年度の報酬改定で、BCPを策定していない場合の「業務継続計画未策定減算」が設けられました。島根県の案内による減算の割合は次のとおりです。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">対象</th><th scope="col">減算の割合</th></tr></thead><tbody><tr><th scope="row">療養介護、施設入所支援、共同生活援助（グループホーム）、宿泊型自立訓練、障害児入所施設など</th><td>所定単位数の3％</td></tr><tr><th scope="row">上記以外のサービス（生活介護、就労系サービス、居宅介護、障害児通所支援など）</th><td>所定単位数の1％</td></tr></tbody></table></div>
+<p>減算の対象になるのは、<strong>感染症または非常災害のいずれか、または両方のBCPが未策定</strong>の場合です。2025年3月31日までは一定の条件で減算を適用しない経過措置がありましたが、現在は終了しています（新しく創設された就労選択支援には別の経過措置があります）。</p>
+<div class="blog-box blog-box--warn"><p class="blog-box__title">未策定がわかった時点にさかのぼって減算されることも</p><p>島根県の案内では、運営指導などで未策定が判明した場合、判明した月からではなく、さかのぼって減算となる例が示されています。「作ったつもり」で終わらせず、計画書があるか、内容が古くなっていないかを確認しておきましょう。</p></div>
+<p>減算の対象サービスや扱いは指定権者によって案内のしかたが異なる場合があります。必ず所管の自治体の通知を確認してください。</p>
+<h2 id="sec-3">BCPに盛り込む主な項目</h2>
+<p>厚生労働省の自然災害ガイドラインでは、BCPの作成例として、次のような項目が示されています。ひな形も公開されているので、ゼロから作る必要はありません。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">項目</th><th scope="col">内容の例</th></tr></thead><tbody><tr><th scope="row">総論</th><td>基本方針、推進体制（誰が責任者か）</td></tr><tr><th scope="row">リスクの把握</th><td>自治体のハザードマップで、所在地の災害リスクを確認する</td></tr><tr><th scope="row">優先業務の選定</th><td>災害時にも続けるべき業務と、最低限必要な職員数</td></tr><tr><th scope="row">平常時の対応</th><td>建物・設備の安全対策、電気・ガス・水道が止まったときの対策、備蓄品</td></tr><tr><th scope="row">通信が使えないときの対策</th><td>使える連絡手段の確認、緊急連絡網</td></tr><tr><th scope="row">緊急時の対応</th><td>利用者・職員の安否確認、安全確保、職員の参集</td></tr><tr><th scope="row">研修・訓練、見直し</th><td>研修とシミュレーション訓練、課題を反映した定期的な見直し</td></tr></tbody></table></div>
+<div class="blog-box blog-box--point"><p class="blog-box__title">優先業務を絞り込む</p><p>ガイドラインでは、限られた資源を有効に使うために優先する業務と最低限必要な人数を選んでおくこと、また、たとえ災害時でも生命を維持するための業務は休止できないことが示されています。備蓄の例として、入浴を優先業務から外すことで生活用水の節約にもつながる、といった考え方も紹介されています。</p></div>
+<h2 id="sec-4">通所系・訪問系で準備したいこと</h2>
+<p>ガイドラインには、サービスの種類ごとに留意したい点もまとめられています。</p>
+<h3>通所系（生活介護、就労系、放課後等デイサービスなど）</h3>
+<ul class="blog-list"><li>サービス提供中に被災した場合に備え、<strong>緊急連絡先は複数の連絡先・連絡手段</strong>（固定電話、携帯電話、メールなど）を把握しておく</li><li>相談支援事業所と連携し、利用者の安否確認の方法を整理しておく</li><li>台風など大きな被害が予想される場合の<strong>サービスの休止・縮小の基準</strong>をあらかじめ定め、相談支援事業所と共有したうえで、利用者や家族にも説明しておく</li><li>利用中に被災した場合は、安否確認のあと家族に連絡し、送迎車が使えない場合も考えて帰宅の手段を検討する</li></ul>
+<h3>訪問系（居宅介護、重度訪問介護など）</h3>
+<ul class="blog-list"><li>職員が利用者宅を訪問中、または移動中に被災することを想定し、その場合の手順を決めておく</li><li>避難先でサービスを提供することも想定し、地域の避難方法や避難所の情報、関係機関とのつながりを日頃から確認しておく</li></ul>
+<h2 id="sec-5">災害時の連絡手段を整える</h2>
+<p>災害時は、固定電話や携帯電話がつながりにくくなることがあります。ガイドラインでは、次のような準備が示されています。</p>
+<ul class="blog-list"><li>携帯メール、パソコンのメール、SNSなど、<strong>被災時に施設内で実際に使える方法</strong>と、使える台数・バッテリー容量・使い方を記載しておく</li><li>複数の連絡手段で関係機関と連絡が取れるようにしておく</li><li>整備した緊急連絡網は、いざというときに使えるよう<strong>定期的にメンテナンス</strong>する</li><li>同じ被災地域の中では連絡が取りにくくなるため、遠方の交流のある施設などを中継点にして情報を集める方法（三角連絡法）も検討する</li></ul>
+<p>連絡手段を決めるときは、「誰が」「どの手段で」「誰に」連絡するかを、BCPの中で具体的にしておくことが大切です。例えば、サービスの休止を利用者や家族、相談支援事業所に知らせる場合、電話・メール・連絡用のアプリ・事業所のホームページやSNSなど、どの手段を使い、誰が発信するのかを決めておくと、当日の混乱を防げます。</p>
+<div class="blog-box blog-box--check"><p class="blog-box__title">連絡体制のチェックリスト</p><ul class="blog-list"><li>職員・利用者・家族の緊急連絡先は、最新の情報になっているか（年に1回など、確認の時期を決めているか）</li><li>連絡網は紙でも保管しているか（停電やパソコンの故障に備えて）</li><li>事業所の固定電話以外の連絡手段を、利用者や家族に伝えてあるか</li><li>休止や再開を知らせる文面のひな形を用意しているか</li><li>ホームページやSNSを更新できる職員が、複数いるか</li></ul></div>
+<p>なお、利用者の記録や請求データが使えなくなる事態に備えたバックアップの考え方は「<a href="../../blog/ransomware-backup-basics/">ランサムウェア対策のバックアップ入門</a>」で解説しています。BCPには、サイバー攻撃などでデータが使えなくなった場合の手順も加えておくと安心です。</p>
+<h2 id="sec-6">作り方と見直しの進め方</h2>
+<ol class="blog-olist"><li><strong>ひな形を入手する</strong>：厚生労働省のページで、自然災害・感染症それぞれのガイドラインやひな形が公開されています。兵庫県や沖縄県のページでは、厚生労働省のBCP作成支援に関する研修も案内されています</li><li><strong>ハザードマップで所在地のリスクを確認する</strong>：浸水、土砂災害、地震の揺れなど、事業所ごとに想定すべき災害は異なります</li><li><strong>優先業務と最低限の人数を決める</strong>：利用者の命と健康を守るために欠かせない業務から整理します</li><li><strong>職員に周知し、研修と訓練を行う</strong>：机上で手順を確認するだけでも課題が見つかります</li><li><strong>定期的に見直す</strong>：訓練で見つかった課題、職員や利用者の入れ替わり、ハザードマップの更新などを反映します</li></ol>
+<p>BCPの策定状況は、運営指導などで確認されます。公表が求められる情報の全体像は「<a href="../../blog/kouhyou-gimu-website/">障害福祉事業所がホームページ等で公表すべき情報まとめ</a>」も参考にしてください。</p>
+<h2 id="sec-7">まとめ</h2>
+<p>業務継続計画（BCP）は、災害や感染症が起きても利用者の安全を守り、必要なサービスを続けるための計画です。障害福祉サービスの事業所では、策定・職員への周知・研修と訓練・定期的な見直しが義務付けられており、未策定の場合は報酬が減算されます。</p>
+<p>厚生労働省のガイドラインとひな形を使えば、一から考える必要はありません。まずはハザードマップで自分たちの事業所のリスクを確かめ、優先業務と連絡体制を決めるところから始めましょう。特に連絡手段は、ひとつに頼らず複数を用意し、定期的に見直しておくことが大切です。</p>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>感染症と自然災害、両方のBCPが必要ですか？</summary><div class="blog-faq__a"><p>必要です。島根県の案内では、感染症または非常災害のいずれか、または両方の業務継続計画が未策定の場合に、業務継続計画未策定減算の対象になるとされています。厚生労働省は、感染症と自然災害それぞれについて業務継続ガイドラインを公表しています。</p></div></details><details class="blog-faq__item"><summary>法人内に複数の事業所があります。BCPは事業所ごとに必要ですか？</summary><div class="blog-faq__a"><p>厚生労働省の自然災害ガイドラインは、施設・事業所等の単位でBCPを作成することを前提としています。複数の事業所を持つ法人では、法人本部としてのBCPも別途作成し、事業所のBCPと連動させることが望まれるとされています。扱いに迷う場合は、指定権者に確認してください。</p></div></details><details class="blog-faq__item"><summary>訓練はどのように行えばよいですか？</summary><div class="blog-faq__a"><p>ガイドラインでは、作成したBCPを関係者と共有し、平時から内容に関する研修と、BCPに沿った訓練（シミュレーション）を行うことが示されています。責任者が不在の場合や、電気・水道が止まった場合など、さまざまな状況を想定して机上で手順を確認するだけでも、計画の抜けや課題が見つかります。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://www.mhlw.go.jp/stf/newpage_17517.html" target="_blank" rel="noopener">厚生労働省「障害福祉サービス事業所等における自然災害発生時の業務継続ガイドライン等について」</a></li><li><a href="https://www.mhlw.go.jp/content/12200000/000756659.pdf" target="_blank" rel="noopener">厚生労働省「障害福祉サービス事業所等における自然災害発生時の業務継続ガイドライン」（PDF）</a></li><li><a href="https://www.pref.okinawa.jp/kyoiku/shogaifukushi/1007022/1018749/1026811.html" target="_blank" rel="noopener">沖縄県「障害福祉サービス事業所等におけるBCP（業務継続計画）の策定」</a></li><li><a href="https://www.pref.shimane.lg.jp/medical/fukushi/syougai/jigyousya/syougaiservice/shintaikousokuhaisi_mizisshigensan.html" target="_blank" rel="noopener">島根県「業務継続計画未策定減算の取扱いについて」</a></li><li><a href="https://web.pref.hyogo.lg.jp/kf08/bcp.html" target="_blank" rel="noopener">兵庫県「障害福祉サービス事業所等におけるBCP（業務継続計画）の策定について」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/shuro-iko-comparison.html">就労移行支援向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/houkago-day-comparison.html">放課後等デイサービス向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/jihatsu-comparison.html">児童発達支援向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/a-type-comparison.html">就労継続支援A型向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/seikatsu-kaigo-comparison.html">生活介護向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card blog-card--fukushi-kiso" href="../../blog/kouhyou-gimu-website/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/kouhyou-gimu-website-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害福祉事業所がホームページ等で公表すべき情報まとめ｜情報公表制度・未報告減算・重要事項の掲載</h3>
+<p class="blog-card__desc">障害福祉サービス等情報公表制度（WAM NET）の未報告減算、児童発達支援・放課後等デイサービスの支援プログラム未公表減算、重要事項のウェブサイト掲載など、障害福祉事業所が公表すべき情報と減算のリスクを一覧で整理します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-08-06">2026年8月6日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--security" href="../../blog/ransomware-backup-basics/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/ransomware-backup-basics-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--security">セキュリティ対策</span>
+<h3 class="blog-card__title">ランサムウェア対策のバックアップ入門｜福祉事業所の記録データを守る3-2-1ルールと復元テスト</h3>
+<p class="blog-card__desc">ランサムウェア被害ではバックアップも暗号化され、復元できない例が多いと警察庁の調査が示しています。福祉事業所の記録や請求データを守るため、3-2-1ルール、オフライン保管、復元テストの考え方をチェックリスト付きで解説します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-11-10">2026年11月10日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--fukushi-kiso" href="../../blog/shogai-fukushi-service-list/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/shogai-fukushi-service-list-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害福祉サービスの種類一覧｜介護給付・訓練等給付・障害児支援の違いをわかりやすく解説</h3>
+<p class="blog-card__desc">障害者総合支援法と児童福祉法にもとづく障害福祉サービスの種類を一覧で整理。介護給付・訓練等給付・相談支援・障害児通所支援の違いや、2025年10月に始まった就労選択支援まで、事業所運営者向けにわかりやすく解説します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-07-17">2026年7月17日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
