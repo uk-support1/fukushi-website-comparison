@@ -8,7 +8,7 @@
 - [x] 就労移行支援（slug: shuro-iko）2026-11-10 公開：comparisons/shuro-iko-comparison.html（手動作成）
 - [x] 就労継続支援A型（slug: a-type）2026-11-13 公開：comparisons/a-type-comparison.html
 - [x] 生活介護（slug: seikatsu-kaigo）2026-11-14 公開：comparisons/seikatsu-kaigo-comparison.html
-- [ ] 相談支援事業所（計画相談・障害児相談）（slug: soudan-shien）
+- [x] 相談支援事業所（計画相談・障害児相談）（slug: soudan-shien）2026-11-15 公開：comparisons/soudan-shien-comparison.html
 - [ ] 居宅介護・重度訪問介護（ヘルパー事業所）（slug: homon-kaigo）
 - [ ] 短期入所（ショートステイ）（slug: tanki-nyusho）
 - [ ] 自立訓練（機能訓練・生活訓練）（slug: jiritsu-kunren）
