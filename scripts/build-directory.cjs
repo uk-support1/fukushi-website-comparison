@@ -19,6 +19,7 @@ const byYear = [...companies].sort((a,b)=>a.yearTotal.min-b.yearTotal.min);
 if (byYear.length>1 && byYear[0].id==='fukushi-it-partner') [byYear[0],byYear[1]]=[byYear[1],byYear[0]];
 const yearMin = Math.min(...companies.map(c=>c.yearTotal.min));
 function yearCell(c) {return `<span class="directory-year-total">${esc(c.yearTotal.main)}</span><span class="directory-year-break">${esc(c.yearTotal.note)}</span>`;}
+function evalCell([sym,note]) {return `${symbolCell(sym)}<span class="directory-eval-note">${esc(note)}</span>`;}
 function priceYear(c) {return `<p class="directory-year"><span class="directory-year-label">1年間の費用の目安（税込相当）</span>${yearCell(c)}</p><p class="directory-note" data-price-note>${esc(c.priceNote)}</p><p class="directory-note">公式情報確認：${formatDate(c.informationDate)}</p>`;}
 const SYMBOL_CLASS = {'◎':'best','○':'good','△':'mid','×':'bad'};
 const SYMBOL_RANK = {'◎':0,'○':1,'△':2,'×':3};
@@ -85,12 +86,11 @@ ${isSearch?'<meta name="robots" content="noindex,follow">':''}<link rel="canonic
 }
 const rankedRows = [
   ['1年間の費用の目安',c=>String(c.yearTotal.min),c=>yearCell(c),'directory-price-cell'],
-  ['福祉への理解',c=>c.support[0],c=>tableSymbol(c.support[0])],
-  ['自分で更新',c=>c.support[1],c=>tableSymbol(c.support[1])],
-  ['SEO',c=>c.support[2],c=>tableSymbol(c.support[2])],
-  ['Googleマップ',c=>c.support[3],c=>tableSymbol(c.support[3])],
-  ['集客支援',c=>c.support[4],c=>tableSymbol(c.support[4])],
-  ['制作期間',c=>c.delivery || '要確認',c=>esc(c.deliveryLabel)],
+  ['福祉への理解',c=>c.evals.welfare[0],c=>evalCell(c.evals.welfare)],
+  ['デザインの自由度',c=>c.evals.design[0],c=>evalCell(c.evals.design)],
+  ['相談しやすさ',c=>c.evals.consult[0],c=>evalCell(c.evals.consult)],
+  ['公開後の更新・サポート',c=>c.evals.support[0],c=>evalCell(c.evals.support)],
+  ['納期の目安',c=>c.evals.delivery[0],c=>evalCell(c.evals.delivery)],
 ];
 const plainRows = [
   ['特徴',c=>esc(c.summary)],
@@ -103,7 +103,7 @@ const purposes = [['1年間の費用を抑えたい','fukushi-it-partner','1年�
 const details = byYear.map(c=>`<article id="${c.id}" class="directory-card"><h3>${esc(c.name)}</h3>${content.details[c.id].intro}${priceYear(c)}<h4>特徴</h4><ul>${c.reasons.map(r=>`<li>${esc(r)}</li>`).join('')}</ul><h4>対応内容</h4>${spec(c)}${content.details[c.id].body}<h4>会社・サービス概要</h4><p>${esc(c.name)}。${esc(c.summary)} 所在地・法人情報の詳細は公式サイトでご確認ください。</p><p class="directory-note">情報元：公式サイト（${formatDate(c.informationDate)}確認）。<a href="${c.source}">公式サイトで情報を確認 ↗</a></p>${links(c,'../')}</article>`).join('');
 const intro = '就労継続支援B型のホームページ制作会社4社を、料金・福祉への理解・公開後の運用から比較します。まずは比較表で違いを確認し、気になる条件や目的から候補を探してください。各社の特徴と注意点も整理し、見学や問い合わせにつながる依頼先選びをお手伝いします。';
 const btype = `<header class="directory-intro"><p class="directory-eyebrow">福祉業界のホームページ制作会社を比較</p><h1>${title.replace("B型",'<span class="directory-nowrap">B型</span>').replace("料金・特徴を比較",'<span class="directory-nowrap">料金・特徴を比較</span>')}</h1><p class="directory-date">ページ更新：<time datetime="2026-09-29">2026年9月29日</time> ／ 公式確認：2026年9月29日（掲載4社とも公式サイトで確認）</p><p class="directory-lead">${intro}</p><nav class="directory-toc" aria-label="比較・検索へのショートカット"><a href="#compare-table">比較表を見る ↓</a><a href="#conditions">条件から探す ↓</a><a href="#purpose">目的別おすすめ ↓</a></nav></header>`+
-section('compare-table','おすすめ制作会社の比較表',table+`<p class="directory-legend"><span><span class="directory-symbol directory-symbol--best">◎</span>特に優れている</span><span><span class="directory-symbol directory-symbol--good">○</span>対応あり</span><span><span class="directory-symbol directory-symbol--mid">△</span>限定的・要問い合わせ</span><span><span class="directory-symbol directory-symbol--bad">×</span>非対応</span></p><div class="directory-mobile">${companies.map(c=>card(c,'../',true)).join('')}</div><p class="directory-note">「記載なし」「△」は必ずしも非対応を意味しません。1年間の費用の目安は、初期費用＋月額×12か月（税込相当）で、サーバー・ドメインの実費と更新代行の費用は含みません。福祉ITパートナーは月額契約がなく、公開後の更新を自社で行う前提の金額です。掲載順は1年間の費用の安い順を基本としていますが、運営の関連会社である福祉ITパートナーは先頭にせず2番目に掲載しています。契約期間や条件は会社ごとに異なるため、各社の公式サイトでご確認ください。詳しい条件・注意点は各社の「詳しく見る」からご確認ください。</p>`)+
+section('compare-table','おすすめ制作会社の比較表',table+`<p class="directory-legend"><span><span class="directory-symbol directory-symbol--best">◎</span>特に充実している</span><span><span class="directory-symbol directory-symbol--good">○</span>対応を確認できる</span><span><span class="directory-symbol directory-symbol--mid">△</span>限定的・記載を確認できない</span></p><div class="directory-mobile">${companies.map(c=>card(c,'../',true)).join('')}</div><p class="directory-note">◎○△は、各社の公式サイトの記載（2026年9月29日確認）にもとづく、当サイト編集部の評価です。セルの小さな文字が評価の根拠で、評価は他社と同じ基準で行っています。当サイトは福祉ITパートナーの関連会社が運営している点にもご留意ください。「記載なし」「△」は必ずしも非対応を意味しません。1年間の費用の目安は、初期費用＋月額×12か月（税込相当）で、サーバー・ドメインの実費と更新代行の費用は含みません。福祉ITパートナーは月額契約がなく、公開後の更新を自社で行う前提の金額です。掲載順は1年間の費用の安い順を基本としていますが、運営の関連会社である福祉ITパートナーは先頭にせず2番目に掲載しています。契約期間や条件は会社ごとに異なるため、各社の公式サイトでご確認ください。詳しい条件・注意点は各社の「詳しく見る」からご確認ください。</p>`)+
 section('conditions','条件に合う制作会社を見つける',form('../'))+
 section('purpose','目的別おすすめ',`<div class="directory-grid">${purposes.map(([heading,id,desc])=>`<a class="directory-purpose" href="#${id}"><strong>${heading}</strong><span>${companies.find(c=>c.id===id).name} →<br>${desc}</span></a>`).join('')}</div>`)+
 section('companies','各制作会社の詳細',details)+
