@@ -11,7 +11,7 @@
 - [x] unei：Google Search Consoleの基本（検索キーワードの確認、インデックス登録、エラー対応）（2026-11-12 公開: search-console-basics）
 - [x] hp-seisaku：ホームページの表示速度とCore Web Vitals（画像の軽量化、確認ツール）（2026-11-13 公開: page-speed-core-web-vitals）
 - [x] fukushi-kiso：業務継続計画（BCP）の基本と、災害時の情報発信の準備（2026-11-14 公開: bcp-basics）
-- [ ] security：職員のパスワード管理と二段階認証（パスワード管理ツール、共有アカウントの扱い）
+- [x] security：職員のパスワード管理と二段階認証（パスワード管理ツール、共有アカウントの扱い）（2026-11-15 公開: password-mfa-staff）
 - [ ] fukushi-kiso：障害者手帳の種類と違い（身体・療育・精神保健福祉、等級と受けられる支援）
 - [ ] unei：Googleアナリティクス4の基本（見るべき指標、問い合わせの計測）
 - [ ] fukushi-kiso：虐待防止の措置（委員会・指針・研修・担当者）と未実施減算
