@@ -1042,3 +1042,126 @@
   line-height: 1.5;
   color: var(--color-text-sub);
 }
+
+/* ==========================================================================
+   比較基準カード（写真つき）
+   ========================================================================== */
+.criteria-grid--photo {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 22px;
+}
+
+.criteria-grid--photo > .criteria-card--photo {
+  grid-column: span 2;
+}
+
+.criteria-grid--photo > .criteria-card--photo:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.criteria-grid--photo > .criteria-card--photo:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.criteria-card--photo {
+  --accent: #2aa5ac;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  box-shadow: 0 6px 20px rgba(30, 73, 60, 0.14);
+}
+
+.criteria-card--price { --accent: #f08a1c; }
+.criteria-card--welfare { --accent: #e8455f; }
+.criteria-card--design { --accent: #6a56e8; }
+.criteria-card--consult { --accent: #16a9bf; }
+.criteria-card--support { --accent: #2fb56a; }
+
+.criteria-card__photo {
+  position: relative;
+  display: block;
+}
+
+.criteria-card__img {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.criteria-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.criteria-card--photo:hover .criteria-card__img img {
+  transform: scale(1.07);
+}
+
+.criteria-card__badge {
+  position: absolute;
+  left: 16px;
+  bottom: -22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--accent);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.criteria-card__badge svg {
+  width: 28px;
+  height: 28px;
+}
+
+.criteria-card__body {
+  padding: 34px 20px 22px;
+  border-top: 4px solid var(--accent);
+  background-color: var(--color-white);
+}
+
+.criteria-card--photo .criteria-card__title {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: var(--color-text);
+}
+
+.criteria-card--photo .criteria-card__desc {
+  font-size: 14px;
+  color: var(--color-text-sub);
+}
+
+@media (max-width: 1000px) {
+  .criteria-grid--photo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .criteria-grid--photo > .criteria-card--photo,
+  .criteria-grid--photo > .criteria-card--photo:nth-child(4),
+  .criteria-grid--photo > .criteria-card--photo:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .criteria-grid--photo > .criteria-card--photo:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .criteria-grid--photo {
+    grid-template-columns: 1fr;
+  }
+
+  .criteria-grid--photo > .criteria-card--photo:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .criteria-card__img {
+    aspect-ratio: 2 / 1;
+  }
+}
