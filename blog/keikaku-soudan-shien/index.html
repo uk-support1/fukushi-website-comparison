@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Admin analytics exclusion: must run before gtag.js (?analytics=off / ?analytics=on) -->
+<script>
+(function(){
+  var ID='G-KNYX0KWWLY',K='ga_exclude',m=null,err=false,note=null;
+  function hasCk(){try{return /(?:^|;\s*)ga_exclude=1(?:;|$)/.test(document.cookie)}catch(e){return false}}
+  function hasLs(){try{return localStorage.getItem(K)==='1'}catch(e){return false}}
+  function isOn(){return hasCk()||hasLs()}
+  function put(v){
+    try{document.cookie=K+'='+(v?'1':'')+'; Path=/; SameSite=Lax; Max-Age='+(v?34560000:0)+(location.protocol==='https:'?'; Secure':'')}catch(e){}
+    try{if(v)localStorage.setItem(K,'1');else localStorage.removeItem(K)}catch(e){}
+  }
+  var q=location.search;
+  if(q.length>1){
+    var parts=q.slice(1).split('&'),keep=[];
+    for(var i=0;i<parts.length;i++){
+      var kv=parts[i].split('='),key=kv[0];
+      try{key=decodeURIComponent(key)}catch(e){}
+      var val=kv.slice(1).join('=');
+      if(key==='analytics'&&(val==='off'||val==='on'))m=val;else keep.push(parts[i]);
+    }
+    if(m){
+      put(m==='off');
+      err=m==='off'?!isOn():isOn();
+      note=err?'設定を保存できませんでした。ブラウザのCookie設定をご確認ください':m==='off'?'このブラウザはアクセス解析から除外されました':'アクセス解析の除外設定を解除しました';
+      try{history.replaceState(history.state,'',location.pathname+(keep.length?'?'+keep.join('&'):'')+location.hash)}catch(e){}
+    }
+  }
+  if(isOn()){window['ga-disable-'+ID]=true;if(!m)put(true)}
+  else if(m==='off'){window['ga-disable-'+ID]=true}
+  if(note){
+    var show=function(){
+      var d=document.createElement('div');
+      d.setAttribute('role','status');
+      d.textContent=note;
+      d.style.cssText='position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:10px 16px;border-radius:6px;color:#fff;font:13px/1.6 sans-serif;z-index:2147483647;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);background:'+(err?'#b3401f':'#1e493c');
+      document.body.appendChild(d);
+      setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d)},4000);
+    };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNYX0KWWLY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNYX0KWWLY');
+</script>
+
+<title>計画相談支援とは？相談支援専門員の役割・サービス等利用計画・モニタリング・セルフプランをわかりやすく解説｜福祉ホームページ制作比較ガイド</title>
+<meta name="description" content="障害福祉サービスを利用するときに必要な「サービス等利用計画」と、それを作成する計画相談支援について解説。相談支援専門員の役割、サービス利用支援と継続サービス利用支援（モニタリング）の違い、利用者負担、セルフプランとの違いを整理します。">
+<link rel="canonical" href="https://fukushi-hp-hikaku.com/blog/keikaku-soudan-shien/">
+
+<meta property="og:site_name" content="福祉ホームページ制作比較ガイド">
+<meta property="og:type" content="article">
+<meta property="og:title" content="計画相談支援とは？相談支援専門員の役割・サービス等利用計画・モニタリング・セルフプランをわかりやすく解説｜福祉ホームページ制作比較ガイド">
+<meta property="og:description" content="障害福祉サービスを利用するときに必要な「サービス等利用計画」と、それを作成する計画相談支援について解説。相談支援専門員の役割、サービス利用支援と継続サービス利用支援（モニタリング）の違い、利用者負担、セルフプランとの違いを整理します。">
+<meta property="og:url" content="https://fukushi-hp-hikaku.com/blog/keikaku-soudan-shien/">
+<meta property="og:image" content="https://fukushi-hp-hikaku.com/assets/images/blog/keikaku-soudan-shien.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-11-17">
+<meta property="article:modified_time" content="2026-11-17">
+<meta property="article:section" content="福祉の基礎知識">
+<link rel="icon" href="../../favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-v3-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-v3-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../favicon-v3-48x48.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon-v3.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fukushi-hp-hikaku.com/favicon-v3-192x192.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#1e493c">
+
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "計画相談支援とは？相談支援専門員の役割・サービス等利用計画・モニタリング・セルフプランをわかりやすく解説",
+  "description": "障害福祉サービスを利用するときに必要な「サービス等利用計画」と、それを作成する計画相談支援について解説。相談支援専門員の役割、サービス利用支援と継続サービス利用支援（モニタリング）の違い、利用者負担、セルフプランとの違いを整理します。",
+  "mainEntityOfPage": "https://fukushi-hp-hikaku.com/blog/keikaku-soudan-shien/",
+  "url": "https://fukushi-hp-hikaku.com/blog/keikaku-soudan-shien/",
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-17",
+  "articleSection": "福祉の基礎知識",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド編集部",
+    "url": "https://fukushi-hp-hikaku.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "福祉ホームページ制作比較ガイド",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fukushi-hp-hikaku.com/favicon-v3-512x512.png"
+    }
+  },
+  "image": "https://fukushi-hp-hikaku.com/assets/images/blog/keikaku-soudan-shien.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://fukushi-hp-hikaku.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "お役立ち記事",
+      "item": "https://fukushi-hp-hikaku.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "福祉の基礎知識",
+      "item": "https://fukushi-hp-hikaku.com/blog/category/fukushi-kiso/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "計画相談支援とは？相談支援専門員の役割・サービス等利用計画・モニタリング・セルフプランをわかりやすく解説",
+      "item": "https://fukushi-hp-hikaku.com/blog/keikaku-soudan-shien/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-page">
+
+<header class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__logo" href="../../">
+<span class="site-header__logo-icon"><img src="../../assets/images/brand/logo.png" alt=""></span>
+<span class="site-header__logo-text">福祉ホームページ制作比較ガイド</span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
+
+<nav class="global-nav" id="global-nav">
+<ul class="global-nav__list">
+<li class="global-nav__item"><a class="global-nav__link" href="../../#comparisons">比較記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../blog/">お役立ち記事</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../#criteria">比較基準</a></li>
+<li class="global-nav__item"><a class="global-nav__link" href="../../about/">運営者情報</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container blog-container">
+<nav class="blog-breadcrumb" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../blog/">お役立ち記事</a></li><li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li><li aria-current="page">計画相談支援とは？相談支援専門員の役割・サービス等利用計画・モニタリング・セルフプランをわかりやすく解説</li></ol></nav>
+<article class="blog-article">
+<header class="blog-article__head">
+<a class="blog-cat blog-cat--fukushi-kiso" href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a>
+<h1 class="blog-article__title">計画相談支援とは？相談支援専門員の役割・サービス等利用計画・モニタリング・セルフプランをわかりやすく解説</h1>
+<p class="blog-article__meta">
+<span>公開日 <time datetime="2026-11-17">2026年11月17日</time></span>
+
+<span>読了目安 約4分</span>
+<span>執筆・編集 <a href="../../about/">福祉ホームページ制作比較ガイド編集部</a></span>
+</p>
+<figure class="blog-article__cover"><img src="../../assets/images/blog/keikaku-soudan-shien.jpg" alt="" width="1200" height="630" fetchpriority="high"></figure>
+<p class="blog-article__lead">障害福祉サービスを使い始めるとき、最初に関わることが多いのが「相談支援専門員」です。サービス等利用計画の作成から、利用開始後の見直しまで、本人の生活全体を見ながら伴走するのが計画相談支援の役割です。</p>
+</header>
+<div class="blog-summary"><p class="blog-summary__title">この記事でわかること</p><ul><li>計画相談支援の2つのサービス（サービス利用支援・継続サービス利用支援）</li><li>相談支援専門員が行うこと</li><li>サービス等利用計画と個別支援計画の違い</li><li>セルフプランとの違いと、利用者負担</li></ul></div>
+<nav class="blog-toc" aria-label="目次"><p class="blog-toc__title">目次</p><ol><li><a href="#sec-1">計画相談支援とは</a></li><li><a href="#sec-2">相談支援専門員が行うこと</a></li><li><a href="#sec-3">モニタリングの頻度</a></li><li><a href="#sec-4">サービス等利用計画と個別支援計画の違い</a></li><li><a href="#sec-5">セルフプランとの違い</a></li><li><a href="#sec-6">利用者負担</a></li><li><a href="#sec-7">事業所の立場から：相談支援専門員に伝わる情報発信</a></li><li><a href="#sec-8">まとめ</a></li></ol></nav>
+<div class="blog-body">
+<h2 id="sec-1">計画相談支援とは</h2>
+<p>計画相談支援は、障害福祉サービスを利用する方のために、<strong>サービス等利用計画</strong>を作成し、利用開始後も定期的に見直すサービスです。障害者総合支援法にもとづき、市町村の指定を受けた「指定特定相談支援事業所」の<strong>相談支援専門員</strong>が担当します。</p>
+<p>計画相談支援は、次の2つで構成されています。</p>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">サービス</th><th scope="col">時期</th><th scope="col">内容</th></tr></thead><tbody><tr><th scope="row">サービス利用支援</th><td>サービスの利用を始めるとき・変更するとき</td><td>本人の希望や状況を聞き取り、サービス等利用計画案を作成。支給決定後に事業所と調整し、計画を確定する</td></tr><tr><th scope="row">継続サービス利用支援</th><td>サービスの利用中</td><td>一定期間ごとに利用状況を確認（モニタリング）し、必要に応じて計画を見直す</td></tr></tbody></table></div>
+<p>なお、障害児通所支援（児童発達支援、放課後等デイサービスなど）を利用する場合は、児童福祉法にもとづく「障害児相談支援」で、障害児支援利用計画を作成します。</p>
+<div class="blog-box blog-box--point"><p class="blog-box__title">相談支援事業所は、受付状況の見せ方が大切です</p><p>新しい相談を受けられるか、対応地域はどこかは、ホームページでいちばん探されやすい情報です。更新しやすい制作会社は、<a href="../../comparisons/soudan-shien-comparison.html">相談支援事業所向けの比較記事</a>で探せます。</p>
+<ul class="blog-list"><li><strong><a href="../../comparisons/soudan-shien-comparison.html">相談支援事業所向けホームページ制作会社比較を見る ›</a></strong></li></ul></div>
+<h2 id="sec-2">相談支援専門員が行うこと</h2>
+<ol class="blog-olist"><li><strong>アセスメント</strong>：本人や家族と面談し、生活の状況、希望、困りごとを聞き取る</li><li><strong>計画案の作成</strong>：本人の目標と、それを実現するために使うサービスの組み合わせを計画案にまとめる</li><li><strong>市町村への提出</strong>：計画案は、市町村が支給決定を行う際の判断材料になる</li><li><strong>サービス担当者会議</strong>：支給決定後、利用する事業所の担当者と集まり、支援の方針を共有する</li><li><strong>モニタリング</strong>：利用開始後、定期的に本人と面談し、計画どおりに進んでいるか、困りごとがないかを確認する</li></ol>
+<p>福祉サービスだけでなく、医療、教育、就労、地域の社会資源なども視野に入れて、本人の生活全体を考えるのが相談支援専門員の役割です。</p>
+<h2 id="sec-3">モニタリングの頻度</h2>
+<p>モニタリングをどのくらいの間隔で行うかは、本人の状況や利用するサービスに応じて、市町村が決定します。サービスの利用を始めたばかりの時期や、生活環境が大きく変わる時期は頻度が高く、安定している場合は数か月に1回などの間隔になるのが一般的です。</p>
+<div class="blog-box blog-box--point"><p class="blog-box__title">困ったら次のモニタリングを待たずに相談を</p><p>事業所との関係や生活の変化など、困りごとがあれば、予定のモニタリングを待たずに相談支援専門員に連絡して構いません。必要に応じて計画を見直し、サービスの変更を検討してもらえます。</p></div>
+<h2 id="sec-4">サービス等利用計画と個別支援計画の違い</h2>
+<div class="blog-table-wrap"><table class="blog-table"><thead><tr><th scope="col">計画</th><th scope="col">作成する人</th><th scope="col">内容</th></tr></thead><tbody><tr><th scope="row">サービス等利用計画</th><td>相談支援専門員</td><td>本人の生活全体の目標と、利用するサービスの組み合わせ</td></tr><tr><th scope="row">個別支援計画</th><td>各事業所のサービス管理責任者など</td><td>その事業所での具体的な支援の目標と内容</td></tr></tbody></table></div>
+<p>サービス等利用計画が「全体の設計図」、個別支援計画が「事業所ごとの具体的な計画」というイメージです。両者の内容がつながっていることが大切です。</p>
+<h2 id="sec-5">セルフプランとの違い</h2>
+<p>本人や家族などが自分でサービス等利用計画案を作成し、市町村に提出することもできます。これを「<strong>セルフプラン</strong>」と呼びます。</p>
+<ul class="blog-list"><li>相談支援事業所が近くにない、自分で計画を立てたいといった場合に選ばれる</li><li>セルフプランの場合は、相談支援専門員によるモニタリング（継続サービス利用支援）は行われない</li><li>事業所との調整や計画の見直しを、本人・家族が行う必要がある</li></ul>
+<p>地域によっては相談支援事業所が不足し、セルフプランの割合が高くなっていることが課題とされています。できるだけ相談支援専門員に相談できる体制をつくることが望まれています。</p>
+<h2 id="sec-6">利用者負担</h2>
+<p>計画相談支援には<strong>利用者負担がありません</strong>。サービス等利用計画の作成もモニタリングも、無料で受けられます。</p>
+<h2 id="sec-7">事業所の立場から：相談支援専門員に伝わる情報発信</h2>
+<p>障害福祉サービス事業所にとって、相談支援専門員は利用者を紹介してくれる大切な連携先です。相談支援専門員が事業所を探すときは、空き状況、対象者、送迎範囲、支援の特色などを確認します。ホームページにこれらの情報をまとめておくと、紹介につながりやすくなります。掲載したい項目は「<a href="../../blog/hp-must-have-contents/">福祉事業所のホームページに載せるべき項目チェックリスト</a>」を参考にしてください。</p>
+<h2 id="sec-8">まとめ</h2>
+<p>計画相談支援は、相談支援専門員がサービス等利用計画を作成し、利用開始後も定期的なモニタリングで見直していくサービスです。利用者負担はなく、福祉サービスだけでなく生活全体を考えて伴走してくれる存在です。</p>
+<p>自分で計画を作るセルフプランも選べますが、計画の見直しや事業所との調整を自分で行う必要があります。迷ったときは、まず市町村の窓口で相談支援事業所を紹介してもらいましょう。</p>
+<div class="blog-box blog-box--info"><p class="blog-box__title">「今、相談できるか」が伝わるホームページを作るなら</p><p>受付状況は変わりやすいため、自分で更新できるか、依頼したらどのくらいで反映されるかが、制作会社選びの大切な基準になります。費用と更新のしやすさは<a href="../../comparisons/soudan-shien-comparison.html">相談支援事業所向けホームページ制作会社比較</a>で比べています。</p>
+<ul class="blog-list"><li><strong><a href="../../comparisons/soudan-shien-comparison.html">相談支援事業所向けホームページ制作会社比較を見る ›</a></strong></li></ul></div>
+</div>
+<section class="blog-faq" id="faq"><h2>よくある質問</h2><details class="blog-faq__item"><summary>計画相談支援にお金はかかりますか？</summary><div class="blog-faq__a"><p>計画相談支援には利用者負担がありません。費用は全額が公費（計画相談支援給付費）でまかなわれます。</p></div></details><details class="blog-faq__item"><summary>相談支援事業所はどうやって探せばよいですか？</summary><div class="blog-faq__a"><p>市町村の障害福祉担当窓口で、地域の指定特定相談支援事業所の一覧を案内してもらえます。WAM NETの障害福祉サービス等情報検索でも探せます。地域によっては相談支援事業所が不足しており、すぐに担当が見つからないこともあります。</p></div></details><details class="blog-faq__item"><summary>相談支援専門員を変更することはできますか？</summary><div class="blog-faq__a"><p>できます。相性が合わない、引っ越したなどの理由で、別の相談支援事業所と契約し直すことは可能です。新しい事業所を探すときは、市町村の窓口にも相談してください。</p></div></details></section>
+<section class="blog-sources"><h2>参考資料・出典</h2><ul><li><a href="https://www.wam.go.jp/content/wamnet/sppub/syogai/handbook/service/c078-p02-02-Shogai-26.html" target="_blank" rel="noopener">WAM NET「障害福祉サービスの内容：サービス利用支援」</a></li><li><a href="https://www.wam.go.jp/content/wamnet/sppub/syogai/handbook/service/c078-p02-02-Shogai-27.html" target="_blank" rel="noopener">WAM NET「障害福祉サービスの内容：継続サービス利用支援」</a></li><li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/service/naiyou.html" target="_blank" rel="noopener">厚生労働省「障害福祉サービスについて」</a></li><li><a href="https://www.wam.go.jp/sfkohyoout/" target="_blank" rel="noopener">WAM NET「障害福祉サービス等情報検索」</a></li></ul><p class="blog-sources__note">制度・料金・統計は改定される場合があります。最新の内容は各出典の公式情報でご確認ください。</p></section>
+<aside class="blog-cta"><p class="blog-cta__title">業種別にホームページ制作会社を比較する</p><p>料金・対応範囲・公開後のサポートを、公式情報をもとに整理しています。</p><ul><li><a href="../../comparisons/welfare-comparison.html">福祉事業所向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/group-home-comparison.html">障害者グループホーム向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/b-type-comparison.html">就労継続支援B型向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/shuro-iko-comparison.html">就労移行支援向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/houkago-day-comparison.html">放課後等デイサービス向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/jihatsu-comparison.html">児童発達支援向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/a-type-comparison.html">就労継続支援A型向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/seikatsu-kaigo-comparison.html">生活介護向けホームページ制作会社比較 ›</a></li><li><a href="../../comparisons/soudan-shien-comparison.html">相談支援事業所向けホームページ制作会社比較 ›</a></li></ul></aside>
+</article>
+<section class="blog-related"><h2 class="blog-related__title">あわせて読みたい</h2><div class="blog-grid"><a class="blog-card blog-card--fukushi-kiso" href="../../blog/shogai-fukushi-service-list/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/shogai-fukushi-service-list-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">障害福祉サービスの種類一覧｜介護給付・訓練等給付・障害児支援の違いをわかりやすく解説</h3>
+<p class="blog-card__desc">障害者総合支援法と児童福祉法にもとづく障害福祉サービスの種類を一覧で整理。介護給付・訓練等給付・相談支援・障害児通所支援の違いや、2025年10月に始まった就労選択支援まで、事業所運営者向けにわかりやすく解説します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-07-17">2026年7月17日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--fukushi-kiso" href="../../blog/shuro-iko-shien/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/shuro-iko-shien-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">就労移行支援とは？対象者・利用期間2年・利用の流れと、就労定着支援・就労選択支援との関係</h3>
+<p class="blog-card__desc">一般企業への就職を目指す障害のある方が利用する就労移行支援について、対象者（原則65歳未満）、標準利用期間2年、訓練内容、利用料、利用開始までの流れ、就職後の就労定着支援や2027年4月から原則利用となる就労選択支援との関係を解説します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-11-13">2026年11月13日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a>
+<a class="blog-card blog-card--fukushi-kiso" href="../../blog/seikatsu-kaigo/">
+<span class="blog-card__thumb"><img src="../../assets/images/blog/seikatsu-kaigo-sm.jpg" alt="" width="600" height="315" loading="lazy" decoding="async"></span>
+<span class="blog-card__body">
+<span class="blog-cat blog-cat--fukushi-kiso">福祉の基礎知識</span>
+<h3 class="blog-card__title">生活介護とは？対象者（障害支援区分）・支援内容・利用料と、2024年度改定の時間区分</h3>
+<p class="blog-card__desc">障害者総合支援法の生活介護について、対象となる障害支援区分（区分3以上、50歳以上は区分2以上）、日中の支援内容、利用料と実費、2024年度報酬改定で導入されたサービス提供時間ごとの基本報酬までわかりやすく解説します。</p>
+<span class="blog-card__foot"><span class="blog-card__meta"><time datetime="2026-11-10">2026年11月10日</time>更新</span><span class="blog-card__more">記事を読む<span aria-hidden="true"> →</span></span></span>
+</span>
+</a></div></section>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p class="site-footer__sitename">福祉ホームページ制作比較ガイド</p>
+<nav class="site-footer__nav" aria-label="フッターナビゲーション">
+<ul>
+<li><a href="../../">トップページ</a></li>
+<li><a href="../../#comparisons">比較記事一覧</a></li>
+<li><a href="../../blog/">お役立ち記事</a></li>
+<li><a href="../../blog/category/fukushi-kiso/">福祉の基礎知識</a></li>
+<li><a href="../../blog/category/security/">セキュリティ対策</a></li>
+<li><a href="../../blog/category/hp-seisaku/">ホームページ制作の基礎</a></li>
+<li><a href="../../blog/category/unei/">集客・採用・運用</a></li>
+<li><a href="../../about/">運営者情報・編集方針</a></li>
+</ul>
+</nav>
+<p class="site-footer__disclaimer">掲載情報は作成時点の公式情報をもとにしています。契約前に各社公式サイトで最新情報をご確認ください。</p>
+<p class="site-footer__disclosure">当サイトは、掲載企業の一社である福祉ITパートナーの関連会社が運営しています。</p>
+<p class="site-footer__copyright">&copy; 福祉ホームページ制作比較ガイド</p>
+</div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

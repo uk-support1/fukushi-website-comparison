@@ -14,11 +14,13 @@
 - B型の比較ページと検索ページの再生成：`node scripts/build-directory.cjs`
 - カバー画像の生成：`node scripts/make-blog-covers.cjs`
 - リンク切れの確認：`node scripts/check-links.cjs .`
+- お役立ち記事の比較記事への誘導の確認：`node scripts/check-blog-cta.cjs`
 - 検索まわりの検証：`node scripts/check-directory.cjs`（Playwright が必要）
 
 ## 記事づくりのルール（詳細は docs/ 以下）
 
 - お役立ち記事：`docs/blog-writing-guide.md`、毎日の自動作成：`docs/daily-article-task.md`
+- **お役立ち記事には、必ず比較記事（`/comparisons/…`）への誘導を、記事の途中と終わりの2か所に入れる**（記事ごとに文面を工夫し、独立した目立つリンク行を付ける）。書き方は `docs/daily-article-task.md` の「比較記事への誘導」、確認は `node scripts/check-blog-cta.cjs`。福祉ITパートナーのページへ誘導する場合は、同じボックス内に「運営者の関連会社」の旨を必ず書く。
 - 比較記事：`docs/daily-comparison-task.md`（料金の見せ方、◎○△評価、掲載順のルールを含む）
 - 運営者は福祉ITパートナーの関連会社。福祉ITパートナーは先頭にせず2番目に掲載し、評価は全社同じ基準で行い、その旨を記事内に明記する。同社のブログと重なるテーマ・文章にしない（`docs/partner-blog-topics.md`）。
 - 事実は公式サイトや公的機関で確認したものだけを書く。確認できないことは書かない。
