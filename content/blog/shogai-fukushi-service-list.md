@@ -50,6 +50,12 @@
 法律上の「障害福祉サービス」は介護給付と訓練等給付のサービスを指しますが、一般的には相談支援や障害児支援まで含めて「障害福祉サービス」と呼ぶことが多くあります。この記事でも広い意味で使っています。
 :::
 
+:::point サービスの種類ごとに、ホームページで伝えることは違います
+就労・日中活動・住まい・障害児・相談と、種類によって見る人も知りたいことも変わります。種別ごとの比較を[福祉事業所向けの比較記事](/comparisons/welfare-comparison.html)から探せます。
+
+- **[福祉事業所向けホームページ制作会社比較を見る ›](/comparisons/welfare-comparison.html)**
+:::
+
 ## 介護給付：日常生活の介護を受けるサービス
 
 介護給付は、日常生活に介護が必要な方を対象としたサービスです。多くのサービスで、市町村による「障害支援区分」の認定が必要になります。
@@ -124,3 +130,17 @@
 障害福祉サービスは、障害者総合支援法の「介護給付」「訓練等給付」「相談支援」「地域生活支援事業」と、児童福祉法の「障害児支援」に大きく整理できます。2025年10月には就労選択支援が始まるなど、制度は少しずつ変化しています。
 
 事業所のホームページでは、正式なサービス名と平易な説明を組み合わせ、利用者・家族・相談支援専門員のそれぞれが知りたい情報を載せることが、信頼と問い合わせにつながります。
+
+:::info 自分の事業所の種別に近い、制作会社の比較を見てみましょう
+種別ごとの比較を用意しています：[A型](/comparisons/a-type-comparison.html)・[B型](/comparisons/b-type-comparison.html)・[就労移行](/comparisons/shuro-iko-comparison.html)・[生活介護](/comparisons/seikatsu-kaigo-comparison.html)・[グループホーム](/comparisons/group-home-comparison.html)・[放課後等デイ](/comparisons/houkago-day-comparison.html)・[児童発達支援](/comparisons/jihatsu-comparison.html)・[相談支援](/comparisons/soudan-shien-comparison.html)。当てはまらない場合は[福祉事業所全般向け](/comparisons/welfare-comparison.html)をどうぞ。
+
+- **[就労継続支援A型向けホームページ制作会社比較を見る ›](/comparisons/a-type-comparison.html)**
+- **[就労継続支援B型向けホームページ制作会社比較を見る ›](/comparisons/b-type-comparison.html)**
+- **[就労移行支援向けホームページ制作会社比較を見る ›](/comparisons/shuro-iko-comparison.html)**
+- **[生活介護向けホームページ制作会社比較を見る ›](/comparisons/seikatsu-kaigo-comparison.html)**
+- **[障害者グループホーム向けホームページ制作会社比較を見る ›](/comparisons/group-home-comparison.html)**
+- **[放課後等デイサービス向けホームページ制作会社比較を見る ›](/comparisons/houkago-day-comparison.html)**
+- **[児童発達支援向けホームページ制作会社比較を見る ›](/comparisons/jihatsu-comparison.html)**
+- **[相談支援事業所向けホームページ制作会社比較を見る ›](/comparisons/soudan-shien-comparison.html)**
+- **[福祉事業所向けホームページ制作会社比較を見る ›](/comparisons/welfare-comparison.html)**
+:::
